@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.ActivityBrowsedMapper">
+    <resultMap id="ActivityBrowsedMap" type="edu.scau.common.dto.IndexActivityStatus">
+        <result column="browsed" property="browsed" javaType="Boolean"/>
+        <association property="activity" javaType="edu.scau.common.pojo.Activity" column="id">
+            <id column="id" property="id"/>
+            <result column="title" property="title"/>
+            <result column="text" property="text"/>
+            <result column="user_id" property="userId"/>
+            <result column="start_time" property="startTime"/>
+            <result column="end_time" property="endTime"/>
+            <collection  property="label" ofType="java.lang.String">
+                <result column="label_code" javaType="java.lang.String"/>
+            </collection>
+        </association>
+
+
+    </resultMap>
+
+    <select id="selectActivityBrowsed" resultMap="ActivityBrowsedMap">
+        SELECT a.*,b.*,al.label_code from activite as a
+			left join browsed as b on a.id = b.activity_id
+			left join activity_label as al on al.activity_id = a.id
+    </select>
+
+
+</mapper>
