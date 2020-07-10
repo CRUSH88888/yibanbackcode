@@ -49,7 +49,6 @@ public class ActivityController {
         Activity activity = new Activity(title,text,userId, new java.sql.Date(startTime.getTime()), new java.sql.Date(endTime.getTime()),labelList);
         Integer result = activityService.InsertActivity(activity);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
-
     }
 
 

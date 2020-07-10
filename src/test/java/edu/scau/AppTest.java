@@ -2,7 +2,9 @@ package edu.scau;
 
 import static org.junit.Assert.assertTrue;
 
+import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
 import org.junit.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * Unit test for simple App.
