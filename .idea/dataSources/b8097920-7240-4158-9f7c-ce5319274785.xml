@@ -915,153 +915,153 @@
     </column>
     <column id="294" parent="285" name="title">
       <Position>2</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="295" parent="285" name="text">
+    <column id="295" parent="285" name="address">
       <Position>3</Position>
+      <DataType>varchar(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="296" parent="285" name="text">
+      <Position>4</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="296" parent="285" name="user_id">
-      <Position>4</Position>
+    <column id="297" parent="285" name="user_id">
+      <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="297" parent="285" name="start_time">
-      <Position>5</Position>
-      <DataType>date|0s</DataType>
-      <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="298" parent="285" name="end_time">
+    <column id="298" parent="285" name="start_time">
       <Position>6</Position>
-      <DataType>date|0s</DataType>
+      <DataType>timestamp|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="299" parent="285" name="PRIMARY">
+    <column id="299" parent="285" name="end_time">
+      <Position>7</Position>
+      <DataType>timestamp|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="300" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="300" parent="286" name="id">
+    <column id="301" parent="286" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="301" parent="286" name="activity_id">
+    <column id="302" parent="286" name="activity_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="302" parent="286" name="label_code">
+    <column id="303" parent="286" name="label_code">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="303" parent="286" name="PRIMARY">
+    <key id="304" parent="286" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="304" parent="287" name="id">
+    <column id="305" parent="287" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="305" parent="287" name="name">
+    <column id="306" parent="287" name="name">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="306" parent="287" name="introduce">
+    <column id="307" parent="287" name="introduce">
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="307" parent="287" name="department">
+    <column id="308" parent="287" name="department">
       <Position>4</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="308" parent="287" name="activity">
+    <column id="309" parent="287" name="activity">
       <Position>5</Position>
       <DataType>mediumtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="309" parent="287" name="href">
+    <column id="310" parent="287" name="href">
       <Position>6</Position>
       <DataType>text|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="310" parent="287" name="type">
+    <column id="311" parent="287" name="type">
       <Position>7</Position>
       <DataType>enum(&apos;组织&apos;, &apos;学术科技类&apos;, &apos;公益实践类&apos;, &apos;文化艺术类&apos;, &apos;体育竞技类&apos;)|0e</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="311" parent="287" name="PRIMARY">
+    <key id="312" parent="287" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="312" parent="288" name="id">
+    <column id="313" parent="288" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="313" parent="288" name="browsed">
+    <column id="314" parent="288" name="browsed">
       <Position>2</Position>
       <DataType>tinyint(1)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="314" parent="288" name="activity_id">
+    <column id="315" parent="288" name="activity_id">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="315" parent="288" name="user_id">
+    <column id="316" parent="288" name="user_id">
       <Position>4</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="316" parent="288" name="PRIMARY">
+    <key id="317" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="317" parent="289" name="user_id">
+    <column id="318" parent="289" name="user_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="318" parent="289" name="activity_id">
+    <column id="319" parent="289" name="activity_id">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="319" parent="289" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>user_id</ColNames>
-      <Primary>1</Primary>
-    </key>
     <column id="320" parent="290" name="activity_id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
@@ -1152,38 +1152,43 @@
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="337" parent="292" name="name">
+    <column id="337" parent="292" name="student_number">
       <Position>2</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="338" parent="292" name="grade">
+    <column id="338" parent="292" name="name">
       <Position>3</Position>
-      <DataType>varchar(255)|0s</DataType>
+      <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="339" parent="292" name="major">
+    <column id="339" parent="292" name="grade">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="340" parent="292" name="phone_number">
+    <column id="340" parent="292" name="major">
       <Position>5</Position>
-      <DataType>varchar(30)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="341" parent="292" name="wechat_number">
+    <column id="341" parent="292" name="phone_number">
       <Position>6</Position>
       <DataType>varchar(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="342" parent="292" name="username">
+    <column id="342" parent="292" name="wechat_number">
       <Position>7</Position>
+      <DataType>varchar(30)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="343" parent="292" name="username">
+      <Position>8</Position>
       <DataType>varchar(30)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="343" parent="292" name="PRIMARY">
+    <key id="344" parent="292" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>

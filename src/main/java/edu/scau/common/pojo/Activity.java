@@ -7,6 +7,7 @@ import lombok.NoArgsConstructor;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 
 import java.sql.Date;
+import java.sql.Timestamp;
 import java.util.List;
 
 @Data
@@ -19,12 +20,12 @@ public class Activity {    //活动
     private String text;//正文
     private Integer userId;//发布者
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    private Date startTime;//活动开始时间
+    private Timestamp startTime;//活动开始时间
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    private Date endTime;//活动结束时间
+    private Timestamp endTime;//活动结束时间
     private List<String> label;//标签
 
-    public Activity( String title, String text, Integer userId, Date startTime, Date endTime, List<String> label) {
+    public Activity( String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label) {
         this.title = title;
         this.text = text;
         this.userId = userId;
