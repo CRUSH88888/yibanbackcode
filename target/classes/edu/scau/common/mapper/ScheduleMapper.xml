@@ -4,9 +4,11 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ScheduleMapper">
     <select id="getSchedule" resultMap="schedule" parameterType="int">
-        select address,title,start_time,end_time from activite
-        where user_id = #{userId}
-        order by start_time asc
+        select a.address,a.title,a.start_time,a.end_time from user as u
+        left join collection c on u.id = c.user_id
+        left join activite a on c.activity_id = a.id
+        where u.id = #{id}
+        order by a.start_time asc
     </select>
     <resultMap id="schedule" type="edu.scau.common.dto.Schedule">
         <result column="address" property="address"/>
