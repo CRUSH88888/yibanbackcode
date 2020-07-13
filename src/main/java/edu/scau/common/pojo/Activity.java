@@ -24,7 +24,6 @@ public class Activity {    //活动
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
     private List<String> label;//标签
-    private String date;
 
     public Activity( String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label) {
         this.title = title;
