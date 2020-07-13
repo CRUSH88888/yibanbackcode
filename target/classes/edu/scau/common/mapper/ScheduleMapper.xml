@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.ScheduleMapper">
+    <select id="getSchedule" resultMap="schedule" parameterType="int">
+        select address,title,start_time,end_time from activite
+        where user_id = #{userId}
+        order by start_time asc
+    </select>
+    <resultMap id="schedule" type="edu.scau.common.dto.Schedule">
+        <result column="address" property="address"/>
+        <result column="title" property="title"/>
+        <result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>
+        <result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>
+    </resultMap>
+</mapper>
