@@ -46,10 +46,9 @@ public class ActivityController {
                                     @RequestParam("label[]")String[] label){
         List<String> labelList = new ArrayList<>();
         Collections.addAll(labelList,label);
-        Activity activity = new Activity(title,text,userId, new java.sql.Date(startTime.getTime()), new java.sql.Date(endTime.getTime()),labelList);
+        Activity activity = new Activity(title,text,userId, new java.sql.Timestamp(startTime.getTime()), new java.sql.Timestamp(endTime.getTime()),labelList);
         Integer result = activityService.InsertActivity(activity);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
-
     }
 
 
