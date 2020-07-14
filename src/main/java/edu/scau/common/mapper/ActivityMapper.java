@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+import java.util.Map;
 
 /**
  * @description:与活动有关的mapper
@@ -15,7 +16,6 @@ import java.util.List;
 public interface ActivityMapper {
 
     Integer insertActivity(Activity activity);
-    Integer insertLabelOfActivity(@Param("label") List<String >label,@Param("activity_id") Integer activity_id);
-
+    Integer insertLabelOfActivity(@Param("label") String label,@Param("activityId") Integer activityId);
 
 }

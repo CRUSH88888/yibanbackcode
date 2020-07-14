@@ -24,13 +24,28 @@ public class Activity {    //活动
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
     private List<String> label;//标签
+    /*
+    二维码或其他照片的地址
+     */
+    private String picUrl;
 
-    public Activity( String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label) {
+    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,String picUrl) {
+        this.address = address;
         this.title = title;
         this.text = text;
         this.userId = userId;
         this.startTime = startTime;
         this.endTime = endTime;
         this.label = label;
+        this.picUrl = picUrl;
+    }
+
+    public Activity(String address, String title, String text, Integer userId, List<String> label, String picUrl) {
+        this.address = address;
+        this.title = title;
+        this.text = text;
+        this.userId = userId;
+        this.label = label;
+        this.picUrl = picUrl;
     }
 }
