@@ -11,21 +11,21 @@ import java.io.IOException;
  * @create:2020/6/26 14:20
  **/
 public class FileUtil {
-//    public static String dev = "D:/";//开发
-    public static String pro = "/usr/local/";//上线
+    public static String dev = "D:/images";//开发
+    public static String pro = "/usr/local/images";//上线
 
-    public static String saveFile(MultipartFile file,String path) throws IOException {
+    public static String saveFile(MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
         if (file.getOriginalFilename()==null)
         {
             return "null";
         }
-        String filePath = pro + path +"/";
+        String filePath = pro +"/";
         File dest = new File(filePath + fileName);
         System.out.println(filePath+fileName);
         dest.createNewFile();
         file.transferTo(dest);
-        return ApiResponse.URL+path+"/"+fileName;
+        return ApiResponse.URL+"/"+fileName;
     }
     public static Boolean deleteFile(String url){
         String oldPath = url;

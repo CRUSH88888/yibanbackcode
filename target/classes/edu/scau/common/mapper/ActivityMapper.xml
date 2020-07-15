@@ -7,17 +7,15 @@
 
 
     <insert id="insertActivity" parameterType="edu.scau.common.pojo.Activity" useGeneratedKeys="true" keyProperty="id">
-        insert into activite(title,text,user_id,start_time,end_time)
-        VALUES (#{title},#{text},#{userId},#{startTime},#{endTime})
+        insert into activite(address,title,text,user_id,start_time,end_time,pic_url)
+        VALUES (#{address},#{title},#{text},#{userId},#{startTime},#{endTime},#{picUrl})
     </insert>
     <insert id="insertLabelOfActivity" >
-        insert into (label_code,activity_id)
-        values (
-        <foreach collection="list" item="item" separator="," open="(" close=")" index="">
-            #{item}
-        </foreach>,
-        #{activity_id}
-        )
+        INSERT INTO activity_label (label_code,activity_id)
+        VALUES
+        (#{label},#{activityId})
+
+
     </insert>
 
 
