@@ -67,7 +67,4 @@ public class ActivityController {
         Integer result = activityService.InsertActivity(activity);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }
-
-
-
 }

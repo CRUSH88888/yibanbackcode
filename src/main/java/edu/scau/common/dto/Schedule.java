@@ -1,11 +1,11 @@
 package edu.scau.common.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import edu.scau.common.utils.DateToStringUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.sql.Date;
 import java.sql.Timestamp;
 
 /**
@@ -23,4 +23,5 @@ public class Schedule {
     private Timestamp startTime;//活动开始时间
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
+    private String date;//活动时间转为字符串
 }
