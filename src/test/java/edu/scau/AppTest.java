@@ -23,12 +23,11 @@ public class AppTest
     /**
      * Rigorous Test :-)
      */
-    @Autowired
-    private ScheduleMapper scheduleMapper;
     @Test
     public void test(){
-        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-        System.out.println(DateToStringUtil.toString(timestamp,"year"));
+        Timestamp timestamp = new Timestamp(2019-1900,5,17,22,1,0,0);
+        String s = DateToStringUtil.publishTime(timestamp);
+        System.out.println(s);
     }
 
     @Test
