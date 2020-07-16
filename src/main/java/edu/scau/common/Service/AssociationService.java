@@ -11,7 +11,7 @@ import java.util.List;
  **/
 public interface AssociationService {
     Association getAssociationByName(String associationName);
-    List<Association> getAssociationByType(int type);
+    List<Association> getAssociationByType(String type);
     Integer updateAssociation(Association association);
     Integer insertAssociation(Association association);
 }

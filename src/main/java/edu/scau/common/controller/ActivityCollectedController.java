@@ -1,3 +1,5 @@
+package edu.scau.common.controller;
+
 import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
 import edu.scau.common.pojo.Activity;
 import edu.scau.common.utils.ApiResponse;
@@ -24,7 +26,7 @@ public class ActivityCollectedController {
     @GetMapping("/getCollectedActivity")
     public ApiResponse getCollectedActivity(@RequestParam("userId") int userId){
         List<Activity> collectedActivity = activityCollectedService.getCollectedActivity(userId);
-        return collectedActivity.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",activityCollectedService);
+        return collectedActivity.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",collectedActivity);
     }
 
     /**

@@ -12,8 +12,8 @@ public class Association {      //社团组织
     private String name;//社团名字
     private String introduce;//介绍
     private String href;//公众号
-    private int type;//社团类型，1组织,2学术科技类,3公益实践类,4文化艺术类,5体育竞技类
-    public Association(String name, String introduce, String href, int type){
+    private String type;//组织,学术科技类,公益实践类,文化艺术类,体育竞技类
+    public Association(String name, String introduce, String href, String type){
         this.name=name;
         this.introduce=introduce;
         this.href=href;
