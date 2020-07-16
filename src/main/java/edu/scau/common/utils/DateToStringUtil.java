@@ -101,8 +101,10 @@ public class DateToStringUtil {
         }
 //        1年以上
         else{
-            long year=(time1-time)/31536000;
-            return year+"年前";
+            String year=publishTime.getYear()+1900+"";
+            String month=publishTime.getMonth()+1+"";
+            String date=publishTime.getDate()+"";
+            return year+"-"+month+"-"+date;
         }
     }
 }
