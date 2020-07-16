@@ -63,6 +63,8 @@ public class ActivityController {
             labelList.add(s);
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+        System.out.println(startTime);
+        System.out.println(endTime);
         Activity activity = new Activity(address,title,text,userId, Timestamp.valueOf(startTime),Timestamp.valueOf(endTime), labelList,picUrl);
         Integer result = activityService.InsertActivity(activity);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");

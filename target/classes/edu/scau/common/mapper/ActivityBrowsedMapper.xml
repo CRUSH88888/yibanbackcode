@@ -12,9 +12,12 @@
             <result column="user_id" property="userId"/>
             <result column="start_time" property="startTime"/>
             <result column="end_time" property="endTime"/>
+            <result column="pic_url" property="picUrl"/>
+            <result property="date" column="build_time"/>
             <collection  property="label" ofType="java.lang.String">
                 <result column="label_code" javaType="java.lang.String"/>
             </collection>
+
         </association>
 
 
