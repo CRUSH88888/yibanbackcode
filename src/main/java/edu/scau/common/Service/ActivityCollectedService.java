@@ -1,5 +1,6 @@
 package edu.scau.common.Service;
 
+import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.pojo.Activity;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import java.util.List;
  * @create:2020/7/10 21:41
  **/
 public interface ActivityCollectedService {
-    List<Activity> getCollectedActivity(int userId);
+    List<ActivityManger> getCollectedActivity(int userId);
     Integer addActivity(int userId,int activityId);
     Integer deleteCollectedActivity(int userId,int activityId);
 }
