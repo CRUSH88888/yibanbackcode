@@ -6,7 +6,9 @@ import edu.scau.common.mapper.PublishManagementMapper;
 import edu.scau.common.utils.DateToStringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
+import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,7 +19,7 @@ import java.util.List;
  **/
 @Service
 public class PublishManagementServiceImpl implements PublishManagementService {
-    @Autowired
+    @Autowired(required = false)
     private PublishManagementMapper publishManagementMapper;
     @Override
     public List<PublishManagement> getPublish(int userId) {
@@ -48,5 +50,23 @@ public class PublishManagementServiceImpl implements PublishManagementService {
             publishManagement.setDate(DateToStringUtil.publishTime(publishManagement.getPublishTime()));
         }
         return publishManagements;
+    }
+
+    @Override
+    @Transactional
+    public Integer deletePublish(int[] id, int[] type) {
+        Integer result=0;
+        for (int i = 0; i <id.length ; i++) {
+            if(type[i]==1){
+                result=publishManagementMapper.deletePublishActivity(id[i]);
+                if(result==0)
+                    return result;
+            }
+            else
+                result=publishManagementMapper.deletePublishGroup(id[i]);
+                if(result==0)
+                    return result;
+        }
+        return result;
     }
 }

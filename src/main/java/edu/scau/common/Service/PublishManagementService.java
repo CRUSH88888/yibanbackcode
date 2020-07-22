@@ -11,4 +11,5 @@ import java.util.List;
  **/
 public interface PublishManagementService {
     public List<PublishManagement> getPublish(int userId);
+    public Integer deletePublish(int[] id, int[] type);
 }

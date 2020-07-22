@@ -3,6 +3,7 @@ package edu.scau.common.mapper;
 import edu.scau.common.dto.PublishManagement;
 import org.apache.ibatis.annotations.Mapper;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -14,5 +15,6 @@ import java.util.List;
 public interface PublishManagementMapper {
     List<PublishManagement> getPublishActivity(int userId);
     List<PublishManagement> getPublishGroup(int userId);
-   // Integer deletePublish(int activityId,int userId);
+    Integer deletePublishActivity(int id);
+    Integer deletePublishGroup(int id);
 }

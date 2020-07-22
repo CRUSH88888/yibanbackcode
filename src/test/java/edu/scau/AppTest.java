@@ -3,10 +3,12 @@ package edu.scau;
 import static org.junit.Assert.assertTrue;
 
 import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
+import edu.scau.common.Service.impl.GroupServiceImpl;
 import edu.scau.common.Service.impl.PublishManagementServiceImpl;
 import edu.scau.common.dto.PublishManagement;
 import edu.scau.common.mapper.PublishManagementMapper;
 import edu.scau.common.mapper.ScheduleMapper;
+import edu.scau.common.pojo.group;
 import edu.scau.common.utils.DateToStringUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -28,12 +30,10 @@ public class AppTest
      * Rigorous Test :-)
      */
     @Autowired
-    private PublishManagementServiceImpl publishManagementService;
+    private GroupServiceImpl groupService;
     @Test
     public void test(){
-        for (PublishManagement publish : publishManagementService.getPublish(1)) {
-            System.out.println(publish);
-        }
+        System.out.println(groupService.getGroup(1));
     }
 
     @Test

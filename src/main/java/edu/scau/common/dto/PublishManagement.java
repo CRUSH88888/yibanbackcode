@@ -15,8 +15,10 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 public class PublishManagement {
+    private int id;//活动id或者组队id
     private int userId;//发布者id
-    private String text;//互动标题或组队内容
+    private String text;// 活动标题或组队内容
     private Timestamp publishTime;//发布时间
     private String date;//发布时间至今
+    private int type;//活动为1 组队信息为2
 }
