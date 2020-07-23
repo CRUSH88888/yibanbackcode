@@ -7,12 +7,20 @@
         insert into `group`(activity_id, user_id, text, publish_time)
         values (#{activityId},#{userId},#{text},#{publishTime})
     </insert>
-    <select id="getGroups" resultType="edu.scau.common.pojo.group" parameterType="int">
-        select * from `group`
+    <select id="getGroups" resultMap="group" parameterType="int">
+        select id,activity_id,user_id,text,publish_time from `group`
         where activity_id=#{activityId}
     </select>
-    <select id="getGroup" resultType="edu.scau.common.pojo.group" parameterType="int">
-        select * from `group`
+    <resultMap id="group" type="edu.scau.common.pojo.group">
+        <result property="id" column="id"/>
+        <result property="activityId" column="activity_id"/>
+        <result property="userId" column="user_id"/>
+        <result property="text" column="text"/>
+        <result property="publishTime" column="publish_time"/>
+    </resultMap>
+
+    <select id="getGroup" resultMap="group" parameterType="int">
+        select id,activity_id,user_id,text,publish_time from `group`
         where id=#{id}
     </select>
 </mapper>

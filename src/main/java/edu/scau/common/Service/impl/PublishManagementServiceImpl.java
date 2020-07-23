@@ -24,7 +24,13 @@ public class PublishManagementServiceImpl implements PublishManagementService {
     @Override
     public List<PublishManagement> getPublish(int userId) {
         List<PublishManagement> publishActivity = publishManagementMapper.getPublishActivity(userId);
+        for (PublishManagement publishManagement : publishActivity) {
+            publishManagement.setType(1);
+        }
         List<PublishManagement> publishGroup = publishManagementMapper.getPublishGroup(userId);
+        for (PublishManagement publishManagement : publishGroup) {
+            publishManagement.setType(2);
+        }
         List<PublishManagement> publishManagements = new ArrayList<>();
         int i=0;
         int j=0;

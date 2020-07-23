@@ -30,11 +30,10 @@ public class GroupController {
      * @return
      */
     @PostMapping("insertGroups")
-    public ApiResponse insertGroups(@RequestParam(value = "id") int id,
-                                    @RequestParam(value = "activityId") int activityId,
+    public ApiResponse insertGroups(@RequestParam(value = "activityId") int activityId,
                                     @RequestParam(value = "userId") int userId,
                                     @RequestParam(value = "text") String text) {
-        group group = new group(id, activityId, userId, text);
+        group group = new group(activityId, userId, text);
         Integer result = groupService.insertGroups(group);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }

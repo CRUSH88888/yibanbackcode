@@ -40,7 +40,7 @@ public class AssociationController {
      */
     @GetMapping("/getAssociationByType")
     public ApiResponse getAssociationByType(String type){
-        List<Association> associationByType = associationService.getAssociationByType(type);
+        List<String> associationByType = associationService.getAssociationByType(type);
         return associationByType.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",associationByType);
     }
 
@@ -55,7 +55,7 @@ public class AssociationController {
     @PostMapping("/updateAssociation")
     public ApiResponse updateAssociation(@RequestParam("name") String name,
                                          @RequestParam("introduce") String introduce,
-                                         @RequestParam("href") String href,
+                                         @RequestParam(value = "href",required = false) String href,
                                          @RequestParam("type") String type){
         Association association = new Association(name, introduce, href, type);
         Integer result=associationService.updateAssociation(association);

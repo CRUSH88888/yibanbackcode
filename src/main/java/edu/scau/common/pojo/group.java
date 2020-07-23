@@ -17,7 +17,7 @@ public class group {        //组队
     private String text;//组队信息
     private Timestamp publishTime;//发布时间
     private String date;//发布时间到查询时 例：几分钟前
-    public group(int id, int activityId, int userId, String text) {
+    public group(int activityId, int userId, String text) {
         this.id = id;
         this.activityId = activityId;
         this.userId = userId;
