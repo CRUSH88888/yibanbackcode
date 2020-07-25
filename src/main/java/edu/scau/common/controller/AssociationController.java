@@ -23,17 +23,6 @@ public class AssociationController {
     private AssociationServiceImpl associationService;
 
     /**
-     * 根据名字查询社团组织
-     * @param associationName
-     * @return
-     */
-    @GetMapping("/getAssociationByType/getAssociationByName")
-    public ApiResponse getAssociationByName(String associationName){
-        Association associationByName = associationService.getAssociationByName(associationName);
-        return associationByName==null?new ApiResponse(0,"empty"):new ApiResponse(0,"success",associationByName);
-    }
-
-    /**
      * 根据类型查询社团组织
      * @param type
      * @return

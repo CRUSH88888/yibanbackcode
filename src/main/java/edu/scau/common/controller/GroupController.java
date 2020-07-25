@@ -49,14 +49,4 @@ public class GroupController {
         return groups.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",groups);
     }
 
-    /**
-     * 获取某个组队信息
-     * @param id
-     * @return
-     */
-    @GetMapping("getGroups/getGroup")
-    public ApiResponse getGroup(@RequestParam(value = "id") int id) {
-        group group = groupService.getGroup(id);
-        return group==null?new ApiResponse(0,"empty"):new ApiResponse(0,"success",group);
-    }
 }
