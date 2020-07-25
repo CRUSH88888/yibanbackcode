@@ -1,6 +1,7 @@
 package edu.scau.common.controller;
 
 import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
+import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.pojo.Activity;
 import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,7 +26,7 @@ public class ActivityCollectedController {
      */
     @GetMapping("/getCollectedActivity")
     public ApiResponse getCollectedActivity(@RequestParam("userId") int userId){
-        List<Activity> collectedActivity = activityCollectedService.getCollectedActivity(userId);
+        List<ActivityManger> collectedActivity = activityCollectedService.getCollectedActivity(userId);
         return collectedActivity.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",collectedActivity);
     }
 

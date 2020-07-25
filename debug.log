@@ -1,122 +1,100 @@
-2020-07-16 19:47:11.767  INFO 11004 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 11004 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 19:47:11.809  INFO 11004 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 19:47:13.352  INFO 11004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-07-16 19:47:13.352  INFO 11004 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-07-16 19:47:19.684  INFO 11004 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bae9f489] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 19:47:21.225  INFO 11004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 19:47:21.449  INFO 11004 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 19:47:21.449  INFO 11004 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 19:47:23.571  INFO 11004 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 19:47:23.572  INFO 11004 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 10219 ms
-2020-07-16 19:47:29.644  INFO 11004 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 19:47:29.645  INFO 11004 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 19:47:29.691  INFO 11004 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 19:47:30.588  INFO 11004 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 19:47:30.937  INFO 11004 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 19:47:30.959  INFO 11004 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 19:47:31.040  INFO 11004 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 19:47:31.229  INFO 11004 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 19:47:31.233  INFO 11004 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 21.334 seconds (JVM running for 27.515)
-2020-07-16 19:48:34.490  INFO 11004 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-16 19:48:34.491  INFO 11004 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-16 19:48:34.521  INFO 11004 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 30 ms
-2020-07-16 19:48:34.596  WARN 11004 --- [http-nio-8864-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
-2020-07-16 19:48:43.183  INFO 11004 --- [http-nio-8864-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-16 19:48:43.739 ERROR 11004 --- [http-nio-8864-exec-2] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed; nested exception is org.springframework.dao.DataIntegrityViolationException: Error attempting to get column 'type' from result set.  Cause: java.sql.SQLDataException: Cannot determine value type from string '组织'
-; Cannot determine value type from string '组织'; nested exception is java.sql.SQLDataException: Cannot determine value type from string '组织'] with root cause
+2020-07-22 20:35:37.644  INFO 26880 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 26880 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 20:35:37.700  INFO 26880 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 20:35:37.849  INFO 26880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 20:35:37.849  INFO 26880 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 20:35:40.205  INFO 26880 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f5ddf8ec] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:35:40.691  INFO 26880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 20:35:40.718  INFO 26880 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 20:35:40.719  INFO 26880 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 20:35:40.880  INFO 26880 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 20:35:40.881  INFO 26880 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3031 ms
+2020-07-22 20:35:42.071  INFO 26880 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 20:35:42.073  INFO 26880 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 20:35:42.096  INFO 26880 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 20:35:42.319  INFO 26880 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 20:35:42.621  INFO 26880 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 20:35:42.655  INFO 26880 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 20:35:42.701  INFO 26880 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 20:35:42.765  INFO 26880 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 20:35:42.769  INFO 26880 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 5.856 seconds (JVM running for 8.995)
+2020-07-22 20:39:55.043  INFO 16088 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 16088 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 20:39:55.054  INFO 16088 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 20:39:55.139  INFO 16088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 20:39:55.140  INFO 16088 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 20:39:57.362  INFO 16088 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4b7f3147] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:39:57.861  INFO 16088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 20:39:57.895  INFO 16088 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 20:39:57.895  INFO 16088 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 20:39:58.092  INFO 16088 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 20:39:58.093  INFO 16088 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2953 ms
+2020-07-22 20:39:59.321  INFO 16088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 20:39:59.323  INFO 16088 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 20:39:59.351  INFO 16088 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 20:39:59.596  INFO 16088 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 20:40:00.059  INFO 16088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 20:40:00.089  INFO 16088 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 20:40:00.157  INFO 16088 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 20:40:00.249  INFO 16088 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 20:40:00.253  INFO 16088 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 5.84 seconds (JVM running for 8.398)
+2020-07-22 20:41:12.080  INFO 16088 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 20:41:12.080  INFO 16088 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 20:41:12.128  INFO 16088 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 48 ms
+2020-07-22 20:41:12.386  INFO 16088 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 20:50:21.091  INFO 1332 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 1332 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 20:50:21.097  INFO 1332 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 20:50:21.231  INFO 1332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 20:50:21.232  INFO 1332 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 20:50:23.878  INFO 1332 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$bfcd95a0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 20:50:24.358  INFO 1332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 20:50:24.390  INFO 1332 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 20:50:24.391  INFO 1332 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 20:50:24.545  INFO 1332 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 20:50:24.545  INFO 1332 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3313 ms
+2020-07-22 20:50:25.719  INFO 1332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 20:50:25.721  INFO 1332 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 20:50:25.743  INFO 1332 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 20:50:25.980  INFO 1332 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 20:50:26.285  INFO 1332 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 20:50:26.318  INFO 1332 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 20:50:26.357  INFO 1332 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 20:50:26.463  INFO 1332 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 20:50:26.467  INFO 1332 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 6.378 seconds (JVM running for 9.493)
+2020-07-22 20:52:31.852  INFO 1332 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 20:52:31.852  INFO 1332 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 20:52:31.862  INFO 1332 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-22 20:52:31.968  INFO 1332 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 21:01:13.362  INFO 7044 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 7044 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 21:01:13.367  INFO 7044 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 21:01:13.439  INFO 7044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 21:01:13.439  INFO 7044 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 21:01:15.769  INFO 7044 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$1e454168] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 21:01:16.220  INFO 7044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 21:01:16.245  INFO 7044 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 21:01:16.246  INFO 7044 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 21:01:16.421  INFO 7044 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 21:01:16.422  INFO 7044 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2982 ms
+2020-07-22 21:01:17.418  INFO 7044 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 21:01:17.421  INFO 7044 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 21:01:17.447  INFO 7044 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 21:01:17.659  INFO 7044 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 21:01:17.984  INFO 7044 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 21:01:18.010  INFO 7044 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 21:01:18.053  INFO 7044 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 21:01:18.115  INFO 7044 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 21:01:18.120  INFO 7044 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 5.379 seconds (JVM running for 7.786)
+2020-07-22 21:02:24.157  INFO 7044 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 21:02:24.158  INFO 7044 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 21:02:24.170  INFO 7044 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 12 ms
+2020-07-22 21:02:24.216  WARN 7044 --- [http-nio-8864-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int[] parameter 'id[]' is not present]
+2020-07-22 21:02:49.006  WARN 7044 --- [http-nio-8864-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int[] parameter 'id[]' is not present]
+2020-07-22 21:03:36.686  WARN 7044 --- [http-nio-8864-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int[] parameter 'id[]' is not present]
+2020-07-22 21:07:14.626  WARN 7044 --- [http-nio-8864-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int[] parameter 'id[]' is not present]
+2020-07-22 21:07:21.654  INFO 7044 --- [http-nio-8864-exec-5] o.apache.coyote.http11.Http11Processor   : Error parsing HTTP request header
+ Note: further occurrences of HTTP request parsing errors will be logged at DEBUG level.
 
-com.mysql.cj.exceptions.DataConversionException: Cannot determine value type from string '组织'
-	at com.mysql.cj.result.AbstractNumericValueFactory.createFromBytes(AbstractNumericValueFactory.java:68) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.a.MysqlTextValueDecoder.decodeByteArray(MysqlTextValueDecoder.java:132) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.result.AbstractResultsetRow.decodeAndCreateReturnValue(AbstractResultsetRow.java:133) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.result.AbstractResultsetRow.getValueFromBytes(AbstractResultsetRow.java:241) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.protocol.a.result.TextBufferRow.getValue(TextBufferRow.java:132) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:805) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.mysql.cj.jdbc.result.ResultSetImpl.getInt(ResultSetImpl.java:825) ~[mysql-connector-java-8.0.16.jar:8.0.16]
-	at com.alibaba.druid.pool.DruidPooledResultSet.getInt(DruidPooledResultSet.java:293) ~[druid-1.1.15.jar:1.1.15]
-	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:37) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.type.IntegerTypeHandler.getNullableResult(IntegerTypeHandler.java:26) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.type.BaseTypeHandler.getResult(BaseTypeHandler.java:81) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.applyAutomaticMappings(DefaultResultSetHandler.java:521) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.getRowValue(DefaultResultSetHandler.java:402) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValuesForSimpleResultMap(DefaultResultSetHandler.java:354) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleRowValues(DefaultResultSetHandler.java:328) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSet(DefaultResultSetHandler.java:301) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.resultset.DefaultResultSetHandler.handleResultSets(DefaultResultSetHandler.java:194) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.statement.PreparedStatementHandler.query(PreparedStatementHandler.java:65) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.statement.RoutingStatementHandler.query(RoutingStatementHandler.java:79) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.SimpleExecutor.doQuery(SimpleExecutor.java:63) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.BaseExecutor.queryFromDatabase(BaseExecutor.java:324) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.BaseExecutor.query(BaseExecutor.java:156) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.executor.CachingExecutor.query(CachingExecutor.java:109) ~[mybatis-3.5.3.jar:3.5.3]
-	at com.github.pagehelper.PageInterceptor.intercept(PageInterceptor.java:108) ~[pagehelper-5.1.10.jar:na]
-	at org.apache.ibatis.plugin.Plugin.invoke(Plugin.java:61) ~[mybatis-3.5.3.jar:3.5.3]
-	at com.sun.proxy.$Proxy92.query(Unknown Source) ~[na:na]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:147) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectList(DefaultSqlSession.java:140) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.session.defaults.DefaultSqlSession.selectOne(DefaultSqlSession.java:76) ~[mybatis-3.5.3.jar:3.5.3]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_252]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_252]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_252]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_252]
-	at org.mybatis.spring.SqlSessionTemplate$SqlSessionInterceptor.invoke(SqlSessionTemplate.java:426) ~[mybatis-spring-2.0.3.jar:2.0.3]
-	at com.sun.proxy.$Proxy72.selectOne(Unknown Source) ~[na:na]
-	at org.mybatis.spring.SqlSessionTemplate.selectOne(SqlSessionTemplate.java:159) ~[mybatis-spring-2.0.3.jar:2.0.3]
-	at org.apache.ibatis.binding.MapperMethod.execute(MapperMethod.java:87) ~[mybatis-3.5.3.jar:3.5.3]
-	at org.apache.ibatis.binding.MapperProxy.invoke(MapperProxy.java:93) ~[mybatis-3.5.3.jar:3.5.3]
-	at com.sun.proxy.$Proxy78.getAssociationByName(Unknown Source) ~[na:na]
-	at edu.scau.common.Service.impl.AssociationServiceImpl.getAssociationByName(AssociationServiceImpl.java:22) ~[classes/:na]
-	at edu.scau.common.controller.AssociationController.getAssociationByName(AssociationController.java:32) ~[classes/:na]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:1.8.0_252]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[na:1.8.0_252]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:1.8.0_252]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[na:1.8.0_252]
-	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:897) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:634) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882) ~[spring-webmvc-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53) ~[tomcat-embed-websocket-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.CorsFilter.doFilterInternal(CorsFilter.java:96) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:109) ~[spring-web-5.1.8.RELEASE.jar:5.1.8.RELEASE]
-	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343) [tomcat-embed-core-9.0.21.jar:9.0.21]
-	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408) [tomcat-embed-core-9.0.21.jar:9.0.21]
+java.lang.IllegalArgumentException: Invalid character found in the request target. The valid characters are defined in RFC 7230 and RFC 3986
+	at org.apache.coyote.http11.Http11InputBuffer.parseRequestLine(Http11InputBuffer.java:468) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:294) ~[tomcat-embed-core-9.0.21.jar:9.0.21]
 	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66) [tomcat-embed-core-9.0.21.jar:9.0.21]
 	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:853) [tomcat-embed-core-9.0.21.jar:9.0.21]
 	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1587) [tomcat-embed-core-9.0.21.jar:9.0.21]
@@ -126,354 +104,218 @@ com.mysql.cj.exceptions.DataConversionException: Cannot determine value type fro
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.21.jar:9.0.21]
 	at java.lang.Thread.run(Thread.java:748) [na:1.8.0_252]
 
-2020-07-16 19:57:34.916  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 3504 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 19:57:34.927  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 19:57:34.998  INFO 3504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2020-07-16 19:57:34.999  INFO 3504 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2020-07-16 19:57:37.292  INFO 3504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c46bef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 19:57:37.832  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 19:57:37.864  INFO 3504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 19:57:37.865  INFO 3504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 19:57:38.028  INFO 3504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 19:57:38.028  INFO 3504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3029 ms
-2020-07-16 19:57:39.140  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 19:57:39.142  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 19:57:39.168  INFO 3504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 19:57:39.383  INFO 3504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 19:57:39.675  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 19:57:39.700  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 19:57:39.740  INFO 3504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 19:57:39.799  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 19:57:39.803  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 5.598 seconds (JVM running for 8.028)
-2020-07-16 19:57:56.782  INFO 3504 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2020-07-16 19:57:56.782  INFO 3504 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2020-07-16 19:57:56.796  INFO 3504 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 13 ms
-2020-07-16 19:57:56.914  INFO 3504 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
-2020-07-16 20:09:50.780  WARN 3504 --- [http-nio-8864-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
-2020-07-16 21:06:42.511  INFO 3504 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:06:42.530  INFO 3504 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
-2020-07-16 21:06:44.937  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 3504 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:06:44.938  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 21:06:46.683  INFO 3504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c46bef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:06:47.066  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 21:06:47.070  INFO 3504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 21:06:47.070  INFO 3504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 21:06:47.164  INFO 3504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 21:06:47.165  INFO 3504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2223 ms
-2020-07-16 21:06:48.190  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:06:48.191  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:06:48.198  INFO 3504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:06:48.302  INFO 3504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 21:06:48.414  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:06:48.416  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:06:48.422  INFO 3504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:06:48.454  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 21:06:48.455  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 3.741 seconds (JVM running for 4156.685)
-2020-07-16 21:06:48.458  INFO 3504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-07-16 21:06:52.880  INFO 28996 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 28996 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:06:52.882  INFO 28996 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:06:55.672  INFO 28996 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$22a8b3dc] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:06:58.641  INFO 28996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:06:58.655  INFO 28996 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:06:58.755  INFO 28996 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:07:00.378  INFO 28996 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:07:00.424  INFO 28996 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:07:00.501  INFO 28996 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:07:00.553  INFO 28996 --- [main] edu.scau.AppTest                         : Started AppTest in 8.39 seconds (JVM running for 9.989)
-2020-07-16 21:07:01.129  INFO 28996 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:07:24.225  INFO 29732 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 29732 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:07:24.227  INFO 29732 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:07:27.084  INFO 29732 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:07:28.911  INFO 29732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:07:28.926  INFO 29732 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:07:29.027  INFO 29732 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:07:30.450  INFO 29732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:07:30.513  INFO 29732 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:07:30.574  INFO 29732 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:07:30.613  INFO 29732 --- [main] edu.scau.AppTest                         : Started AppTest in 7.039 seconds (JVM running for 8.484)
-2020-07-16 21:07:30.927  INFO 29732 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:07:44.108  INFO 12164 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 12164 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:07:44.111  INFO 12164 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:07:46.963  INFO 12164 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:07:48.826  INFO 12164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:07:48.841  INFO 12164 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:07:48.928  INFO 12164 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:07:50.460  INFO 12164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:07:50.529  INFO 12164 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:07:50.580  INFO 12164 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:07:50.620  INFO 12164 --- [main] edu.scau.AppTest                         : Started AppTest in 7.163 seconds (JVM running for 8.689)
-2020-07-16 21:07:50.945  INFO 12164 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:08:10.921  INFO 7908 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 7908 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:08:10.923  INFO 7908 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:08:13.748  INFO 7908 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:08:15.504  INFO 7908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:08:15.521  INFO 7908 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:08:15.624  INFO 7908 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:08:17.097  INFO 7908 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:08:17.135  INFO 7908 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:08:17.185  INFO 7908 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:08:17.223  INFO 7908 --- [main] edu.scau.AppTest                         : Started AppTest in 6.973 seconds (JVM running for 8.324)
-2020-07-16 21:08:17.548  INFO 7908 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:08:34.287  INFO 22368 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 22368 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:08:34.289  INFO 22368 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:08:37.028  INFO 22368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:08:38.850  INFO 22368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:08:38.866  INFO 22368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:08:38.958  INFO 22368 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:08:40.445  INFO 22368 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:08:40.492  INFO 22368 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:08:40.568  INFO 22368 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:08:40.608  INFO 22368 --- [main] edu.scau.AppTest                         : Started AppTest in 7.018 seconds (JVM running for 8.436)
-2020-07-16 21:08:40.903  INFO 22368 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:09:28.247  INFO 24216 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 24216 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:09:28.249  INFO 24216 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:09:29.124  INFO 27564 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 27564 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:09:29.127  INFO 27564 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:09:33.341  INFO 24216 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f521c7d7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:09:33.492  INFO 27564 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ace086] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:09:37.207  INFO 27564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:09:37.234  INFO 27564 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:09:37.424  INFO 27564 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:09:38.082  INFO 24216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:09:38.165  INFO 24216 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:09:38.371  INFO 24216 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:09:41.449  INFO 27564 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:09:41.896  INFO 27564 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:09:42.009  INFO 27564 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:09:42.162  INFO 27564 --- [main] edu.scau.AppTest                         : Started AppTest in 14.22 seconds (JVM running for 16.543)
-2020-07-16 21:09:43.390  INFO 24216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:09:43.479  INFO 24216 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:09:43.581  INFO 24216 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:09:43.655  INFO 24216 --- [main] edu.scau.AppTest                         : Started AppTest in 16.391 seconds (JVM running for 20.384)
-2020-07-16 21:09:43.729  INFO 27564 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:09:44.052  INFO 24216 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:09:56.995  INFO 6064 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 6064 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:09:56.997  INFO 6064 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:09:59.739  INFO 6064 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:10:01.643  INFO 6064 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:10:01.662  INFO 6064 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:10:01.765  INFO 6064 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:10:03.310  INFO 6064 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:10:03.347  INFO 6064 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:10:03.401  INFO 6064 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:10:03.446  INFO 6064 --- [main] edu.scau.AppTest                         : Started AppTest in 7.086 seconds (JVM running for 8.499)
-2020-07-16 21:10:03.768  INFO 6064 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:10:59.213  INFO 3504 --- [Thread-23] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:11:00.493  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 3504 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:11:00.493  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 21:11:01.102  INFO 3504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c46bef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:11:01.333  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 21:11:01.335  INFO 3504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 21:11:01.335  INFO 3504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 21:11:01.381  INFO 3504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 21:11:01.381  INFO 3504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 886 ms
-2020-07-16 21:11:01.743  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:11:01.743  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:11:01.754  INFO 3504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:11:01.844  INFO 3504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 21:11:02.023  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:11:02.024  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:11:02.034  INFO 3504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:11:02.049  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 21:11:02.050  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 1.622 seconds (JVM running for 4410.28)
-2020-07-16 21:11:02.054  INFO 3504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-07-16 21:11:03.274  INFO 5300 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 5300 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:11:03.276  INFO 5300 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:11:05.847  INFO 5300 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b38a2296] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:11:07.535  INFO 5300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:11:07.548  INFO 5300 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:11:07.646  INFO 5300 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:11:09.037  INFO 5300 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:11:09.083  INFO 5300 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:11:09.136  INFO 5300 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:11:09.177  INFO 5300 --- [main] edu.scau.AppTest                         : Started AppTest in 6.536 seconds (JVM running for 7.912)
-2020-07-16 21:11:09.555  INFO 5300 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:12:23.883  INFO 25700 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 25700 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:12:23.886  INFO 25700 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:12:26.468  INFO 25700 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:12:28.223  INFO 25700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:12:28.240  INFO 25700 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:12:28.395  INFO 25700 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:12:29.973  INFO 25700 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:12:30.019  INFO 25700 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:12:30.076  INFO 25700 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:12:30.119  INFO 25700 --- [main] edu.scau.AppTest                         : Started AppTest in 6.864 seconds (JVM running for 8.239)
-2020-07-16 21:12:30.511  INFO 25700 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:12:44.377  INFO 6632 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 6632 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:12:44.379  INFO 6632 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:12:47.661  INFO 6632 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e1596b7a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:12:49.656  INFO 6632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:12:49.672  INFO 6632 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:12:49.778  INFO 6632 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:12:51.152  INFO 6632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:12:51.198  INFO 6632 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:12:51.253  INFO 6632 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:12:51.312  INFO 6632 --- [main] edu.scau.AppTest                         : Started AppTest in 7.653 seconds (JVM running for 9.029)
-2020-07-16 21:12:51.646  INFO 6632 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:13:47.413  INFO 29368 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 29368 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:13:47.415  INFO 29368 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:13:50.000  INFO 29368 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$54d1e103] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:13:51.715  INFO 29368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:13:51.730  INFO 29368 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:13:51.822  INFO 29368 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:13:53.240  INFO 29368 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:13:53.282  INFO 29368 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:13:53.350  INFO 29368 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:13:53.386  INFO 29368 --- [main] edu.scau.AppTest                         : Started AppTest in 6.673 seconds (JVM running for 7.888)
-2020-07-16 21:13:53.674  INFO 29368 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:14:10.255  INFO 8572 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 8572 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:14:10.256  INFO 8572 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:14:12.938  INFO 8572 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:14:14.747  INFO 8572 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:14:14.764  INFO 8572 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:14:14.866  INFO 8572 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:14:16.247  INFO 8572 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:14:16.291  INFO 8572 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:14:16.335  INFO 8572 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:14:16.369  INFO 8572 --- [main] edu.scau.AppTest                         : Started AppTest in 6.722 seconds (JVM running for 8.122)
-2020-07-16 21:14:16.673  INFO 8572 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:15:30.619  INFO 3504 --- [Thread-29] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:15:31.944  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 3504 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:15:31.945  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 21:15:32.577  INFO 3504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c46bef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:15:32.745  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 21:15:32.746  INFO 3504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 21:15:32.746  INFO 3504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 21:15:32.778  INFO 3504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 21:15:32.778  INFO 3504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 830 ms
-2020-07-16 21:15:33.020  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:15:33.021  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:15:33.030  INFO 3504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:15:33.098  INFO 3504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 21:15:33.195  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:15:33.196  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:15:33.201  INFO 3504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:15:33.250  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 21:15:33.251  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 1.367 seconds (JVM running for 4681.481)
-2020-07-16 21:15:33.253  INFO 3504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-07-16 21:15:36.317  INFO 18788 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 18788 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:15:36.319  INFO 18788 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:15:39.101  INFO 18788 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:15:40.862  INFO 18788 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:15:40.879  INFO 18788 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:15:40.971  INFO 18788 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:15:42.452  INFO 18788 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:15:42.495  INFO 18788 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:15:42.556  INFO 18788 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:15:42.598  INFO 18788 --- [main] edu.scau.AppTest                         : Started AppTest in 6.952 seconds (JVM running for 8.343)
-2020-07-16 21:15:42.975  INFO 18788 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:15:56.238  INFO 16812 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 16812 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:15:56.240  INFO 16812 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:15:59.175  INFO 16812 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:16:01.035  INFO 16812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:16:01.048  INFO 16812 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:16:01.146  INFO 16812 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:16:02.587  INFO 16812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:16:02.629  INFO 16812 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:16:02.684  INFO 16812 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:16:02.722  INFO 16812 --- [main] edu.scau.AppTest                         : Started AppTest in 7.066 seconds (JVM running for 8.331)
-2020-07-16 21:16:03.041  INFO 16812 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:16:16.453  INFO 9456 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 9456 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:16:16.455  INFO 9456 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:16:19.030  INFO 9456 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:16:20.763  INFO 9456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:16:20.782  INFO 9456 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:16:20.882  INFO 9456 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:16:22.228  INFO 9456 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:16:22.268  INFO 9456 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:16:22.324  INFO 9456 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:16:22.356  INFO 9456 --- [main] edu.scau.AppTest                         : Started AppTest in 6.521 seconds (JVM running for 7.918)
-2020-07-16 21:16:22.655  INFO 9456 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:16:31.878  INFO 12508 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 12508 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:16:31.880  INFO 12508 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:16:34.635  INFO 12508 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:16:36.628  INFO 12508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:16:36.650  INFO 12508 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:16:36.783  INFO 12508 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:16:38.175  INFO 12508 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:16:38.215  INFO 12508 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:16:38.267  INFO 12508 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:16:38.302  INFO 12508 --- [main] edu.scau.AppTest                         : Started AppTest in 7.055 seconds (JVM running for 8.684)
-2020-07-16 21:16:38.603  INFO 12508 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:16:50.866  INFO 19084 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 19084 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:16:50.868  INFO 19084 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:16:53.677  INFO 19084 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:16:55.414  INFO 19084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:16:55.428  INFO 19084 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:16:55.537  INFO 19084 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:16:57.078  INFO 19084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:16:57.118  INFO 19084 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:16:57.191  INFO 19084 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:16:57.248  INFO 19084 --- [main] edu.scau.AppTest                         : Started AppTest in 7.007 seconds (JVM running for 8.484)
-2020-07-16 21:16:57.570  INFO 19084 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:17:14.907  INFO 29468 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 29468 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:17:14.909  INFO 29468 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:17:17.542  INFO 29468 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:17:19.230  INFO 29468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:17:19.246  INFO 29468 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:17:19.343  INFO 29468 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:17:20.703  INFO 29468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:17:20.746  INFO 29468 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:17:20.797  INFO 29468 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:17:20.832  INFO 29468 --- [main] edu.scau.AppTest                         : Started AppTest in 6.583 seconds (JVM running for 7.936)
-2020-07-16 21:17:21.139  INFO 29468 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:36:39.135  INFO 3504 --- [Thread-35] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:36:40.152  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 3504 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:36:40.153  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 21:36:41.091  INFO 3504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c46bef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:36:41.232  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 21:36:41.233  INFO 3504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 21:36:41.233  INFO 3504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 21:36:41.269  INFO 3504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 21:36:41.269  INFO 3504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1114 ms
-2020-07-16 21:36:41.631  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:36:41.631  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:36:41.638  INFO 3504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:36:41.722  INFO 3504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 21:36:41.849  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:36:41.851  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:36:41.857  INFO 3504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:36:41.868  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 21:36:41.869  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 1.756 seconds (JVM running for 5950.099)
-2020-07-16 21:36:41.871  INFO 3504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-07-16 21:36:48.252  INFO 11108 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 11108 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:36:48.253  INFO 11108 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:36:50.983  INFO 11108 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5ace086] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:36:54.186  INFO 11108 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:36:54.195  INFO 11108 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:36:54.258  INFO 11108 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:36:55.556  INFO 11108 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:36:55.759  INFO 11108 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:36:55.820  INFO 11108 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:36:55.860  INFO 11108 --- [main] edu.scau.AppTest                         : Started AppTest in 8.076 seconds (JVM running for 9.667)
-2020-07-16 21:36:56.791  INFO 11108 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:37:59.080  INFO 3504 --- [Thread-41] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
-2020-07-16 21:37:59.984  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 3504 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:37:59.984  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
-2020-07-16 21:38:00.415  INFO 3504 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$5c46bef8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:38:00.576  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
-2020-07-16 21:38:00.577  INFO 3504 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2020-07-16 21:38:00.577  INFO 3504 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
-2020-07-16 21:38:00.607  INFO 3504 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2020-07-16 21:38:00.607  INFO 3504 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 621 ms
-2020-07-16 21:38:00.840  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:38:00.841  INFO 3504 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:38:00.853  INFO 3504 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:38:00.940  INFO 3504 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2020-07-16 21:38:01.083  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:38:01.084  INFO 3504 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:38:01.089  INFO 3504 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:38:01.099  INFO 3504 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
-2020-07-16 21:38:01.100  INFO 3504 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 1.142 seconds (JVM running for 6029.33)
-2020-07-16 21:38:01.103  INFO 3504 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
-2020-07-16 21:38:02.138  INFO 28144 --- [main] edu.scau.AppTest                         : Starting AppTest on LAPTOP-7RJ4E68N with PID 28144 (started by 14375 in D:\yiban\SNLN)
-2020-07-16 21:38:02.140  INFO 28144 --- [main] edu.scau.AppTest                         : No active profile set, falling back to default profiles: default
-2020-07-16 21:38:04.363  INFO 28144 --- [main] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$96a6d0fe] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2020-07-16 21:38:05.905  INFO 28144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
-2020-07-16 21:38:05.920  INFO 28144 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
-2020-07-16 21:38:06.017  INFO 28144 --- [main] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2020-07-16 21:38:07.064  INFO 28144 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
-2020-07-16 21:38:07.102  INFO 28144 --- [main] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
-2020-07-16 21:38:07.158  INFO 28144 --- [main] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
-2020-07-16 21:38:07.194  INFO 28144 --- [main] edu.scau.AppTest                         : Started AppTest in 5.547 seconds (JVM running for 6.622)
-2020-07-16 21:38:07.474  INFO 28144 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
+2020-07-22 21:14:48.474  WARN 7044 --- [http-nio-8864-exec-8] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int[] parameter 'type[]' is not present]
+2020-07-22 21:15:55.941  INFO 26336 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 26336 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 21:15:55.945  INFO 26336 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 21:15:56.008  INFO 26336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 21:15:56.009  INFO 26336 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 21:15:59.312  INFO 26336 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$835b35c5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 21:15:59.936  INFO 26336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 21:15:59.965  INFO 26336 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 21:15:59.966  INFO 26336 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 21:16:00.176  INFO 26336 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 21:16:00.176  INFO 26336 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 4167 ms
+2020-07-22 21:16:01.602  INFO 26336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 21:16:01.604  INFO 26336 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 21:16:01.628  INFO 26336 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 21:16:01.876  INFO 26336 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 21:16:02.206  INFO 26336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 21:16:02.227  INFO 26336 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 21:16:02.267  INFO 26336 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 21:16:02.323  INFO 26336 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 21:16:02.327  INFO 26336 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 7.039 seconds (JVM running for 9.48)
+2020-07-22 21:16:08.423  INFO 26336 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 21:16:08.423  INFO 26336 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 21:16:08.437  INFO 26336 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-07-22 21:16:08.781  INFO 26336 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 21:22:33.554  WARN 26336 --- [http-nio-8864-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.bind.MissingServletRequestParameterException: Required int parameter 'userId' is not present]
+2020-07-22 21:28:40.827  WARN 26336 --- [http-nio-8864-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-07-22 22:09:44.588 DEBUG 26968 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2020-07-22 22:09:44.723  INFO 26968 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 26968 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:09:44.725  INFO 26968 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:09:44.785  INFO 26968 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:09:44.786  INFO 26968 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:09:47.027  INFO 26968 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$4e4aa237] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:09:47.449  INFO 26968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:09:47.477  INFO 26968 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:09:47.478  INFO 26968 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:09:47.631  INFO 26968 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:09:47.631  INFO 26968 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2845 ms
+2020-07-22 22:09:48.681  INFO 26968 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:09:48.683  INFO 26968 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:09:48.703  INFO 26968 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:09:48.952  INFO 26968 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:09:49.263  INFO 26968 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:09:49.282  INFO 26968 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:09:49.312  INFO 26968 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:09:49.368  INFO 26968 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:09:49.372  INFO 26968 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 5.187 seconds (JVM running for 7.37)
+2020-07-22 22:09:59.547  INFO 26968 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:09:59.547  INFO 26968 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:09:59.556  INFO 26968 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-22 22:09:59.663  INFO 26968 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 22:12:25.239  WARN 26968 --- [http-nio-8864-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-07-22 22:22:50.324  INFO 21176 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 21176 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:22:50.329  INFO 21176 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:22:50.419  INFO 21176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:22:50.419  INFO 21176 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:22:52.680  INFO 21176 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$d095caa8] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:22:53.227  INFO 21176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:22:53.270  INFO 21176 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:22:53.271  INFO 21176 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:22:53.463  INFO 21176 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:22:53.464  INFO 21176 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 3044 ms
+2020-07-22 22:22:54.752  INFO 21176 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:22:54.754  INFO 21176 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:22:54.775  INFO 21176 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:22:54.987  INFO 21176 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:22:55.293  INFO 21176 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:22:55.317  INFO 21176 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:22:55.354  INFO 21176 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:22:55.406  INFO 21176 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:22:55.409  INFO 21176 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 5.722 seconds (JVM running for 8.285)
+2020-07-22 22:28:18.346  INFO 21176 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:28:18.346  INFO 21176 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:28:18.357  INFO 21176 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-07-22 22:28:18.453  INFO 21176 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 22:33:58.155 DEBUG 30140 --- [background-preinit] .h.v.m.ResourceBundleMessageInterpolator : Loaded expression factory via original TCCL
+2020-07-22 22:33:58.302  INFO 30140 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 30140 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:33:58.303  INFO 30140 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:33:58.365  INFO 30140 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:33:58.366  INFO 30140 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:34:00.157  INFO 30140 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$688b8a3e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:34:00.566  INFO 30140 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:34:00.590  INFO 30140 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:34:00.590  INFO 30140 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:34:00.724  INFO 30140 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:34:00.725  INFO 30140 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2358 ms
+2020-07-22 22:34:01.621  INFO 30140 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:34:01.623  INFO 30140 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:34:01.647  INFO 30140 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:34:01.881  INFO 30140 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:34:02.181  INFO 30140 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:34:02.200  INFO 30140 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:34:02.237  INFO 30140 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:34:02.289  INFO 30140 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:34:02.293  INFO 30140 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 4.523 seconds (JVM running for 6.98)
+2020-07-22 22:34:07.008  INFO 30140 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:34:07.008  INFO 30140 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:34:07.025  INFO 30140 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 17 ms
+2020-07-22 22:34:07.152  INFO 30140 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 22:40:08.020  INFO 26188 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 26188 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:40:08.023  INFO 26188 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:40:08.084  INFO 26188 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:40:08.084  INFO 26188 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:40:10.106  INFO 26188 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$cf59b344] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:40:10.504  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:40:10.535  INFO 26188 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:40:10.535  INFO 26188 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:40:10.685  INFO 26188 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:40:10.685  INFO 26188 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2600 ms
+2020-07-22 22:40:11.742  INFO 26188 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:40:11.744  INFO 26188 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:40:11.765  INFO 26188 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:40:12.001  INFO 26188 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:40:12.268  INFO 26188 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:40:12.288  INFO 26188 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:40:12.322  INFO 26188 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:40:12.376  INFO 26188 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:40:12.380  INFO 26188 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 4.873 seconds (JVM running for 7.234)
+2020-07-22 22:40:27.036  INFO 26188 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:40:27.036  INFO 26188 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:40:27.050  INFO 26188 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 14 ms
+2020-07-22 22:40:27.153  INFO 26188 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 22:45:59.271  INFO 23600 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 23600 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:45:59.278  INFO 23600 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:45:59.331  INFO 23600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:45:59.332  INFO 23600 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:46:00.850  INFO 23600 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$9246cbe0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:46:01.145  INFO 23600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:46:01.162  INFO 23600 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:46:01.163  INFO 23600 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:46:01.276  INFO 23600 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:46:01.277  INFO 23600 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1945 ms
+2020-07-22 22:46:02.059  INFO 23600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:46:02.060  INFO 23600 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:46:02.080  INFO 23600 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:46:02.241  INFO 23600 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:46:02.487  INFO 23600 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:46:02.502  INFO 23600 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:46:02.529  INFO 23600 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:46:02.571  INFO 23600 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:46:02.574  INFO 23600 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 3.731 seconds (JVM running for 5.68)
+2020-07-22 22:46:33.103  INFO 23600 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:46:33.103  INFO 23600 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:46:33.110  INFO 23600 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-07-22 22:46:33.136  WARN 23600 --- [http-nio-8864-exec-1] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'GET' not supported]
+2020-07-22 22:46:37.905  INFO 23600 --- [http-nio-8864-exec-2] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 22:49:12.959  WARN 23600 --- [http-nio-8864-exec-6] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-07-22 22:50:09.788  INFO 30116 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 30116 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:50:09.791  INFO 30116 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:50:09.848  INFO 30116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:50:09.848  INFO 30116 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:50:11.176  INFO 30116 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$8838668e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:50:11.485  INFO 30116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:50:11.506  INFO 30116 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:50:11.506  INFO 30116 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:50:11.626  INFO 30116 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:50:11.626  INFO 30116 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1777 ms
+2020-07-22 22:50:12.292  INFO 30116 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:50:12.293  INFO 30116 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:50:12.309  INFO 30116 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:50:12.463  INFO 30116 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:50:12.694  INFO 30116 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:50:12.709  INFO 30116 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:50:12.735  INFO 30116 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:50:12.773  INFO 30116 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:50:12.777  INFO 30116 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 3.452 seconds (JVM running for 5.322)
+2020-07-22 22:51:12.226  INFO 30116 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:51:12.227  INFO 30116 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:51:12.238  INFO 30116 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 11 ms
+2020-07-22 22:51:12.320  INFO 30116 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 22:52:33.221  INFO 16952 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 16952 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 22:52:33.225  INFO 16952 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 22:52:33.285  INFO 16952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 22:52:33.285  INFO 16952 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 22:52:34.984  INFO 16952 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$788996ce] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 22:52:35.345  INFO 16952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 22:52:35.370  INFO 16952 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 22:52:35.370  INFO 16952 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 22:52:35.490  INFO 16952 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 22:52:35.490  INFO 16952 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2205 ms
+2020-07-22 22:52:36.272  INFO 16952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 22:52:36.273  INFO 16952 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 22:52:36.294  INFO 16952 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 22:52:36.476  INFO 16952 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 22:52:36.744  INFO 16952 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 22:52:36.765  INFO 16952 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 22:52:36.795  INFO 16952 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 22:52:36.844  INFO 16952 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 22:52:36.846  INFO 16952 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 4.052 seconds (JVM running for 5.742)
+2020-07-22 22:52:49.872  INFO 16952 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 22:52:49.872  INFO 16952 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 22:52:49.880  INFO 16952 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 8 ms
+2020-07-22 22:52:49.986  INFO 16952 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-07-22 23:01:34.411  INFO 17000 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 17000 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-07-22 23:01:34.415  INFO 17000 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-07-22 23:01:34.465  INFO 17000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-07-22 23:01:34.465  INFO 17000 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-07-22 23:01:36.002  INFO 17000 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$213f5eb1] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-07-22 23:01:36.332  INFO 17000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-07-22 23:01:36.350  INFO 17000 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-07-22 23:01:36.351  INFO 17000 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-07-22 23:01:36.471  INFO 17000 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-07-22 23:01:36.471  INFO 17000 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2006 ms
+2020-07-22 23:01:37.210  INFO 17000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-07-22 23:01:37.212  INFO 17000 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-07-22 23:01:37.231  INFO 17000 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-07-22 23:01:37.402  INFO 17000 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-07-22 23:01:37.629  INFO 17000 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-07-22 23:01:37.643  INFO 17000 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-07-22 23:01:37.673  INFO 17000 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-07-22 23:01:37.718  INFO 17000 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-07-22 23:01:37.721  INFO 17000 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 3.73 seconds (JVM running for 5.742)
+2020-07-22 23:01:48.147  INFO 17000 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-07-22 23:01:48.147  INFO 17000 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-07-22 23:01:48.156  INFO 17000 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 9 ms
+2020-07-22 23:01:48.247  INFO 17000 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited

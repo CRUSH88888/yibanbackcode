@@ -1,6 +1,6 @@
 package edu.scau.common.mapper;
 
-import edu.scau.common.pojo.Activity;
+import edu.scau.common.dto.ActivityManger;
 import org.apache.ibatis.annotations.Mapper;
 
 import java.util.List;
@@ -11,7 +11,7 @@ import java.util.List;
  **/
 @Mapper
 public interface ActivityCollectedMapper {
-    List<Activity> getCollectedActivity(int userId);
+    List<ActivityManger> getCollectedActivity(int userId);
     Integer addActivity(int userId,int activityId);
     Integer deleteCollectedActivity(int userId,int activityId);
 }

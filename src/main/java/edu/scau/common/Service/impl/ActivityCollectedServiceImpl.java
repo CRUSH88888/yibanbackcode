@@ -1,8 +1,10 @@
 package edu.scau.common.Service.impl;
 
 import edu.scau.common.Service.ActivityCollectedService;
+import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.mapper.ActivityCollectedMapper;
 import edu.scau.common.pojo.Activity;
+import edu.scau.common.utils.DateToStringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,12 +16,16 @@ import java.util.List;
  **/
 @Service
 public class ActivityCollectedServiceImpl implements ActivityCollectedService {
-    @Autowired
+    @Autowired(required = false)
     private ActivityCollectedMapper activityCollectedMapper;
 
     @Override
-    public List<Activity> getCollectedActivity(int userId) {
-        return activityCollectedMapper.getCollectedActivity(userId);
+    public List<ActivityManger> getCollectedActivity(int userId) {
+        List<ActivityManger> collectedActivity = activityCollectedMapper.getCollectedActivity(userId);
+        for (ActivityManger activityManger : collectedActivity) {
+            activityManger.setDate(DateToStringUtil.publishTime(activityManger.getBuildTime()));
+        }
+        return collectedActivity;
     }
 
     @Override

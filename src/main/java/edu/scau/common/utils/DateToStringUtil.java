@@ -82,8 +82,7 @@ public class DateToStringUtil {
 //        1天内
         else if(time1-time>=3600&&time1-time<86400){
             long hour=(time1-time)/3600;
-            long minute=((time1-time)/60)%60;
-            return hour+"小时"+minute+"分钟前";
+            return hour+"小时前";
         }
 //        1个月内
         else if(time1-time>=86400&&time1-time<2592000){

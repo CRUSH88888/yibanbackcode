@@ -23,7 +23,7 @@ public class AssociationServiceImpl implements AssociationService {
     }
 
     @Override
-    public List<Association> getAssociationByType(String type) {
+    public List<String> getAssociationByType(String type) {
         return associationMapper.getAssociationByType(type);
     }
 
