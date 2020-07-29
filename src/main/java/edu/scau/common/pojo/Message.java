@@ -13,8 +13,13 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Message {
+    private int id;
     private int activityId;//活动id
     private int userId;//用户id
     private boolean browsed;//是否已看
     private String text;//留言内容
+    public Message(int activityId,String text){
+        this.activityId=activityId;
+        this.text=text;
+    }
 }
