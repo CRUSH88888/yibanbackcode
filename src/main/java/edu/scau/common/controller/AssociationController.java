@@ -23,6 +23,16 @@ public class AssociationController {
     private AssociationServiceImpl associationService;
 
     /**
+     * 查询具体的社团介绍
+     * @param id
+     * @return
+     */
+    @GetMapping("/getAssociationByType/getAssociationById")
+    public ApiResponse getAssociationById(@RequestParam("id") int id){
+        Association associationById = associationService.getAssociationById(id);
+        return associationById==null?new ApiResponse(0,"error"):new ApiResponse(0,"success",associationById);
+    }
+    /**
      * 根据类型查询社团组织
      * @param type
      * @return

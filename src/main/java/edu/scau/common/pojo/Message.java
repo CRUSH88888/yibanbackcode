@@ -17,9 +17,9 @@ public class Message {
     private int activityId;//活动id
     private int userId;//用户id
     private boolean browsed;//是否已看
-    private String text;//留言内容
-    public Message(int activityId,String text){
+    private String message;//留言内容
+    public Message(int activityId,String message){
         this.activityId=activityId;
-        this.text=text;
+        this.message=message;
     }
 }

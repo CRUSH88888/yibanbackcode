@@ -10,7 +10,7 @@ import java.util.List;
  * @create: 2020-07-15 15:23
  **/
 public interface AssociationService {
-    Association getAssociationByName(String associationName);
+    Association getAssociationById(int id);
     List<String> getAssociationByType(String type);
     Integer updateAssociation(Association association);
     Integer insertAssociation(Association association);

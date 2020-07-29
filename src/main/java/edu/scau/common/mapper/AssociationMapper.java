@@ -12,7 +12,7 @@ import java.util.List;
  **/
 @Mapper
 public interface AssociationMapper {
-    Association getAssociationByName(String associationName);
+    Association getAssociationById(int id);
     List<String> getAssociationByType(String type);
     Integer updateAssociation(Association association);
     Integer insertAssociation(Association association);

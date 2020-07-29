@@ -15,11 +15,12 @@ import java.util.List;
  **/
 @Service
 public class AssociationServiceImpl implements AssociationService {
-    @Autowired
+    @Autowired(required = false)
     private AssociationMapper associationMapper;
+
     @Override
-    public Association getAssociationByName(String associationName) {
-        return associationMapper.getAssociationByName(associationName);
+    public Association getAssociationById(int id) {
+        return associationMapper.getAssociationById(id);
     }
 
     @Override
