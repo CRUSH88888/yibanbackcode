@@ -1,5 +1,6 @@
 package edu.scau.common.Service;
 
+import edu.scau.common.dto.ActivityAndMessage;
 import edu.scau.common.pojo.Activity;
 
 /**
@@ -10,5 +11,7 @@ import edu.scau.common.pojo.Activity;
 public interface ActivityService {
 
     Integer InsertActivity(Activity activity);
+    ActivityAndMessage selectActivityById(Integer activityId,Integer userId);
+
 
 }

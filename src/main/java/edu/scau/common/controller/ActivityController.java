@@ -35,7 +35,6 @@ public class ActivityController {
 
 
     /**保存活动
-     * 这个接口写完了，但是因为tomcat的配置问题不能用，等cyf修改
      * 这里的保存图片只需要调用FileUtil的保存文件，返回文件在服务器上的路径
      * @param title
      * @param text
@@ -67,4 +66,12 @@ public class ActivityController {
         Integer result = activityService.InsertActivity(activity);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }
+
+    @PostMapping("/queryActivityById")
+    public ApiResponse queryActivityById(@RequestParam("activityId")Integer activityId,
+                                         @RequestParam("userId")Integer UserId){
+
+            return new ApiResponse(0,"success", activityService.selectActivityById(activityId,UserId));
+    }
+
 }

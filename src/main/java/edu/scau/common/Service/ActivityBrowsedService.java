@@ -12,6 +12,6 @@ import java.util.List;
 public interface ActivityBrowsedService {
 
 
-    List<IndexActivityStatus> selectActivityBrowsed();
+    List<IndexActivityStatus> selectActivityBrowsed(Integer userId);
 
 }

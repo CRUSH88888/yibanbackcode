@@ -28,7 +28,21 @@ public class Activity {    //活动
     二维码或其他照片的地址
      */
     private String picUrl;
+    private String dayToNow;
+    private Timestamp buildingTime;
 
+    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,String picUrl
+    ,Timestamp buildingTime) {
+        this.address = address;
+        this.title = title;
+        this.text = text;
+        this.userId = userId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.label = label;
+        this.picUrl = picUrl;
+        this.buildingTime = buildingTime;
+    }
     public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,String picUrl) {
         this.address = address;
         this.title = title;
@@ -38,14 +52,17 @@ public class Activity {    //活动
         this.endTime = endTime;
         this.label = label;
         this.picUrl = picUrl;
+
     }
 
-    public Activity(String address, String title, String text, Integer userId, List<String> label, String picUrl) {
+    public Activity(String address, String title, String text, Integer userId, List<String> label, String picUrl
+            ,Timestamp buildingTime) {
         this.address = address;
         this.title = title;
         this.text = text;
         this.userId = userId;
         this.label = label;
         this.picUrl = picUrl;
+        this.buildingTime = buildingTime;
     }
 }

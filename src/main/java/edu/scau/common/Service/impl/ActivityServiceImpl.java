@@ -1,8 +1,12 @@
 package edu.scau.common.Service.impl;
 
 import edu.scau.common.Service.ActivityService;
+import edu.scau.common.dto.ActivityAndMessage;
+import edu.scau.common.mapper.ActivityBrowsedMapper;
 import edu.scau.common.mapper.ActivityMapper;
 import edu.scau.common.pojo.Activity;
+import edu.scau.common.pojo.Label;
+import edu.scau.common.utils.LabelTransUtils;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +27,8 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Autowired
     private ActivityMapper activityMapper;
+    @Autowired
+    private ActivityBrowsedMapper activityBrowsedMapper;
 
     @Data
     @NoArgsConstructor
@@ -41,16 +47,26 @@ public class ActivityServiceImpl implements ActivityService {
     public Integer InsertActivity(Activity activity) {
         Integer activityId = activityMapper.insertActivity(activity);
         List<String> labels = activity.getLabel();
-
+        List<Integer> integerLabel = LabelTransUtils.StringToInteger(labels);
         Integer result  = 0;
-        for (String s:labels
+        for (Integer i:integerLabel
              ) {
-             result += activityMapper.insertLabelOfActivity(s,activityId);
+
+             result += activityMapper.insertLabelOfActivity(i,activityId);
 
         }
         return result==labels.size()?1:0;
 
 
 
+    }
+
+    @Override
+    public ActivityAndMessage selectActivityById(Integer activityId,Integer userId) {
+
+        List<Integer> labels= activityBrowsedMapper.selectLabels(activityId);
+        ActivityAndMessage activityAndMessage = activityMapper.selectActivityById(activityId,userId);
+        activityAndMessage.getActivity().setLabel(LabelTransUtils.integerToString(labels));
+        return activityAndMessage;
     }
 }

@@ -26,15 +26,6 @@ import java.util.List;
 @SpringBootTest
 public class AppTest 
 {
-    /**
-     * Rigorous Test :-)
-     */
-    @Autowired
-    private GroupServiceImpl groupService;
-    @Test
-    public void test(){
-        System.out.println(groupService.getGroup(1));
-    }
 
     @Test
     public void shouldAnswerWithTrue()
