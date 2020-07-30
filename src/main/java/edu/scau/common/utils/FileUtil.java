@@ -16,6 +16,11 @@ public class FileUtil {
 
     public static String saveFile(MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
+        String dirName = dev ;
+        File dir = new File(dirName);
+        if (!dir.exists()){
+            dir.mkdir();
+        }
         if (file.getOriginalFilename()==null)
         {
             return "null";

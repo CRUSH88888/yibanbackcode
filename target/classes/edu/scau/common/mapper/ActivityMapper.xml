@@ -3,7 +3,28 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ActivityMapper">
+    <resultMap id="ActivityMap" type="edu.scau.common.pojo.Activity">
+        <id property="id" column="id"/>
+        <result property="title" column="title"/>
+        <result column="text" property="text"/>
+        <result property="address" column="address"/>
+        <result property="picUrl" column="pic_url"/>
+        <result property="buildingTime" column="build_time"/>
+        <result property="endTime" column="end_time"/>
+        <result property="startTime" column="start_time"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
 
+    <resultMap id="ActivityAndMessage" type="edu.scau.common.dto.ActivityAndMessage">
+        <association property="activity" resultMap="ActivityMap"></association>
+        <association property="message" javaType="edu.scau.common.pojo.Message" >
+            <id column="id" property="id"/>
+            <result column="activity_id" property="activityId"/>
+            <result column="message" property="message"/>
+            <result column="browsed" property="browsed"/>
+            <result column="user_id" property="userId"/>
+        </association>
+    </resultMap>
 
 
     <insert id="insertActivity" parameterType="edu.scau.common.pojo.Activity" useGeneratedKeys="true" keyProperty="id">
@@ -14,9 +35,12 @@
         INSERT INTO activity_label (label_code,activity_id)
         VALUES
         (#{label},#{activityId})
-
-
     </insert>
+    <select id="selectActivityById" parameterType="integer" resultMap="ActivityAndMessage">
+        SELECT a.*,m.* from activite as a
+        INNER join activity_message as m on
+        (m.activity_id = a.id and m.user_id = #{userId} and a.id = #{activityId})
+    </select>
 
 
 

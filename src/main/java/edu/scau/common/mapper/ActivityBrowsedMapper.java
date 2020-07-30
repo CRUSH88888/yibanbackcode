@@ -12,5 +12,6 @@ import java.util.List;
  **/
 @Mapper
 public interface ActivityBrowsedMapper {
-    List<IndexActivityStatus> selectActivityBrowsed();
+    List<IndexActivityStatus> selectActivityBrowsed(Integer userId);
+    List<Integer> selectLabels(Integer activityId);
 }

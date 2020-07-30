@@ -3,6 +3,8 @@ package edu.scau.common.Service.impl;
 import edu.scau.common.Service.ActivityBrowsedService;
 import edu.scau.common.dto.IndexActivityStatus;
 import edu.scau.common.mapper.ActivityBrowsedMapper;
+import edu.scau.common.utils.DateToStringUtil;
+import edu.scau.common.utils.LabelTransUtils;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -21,7 +23,13 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
 
 
     @Override
-    public List<IndexActivityStatus> selectActivityBrowsed() {
-        return activityBrowsedMapper.selectActivityBrowsed();
+    public List<IndexActivityStatus> selectActivityBrowsed(Integer userId) {
+        List<IndexActivityStatus> statuses = activityBrowsedMapper.selectActivityBrowsed(userId);
+        for (IndexActivityStatus s:statuses
+             ) {
+            s.getActivity().setLabel(LabelTransUtils.integerToString(activityBrowsedMapper.selectLabels(s.getActivity().getId())));
+            s.getActivity().setDayToNow(DateToStringUtil.publishTime(s.getActivity().getBuildingTime()));
+        }
+        return statuses;
     }
 }

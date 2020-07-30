@@ -1,6 +1,10 @@
 server:
   # 服务端===,（最好安装linux版的,windows版的也行,windows版的下载redis的zip包解压后点击redis-server.exe即可）
-  port: 8800
+  port: 8864
+#  ssl:
+#    key-store: liveforjokes.icu.pfx
+#    key-store-password: XF7r4TLs
+
   connection-timeout: 18000000
 spring:
 #  redis:
@@ -10,7 +14,7 @@ spring:
   datasource:
     url: jdbc:mysql://8.129.172.254/yiban?characterEncoding=UTF-8&serverTimezone=GMT%2B8&useSSL=false&allowPublicKeyRetrieval=true
     username: root
-    password: 520Cyf1314!
+    password: 1234
     # Mysql新版本在驱动有改动，建议使用新版驱动配置
     driverClassName: com.mysql.cj.jdbc.Driver
     # 配置阿里的Druid数据源
@@ -43,6 +47,8 @@ spring:
     multipart:
       max-file-size: 1024MB
       max-request-size: 1024MB
+  jmx:
+    enabled: false
 #  http:
 #    multipart:
 #      max-file-size: 1024MB
@@ -77,5 +83,4 @@ mybatis-plus:
     default-statement-timeout: 3000
   # 别名
   type-aliases-package: edu.scau.common.mapper
-
 

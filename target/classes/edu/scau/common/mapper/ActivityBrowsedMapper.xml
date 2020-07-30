@@ -4,29 +4,27 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ActivityBrowsedMapper">
     <resultMap id="ActivityBrowsedMap" type="edu.scau.common.dto.IndexActivityStatus">
-        <result column="browsed" property="browsed" javaType="Boolean"/>
+        <result column="is_browsed" property="browsed" javaType="Boolean"/>
         <association property="activity" javaType="edu.scau.common.pojo.Activity" column="id">
             <id column="id" property="id"/>
+            <result column="address" property="address"/>
             <result column="title" property="title"/>
             <result column="text" property="text"/>
             <result column="user_id" property="userId"/>
             <result column="start_time" property="startTime"/>
             <result column="end_time" property="endTime"/>
-            <result column="pic_url" property="picUrl"/>
-            <result property="date" column="build_time"/>
-            <collection  property="label" ofType="java.lang.String">
-                <result column="label_code" javaType="java.lang.String"/>
-            </collection>
-
+            <result column="build_time" property="buildingTime"/>
+            <result column="pic_url" property="picUrl"></result>
         </association>
-
-
     </resultMap>
 
-    <select id="selectActivityBrowsed" resultMap="ActivityBrowsedMap">
-        SELECT a.*,b.*,al.label_code from activite as a
-			left join browsed as b on a.id = b.activity_id
-			left join activity_label as al on al.activity_id = a.id
+    <select id="selectActivityBrowsed" parameterType="integer" resultMap="ActivityBrowsedMap">
+        SELECT a.*,b.* from activite as a
+			left join browsed as b on (a.id = b.activity_id and b.user_id = #{userId})
+			order by build_time desc
+    </select>
+    <select id="selectLabels" parameterType="integer" resultType="integer">
+        select label_code from activity_label where activity_id = #{activityId}
     </select>
 
 

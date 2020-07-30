@@ -6,6 +6,7 @@ import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
@@ -26,8 +27,8 @@ public class ActivityBrowsedController {
      * @return
      */
     @GetMapping("/activity")
-    public ApiResponse queryIndexActivity(){
-        List<IndexActivityStatus> activityStatuses = activityBrowsedService.selectActivityBrowsed();
+    public ApiResponse queryIndexActivity(@RequestParam("userId")Integer userId){
+        List<IndexActivityStatus> activityStatuses = activityBrowsedService.selectActivityBrowsed(userId);
         return activityStatuses==null?new ApiResponse(-1,"Server Error"):new ApiResponse(0,"success",activityStatuses);
 
     }
