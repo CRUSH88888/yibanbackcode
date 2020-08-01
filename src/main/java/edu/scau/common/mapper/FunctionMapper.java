@@ -16,4 +16,7 @@ import java.util.List;
 public interface FunctionMapper {
     List<Information> getInformation(int userId);
     List<ActivityManger> getActivity();
+    Information getInformationById(int id);
+    Integer updateBrowsed(int id);
+    Integer insertInformation(Information information);
 }

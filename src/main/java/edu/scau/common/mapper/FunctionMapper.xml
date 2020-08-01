@@ -25,4 +25,17 @@
         <result column="browsed" property="browsed"/>
         <result column="publish_time" property="publishTime"/>
     </resultMap>
+    <select id="getInformationById" resultMap="information" parameterType="int">
+        select * from information
+        where id=#{id}
+    </select>
+    <update id="updateBrowsed" parameterType="int">
+        update information
+        set browsed=1
+        where id=#{id}
+    </update>
+    <insert id="insertInformation" parameterType="edu.scau.common.pojo.Information" useGeneratedKeys="true" keyProperty="id">
+        insert into information( browsed, user_id, information, publish_time)
+        VALUES (#{browsed},#{userId},#{information},#{publishTime})
+    </insert>
 </mapper>
