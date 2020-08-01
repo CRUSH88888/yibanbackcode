@@ -2,6 +2,7 @@ package edu.scau.common.Service.impl;
 
 import edu.scau.common.Service.PublishManagementService;
 import edu.scau.common.dto.PublishManagement;
+import edu.scau.common.mapper.ActivityCollectedMapper;
 import edu.scau.common.mapper.PublishManagementMapper;
 import edu.scau.common.utils.DateToStringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +22,8 @@ import java.util.List;
 public class PublishManagementServiceImpl implements PublishManagementService {
     @Autowired(required = false)
     private PublishManagementMapper publishManagementMapper;
+    @Autowired
+    private ActivityCollectedMapper activityCollectedMapper;
     @Override
     public List<PublishManagement> getPublish(int userId) {
         List<PublishManagement> publishActivity = publishManagementMapper.getPublishActivity(userId);
@@ -65,6 +68,7 @@ public class PublishManagementServiceImpl implements PublishManagementService {
         for (int i = 0; i <id.length ; i++) {
             if(type[i]==1){
                 result=publishManagementMapper.deletePublishActivity(id[i]);
+                activityCollectedMapper.deleteCollectedActivity(null,id[i]);
             }
             else
                 result=publishManagementMapper.deletePublishGroup(id[i]);

@@ -4,7 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ActivityCollectedMapper">
     <select id="getCollectedActivity" resultMap="activityManger" parameterType="int">
-        select a.id,a.title,a.build_time from user as u
+        select a.id,a.title,a.build_time from `user` as u
                     left join collection c on u.id = c.user_id
                     left join activite a on c.activity_id = a.id
         where u.id = #{userId}
@@ -18,7 +18,12 @@
         insert into collection(user_id, activity_id) value (#{userId},#{activityId})
     </insert>
     <delete id="deleteCollectedActivity" parameterType="int">
-        delete from collection where user_id=#{userId} and activity_id=#{activityId}
+        delete from collection
+        where 1=1
+        <if test="userId!=null">
+            and  user_id=#{userId}
+        </if>
+        and activity_id=#{activityId}
     </delete>
 
 
