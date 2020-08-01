@@ -21,4 +21,9 @@ public class Message {
       */
     private Boolean browsed;
     private Integer userId;
+
+    public Message(Integer activityId, String message) {
+        this.activityId = activityId;
+        this.message = message;
+    }
 }

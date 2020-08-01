@@ -24,12 +24,12 @@ public class AssociationController {
 
     /**
      * 根据名字查询社团组织
-     * @param associationName
+     * @param name
      * @return
      */
-    @GetMapping("/getAssociationByType/getAssociationByName")
-    public ApiResponse getAssociationByName(String associationName){
-        Association associationByName = associationService.getAssociationByName(associationName);
+        @GetMapping("/getAssociationByType/getAssociationByName")
+    public ApiResponse getAssociationByName(@RequestParam("name")String name){
+        Association associationByName = associationService.getAssociationByName(name);
         return associationByName==null?new ApiResponse(0,"empty"):new ApiResponse(0,"success",associationByName);
     }
 
@@ -39,7 +39,7 @@ public class AssociationController {
      * @return
      */
     @GetMapping("/getAssociationByType")
-    public ApiResponse getAssociationByType(String type){
+    public ApiResponse getAssociationByType(@RequestParam("type")String type){
         List<String> associationByType = associationService.getAssociationByType(type);
         return associationByType.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",associationByType);
     }
