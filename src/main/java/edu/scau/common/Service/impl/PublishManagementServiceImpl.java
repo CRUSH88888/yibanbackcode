@@ -65,13 +65,9 @@ public class PublishManagementServiceImpl implements PublishManagementService {
         for (int i = 0; i <id.length ; i++) {
             if(type[i]==1){
                 result=publishManagementMapper.deletePublishActivity(id[i]);
-                if(result==0)
-                    return result;
             }
             else
                 result=publishManagementMapper.deletePublishGroup(id[i]);
-                if(result==0)
-                    return result;
         }
         return result;
     }
