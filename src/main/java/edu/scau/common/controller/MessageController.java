@@ -32,17 +32,7 @@ public class MessageController {
         List<Message> message = messageService.getMessages(userId);
         return message.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",message);
     }
-
-    /**
-     * 获取具体留言并修改browsed
-     * @param id
-     * @return
-     */
-    @GetMapping("/getMessage")
-    public ApiResponse getMessage(@RequestParam("id") int id){
-        Message message = messageService.getMessage(id);
-        return message==null?new ApiResponse(-1,"error"):new ApiResponse(0,"success",message);
-    }
+    
     /**
      * 添加留言
      * @param activityId

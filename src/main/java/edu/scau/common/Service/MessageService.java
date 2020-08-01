@@ -12,5 +12,4 @@ import java.util.List;
 public interface MessageService {
     List<Message> getMessages(int userId);
     Integer insertMessage(Message message);
-    Message getMessage(int id);
 }

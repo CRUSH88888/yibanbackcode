@@ -13,9 +13,6 @@ import java.util.List;
 @Mapper
 public interface MessageMapper {
     List<Message> getMessages(int userId);
-    Message getMessage(int id);
     Integer insertMessage(Message message);
     List<Integer> getUserId(int activityId);
-    Integer updateMessage(int id);
-    Integer deleteMessage(int id);
 }

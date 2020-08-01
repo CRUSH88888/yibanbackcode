@@ -3,10 +3,12 @@ package edu.scau.common.Service.impl;
 import edu.scau.common.Service.MessageService;
 import edu.scau.common.mapper.MessageMapper;
 import edu.scau.common.pojo.Message;
+import edu.scau.common.utils.DateToStringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -20,7 +22,11 @@ public class MessageServiceImpl implements MessageService {
     private MessageMapper messageMapper;
     @Override
     public List<Message> getMessages(int userId) {
-        return messageMapper.getMessages(userId);
+        List<Message> messages = messageMapper.getMessages(userId);
+        for (Message message : messages) {
+            message.setDate(DateToStringUtil.publishTime(message.getPublishTime()));
+        }
+        return messages;
     }
 
     @Override
@@ -31,18 +37,10 @@ public class MessageServiceImpl implements MessageService {
         for (Integer integer : userId) {
             message.setUserId(integer);
             message.setBrowsed(false);
+            message.setPublishTime(new Timestamp(System.currentTimeMillis()));
             result = messageMapper.insertMessage(message);
         }
         return result;
     }
 
-    @Override
-    @Transactional
-    public Message getMessage(int id) {
-        Message message = messageMapper.getMessage(id);
-        if(!message.getBrowsed()){
-            messageMapper.updateMessage(id);
-        }
-        return message;
-    }
 }
