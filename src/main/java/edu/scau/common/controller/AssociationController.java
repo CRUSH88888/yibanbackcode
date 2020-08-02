@@ -27,7 +27,7 @@ public class AssociationController {
      * @param name
      * @return
      */
-        @GetMapping("/getAssociationByType/getAssociationByName")
+    @GetMapping("/getAssociationByType/getAssociationByName")
     public ApiResponse getAssociationByName(@RequestParam("name")String name){
         Association associationByName = associationService.getAssociationByName(name);
         return associationByName==null?new ApiResponse(0,"empty"):new ApiResponse(0,"success",associationByName);
