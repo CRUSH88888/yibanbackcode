@@ -8,6 +8,7 @@ import edu.scau.common.Service.impl.GroupServiceImpl;
 import edu.scau.common.Service.impl.PublishManagementServiceImpl;
 import edu.scau.common.dto.Function;
 import edu.scau.common.dto.PublishManagement;
+import edu.scau.common.mapper.BrowsedMapper;
 import edu.scau.common.mapper.FunctionMapper;
 import edu.scau.common.mapper.PublishManagementMapper;
 import edu.scau.common.mapper.ScheduleMapper;
@@ -37,6 +38,8 @@ public class AppTest
     private ActivityCollectedServiceImpl activityCollectedService;
     @Autowired
     private PublishManagementServiceImpl publishManagementService;
+    @Autowired
+    private BrowsedMapper browsedMapper;
     @Test
     public void test(){
         System.out.println(functionService.getFunction(1));
@@ -50,6 +53,10 @@ public class AppTest
         int[] id={2};
         int[] type={1};
         System.out.println(publishManagementService.deletePublish(id,type));
+    }
+    @Test
+    public void test4(){
+        System.out.println(browsedMapper.getFootPrint(1));
     }
     @Test
     public void shouldAnswerWithTrue()
