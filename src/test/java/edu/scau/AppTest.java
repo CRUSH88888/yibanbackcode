@@ -3,16 +3,15 @@ package edu.scau;
 import static org.junit.Assert.assertTrue;
 
 import com.mysql.cj.x.protobuf.MysqlxDatatypes;
-import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
-import edu.scau.common.Service.impl.FunctionServiceImpl;
-import edu.scau.common.Service.impl.GroupServiceImpl;
-import edu.scau.common.Service.impl.PublishManagementServiceImpl;
+import edu.scau.common.Service.impl.*;
+import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.dto.Function;
 import edu.scau.common.dto.PublishManagement;
 import edu.scau.common.mapper.*;
 import edu.scau.common.pojo.Association;
 import edu.scau.common.pojo.group;
 import edu.scau.common.utils.DateToStringUtil;
+import edu.scau.common.utils.StringCompareUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +41,7 @@ public class AppTest
     @Autowired
     private BrowsedMapper browsedMapper;
     @Autowired
-    private SearchMapper searchMapper;
+    private SearchServiceImpl searchService;
     @Test
     public void test(){
         System.out.println(functionService.getFunction(1));
@@ -71,14 +70,17 @@ public class AppTest
     }
     @Test
     public void test6(){
-        String s1="羽协";
-        char[] chars = s1.toCharArray();
-        List<String> strings = searchMapper.searchAssociation(chars);
-        System.out.println(strings);
+        List<ActivityManger> a = searchService.searchActivity("志愿");
+        System.out.println(a);
     }
     @Test
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
+    }
+    @Test
+    public void test7()
+    {
+        System.out.println(StringCompareUtil.StringCompare("fas","adasfbiuibiaxxxs"));
     }
 }
