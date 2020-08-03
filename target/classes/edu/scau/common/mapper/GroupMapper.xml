@@ -10,6 +10,7 @@
     <select id="getGroups" resultMap="group" parameterType="int">
         select id,activity_id,user_id,text,publish_time from `group`
         where activity_id=#{activityId}
+        order by publish_time desc
     </select>
     <resultMap id="group" type="edu.scau.common.pojo.group">
         <result property="id" column="id"/>

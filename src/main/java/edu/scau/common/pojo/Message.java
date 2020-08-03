@@ -4,6 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
+
 /**
  * @description:
  * @auther:cyf
@@ -21,4 +23,11 @@ public class Message {
       */
     private Boolean browsed;
     private Integer userId;
+    private Timestamp publishTime;
+    private String date;
+
+    public Message(Integer activityId, String message) {
+        this.activityId = activityId;
+        this.message = message;
+    }
 }
