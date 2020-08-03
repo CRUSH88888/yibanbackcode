@@ -27,9 +27,11 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
         List<IndexActivityStatus> statuses = activityBrowsedMapper.selectActivityBrowsed(userId);
         for (IndexActivityStatus s:statuses
              ) {
+            s.getActivity().setDate(DateToStringUtil.dateToString(s.getActivity().getStartTime(),s.getActivity().getEndTime()));
             s.getActivity().setLabel(LabelTransUtils.integerToString(activityBrowsedMapper.selectLabels(s.getActivity().getId())));
             s.getActivity().setDayToNow(DateToStringUtil.publishTime(s.getActivity().getBuildingTime()));
         }
+
         return statuses;
     }
 }

@@ -2,8 +2,10 @@ package edu.scau.common.mapper;
 
 import edu.scau.common.dto.ActivityAndMessage;
 import edu.scau.common.pojo.Activity;
+import edu.scau.common.pojo.Message;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.MySqlMapper;
 
 import java.util.List;
@@ -20,6 +22,8 @@ public interface ActivityMapper extends MySqlMapper<Activity> {
     Integer insertActivity(Activity activity);
     Integer insertLabelOfActivity(@Param("label") Integer label,@Param("activityId") Integer activityId);
 
-    ActivityAndMessage selectActivityById(@Param("activityId") Integer activityId,@Param("userId") Integer userId);
+    Activity selectActivityById(@Param("activityId") Integer activityId);
 
+//    @Select("select message from activity_message where activity_id = #{activityId} and user_id = #{userId}")
+    List<Message> selectMessage(@Param("activityId") Integer activityId, @Param("userId") Integer userId);
 }

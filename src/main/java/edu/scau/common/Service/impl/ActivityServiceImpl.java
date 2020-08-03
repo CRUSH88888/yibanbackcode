@@ -6,6 +6,8 @@ import edu.scau.common.mapper.ActivityBrowsedMapper;
 import edu.scau.common.mapper.ActivityMapper;
 import edu.scau.common.pojo.Activity;
 import edu.scau.common.pojo.Label;
+import edu.scau.common.pojo.Message;
+import edu.scau.common.utils.DateToStringUtil;
 import edu.scau.common.utils.LabelTransUtils;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -65,8 +67,16 @@ public class ActivityServiceImpl implements ActivityService {
     public ActivityAndMessage selectActivityById(Integer activityId,Integer userId) {
 
         List<Integer> labels= activityBrowsedMapper.selectLabels(activityId);
-        ActivityAndMessage activityAndMessage = activityMapper.selectActivityById(activityId,userId);
-        activityAndMessage.getActivity().setLabel(LabelTransUtils.integerToString(labels));
+        ActivityAndMessage activityAndMessage = new ActivityAndMessage();
+        Activity activity = activityMapper.selectActivityById(activityId);
+        activity.setLabel(LabelTransUtils.integerToString(labels));
+        activityAndMessage.setActivity(activity);
+        activityAndMessage.getActivity().setDate(DateToStringUtil.dateToString(activityAndMessage.getActivity().getStartTime(), activityAndMessage.getActivity().getEndTime()));
+        List<Message> messages = activityMapper.selectMessage(activityId,userId);
+        activityAndMessage.setMessage(messages);
+
+
+
         return activityAndMessage;
     }
 }

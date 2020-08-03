@@ -23,6 +23,7 @@ public class Activity {    //活动
     private Timestamp startTime;//活动开始时间
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
+    private String date;
     private List<String> label;//标签
     /*
     二维码或其他照片的地址

@@ -14,16 +14,21 @@
         <result property="startTime" column="start_time"/>
         <result property="userId" column="user_id"/>
     </resultMap>
+    <resultMap id="message" type="edu.scau.common.pojo.Message">
+        <id column="id" property="id"/>
+        <result column="activity_id" property="activityId"/>
+        <result column="browsed" property="browsed"/>
+        <result column="user_id" property="userId"/>
+        <result column="message" property="message"/>
+    </resultMap>
 
     <resultMap id="ActivityAndMessage" type="edu.scau.common.dto.ActivityAndMessage">
         <association property="activity" resultMap="ActivityMap"></association>
-        <association property="message" javaType="edu.scau.common.pojo.Message" >
-            <id column="id" property="id"/>
-            <result column="activity_id" property="activityId"/>
-            <result column="message" property="message"/>
-            <result column="browsed" property="browsed"/>
-            <result column="user_id" property="userId"/>
-        </association>
+        <collection property="message" resultMap="message" javaType="arraylist" ofType="edu.scau.common.pojo.Message">
+
+        </collection>
+<!--        <association property="message" javaType="edu.scau.common.pojo.Message" resultMap="message">-->
+<!--        </association>-->
     </resultMap>
 
 
@@ -36,10 +41,12 @@
         VALUES
         (#{label},#{activityId})
     </insert>
-    <select id="selectActivityById" parameterType="integer" resultMap="ActivityAndMessage">
-        SELECT a.*,m.* from activite as a
-        INNER join activity_message as m on
-        (m.activity_id = a.id and m.user_id = #{userId} and a.id = #{activityId})
+    <select id="selectActivityById" parameterType="integer" resultMap="ActivityMap">
+
+    select * from activite where id = #{activityId}
+    </select>
+    <select id="selectMessage" resultMap="message" parameterType="integer">
+        select * from activity_message where user_id = #{userId} and activity_id = #{activityId}
     </select>
 
 

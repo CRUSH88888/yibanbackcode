@@ -4,6 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import javax.persistence.Transient;
+import java.util.List;
+
 /**
  * @description:
  * @auther:cyf
@@ -15,6 +18,7 @@ import lombok.NoArgsConstructor;
 public class Message {
     private Integer id;
     private Integer activityId;
+
     private String message;
     /**
      * 浏览
