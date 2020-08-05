@@ -5,7 +5,7 @@
 <mapper namespace="edu.scau.common.mapper.AssociationMapper">
 
     <select id="getAssociationByName" resultType="edu.scau.common.pojo.Association" parameterType="String">
-        select * from association where name=#{associationName}
+        select * from association where `name`=#{associationName}
     </select>
     <select id="getAssociationByType" resultType="String" parameterType="String">
         select `name` from association where type=#{type}

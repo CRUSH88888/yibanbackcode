@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.MessageMapper">
+    <select id="getMessages" resultMap="message" parameterType="int">
+        select * from activity_message
+        where user_id=#{userId}
+    </select>
+    <resultMap id="message" type="edu.scau.common.pojo.Message">
+        <result column="id" property="id"/>
+        <result column="activity_id" property="activityId"/>
+        <result column="message" property="message"/>
+        <result column="user_id" property="userId"/>
+        <result column="browsed" property="browsed"/>
+        <result column="publish_time" property="publishTime"/>
+    </resultMap>
+    <insert id="insertMessage" parameterType="edu.scau.common.pojo.Message" useGeneratedKeys="true" keyProperty="id">
+        insert into activity_message(activity_id, browsed, user_id, message, publish_time)
+        VALUES (#{activityId},#{browsed},#{userId},#{message},#{publishTime})
+    </insert>
+    <select id="getUserId" resultType="Integer" parameterType="int">
+        select user_id from collection where activity_id=#{activityId}
+    </select>
+</mapper>

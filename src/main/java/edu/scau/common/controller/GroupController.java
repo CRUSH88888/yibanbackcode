@@ -46,17 +46,17 @@ public class GroupController {
     @GetMapping("getGroups")
     public ApiResponse getGroups(@RequestParam(value = "activityId") int activityId) {
         List<group> groups = groupService.getGroups(activityId);
-        return groups.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",groups);
+        return groups.isEmpty()==true?new ApiResponse(-1,"empty"):new ApiResponse(0,"success",groups);
     }
 
     /**
-     * 获取某个组队信息
+     *
      * @param id
      * @return
      */
-    @GetMapping("getGroups/getGroup")
-    public ApiResponse getGroup(@RequestParam(value = "id") int id) {
+    @GetMapping("getGroup")
+    public ApiResponse getGroup(@RequestParam("id") int id){
         group group = groupService.getGroup(id);
-        return group==null?new ApiResponse(0,"empty"):new ApiResponse(0,"success",group);
+        return group==null?new ApiResponse(-1,"error"):new ApiResponse(0,"success",group);
     }
 }

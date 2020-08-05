@@ -4,6 +4,7 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ActivityBrowsedMapper">
     <resultMap id="ActivityBrowsedMap" type="edu.scau.common.dto.IndexActivityStatus">
+        <id property="id" column="id" ></id>
         <result column="is_browsed" property="browsed" javaType="Boolean"/>
         <association property="activity" javaType="edu.scau.common.pojo.Activity" column="id">
             <id column="id" property="id"/>
@@ -14,7 +15,7 @@
             <result column="start_time" property="startTime"/>
             <result column="end_time" property="endTime"/>
             <result column="build_time" property="buildingTime"/>
-            <result column="pic_url" property="picUrl"></result>
+
         </association>
     </resultMap>
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.SearchMapper">
+    <select id="searchAssociation" resultType="String">
+        select `name` from association
+        where `name` like concat
+        <foreach collection="search" item="name" open="(" close=")" separator=",">
+            trim('%${name}%')
+        </foreach>
+    </select>
+</mapper>

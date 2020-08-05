@@ -4,8 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
 import javax.persistence.Transient;
 import java.util.List;
+
+import java.sql.Timestamp;
+
 
 /**
  * @description:
@@ -25,4 +29,11 @@ public class Message {
       */
     private Boolean browsed;
     private Integer userId;
+    private Timestamp publishTime;
+    private String date;
+
+    public Message(Integer activityId, String message) {
+        this.activityId = activityId;
+        this.message = message;
+    }
 }
