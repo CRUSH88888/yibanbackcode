@@ -4,7 +4,12 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+
+import javax.persistence.Transient;
+import java.util.List;
+
 import java.sql.Timestamp;
+
 
 /**
  * @description:
@@ -17,6 +22,7 @@ import java.sql.Timestamp;
 public class Message {
     private Integer id;
     private Integer activityId;
+
     private String message;
     /**
      * 浏览

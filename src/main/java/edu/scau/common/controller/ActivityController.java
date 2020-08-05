@@ -2,6 +2,7 @@ package edu.scau.common.controller;
 
 import edu.scau.common.Service.ActivityService;
 import edu.scau.common.pojo.Activity;
+import edu.scau.common.pojo.ActivityPicture;
 import edu.scau.common.utils.ApiResponse;
 import edu.scau.common.utils.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -52,9 +53,16 @@ public class ActivityController {
                                     @RequestParam(value = "startTime",required = false) String startTime,
                                     @RequestParam(value ="endTime" ,required = false)String endTime,
                                     @RequestParam(value ="label[]",required = false)String[] label,
-                                    @RequestParam(value ="picture",required = false)MultipartFile picture) throws IOException, ParseException {
-        String picUrl = "http://8.129.172.254:8080/images/春节finally.jpg";
-//                FileUtil.saveFile(picture);
+                                    @RequestParam(value ="picture",required = false)MultipartFile[] picture) throws IOException, ParseException {
+                List<ActivityPicture> picUrl = new ArrayList<>();
+        for (MultipartFile m:picture
+             ) {
+
+            picUrl.add(new ActivityPicture(FileUtil.saveFile(m)));
+        }
+
+
+
         List<String> labelList = new ArrayList<>();
 
         for (String s:label

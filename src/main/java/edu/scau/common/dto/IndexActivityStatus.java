@@ -14,6 +14,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class IndexActivityStatus {
+    Integer id;
     /*
     首页的某个活动
      */

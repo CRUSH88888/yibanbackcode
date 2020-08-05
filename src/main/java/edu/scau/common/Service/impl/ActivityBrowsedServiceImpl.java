@@ -3,6 +3,8 @@ package edu.scau.common.Service.impl;
 import edu.scau.common.Service.ActivityBrowsedService;
 import edu.scau.common.dto.IndexActivityStatus;
 import edu.scau.common.mapper.ActivityBrowsedMapper;
+import edu.scau.common.mapper.ActivityMapper;
+import edu.scau.common.pojo.ActivityPicture;
 import edu.scau.common.utils.DateToStringUtil;
 import edu.scau.common.utils.LabelTransUtils;
 import org.apache.ibatis.annotations.Mapper;
@@ -20,16 +22,22 @@ import java.util.List;
 public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
     @Autowired
     private ActivityBrowsedMapper activityBrowsedMapper;
-
+    @Autowired
+    private ActivityMapper activityMapper;
 
     @Override
     public List<IndexActivityStatus> selectActivityBrowsed(Integer userId) {
         List<IndexActivityStatus> statuses = activityBrowsedMapper.selectActivityBrowsed(userId);
+
         for (IndexActivityStatus s:statuses
              ) {
+            List<ActivityPicture> pictures =activityMapper.selectPicture(s.getActivity().getId());
+            s.getActivity().setPicUrl(pictures);
+            s.getActivity().setDate(DateToStringUtil.dateToString(s.getActivity().getStartTime(),s.getActivity().getEndTime()));
             s.getActivity().setLabel(LabelTransUtils.integerToString(activityBrowsedMapper.selectLabels(s.getActivity().getId())));
             s.getActivity().setDayToNow(DateToStringUtil.publishTime(s.getActivity().getBuildingTime()));
         }
+
         return statuses;
     }
 }
