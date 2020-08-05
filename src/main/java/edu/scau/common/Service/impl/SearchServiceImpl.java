@@ -30,15 +30,16 @@ public class SearchServiceImpl implements SearchService {
 
     @Override
     public List<ActivityManger> searchActivity(String search) {
-        char[] chars = search.toCharArray();
-        List<ActivityManger> activityMangers1 = searchMapper.searchActivity(chars);
-        List<Integer> labels = StringCompareUtil.labelCode(search);
-        for (Integer label : labels) {
-            activityMangers1= ListMerge.listMerge(activityMangers1,searchMapper.searchActivity2(label));
-        }
-        for (ActivityManger activityManger : activityMangers1) {
-            activityManger.setDate(DateToStringUtil.publishTime(activityManger.getBuildTime()));
-        }
-        return activityMangers1;
+//        char[] chars = search.toCharArray();
+//        List<ActivityManger> activityMangers1 = searchMapper.searchActivity(chars);
+//        List<Integer> labels = StringCompareUtil.labelCode(search);
+//        for (Integer label : labels) {
+//            activityMangers1= ListMerge.listMerge(activityMangers1,searchMapper.searchActivity2(label));
+//        }
+//        for (ActivityManger activityManger : activityMangers1) {
+//            activityManger.setDate(DateToStringUtil.publishTime(activityManger.getBuildTime()));
+//        }
+//        return activityMangers1;
+        return null;
     }
 }

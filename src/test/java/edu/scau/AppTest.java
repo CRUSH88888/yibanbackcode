@@ -31,47 +31,11 @@ import java.util.List;
 public class AppTest 
 {
     @Autowired
-    private FunctionServiceImpl functionService;
-    @Autowired
-    private FunctionMapper function;
-    @Autowired
-    private ActivityCollectedServiceImpl activityCollectedService;
-    @Autowired
-    private PublishManagementServiceImpl publishManagementService;
-    @Autowired
-    private BrowsedMapper browsedMapper;
-    @Autowired
-    private SearchServiceImpl searchService;
+    private ScheduleMapper scheduleMapper;
     @Test
-    public void test(){
-        System.out.println(functionService.getFunction(1));
-    }
-    @Test
-    public void test1(){
-        System.out.println(activityCollectedService.getCollectedActivity(1));
-    }
-    @Test
-    public void test3(){
-        int[] id={2};
-        int[] type={1};
-        System.out.println(publishManagementService.deletePublish(id,type));
-    }
-    @Test
-    public void test4(){
-        System.out.println(browsedMapper.getFootPrint(1));
-    }
-    @Test
-    public void test5(){
-        String s="是的按时打算";
-        char[] chars = s.toCharArray();
-        for (char aChar : chars) {
-            System.out.println(aChar+" ");
-        }
-    }
-    @Test
-    public void test6(){
-        List<ActivityManger> a = searchService.searchActivity("志愿");
-        System.out.println(a);
+    public void Test()
+    {
+        System.out.println(scheduleMapper.getSchedule(1));
     }
     @Test
     public void shouldAnswerWithTrue()
@@ -79,8 +43,10 @@ public class AppTest
         assertTrue( true );
     }
     @Test
-    public void test7()
+    public void Test1()
     {
-        System.out.println(StringCompareUtil.StringCompare("fas","adasfbiuibiaxxxs"));
+        String s="aaaasddads";
+        String ch="sda";
+        System.out.println(s.indexOf(ch));
     }
 }

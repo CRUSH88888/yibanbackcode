@@ -15,6 +15,13 @@ public class DateToStringUtil {
      * @return
      */
     public static String dateToString(Timestamp startTime,Timestamp endTime){
+          if(endTime==null){
+              if(endTime.getMinutes()==0&&endTime.getHours()==0)
+                  return toString(endTime,"month");
+              else
+                  return toString(endTime,"month")+" "+toString(endTime,"hour");
+
+          }
 //        年份不同 显示：yyyy年mm月dd日
             if(startTime.getYear()!=endTime.getYear()){
                 return toString(startTime,"year")+"-"+toString(endTime,"year");

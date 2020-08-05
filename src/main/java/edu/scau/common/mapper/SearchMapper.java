@@ -1,6 +1,6 @@
 package edu.scau.common.mapper;
 
-import edu.scau.common.dto.ActivityManger;
+import edu.scau.common.dto.ActivitySearch;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
@@ -15,6 +15,7 @@ import java.util.List;
 @Mapper
 public interface SearchMapper{
     List<String> searchAssociation(@Param("search")char[] search);
-    List<ActivityManger> searchActivity(@Param("search")char[] search);
-    List<ActivityManger> searchActivity2(int label);
+    List<ActivitySearch> searchActivityByTitle(@Param("search")char[] search);
+    List<ActivitySearch> searchActivityByLabel(int label);
+    List<ActivitySearch> searchActivityByText(@Param("search")char[] search);
 }

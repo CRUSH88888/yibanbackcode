@@ -18,7 +18,7 @@ import java.util.List;
  **/
 @Service
 public class ScheduleServiceImpl implements ScheduleService {
-    @Autowired(required = false)
+    @Autowired
     private ScheduleMapper scheduleMapper;
 
     @Override

@@ -1,5 +1,6 @@
 package edu.scau.common.utils;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,17 @@ import java.util.List;
  * @create: 2020-08-03 20:18
  **/
 public class StringCompareUtil {
+    public static List<String> TextCompare(String search,String text){
+        int i = text.indexOf(search);
+        int length = search.length();
+        if(length>15){
+            return null;
+        }
+        int lengthBefore=(15-length)/2;
+        int lengthAfter;
+        ArrayList<String> strings = new ArrayList<>();
+        return strings;
+    }
     public static List<Integer> labelCode(String search){
         List<Integer>  a= new ArrayList<>();
         if(StringCompare(search,"宣讲会")){
