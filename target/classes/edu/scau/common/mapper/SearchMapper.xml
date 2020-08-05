@@ -10,4 +10,23 @@
             trim('%${name}%')
         </foreach>
     </select>
+    <resultMap id="activityManger" type="edu.scau.common.dto.ActivityManger">
+        <result column="id" property="id"/>
+        <result column="title" property="title"/>
+        <result column="build_time" property="buildTime"/>
+    </resultMap>
+    <select id="searchActivity" resultMap="activityManger" >
+        select  id,title,build_time from activite
+        where title like concat
+        <foreach collection="search" item="name" open="(" close=")" separator=",">
+            trim('%${name}%')
+        </foreach>
+        order by build_time desc
+    </select>
+    <select id="searchActivity2" parameterType="int" resultMap="activityManger">
+        select a.id,a.title,a.build_time from activity_label as l
+        left join activite as a on l.activity_id=a.id
+        where l.label_code=#{label}
+        order by build_time desc
+    </select>
 </mapper>
