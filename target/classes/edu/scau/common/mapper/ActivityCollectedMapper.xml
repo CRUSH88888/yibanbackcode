@@ -14,7 +14,7 @@
         <result column="title" property="title"/>
         <result column="build_time" property="buildTime"/>
     </resultMap>
-    <insert id="addActivity" parameterType="int">
+    <insert id="addActivity">
         insert into collection(user_id, activity_id) value (#{userId},#{activityId})
     </insert>
     <delete id="deleteCollectedActivity" parameterType="int">

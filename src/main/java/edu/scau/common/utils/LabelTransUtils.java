@@ -15,36 +15,36 @@ public class LabelTransUtils {
              ) {
             switch (i){
                 case (1):{
-                    stringLabels.add("propagandaConference");break;
+                    stringLabels.add("宣讲会");break;
                 }
                 case (2):{
-                    stringLabels.add("match");break;
+                    stringLabels.add("比赛");break;
                 }
                 case (3):{
-                    stringLabels.add("volunteerActivities");break;
+                    stringLabels.add("志愿活动");break;
                 }
                 case (4):{
-                    stringLabels.add("lecture");break;
+                    stringLabels.add("讲座");break;
                 }
                 case (5):{
-                    stringLabels.add("movieFestival");break;
+                    stringLabels.add("电影节");break;
                 }
                 case (6):{
-                    stringLabels.add("amusementActivity");break;
+                    stringLabels.add("娱乐活动");break;
                 }
                 case (7):{
-                    stringLabels.add("universityLevel");break;
+                    stringLabels.add("校级");break;
                 }
                 case (8):{
-                    stringLabels.add("collegeLevel");break;
+                    stringLabels.add("院级");break;
                 }
                 case (9):{
-                    stringLabels.add("extraPints");break;
+                    stringLabels.add("综测加分");break;
                 }case (10):{
-                    stringLabels.add("volunteerTime");break;
+                    stringLabels.add("志愿时");break;
                 }
                 case (11):{
-                    stringLabels.add("other");break;
+                    stringLabels.add("其它");break;
                 }
             }
         }
@@ -56,37 +56,37 @@ public class LabelTransUtils {
         for (String s:stringLabel
         ) {
             switch (s){
-                case ("propagandaConference"):{
+                case ("宣讲会"):{
                     integerLabels.add(1);
                     break;
                 }
-                case ("match"):{
+                case ("比赛"):{
                     integerLabels.add(2);break;
                 }
-                case ("volunteerActivities"):{
+                case ("志愿活动"):{
                     integerLabels.add(3);break;
                 }
-                case ("lecture"):{
+                case ("讲座"):{
                     integerLabels.add(4);break;
                 }
-                case ("movieFestival"):{
+                case ("电影节"):{
                     integerLabels.add(5);break;
                 }
-                case ("amusementActivity"):{
+                case ("娱乐活动"):{
                     integerLabels.add(6);break;
                 }
-                case ("universityLevel"):{
+                case ("校级"):{
                     integerLabels.add(7);break;
                 }
-                case ("collegeLevel"):{
+                case ("院级"):{
                     integerLabels.add(8);break;
                 }
-                case ("extraPints"):{
+                case ("综测加分"):{
                     integerLabels.add(9);break;
-                }case ("volunteerTime"):{
+                }case ("志愿时"):{
                     integerLabels.add(10);break;
                 }
-                case ("other"):{
+                case ("其它"):{
                     integerLabels.add(11);break;
                 }
             }

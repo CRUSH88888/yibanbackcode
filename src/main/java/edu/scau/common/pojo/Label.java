@@ -18,6 +18,6 @@ public class Label {        //标签
     private Boolean universityLevel;//校级
     private Boolean collegeLevel;//院级
     private Boolean extraPints;//综测加分
-    private Boolean volunteerTime;//志愿活动
+    private Boolean volunteerTime;//志愿时
     private Boolean other;//其它
 }
