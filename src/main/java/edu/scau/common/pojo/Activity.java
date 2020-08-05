@@ -6,6 +6,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import net.sf.jsqlparser.expression.DateTimeLiteralExpression;
 
+import javax.persistence.Transient;
 import java.sql.Date;
 import java.sql.Timestamp;
 import java.util.List;
@@ -23,15 +24,21 @@ public class Activity {    //活动
     private Timestamp startTime;//活动开始时间
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
+    private String date;
     private List<String> label;//标签
     /*
     二维码或其他照片的地址
      */
-    private String picUrl;
+   @Transient
+    private List<ActivityPicture> picUrl;
     private String dayToNow;
     private Timestamp buildingTime;
+    /**
+     * 某个用户查询时是否已经收藏过
+     */
+    private Boolean collected;
 
-    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,String picUrl
+    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,List<ActivityPicture> picUrl
     ,Timestamp buildingTime) {
         this.address = address;
         this.title = title;
@@ -43,7 +50,7 @@ public class Activity {    //活动
         this.picUrl = picUrl;
         this.buildingTime = buildingTime;
     }
-    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,String picUrl) {
+    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,List<ActivityPicture> picUrl) {
         this.address = address;
         this.title = title;
         this.text = text;
@@ -55,7 +62,7 @@ public class Activity {    //活动
 
     }
 
-    public Activity(String address, String title, String text, Integer userId, List<String> label, String picUrl
+    public Activity(String address, String title, String text, Integer userId, List<String> label, List<ActivityPicture> picUrl
             ,Timestamp buildingTime) {
         this.address = address;
         this.title = title;

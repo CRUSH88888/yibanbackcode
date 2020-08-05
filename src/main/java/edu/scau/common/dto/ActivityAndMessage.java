@@ -6,6 +6,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @description:
  * @auther:cyf
@@ -16,5 +18,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class ActivityAndMessage {
     private Activity activity;
-    private Message message;
+    private List<Message> message;
 }
