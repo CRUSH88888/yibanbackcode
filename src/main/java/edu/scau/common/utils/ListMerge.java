@@ -19,6 +19,14 @@ public class ListMerge {
         int j=0;
         while(i<activitySearches.size()&&j<activitySearches1.size()){
             if(activitySearches.get(i).getId()==activitySearches1.get(j).getId()){
+                if(activitySearches1.get(j).getLabel()!=null&&activitySearches.get(i).getLabel()!=null){
+                    List<String> label = activitySearches.get(i).getLabel();
+                    List<String> label1 = activitySearches1.get(j).getLabel();
+                    for (String s : label1) {
+                        label.add(s);
+                    }
+                    activitySearches.get(i).setLabel(label);
+                }
                 activitySearches2.add(activitySearches.get(i));
                 i++;
                 j++;

@@ -17,6 +17,7 @@ import java.sql.Timestamp;
 public class ActivityManger {
     private int id;//活动id
     private String title;//活动标题
+    private String address;//地点
     private Timestamp buildTime;//发布时间
     private String date;//发布时间至今
     private boolean collected;//是否被收藏，查询收藏活动时默认忽略这个

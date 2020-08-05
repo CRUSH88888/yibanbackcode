@@ -1,6 +1,7 @@
 package edu.scau.common.Service;
 
 import edu.scau.common.dto.ActivityManger;
+import edu.scau.common.dto.ActivitySearch;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -12,5 +13,5 @@ import java.util.List;
  **/
 public interface SearchService {
     List<String> searchAssociation(String search);
-    List<ActivityManger> searchActivity(String search);
+    List<ActivitySearch> searchActivity(String search);
 }

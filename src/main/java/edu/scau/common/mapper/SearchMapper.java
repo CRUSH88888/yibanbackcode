@@ -17,5 +17,5 @@ public interface SearchMapper{
     List<String> searchAssociation(@Param("search")char[] search);
     List<ActivitySearch> searchActivityByTitle(@Param("search")char[] search);
     List<ActivitySearch> searchActivityByLabel(int label);
-    List<ActivitySearch> searchActivityByText(@Param("search")char[] search);
+    List<ActivitySearch> searchActivityByText(@Param("search")String search);
 }

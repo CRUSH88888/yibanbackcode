@@ -13,6 +13,7 @@
         <result column="id" property="id"/>
         <result column="title" property="title"/>
         <result column="build_time" property="buildTime"/>
+        <result column="address" property="address"/>
     </resultMap>
     <select id="getInformation" resultMap="information" parameterType="int">
         select * from information

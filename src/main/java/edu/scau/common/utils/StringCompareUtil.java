@@ -11,14 +11,46 @@ import java.util.List;
  **/
 public class StringCompareUtil {
     public static List<String> TextCompare(String search,String text){
-        int i = text.indexOf(search);
-        int length = search.length();
-        if(length>15){
-            return null;
-        }
-        int lengthBefore=(15-length)/2;
-        int lengthAfter;
         ArrayList<String> strings = new ArrayList<>();
+        int i = text.indexOf(search);
+        int searchLength = search.length();
+        int textLength=text.length();
+        if(i==0){
+            strings.add(search);
+            strings.add(text.substring(i+search.length()));
+        }
+        else{
+            if(searchLength>=15){
+                search="..."+search;
+                strings.add(null);
+                strings.add(search);
+                strings.add(text.substring(i+search.length()));
+            }
+            else{
+                if(textLength<=15){
+                    strings.add(text.substring(0,i));
+                    strings.add(search);
+                    strings.add(text.substring(i+searchLength));
+                }
+                else{
+                    int lengthBefore=(15-searchLength)/2;
+                    int lengthAfter=15-lengthBefore-searchLength;
+                    if(lengthAfter>textLength-i-1){
+                        lengthBefore=15-textLength-i-1;
+                        strings.add("..."+text.substring(i-lengthBefore-1,i));
+                        strings.add(search);
+                        strings.add(null);
+                    }
+                    else{
+                        if(i+1<lengthBefore){
+                            strings.add(text.substring(0,i));
+                            strings.add(search);
+                            strings.add(text.substring(i+searchLength));
+                        }
+                    }
+                }
+            }
+        }
         return strings;
     }
     public static List<Integer> labelCode(String search){

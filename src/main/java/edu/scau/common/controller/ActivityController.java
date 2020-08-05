@@ -77,7 +77,7 @@ public class ActivityController {
 
     @PostMapping("/queryActivityById")
     public ApiResponse queryActivityById(@RequestParam("activityId")Integer activityId,
-                                         @RequestParam("userId")Integer UserId){
+                                             @RequestParam("userId")Integer UserId){
 
             return new ApiResponse(0,"success", activityService.selectActivityById(activityId,UserId));
     }

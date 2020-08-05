@@ -30,7 +30,7 @@ import java.util.List;
 @SpringBootTest
 public class AppTest 
 {
-<<<<<<< HEAD
+//<<<<<<< HEAD
 //    @Autowired
 //    private FunctionServiceImpl functionService;
 //    @Autowired
@@ -76,15 +76,9 @@ public class AppTest
 //        List<String> strings = searchMapper.searchAssociation(chars);
 //        System.out.println(strings);
 //    }
-=======
-    @Autowired
-    private ScheduleMapper scheduleMapper;
-    @Test
-    public void Test()
-    {
-        System.out.println(scheduleMapper.getSchedule(1));
-    }
->>>>>>> e59c7d7b4cd35af1a629374a9729187320a28a78
+//=======
+
+//>>>>>>> e59c7d7b4cd35af1a629374a9729187320a28a78
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -93,8 +87,8 @@ public class AppTest
     @Test
     public void Test1()
     {
-        String s="aaaasddads";
-        String ch="sda";
-        System.out.println(s.indexOf(ch));
+        String s="asdas";
+        String s1="sasdasdashasdasdas";
+        System.out.println(StringCompareUtil.TextCompare(s,s1));
     }
 }

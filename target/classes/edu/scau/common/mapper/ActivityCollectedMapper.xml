@@ -13,11 +13,12 @@
         <result column="id" property="id"/>
         <result column="title" property="title"/>
         <result column="build_time" property="buildTime"/>
+        <result column="address" property="address"/>
     </resultMap>
     <insert id="addActivity">
         insert into collection(user_id, activity_id) value (#{userId},#{activityId})
     </insert>
-    <delete id="deleteCollectedActivity" parameterType="int">
+    <delete id="deleteCollectedActivity" >
         delete from collection
         where 1=1
         <if test="userId!=null">
