@@ -79,6 +79,8 @@ public class AppTest
 //=======
 
 //>>>>>>> e59c7d7b4cd35af1a629374a9729187320a28a78
+    @Autowired
+    private SearchServiceImpl searchService;
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -87,8 +89,6 @@ public class AppTest
     @Test
     public void Test1()
     {
-        String s="asdas";
-        String s1="sasdasdashasdasdas";
-        System.out.println(StringCompareUtil.TextCompare(s,s1));
+        System.out.println(searchService.searchActivity("愿活动内容为打扫公园，奖励志愿时，望大家踊跃报"));
     }
 }

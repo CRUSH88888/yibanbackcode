@@ -15,6 +15,11 @@
         <result column="build_time" property="buildTime"/>
         <result column="address" property="address"/>
     </resultMap>
+    <select id="getACollectedActivity" resultType="integer">
+        select id from collection
+        where activity_id=#{activityId}
+        and user_id=#{userId}
+    </select>
     <insert id="addActivity">
         insert into collection(user_id, activity_id) value (#{userId},#{activityId})
     </insert>

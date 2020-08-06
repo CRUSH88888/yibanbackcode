@@ -16,15 +16,16 @@ public class StringCompareUtil {
         int searchLength = search.length();
         int textLength=text.length();
         if(i==0){
+            strings.add("");
             strings.add(search);
-            strings.add(text.substring(i+search.length()));
+            strings.add(text.substring(i+searchLength));
         }
         else{
             if(searchLength>=15){
                 search="..."+search;
-                strings.add(null);
+                strings.add("");
                 strings.add(search);
-                strings.add(text.substring(i+search.length()));
+                strings.add(text.substring(i+searchLength));
             }
             else{
                 if(textLength<=15){
@@ -36,14 +37,19 @@ public class StringCompareUtil {
                     int lengthBefore=(15-searchLength)/2;
                     int lengthAfter=15-lengthBefore-searchLength;
                     if(lengthAfter>textLength-i-1){
-                        lengthBefore=15-textLength-i-1;
-                        strings.add("..."+text.substring(i-lengthBefore-1,i));
+                        lengthBefore=15-(textLength-i-1)-searchLength;
+                        strings.add("..."+text.substring(i-lengthBefore,i));
                         strings.add(search);
-                        strings.add(null);
+                        strings.add(text.substring(i+searchLength));
                     }
                     else{
                         if(i+1<lengthBefore){
                             strings.add(text.substring(0,i));
+                            strings.add(search);
+                            strings.add(text.substring(i+searchLength));
+                        }
+                        else{
+                            strings.add("..."+text.substring(i-lengthBefore,i));
                             strings.add(search);
                             strings.add(text.substring(i+searchLength));
                         }

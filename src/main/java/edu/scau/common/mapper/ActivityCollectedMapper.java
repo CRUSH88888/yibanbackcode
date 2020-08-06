@@ -15,6 +15,7 @@ import java.util.List;
 @Mapper
 public interface ActivityCollectedMapper {
     List<ActivityManger> getCollectedActivity(int userId);
+    Integer getACollectedActivity(@Param("userId") int userId, @Param("activityId")int activityId );
     Integer addActivity(@Param("userId") int userId, @Param("activityId")int activityId);
     Integer deleteCollectedActivity(@Param("userId")@Nullable Integer userId, @Param("activityId")int activityId);
 }

@@ -4,10 +4,8 @@ import edu.scau.common.Service.ActivityService;
 import edu.scau.common.dto.ActivityAndMessage;
 import edu.scau.common.mapper.ActivityBrowsedMapper;
 import edu.scau.common.mapper.ActivityMapper;
-import edu.scau.common.pojo.Activity;
-import edu.scau.common.pojo.ActivityPicture;
-import edu.scau.common.pojo.Label;
-import edu.scau.common.pojo.Message;
+import edu.scau.common.mapper.BrowsedMapper;
+import edu.scau.common.pojo.*;
 import edu.scau.common.utils.DateToStringUtil;
 import edu.scau.common.utils.LabelTransUtils;
 import lombok.Data;
@@ -15,6 +13,7 @@ import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -32,7 +31,8 @@ public class ActivityServiceImpl implements ActivityService {
     private ActivityMapper activityMapper;
     @Autowired
     private ActivityBrowsedMapper activityBrowsedMapper;
-
+    @Autowired
+    private BrowsedMapper browsedMapper;
     @Data
     @NoArgsConstructor
     public class temp{
@@ -85,9 +85,8 @@ public class ActivityServiceImpl implements ActivityService {
         }
 //        activityAndMessage.getActivity().setCollected(false);
         activityAndMessage.getActivity().setPicUrl(pictures);
-
+        browsedMapper.insertBrowsed(new Browse(activityId,userId,new Timestamp(System.currentTimeMillis())));
         activity.setLabel(LabelTransUtils.integerToString(labels));
-
         activityAndMessage.getActivity().setDate(DateToStringUtil.dateToString(activityAndMessage.getActivity().getStartTime(), activityAndMessage.getActivity().getEndTime()));
         List<Message> messages = activityMapper.selectMessage(activityId,userId);
         activityAndMessage.setMessage(messages);

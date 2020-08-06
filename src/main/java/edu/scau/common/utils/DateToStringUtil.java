@@ -77,7 +77,7 @@ public class DateToStringUtil {
         long time = publishTime.getTime()/1000;//秒
         long time1 = currentTime.getTime()/1000;//秒
 //        1分钟内
-        if(time1-time>=0&&time1-time<60){
+        if(time1-time<60){
             return "刚刚";
         }
 //        1小时内
