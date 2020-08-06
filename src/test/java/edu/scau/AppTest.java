@@ -89,6 +89,6 @@ public class AppTest
     @Test
     public void Test1()
     {
-        System.out.println(searchService.searchActivity("愿活动内容为打扫公园，奖励志愿时，望大家踊跃报"));
+        System.out.println(new group(1, 1, null));
     }
 }

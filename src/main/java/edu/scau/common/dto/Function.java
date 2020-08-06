@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Function {
-    private List<ActivityManger> activityMangers;//近期活动
+    private List<Schedule> schedules;//近期活动
     private List<Information> information;//信息中心
     private List<Message> messages;//留言
     private List<PublishManagement> publishManagements;//发布管理

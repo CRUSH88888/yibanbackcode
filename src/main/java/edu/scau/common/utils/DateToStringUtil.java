@@ -15,7 +15,7 @@ public class DateToStringUtil {
      * @return
      */
     public static String dateToString(Timestamp startTime,Timestamp endTime){
-          if(endTime==null){
+          if(endTime==null||startTime.equals(endTime)){
               if(endTime.getMinutes()==0&&endTime.getHours()==0)
                   return toString(endTime,"month");
               else

@@ -4,16 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.FunctionMapper">
 
-    <select id="getActivity" resultMap="activityManger">
-        select id,title,build_time from activite
+    <select id="getActivity" resultMap="schedule">
+        select id,title,address,start_time,end_time from activite
         order by start_time asc
-        limit  0,3
     </select>
-    <resultMap id="activityManger" type="edu.scau.common.dto.ActivityManger">
+    <resultMap id="schedule" type="edu.scau.common.dto.Schedule">
         <result column="id" property="id"/>
-        <result column="title" property="title"/>
-        <result column="build_time" property="buildTime"/>
         <result column="address" property="address"/>
+        <result column="title" property="title"/>
+        <result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>
+        <result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>
     </resultMap>
     <select id="getInformation" resultMap="information" parameterType="int">
         select * from information
@@ -39,4 +39,9 @@
         insert into information( browsed, user_id, information, publish_time)
         VALUES (#{browsed},#{userId},#{information},#{publishTime})
     </insert>
+    <select id="getCollected" resultType="integer">
+        select id from collection
+        where activity_id=#{activityId}
+        and user_id=#{userId}
+    </select>
 </mapper>

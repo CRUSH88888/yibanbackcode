@@ -9,6 +9,7 @@ import org.springframework.stereotype.Service;
 
 import javax.jws.WebService;
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -18,20 +19,24 @@ import java.util.List;
  **/
 @Service
 public class ScheduleServiceImpl implements ScheduleService {
-    @Autowired
+    @Autowired(required = false)
     private ScheduleMapper scheduleMapper;
 
     @Override
     public List<Schedule> getSchedule(int userId) {
         List<Schedule> schedule = scheduleMapper.getSchedule(userId);
+        List<Schedule> schedules = new ArrayList<>();
         for (Schedule schedule1 : schedule) {
-            String date= DateToStringUtil.dateToString(schedule1.getStartTime(),schedule1.getEndTime());
-            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
-            if(timestamp.getYear()==schedule1.getStartTime().getYear()&&timestamp.getMonth()==schedule1.getStartTime().getMonth()&&timestamp.getDate()==schedule1.getStartTime().getDate()){
-                date=date+"(今天)";
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            if(schedule1.getStartTime().after(timestamp)||schedule1.equals(timestamp)){
+                String date= DateToStringUtil.dateToString(schedule1.getStartTime(),schedule1.getEndTime());
+                if(timestamp.getYear()==schedule1.getStartTime().getYear()&&timestamp.getMonth()==schedule1.getStartTime().getMonth()&&timestamp.getDate()==schedule1.getStartTime().getDate()){
+                    date=date+"(今天)";
+                }
+                schedule1.setDate(date);
+                schedules.add(schedule1);
             }
-            schedule1.setDate(date);
         }
-        return schedule;
+        return schedules;
     }
 }

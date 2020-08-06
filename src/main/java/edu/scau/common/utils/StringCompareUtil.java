@@ -21,23 +21,23 @@ public class StringCompareUtil {
             strings.add(text.substring(i+searchLength));
         }
         else{
-            if(searchLength>=15){
+            if(searchLength>=13){
                 search="..."+search;
                 strings.add("");
                 strings.add(search);
-                strings.add(text.substring(i+searchLength));
+                strings.add("");
             }
             else{
-                if(textLength<=15){
+                if(textLength<=13){
                     strings.add(text.substring(0,i));
                     strings.add(search);
                     strings.add(text.substring(i+searchLength));
                 }
                 else{
-                    int lengthBefore=(15-searchLength)/2;
-                    int lengthAfter=15-lengthBefore-searchLength;
+                    int lengthBefore=(13-searchLength)/2;
+                    int lengthAfter=13-lengthBefore-searchLength;
                     if(lengthAfter>textLength-i-1){
-                        lengthBefore=15-(textLength-i-1)-searchLength;
+                        lengthBefore=13-(textLength-i-1)-searchLength;
                         strings.add("..."+text.substring(i-lengthBefore,i));
                         strings.add(search);
                         strings.add(text.substring(i+searchLength));
