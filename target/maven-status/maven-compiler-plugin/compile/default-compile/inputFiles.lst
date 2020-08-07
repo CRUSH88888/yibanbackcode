@@ -52,6 +52,7 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\MessageService
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\impl\ActivityCollectedServiceImpl.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\MessageController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\impl\AssociationServiceImpl.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\ListMerge.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\ImageController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\InformationService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Association.java
@@ -60,6 +61,7 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\group.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\PublishManagementService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\ActivityPicture.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\ActivityBrowsedMapper.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\StringCompareUtil.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\impl\ActivityServiceImpl.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\FunctionController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\ScheduleService.java

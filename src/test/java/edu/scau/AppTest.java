@@ -30,7 +30,7 @@ import java.util.List;
 @SpringBootTest
 public class AppTest 
 {
-<<<<<<< HEAD
+
 //    @Autowired
 //    private FunctionServiceImpl functionService;
 //    @Autowired
@@ -76,59 +76,16 @@ public class AppTest
 //        List<String> strings = searchMapper.searchAssociation(chars);
 //        System.out.println(strings);
 //    }
-=======
-    @Autowired
-    private FunctionServiceImpl functionService;
-    @Autowired
-    private FunctionMapper function;
-    @Autowired
-    private ActivityCollectedServiceImpl activityCollectedService;
-    @Autowired
-    private PublishManagementServiceImpl publishManagementService;
-    @Autowired
-    private BrowsedMapper browsedMapper;
-    @Autowired
-    private SearchServiceImpl searchService;
-    @Test
-    public void test(){
-        System.out.println(functionService.getFunction(1));
-    }
-    @Test
-    public void test1(){
-        System.out.println(activityCollectedService.getCollectedActivity(1));
-    }
-    @Test
-    public void test3(){
-        int[] id={2};
-        int[] type={1};
-        System.out.println(publishManagementService.deletePublish(id,type));
-    }
-    @Test
-    public void test4(){
-        System.out.println(browsedMapper.getFootPrint(1));
-    }
-    @Test
-    public void test5(){
-        String s="是的按时打算";
-        char[] chars = s.toCharArray();
-        for (char aChar : chars) {
-            System.out.println(aChar+" ");
-        }
-    }
-    @Test
-    public void test6(){
-        List<ActivityManger> a = searchService.searchActivity("志愿");
-        System.out.println(a);
-    }
->>>>>>> e59c7d7b4cd35af1a629374a9729187320a28a78
+
+
+
+
+
+
     @Test
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
-    @Test
-    public void test7()
-    {
-        System.out.println(StringCompareUtil.StringCompare("fas","adasfbiuibiaxxxs"));
-    }
+
 }

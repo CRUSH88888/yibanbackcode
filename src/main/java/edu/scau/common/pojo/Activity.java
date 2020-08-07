@@ -72,4 +72,18 @@ public class Activity {    //活动
         this.picUrl = picUrl;
         this.buildingTime = buildingTime;
     }
+
+    public Activity( String address, String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, String date, List<String> label,  String dayToNow, Timestamp buildingTime, Boolean collected) {
+        this.address = address;
+        this.title = title;
+        this.text = text;
+        this.userId = userId;
+        this.startTime = startTime;
+        this.endTime = endTime;
+        this.date = date;
+        this.label = label;
+        this.dayToNow = dayToNow;
+        this.buildingTime = buildingTime;
+        this.collected = collected;
+    }
 }
