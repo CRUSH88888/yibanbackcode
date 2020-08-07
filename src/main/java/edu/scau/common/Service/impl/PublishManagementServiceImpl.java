@@ -61,6 +61,9 @@ public class PublishManagementServiceImpl implements PublishManagementService {
         for (PublishManagement publishManagement : publishManagements) {
             publishManagement.setDate(DateToStringUtil.publishTime(publishManagement.getPublishTime()));
         }
+        for (PublishManagement publishManagement : publishManagements) {
+            publishManagement.setSelect(false);
+        }
         return publishManagements;
     }
 

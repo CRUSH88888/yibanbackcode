@@ -19,4 +19,9 @@
         select id from authentication
         where user_id=#{userId}
     </select>
+    <update id="updateAssociationName">
+        update authentication
+        set assocaition_name=#{newName}
+        where association_name={oldName}
+    </update>
 </mapper>

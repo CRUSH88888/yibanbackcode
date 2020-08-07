@@ -20,4 +20,5 @@ public interface AuthenticationMapper {
     List<String> AssociationAuthentication(@Param("userId") int userId);
     Integer getAssociationId(@Param("associationName") String associationName);
     List<Integer> getId(@Param("userId") int userId);
+    Integer updateAssociationName(@Param("oldName") String oldName,@Param("newName")String newName);
 }

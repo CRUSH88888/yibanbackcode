@@ -2,26 +2,13 @@ package edu.scau;
 
 import static org.junit.Assert.assertTrue;
 
-import com.mysql.cj.x.protobuf.MysqlxDatatypes;
 import edu.scau.common.Service.impl.*;
-import edu.scau.common.dto.ActivityManger;
-import edu.scau.common.dto.Function;
-import edu.scau.common.dto.PublishManagement;
-import edu.scau.common.mapper.*;
-import edu.scau.common.pojo.Association;
-import edu.scau.common.pojo.group;
-import edu.scau.common.utils.DateToStringUtil;
-import edu.scau.common.utils.StringCompareUtil;
+import edu.scau.common.utils.SendMail;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import java.lang.reflect.Array;
-import java.sql.Timestamp;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Unit test for simple App.
@@ -81,6 +68,8 @@ public class AppTest
 //>>>>>>> e59c7d7b4cd35af1a629374a9729187320a28a78
     @Autowired
     private SearchServiceImpl searchService;
+    @Autowired
+    private SendMail sendMail;
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -89,6 +78,6 @@ public class AppTest
     @Test
     public void Test1()
     {
-        System.out.println(new group(1, 1, null));
+        System.out.println(sendMail);
     }
 }

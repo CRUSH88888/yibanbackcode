@@ -1,4 +1,5 @@
 D:\yiban\SNLN\src\main\java\edu\scau\common\pojo\ActivityLabel.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\controller\AuthenticationController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\SearchMapper.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\PublishManagementServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\DemoApplication.java
@@ -22,6 +23,7 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\BrowsedMapper.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\ActivityBrowsedService.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\ScheduleServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\ActivityBrowsedController.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\AuthenticationServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\MessageServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\config\CorsConfig.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\FunctionMapper.java
@@ -33,6 +35,7 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\controller\ActivityCollectedControll
 D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\ActivityMapper.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\dto\ActivitySearch.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\AssociationService.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\Service\AuthenticationService.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\config\SwaggerConfig.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\PublishManagementController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\pojo\Message.java
@@ -56,6 +59,7 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\pojo\Information.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\AssociationController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\InformationService.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\GroupController.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\pojo\Authentication.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\FunctionController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\utils\FileUtil.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\GroupMapper.java

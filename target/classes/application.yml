@@ -49,6 +49,11 @@ spring:
       max-request-size: 1024MB
   jmx:
     enabled: false
+  mail:
+    username: yiban_snln@163.com
+    password: CRKGCELWHXXHJCTG
+    host: smtp.163.com
+    port: 25
 #  http:
 #    multipart:
 #      max-file-size: 1024MB
