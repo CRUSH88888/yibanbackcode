@@ -15,6 +15,13 @@ public class DateToStringUtil {
      * @return
      */
     public static String dateToString(Timestamp startTime,Timestamp endTime){
+          if(endTime==null||startTime.equals(endTime)){
+              if(endTime.getMinutes()==0&&endTime.getHours()==0)
+                  return toString(endTime,"month");
+              else
+                  return toString(endTime,"month")+" "+toString(endTime,"hour");
+
+          }
 //        年份不同 显示：yyyy年mm月dd日
             if(startTime.getYear()!=endTime.getYear()){
                 return toString(startTime,"year")+"-"+toString(endTime,"year");
@@ -70,7 +77,7 @@ public class DateToStringUtil {
         long time = publishTime.getTime()/1000;//秒
         long time1 = currentTime.getTime()/1000;//秒
 //        1分钟内
-        if(time1-time>=0&&time1-time<60){
+        if(time1-time<60){
             return "刚刚";
         }
 //        1小时内

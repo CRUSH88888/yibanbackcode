@@ -1,9 +1,11 @@
 package edu.scau.common.mapper;
 
 import edu.scau.common.dto.ActivityManger;
+import edu.scau.common.dto.Schedule;
 import edu.scau.common.pojo.Information;
 import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -15,8 +17,9 @@ import java.util.List;
 @Mapper
 public interface FunctionMapper {
     List<Information> getInformation(int userId);
-    List<ActivityManger> getActivity();
+    List<Schedule> getActivity();
     Information getInformationById(int id);
     Integer updateBrowsed(int id);
     Integer insertInformation(Information information);
+    Integer getCollected(@Param("userId") int userId,@Param("activityId") int activityId);
 }

@@ -3,12 +3,15 @@ package edu.scau.common.Service.impl;
 import edu.scau.common.Service.FunctionService;
 import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.dto.Function;
+import edu.scau.common.dto.Schedule;
 import edu.scau.common.mapper.FunctionMapper;
 import edu.scau.common.pojo.Information;
 import edu.scau.common.utils.DateToStringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -29,18 +32,23 @@ public class FunctionServiceImpl implements FunctionService {
     @Override
     public Function getFunction(int userId) {
         Function function = new Function();
-        List<ActivityManger> activityMangers = functionMapper.getActivity();
-        List<ActivityManger> collectedActivity = activityCollectedService.getCollectedActivity(userId);
-        for (ActivityManger activityManger : activityMangers) {
-            activityManger.setCollected(false);
-            for (ActivityManger manger : collectedActivity) {
-                if(activityManger.getId()==manger.getId()){
-                    activityManger.setCollected(true);
-                    break;
+        List<Schedule> scheduleList = functionMapper.getActivity();
+        ArrayList<Schedule> schedules = new ArrayList<>();
+        for (Schedule schedule : scheduleList) {
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            if(schedule.getStartTime().after(timestamp)||schedule.equals(timestamp)){
+                if(functionMapper.getCollected(userId,schedule.getId())!=null){
+                    schedule.setCollected(true);
                 }
+                String date= DateToStringUtil.dateToString(schedule.getStartTime(),schedule.getEndTime());
+                if(timestamp.getYear()==schedule.getStartTime().getYear()&&timestamp.getMonth()==schedule.getStartTime().getMonth()&&timestamp.getDate()==schedule.getStartTime().getDate()){
+                    date=date+"(今天)";
+                }
+                schedule.setDate(date);
+                schedules.add(schedule);
             }
         }
-        function.setActivityMangers(activityMangers);
+        function.setSchedules(schedules);
         List<Information> information = functionMapper.getInformation(userId);
         for (Information information1 : information) {
             information1.setDate(DateToStringUtil.publishTime(information1.getPublishTime()));
