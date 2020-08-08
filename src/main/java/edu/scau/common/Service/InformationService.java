@@ -12,5 +12,4 @@ import java.util.List;
 public interface InformationService {
     List<Information> getInformation(int userId);
     Information getInformationById(int id);
-    Integer insertInformation(Information information);
 }

@@ -16,8 +16,16 @@ import java.util.List;
 @NoArgsConstructor
 public class AuthenticationMessage {
     private int id;
-    private int userId;
-    private String associationName;
-    private boolean browsed;
+    private int userId;//认证者的id
+    private String associationName;//认证社团名称
+    private boolean browsed;//是否已审核
+    private int level;//认证权限
     private List<String> pictureUrl;
+
+    public AuthenticationMessage(int userId, String associationName, int level, List<String> pictureUrl) {
+        this.userId = userId;
+        this.associationName = associationName;
+        this.level = level;
+        this.pictureUrl = pictureUrl;
+    }
 }

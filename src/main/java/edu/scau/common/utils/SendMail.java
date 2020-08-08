@@ -1,6 +1,7 @@
 package edu.scau.common.utils;
 
 import com.sun.org.apache.xerces.internal.impl.io.UCSReader;
+import org.apache.commons.io.FileUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -12,6 +13,8 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.MessagingException;
 import javax.mail.internet.MimeMessage;
+import java.io.File;
+import java.io.IOException;
 
 /**
  * @description:邮件发送
@@ -23,7 +26,7 @@ import javax.mail.internet.MimeMessage;
 public class SendMail {
     @Autowired
     private JavaMailSenderImpl javaMailSender;
-    public void sendMail(MultipartFile[] picture,String text) throws MessagingException {
+    public void sendMail(MultipartFile[] picture,String text) throws MessagingException, IOException {
             MimeMessage mimeMessage = javaMailSender.createMimeMessage();
             //组装 开启多文件
             MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
@@ -32,6 +35,8 @@ public class SendMail {
             //附件
             if(picture!=null) {
                 for (int i = 0; i < picture.length; i++) {
+                    File file= new File(picture[i].getOriginalFilename());
+                    FileUtils.copyInputStreamToFile(picture[i].getInputStream(),file);
                     mimeMessageHelper.addAttachment(i + ".jpg", picture[i]);
                 }
             }

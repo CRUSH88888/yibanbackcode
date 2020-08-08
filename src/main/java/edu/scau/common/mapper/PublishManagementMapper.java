@@ -15,6 +15,8 @@ import java.util.List;
 public interface PublishManagementMapper {
     List<PublishManagement> getPublishActivity(int userId);
     List<PublishManagement> getPublishGroup(int userId);
+    List<PublishManagement> getAllActivity();
+    List<PublishManagement> getAllGroup();
     Integer deletePublishActivity(int id);
     Integer deletePublishGroup(int id);
 }

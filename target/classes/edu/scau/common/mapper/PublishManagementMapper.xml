@@ -31,4 +31,12 @@
     <delete id="deletePublishGroup" parameterType="int">
         delete from `group` where id=#{id}
     </delete>
+    <select id="getAllActivity" resultMap="activity">
+        select id,user_id,title,build_time from activite
+        order by build_time desc
+    </select>
+    <select id="getAllGroup" resultMap="group">
+        select id,user_id,text,publish_time from `group`
+        order by publish_time desc
+    </select>
 </mapper>

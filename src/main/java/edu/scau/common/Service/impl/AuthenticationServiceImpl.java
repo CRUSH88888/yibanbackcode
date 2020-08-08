@@ -1,7 +1,9 @@
 package edu.scau.common.Service.impl;
 
 import edu.scau.common.Service.AuthenticationService;
+import edu.scau.common.mapper.AssociationMapper;
 import edu.scau.common.mapper.AuthenticationMapper;
+import edu.scau.common.pojo.Association;
 import edu.scau.common.pojo.Authentication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -18,6 +20,8 @@ import java.util.List;
 public class AuthenticationServiceImpl implements AuthenticationService {
     @Autowired(required = false)
     private AuthenticationMapper authenticationMapper;
+    @Autowired(required = false)
+    private AssociationMapper associationMapper;
     @Override
     public Integer insertAuthenticationMapper(Authentication authentication) {
         return null;
@@ -36,11 +40,19 @@ public class AuthenticationServiceImpl implements AuthenticationService {
 
     @Override
     public List<String> updateAssociationAuthentication(int userId) {
-        List<String> strings = authenticationMapper.AssociationAuthentication(userId);
         ArrayList<String> strings1 = new ArrayList<>();
-        for (String string : strings) {
-            if(authenticationMapper.getAssociationId(string)!=null){
-                strings1.add(string);
+        List<Integer> level = authenticationMapper.getLevel(userId);
+        if(level !=null) {
+            for (Integer integer : level) {
+                if(integer==3){
+                    return associationMapper.getAssociation();
+                }
+            }
+            List<String> strings = authenticationMapper.AssociationAuthentication(userId);
+            for (String string : strings) {
+                if (authenticationMapper.getAssociationId(string) != null) {
+                    strings1.add(string);
+                }
             }
         }
         return strings1;

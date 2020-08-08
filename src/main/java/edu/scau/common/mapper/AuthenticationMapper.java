@@ -14,11 +14,13 @@ import java.util.List;
  **/
 @Mapper
 public interface AuthenticationMapper {
-    Integer insertAuthenticationMapper(Authentication authentication);
     List<Authentication> getAuthentication(int userId);
     Integer deleteAuthentication(@Param("userId") int userId,@Param("associationName") String associationName);
     List<String> AssociationAuthentication(@Param("userId") int userId);
     Integer getAssociationId(@Param("associationName") String associationName);
     List<Integer> getId(@Param("userId") int userId);
     Integer updateAssociationName(@Param("oldName") String oldName,@Param("newName")String newName);
+    List<Integer> getLevel(int userId);
+    List<Integer> getUserId();
+    Integer getUserIdByName(String associationName);
 }

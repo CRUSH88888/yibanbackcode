@@ -5,6 +5,7 @@ edu\scau\common\utils\StringCompareUtil.class
 edu\scau\common\Service\MessageService.class
 edu\scau\common\utils\LabelTransUtils.class
 edu\scau\common\Service\AssociationService.class
+edu\scau\common\controller\MailController.class
 edu\scau\common\Service\impl\PublishManagementServiceImpl.class
 edu\scau\common\mapper\ActivityCollectedMapper.class
 edu\scau\common\pojo\Browse.class
@@ -14,6 +15,7 @@ edu\scau\common\mapper\ActivityBrowsedMapper.class
 edu\scau\common\pojo\Activity.class
 edu\scau\common\Service\BrowsedService.class
 edu\scau\common\mapper\ScheduleMapper.class
+edu\scau\common\utils\SendMail.class
 edu\scau\common\controller\PublishManagementController.class
 edu\scau\common\Service\ActivityService.class
 edu\scau\common\dto\ActivityAndMessage.class
@@ -27,6 +29,7 @@ edu\scau\common\controller\AuthenticationController.class
 edu\scau\common\mapper\FunctionMapper.class
 edu\scau\common\mapper\AssociationMapper.class
 edu\scau\common\Service\InformationService.class
+edu\scau\common\Service\impl\AuthenticationMessageServiceImpl.class
 edu\scau\common\controller\ScheduleController.class
 edu\scau\common\mapper\GroupMapper.class
 edu\scau\common\mapper\PublishManagementMapper.class
@@ -41,6 +44,7 @@ edu\scau\common\Service\PublishManagementService.class
 edu\scau\common\controller\GroupController.class
 edu\scau\common\controller\BrowsedController.class
 edu\scau\common\utils\PageUtil.class
+edu\scau\common\controller\TextController.class
 edu\scau\common\pojo\Authentication.class
 edu\scau\common\dto\PublishManagement.class
 edu\scau\common\utils\ListMerge.class
@@ -53,8 +57,10 @@ edu\scau\common\controller\SearchController.class
 edu\scau\common\config\SwaggerConfig.class
 edu\scau\common\Service\AuthenticationService.class
 edu\scau\common\Service\impl\AuthenticationServiceImpl.class
+edu\scau\common\pojo\AuthenticationMessage.class
 edu\scau\common\Service\impl\FunctionServiceImpl.class
 edu\scau\common\Service\impl\ScheduleServiceImpl.class
+edu\scau\common\Service\AuthenticationMessageService.class
 edu\scau\common\mapper\AuthenticationMapper.class
 edu\scau\common\Service\impl\ActivityBrowsedServiceImpl.class
 edu\scau\common\config\AsynConfiguration.class
@@ -67,6 +73,7 @@ edu\scau\common\controller\ImageController$Second.class
 edu\scau\common\dto\ActivityManger.class
 edu\scau\common\controller\ImageController.class
 edu\scau\common\pojo\Information.class
+edu\scau\common\mapper\AuthenticationMessageMapper.class
 edu\scau\common\Service\impl\MessageServiceImpl.class
 edu\scau\common\controller\ActivityBrowsedController.class
 edu\scau\common\pojo\ActivityPicture.class
@@ -82,6 +89,7 @@ edu\scau\common\controller\FunctionController.class
 edu\scau\common\pojo\group.class
 edu\scau\common\dto\Schedule.class
 edu\scau\common\Service\impl\InformationServiceImpl.class
+edu\scau\common\controller\AuthenticationMessageController.class
 edu\scau\common\Service\impl\ActivityCollectedServiceImpl.class
 edu\scau\common\dto\IndexActivityStatus.class
 edu\scau\common\utils\FileUtil.class

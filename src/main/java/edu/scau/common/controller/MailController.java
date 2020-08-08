@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.MessagingException;
+import java.io.IOException;
 
 /**
  * @description: 意见反馈
@@ -21,7 +22,7 @@ public class MailController {
     private SendMail sendMail;
     @GetMapping("sendMail")
     public ApiResponse sendMail(@RequestParam(value = "picture",required = false) MultipartFile[] picture,
-                                @RequestParam("text")String text) throws MessagingException {
+                                @RequestParam("text")String text) throws MessagingException, IOException {
         sendMail.sendMail(picture, text);
         return new ApiResponse(0,"success");
     }

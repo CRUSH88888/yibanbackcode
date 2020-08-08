@@ -19,4 +19,22 @@
         select id from authentication
         where user_id=#{userId}
     </select>
+    <update id="updateAssociationName">
+        update authentication
+        set assocaition_name=#{newName}
+        where association_name={oldName}
+    </update>
+    <select id="getLevel" parameterType="integer">
+        select `level` from authentication
+        where user_id=#{userId}
+    </select>
+    <select id="getUserId" resultType="integer">
+        select user_id from authentication
+        where `level`=3
+    </select>
+    <select id="getUserIdByName" resultType="integer" parameterType="string">
+        select user_id from authentication
+        where `level`=2
+        and association_name=#{associationName}
+    </select>
 </mapper>
