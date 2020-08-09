@@ -46,6 +46,32 @@ public class ActivityController {
      * @return
      */
     @PostMapping("/saveActivity")
+    public ApiResponse saveActivityTest(@RequestParam("address") String address,
+                                    @RequestParam("title") String title,
+                                    @RequestParam("text") String text,
+                                    @RequestParam("userId") Integer userId,
+                                    @RequestParam(value = "startTime",required = false) String startTime,
+                                    @RequestParam(value ="endTime" ,required = false)String endTime,
+                                    @RequestParam(value ="label",required = false)String[] label,
+                                    @RequestParam(value ="picture",required = false)String[] picture) throws IOException, ParseException {
+
+        List<String> labels = new ArrayList<>();
+        for (String s:label
+        ) {
+            labels.add(s);
+        }
+        List<ActivityPicture> pics = new ArrayList<>();
+        for (String s:picture
+        ) {
+            pics.add(new ActivityPicture(s));
+        }
+
+        Activity activity = new Activity(address,title,text,userId,startTime,endTime,labels,pics);
+        Integer result =  activityService.InsertActivity(activity);
+        System.out.println(result);
+        return new ApiResponse(result,"look result");
+
+    }
     public ApiResponse saveActivity(@RequestParam("address") String address,
                                     @RequestParam("title") String title,
                                     @RequestParam("text") String text,
@@ -54,15 +80,22 @@ public class ActivityController {
                                     @RequestParam(value ="endTime" ,required = false)String endTime,
                                     @RequestParam(value ="label[]",required = false)String[] label,
                                     @RequestParam(value ="picture",required = false)MultipartFile[] picture) throws IOException, ParseException {
-                List<ActivityPicture> picUrl = new ArrayList<>();
+        List<ActivityPicture> picUrl = new ArrayList<>();
+        if(picture != null ||picture.length != 0)
+        {
+//            Activity activity = new Activity(address,title,text,userId,startTime,endTime,labelList);
+
         for (MultipartFile m:picture
              ) {
-
+            System.out.println(m.isEmpty());
+            if (!m.isEmpty() && "".equals(m.getOriginalFilename()) ){
+            System.out.println("."+m.getOriginalFilename()+".");
             picUrl.add(new ActivityPicture(FileUtil.saveFile(m)));
+            }
         }
-
-
-
+        }else {
+            picUrl = null;
+        }
         List<String> labelList = new ArrayList<>();
 
         for (String s:label
@@ -70,9 +103,10 @@ public class ActivityController {
             labelList.add(s);
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Activity activity = new Activity(address,title,text,userId, Timestamp.valueOf(startTime),Timestamp.valueOf(endTime), labelList,picUrl);
+        Activity activity = new Activity(address,title,text,userId, startTime,endTime, labelList,picUrl);
         Integer result = activityService.InsertActivity(activity);
-        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
+        return new ApiResponse(0,"success");
+//        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }
 
     @PostMapping("/queryActivityById")

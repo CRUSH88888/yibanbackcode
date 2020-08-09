@@ -87,7 +87,7 @@ public class ActivityServiceImpl implements ActivityService {
         activityAndMessage.getActivity().setPicUrl(pictures);
         browsedMapper.insertBrowsed(new Browse(activityId,userId,new Timestamp(System.currentTimeMillis())));
         activity.setLabel(LabelTransUtils.integerToString(labels));
-        activityAndMessage.getActivity().setDate(DateToStringUtil.dateToString(activityAndMessage.getActivity().getStartTime(), activityAndMessage.getActivity().getEndTime()));
+        activityAndMessage.getActivity().setDate(DateToStringUtil.dateToString(Timestamp.valueOf(activityAndMessage.getActivity().getStartTime()), Timestamp.valueOf(activityAndMessage.getActivity().getEndTime())));
         List<Message> messages = activityMapper.selectMessage(activityId,userId);
         activityAndMessage.setMessage(messages);
 
