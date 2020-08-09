@@ -33,9 +33,4 @@ public class InformationServiceImpl implements InformationService {
         return functionMapper.getInformationById(id);
     }
 
-    @Override
-    public Integer insertInformation(Information information) {
-        Integer result = functionMapper.insertInformation(information);
-        return result>0?1:0;
-    }
 }

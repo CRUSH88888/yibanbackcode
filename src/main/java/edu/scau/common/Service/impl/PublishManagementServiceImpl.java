@@ -3,6 +3,7 @@ package edu.scau.common.Service.impl;
 import edu.scau.common.Service.PublishManagementService;
 import edu.scau.common.dto.PublishManagement;
 import edu.scau.common.mapper.ActivityCollectedMapper;
+import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.mapper.BrowsedMapper;
 import edu.scau.common.mapper.PublishManagementMapper;
 import edu.scau.common.utils.DateToStringUtil;
@@ -27,13 +28,30 @@ public class PublishManagementServiceImpl implements PublishManagementService {
     private ActivityCollectedMapper activityCollectedMapper;
     @Autowired(required = false)
     private BrowsedMapper browsedMapper;
+    @Autowired(required = false)
+    private AuthenticationMapper authenticationMapper;
     @Override
     public List<PublishManagement> getPublish(int userId) {
-        List<PublishManagement> publishActivity = publishManagementMapper.getPublishActivity(userId);
+        List<Integer> level = authenticationMapper.getLevel(userId);
+        List<PublishManagement> publishActivity=new ArrayList<>();
+        List<PublishManagement> publishGroup=new ArrayList<>();
+        int max=0;
+        for (Integer integer : level) {
+            if(integer>max){
+                max=integer;
+            }
+        }
+        if(max==3){
+            publishActivity=publishManagementMapper.getAllActivity();
+            publishGroup=publishManagementMapper.getAllGroup();
+        }
+        else{
+            publishActivity = publishManagementMapper.getPublishActivity(userId);
+            publishGroup = publishManagementMapper.getPublishGroup(userId);
+        }
         for (PublishManagement publishManagement : publishActivity) {
             publishManagement.setType(1);
         }
-        List<PublishManagement> publishGroup = publishManagementMapper.getPublishGroup(userId);
         for (PublishManagement publishManagement : publishGroup) {
             publishManagement.setType(2);
         }
@@ -60,6 +78,9 @@ public class PublishManagementServiceImpl implements PublishManagementService {
         }
         for (PublishManagement publishManagement : publishManagements) {
             publishManagement.setDate(DateToStringUtil.publishTime(publishManagement.getPublishTime()));
+        }
+        for (PublishManagement publishManagement : publishManagements) {
+            publishManagement.setSelect(false);
         }
         return publishManagements;
     }

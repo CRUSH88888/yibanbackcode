@@ -21,7 +21,6 @@ import java.util.List;
 public class AssociationController {
     @Autowired
     private AssociationServiceImpl associationService;
-
     /**
      * 根据名字查询社团组织
      * @param name
@@ -56,8 +55,9 @@ public class AssociationController {
     public ApiResponse updateAssociation(@RequestParam("name") String name,
                                          @RequestParam("introduce") String introduce,
                                          @RequestParam(value = "href",required = false) String href,
-                                         @RequestParam("type") String type){
-        Association association = new Association(name, introduce, href, type);
+                                         @RequestParam("type") String type,
+                                         @RequestParam("id") int id){
+        Association association = new Association(id,name, introduce, href, type);
         Integer result=associationService.updateAssociation(association);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Update Error");
     }
@@ -78,5 +78,9 @@ public class AssociationController {
         Association association = new Association(name, introduce, href, type);
         Integer result=associationService.insertAssociation(association);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
+    }
+    @GetMapping("getAssociation")
+    public ApiResponse getAssociation(){
+        return new ApiResponse(1,"success",associationService.getAssociation());
     }
 }

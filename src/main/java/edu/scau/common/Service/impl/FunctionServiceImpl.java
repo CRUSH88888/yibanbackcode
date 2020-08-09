@@ -41,9 +41,6 @@ public class FunctionServiceImpl implements FunctionService {
                     schedule.setCollected(true);
                 }
                 String date= DateToStringUtil.dateToString(schedule.getStartTime(),schedule.getEndTime());
-                if(timestamp.getYear()==schedule.getStartTime().getYear()&&timestamp.getMonth()==schedule.getStartTime().getMonth()&&timestamp.getDate()==schedule.getStartTime().getDate()){
-                    date=date+"(今天)";
-                }
                 schedule.setDate(date);
                 schedules.add(schedule);
             }
