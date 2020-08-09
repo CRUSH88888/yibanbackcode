@@ -2,6 +2,12 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ActivityCertificateMapper">
+    <update id="updateCertificate" parameterType="edu.scau.common.pojo.ActivityCertificate">
+        update activity_certificate set
+        activity_content = #{activity_content},
+        activity_title = #{activity_title},
+        where id = #{id}
+    </update>
     <insert id="insertCertificate" parameterType="edu.scau.common.pojo.ActivityCertificate" keyProperty="id" useGeneratedKeys="true">
         insert into activity_certificate ( activity_title, activity_content) VALUES
         (#{activityTitle},#{activityContent})
@@ -25,6 +31,7 @@
         insert into activity_certificate_collected (user_id, collected, certificate_id) VALUES
         (#{userId},1,#{certificateId})
     </insert>
+
 
 
 
