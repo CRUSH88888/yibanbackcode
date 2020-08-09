@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 
 /**
@@ -22,4 +23,9 @@ public class Information {
     private Boolean browsed;
     private Timestamp publishTime;
     private String date;
+    public Information(String information, int userId, Timestamp publishTime){
+        this.information=information;
+        this.userId=userId;
+        this.publishTime=publishTime;
+    }
 }

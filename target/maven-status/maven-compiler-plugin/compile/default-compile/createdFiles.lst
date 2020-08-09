@@ -5,6 +5,10 @@ edu\scau\common\utils\StringCompareUtil.class
 edu\scau\common\Service\MessageService.class
 edu\scau\common\utils\LabelTransUtils.class
 edu\scau\common\Service\AssociationService.class
+<<<<<<< HEAD
+=======
+edu\scau\common\controller\MailController.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\Service\impl\PublishManagementServiceImpl.class
 edu\scau\common\mapper\ActivityCollectedMapper.class
 edu\scau\common\pojo\Browse.class
@@ -14,6 +18,10 @@ edu\scau\common\mapper\ActivityBrowsedMapper.class
 edu\scau\common\pojo\Activity.class
 edu\scau\common\Service\BrowsedService.class
 edu\scau\common\mapper\ScheduleMapper.class
+<<<<<<< HEAD
+=======
+edu\scau\common\utils\SendMail.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\controller\PublishManagementController.class
 edu\scau\common\Service\ActivityService.class
 edu\scau\common\dto\ActivityAndMessage.class
@@ -23,9 +31,17 @@ edu\scau\common\dto\FootPrint.class
 edu\scau\common\pojo\Message.class
 edu\scau\common\mapper\MessageMapper.class
 edu\scau\common\Service\impl\GroupServiceImpl.class
+<<<<<<< HEAD
 edu\scau\common\mapper\FunctionMapper.class
 edu\scau\common\mapper\AssociationMapper.class
 edu\scau\common\Service\InformationService.class
+=======
+edu\scau\common\controller\AuthenticationController.class
+edu\scau\common\mapper\FunctionMapper.class
+edu\scau\common\mapper\AssociationMapper.class
+edu\scau\common\Service\InformationService.class
+edu\scau\common\Service\impl\AuthenticationMessageServiceImpl.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\controller\ScheduleController.class
 edu\scau\common\mapper\GroupMapper.class
 edu\scau\common\mapper\PublishManagementMapper.class
@@ -40,6 +56,11 @@ edu\scau\common\Service\PublishManagementService.class
 edu\scau\common\controller\GroupController.class
 edu\scau\common\controller\BrowsedController.class
 edu\scau\common\utils\PageUtil.class
+<<<<<<< HEAD
+=======
+edu\scau\common\controller\TextController.class
+edu\scau\common\pojo\Authentication.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\dto\PublishManagement.class
 edu\scau\common\utils\ListMerge.class
 edu\scau\common\Service\impl\ActivityServiceImpl.class
@@ -49,8 +70,17 @@ edu\scau\common\pojo\Label.class
 edu\scau\common\dto\Function.class
 edu\scau\common\controller\SearchController.class
 edu\scau\common\config\SwaggerConfig.class
+<<<<<<< HEAD
 edu\scau\common\Service\impl\FunctionServiceImpl.class
 edu\scau\common\Service\impl\ScheduleServiceImpl.class
+=======
+edu\scau\common\Service\AuthenticationService.class
+edu\scau\common\Service\impl\AuthenticationServiceImpl.class
+edu\scau\common\pojo\AuthenticationMessage.class
+edu\scau\common\Service\impl\FunctionServiceImpl.class
+edu\scau\common\Service\impl\ScheduleServiceImpl.class
+edu\scau\common\Service\AuthenticationMessageService.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\mapper\AuthenticationMapper.class
 edu\scau\common\Service\impl\ActivityBrowsedServiceImpl.class
 edu\scau\common\config\AsynConfiguration.class
@@ -63,6 +93,10 @@ edu\scau\common\controller\ImageController$Second.class
 edu\scau\common\dto\ActivityManger.class
 edu\scau\common\controller\ImageController.class
 edu\scau\common\pojo\Information.class
+<<<<<<< HEAD
+=======
+edu\scau\common\mapper\AuthenticationMessageMapper.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\Service\impl\MessageServiceImpl.class
 edu\scau\common\controller\ActivityBrowsedController.class
 edu\scau\common\pojo\ActivityPicture.class
@@ -78,6 +112,10 @@ edu\scau\common\controller\FunctionController.class
 edu\scau\common\pojo\group.class
 edu\scau\common\dto\Schedule.class
 edu\scau\common\Service\impl\InformationServiceImpl.class
+<<<<<<< HEAD
+=======
+edu\scau\common\controller\AuthenticationMessageController.class
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c
 edu\scau\common\Service\impl\ActivityCollectedServiceImpl.class
 edu\scau\common\dto\IndexActivityStatus.class
 edu\scau\common\utils\FileUtil.class

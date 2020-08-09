@@ -1,4 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: edu.scau.AppTest
 -------------------------------------------------------------------------------
+<<<<<<< HEAD
 Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.633 s - in edu.scau.AppTest
+=======
+Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 8.028 s - in edu.scau.AppTest
+>>>>>>> 3115d7209a7644c0e2b4d2c63e4c53b7ade9ea6c

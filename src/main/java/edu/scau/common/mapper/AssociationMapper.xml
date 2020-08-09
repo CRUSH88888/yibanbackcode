@@ -23,4 +23,11 @@
         (name, introduce, href, type)
         VALUES (#{name},#{introduce},#{href},#{type})
     </insert>
+    <select id="getAssociation" resultType="string">
+        select `name` from association
+    </select>
+    <select id="getAssociationById" resultType="string" parameterType="int">
+        select `name` from association
+        where id=#{id}
+    </select>
 </mapper>

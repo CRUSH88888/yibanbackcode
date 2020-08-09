@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.AuthenticationMessageMapper">
+    <select id="getName" parameterType="int" resultType="string">
+        select `name` from user where id=#{userId}
+    </select>
+    <select id="getUserName" parameterType="int" resultType="string">
+        select `user_name` from user where id=#{userId}
+    </select>
+    <insert id="insertAuthenticationMessage" parameterType="edu.scau.common.pojo.AuthenticationMessage" useGeneratedKeys="true" keyProperty="id">
+        insert into authentication_message(user_id, association_name, browsed, `level`)
+        VALUES (#{userId}, #{associationName}, 0, #{level})
+    </insert>
+    <insert id="insertPicture">
+        insert into authentication_pic(picture_url, authentication_id) VALUES (#{picture},#{authenticationId})
+    </insert>
+    <select id="getAuthenticationId" resultType="integer">
+        select id from authentication
+        where user_id=#{userId}
+        and association_name=#{associationName}
+    </select>
+</mapper>

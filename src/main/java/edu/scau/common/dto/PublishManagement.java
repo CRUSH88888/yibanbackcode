@@ -21,4 +21,5 @@ public class PublishManagement {
     private Timestamp publishTime;//发布时间
     private String date;//发布时间至今
     private int type;//活动为1 组队信息为2
+    private boolean select;
 }

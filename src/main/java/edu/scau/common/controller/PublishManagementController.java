@@ -38,7 +38,8 @@ public class PublishManagementController {
      * @return
      */
     @GetMapping("/deletePublish")
-    public ApiResponse deletePublish(@RequestParam(value = "id[]") int[] id, @RequestParam(value = "type[]") int[] type){
+    public ApiResponse deletePublish(@RequestParam(value = "id") int[] id,
+                                     @RequestParam(value = "type") int[] type){
         Integer result=publishManagementService.deletePublish(id,type);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Delete Error");
     }
