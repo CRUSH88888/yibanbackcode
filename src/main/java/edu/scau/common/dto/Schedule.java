@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 import java.sql.Timestamp;
 
 /**
- * @description: 日程表
+ * @description: 日程表及近期活动
  * @author: whj
  * @create: 2020-07-11 20:34
  **/
@@ -17,6 +17,7 @@ import java.sql.Timestamp;
 @NoArgsConstructor
 @AllArgsConstructor
 public class Schedule {
+    private int id;
     private String address;//地点
     private String title;//标题
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
@@ -24,4 +25,5 @@ public class Schedule {
     @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
     private String date;//活动时间转为字符串
+    private Boolean collected;//是否被收藏
 }

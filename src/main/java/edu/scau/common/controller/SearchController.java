@@ -1,7 +1,7 @@
 package edu.scau.common.controller;
 
 import edu.scau.common.Service.impl.SearchServiceImpl;
-import edu.scau.common.dto.ActivityManger;
+import edu.scau.common.dto.ActivitySearch;
 import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -38,8 +38,8 @@ public class SearchController {
      */
     @GetMapping("searchActivity")
     public ApiResponse searchActivity(@RequestParam("search") String search){
-        List<ActivityManger> activityMangers = searchService.searchActivity(search);
-        return activityMangers.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",activityMangers);
+        List<ActivitySearch> activitySearches = searchService.searchActivity(search);
+        return activitySearches.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",activitySearches);
 
     }
 }

@@ -23,7 +23,6 @@ public class GroupController {
 
     /**
      * 添加组队信息
-     * @param id
      * @param activityId
      * @param userId
      * @param text

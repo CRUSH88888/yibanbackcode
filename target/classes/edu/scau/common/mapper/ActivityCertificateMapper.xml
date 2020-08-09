@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.ActivityCertificateMapper">
+    <insert id="insertCertificate" parameterType="edu.scau.common.pojo.ActivityCertificate" keyProperty="id" useGeneratedKeys="true">
+        insert into activity_certificate ( activity_title, activity_content) VALUES
+        (#{activityTitle},#{activityContent})
+    </insert>
+    <insert id="insertCertificateFile" parameterType="java.util.List">
+        insert into certificate_file (certificate_id, file_url) VALUES
+        <foreach collection="files" item="item" index="index"
+                 separator=",">
+            (#{certificateId},#{item})
+        </foreach>
+
+    </insert>
+    <insert id="insertCertificateLabel" parameterType="arraylist">
+        insert into certificate_label(certificate_id, label) VALUES 
+        <foreach collection="labels" separator="," index="index"
+                 item="item">
+            (#{certificateId},#{item})
+        </foreach>
+    </insert>
+    <insert id="collectedCertificate" parameterType="integer">
+        insert into activity_certificate_collected (user_id, collected, certificate_id) VALUES
+        (#{userId},1,#{certificateId})
+    </insert>
+
+
+
+
+
+</mapper>

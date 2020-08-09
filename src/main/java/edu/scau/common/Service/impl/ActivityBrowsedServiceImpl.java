@@ -11,6 +11,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -33,7 +34,7 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
              ) {
             List<ActivityPicture> pictures =activityMapper.selectPicture(s.getActivity().getId());
             s.getActivity().setPicUrl(pictures);
-            s.getActivity().setDate(DateToStringUtil.dateToString(s.getActivity().getStartTime(),s.getActivity().getEndTime()));
+            s.getActivity().setDate(DateToStringUtil.dateToString(Timestamp.valueOf(s.getActivity().getStartTime()),Timestamp.valueOf(s.getActivity().getEndTime())));
             s.getActivity().setLabel(LabelTransUtils.integerToString(activityBrowsedMapper.selectLabels(s.getActivity().getId())));
             s.getActivity().setDayToNow(DateToStringUtil.publishTime(s.getActivity().getBuildingTime()));
         }

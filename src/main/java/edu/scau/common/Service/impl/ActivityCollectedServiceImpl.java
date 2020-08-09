@@ -30,7 +30,9 @@ public class ActivityCollectedServiceImpl implements ActivityCollectedService {
 
     @Override
     public Integer addActivity(int userId, int activityId) {
-        int result = activityCollectedMapper.addActivity(userId, activityId);
+        Integer result=1;
+        if(activityCollectedMapper.getACollectedActivity(userId,activityId)!=null)
+        result = activityCollectedMapper.addActivity(userId, activityId);
         return result>0?1:0;
     }
 

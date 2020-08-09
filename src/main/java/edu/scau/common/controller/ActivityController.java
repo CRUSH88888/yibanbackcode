@@ -52,7 +52,7 @@ public class ActivityController {
                                     @RequestParam("userId") Integer userId,
                                     @RequestParam(value = "startTime",required = false) String startTime,
                                     @RequestParam(value ="endTime" ,required = false)String endTime,
-                                    @RequestParam(value ="label[]",required = false)String[] label,
+                                    @RequestParam(value ="label",required = false)String[] label,
                                     @RequestParam(value ="picture",required = false)String[] picture) throws IOException, ParseException {
 
         List<String> labels = new ArrayList<>();
@@ -66,7 +66,7 @@ public class ActivityController {
             pics.add(new ActivityPicture(s));
         }
 
-        Activity activity = new Activity(address,title,text,userId,Timestamp.valueOf(startTime),Timestamp.valueOf(endTime),labels,pics);
+        Activity activity = new Activity(address,title,text,userId,startTime,endTime,labels,pics);
         Integer result =  activityService.InsertActivity(activity);
         System.out.println(result);
         return new ApiResponse(result,"look result");
@@ -103,7 +103,7 @@ public class ActivityController {
             labelList.add(s);
         }
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Activity activity = new Activity(address,title,text,userId, Timestamp.valueOf(startTime),Timestamp.valueOf(endTime), labelList,picUrl);
+        Activity activity = new Activity(address,title,text,userId, startTime,endTime, labelList,picUrl);
         Integer result = activityService.InsertActivity(activity);
         return new ApiResponse(0,"success");
 //        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
@@ -111,7 +111,7 @@ public class ActivityController {
 
     @PostMapping("/queryActivityById")
     public ApiResponse queryActivityById(@RequestParam("activityId")Integer activityId,
-                                         @RequestParam("userId")Integer UserId){
+                                             @RequestParam("userId")Integer UserId){
 
             return new ApiResponse(0,"success", activityService.selectActivityById(activityId,UserId));
     }

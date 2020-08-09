@@ -1,5 +1,6 @@
 package edu.scau.common.utils;
 
+import javax.swing.*;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,55 @@ import java.util.List;
  * @create: 2020-08-03 20:18
  **/
 public class StringCompareUtil {
+    public static List<String> TextCompare(String search,String text){
+        ArrayList<String> strings = new ArrayList<>();
+        int i = text.indexOf(search);
+        int searchLength = search.length();
+        int textLength=text.length();
+        if(i==0){
+            strings.add("");
+            strings.add(search);
+            strings.add(text.substring(i+searchLength));
+        }
+        else{
+            if(searchLength>=13){
+                search="..."+search;
+                strings.add("");
+                strings.add(search);
+                strings.add("");
+            }
+            else{
+                if(textLength<=13){
+                    strings.add(text.substring(0,i));
+                    strings.add(search);
+                    strings.add(text.substring(i+searchLength));
+                }
+                else{
+                    int lengthBefore=(13-searchLength)/2;
+                    int lengthAfter=13-lengthBefore-searchLength;
+                    if(lengthAfter>textLength-i-1){
+                        lengthBefore=13-(textLength-i-1)-searchLength;
+                        strings.add("..."+text.substring(i-lengthBefore,i));
+                        strings.add(search);
+                        strings.add(text.substring(i+searchLength));
+                    }
+                    else{
+                        if(i+1<lengthBefore){
+                            strings.add(text.substring(0,i));
+                            strings.add(search);
+                            strings.add(text.substring(i+searchLength));
+                        }
+                        else{
+                            strings.add("..."+text.substring(i-lengthBefore,i));
+                            strings.add(search);
+                            strings.add(text.substring(i+searchLength));
+                        }
+                    }
+                }
+            }
+        }
+        return strings;
+    }
     public static List<Integer> labelCode(String search){
         List<Integer>  a= new ArrayList<>();
         if(StringCompare(search,"宣讲会")){

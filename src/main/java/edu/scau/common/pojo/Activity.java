@@ -20,10 +20,10 @@ public class Activity {    //活动
     private String title;//标题
     private String text;//正文
     private Integer userId;//发布者
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    private Timestamp startTime;//活动开始时间
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
-    private Timestamp endTime;//活动结束时间
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm",timezone="GMT+8")
+    private String startTime;//活动开始时间
+//    @JsonFormat(pattern = "yyyy-MM-dd HH:mm",timezone="GMT+8")
+    private String endTime;//活动结束时间
     private String date;
     private List<String> label;//标签
     /*
@@ -38,7 +38,7 @@ public class Activity {    //活动
      */
     private Boolean collected;
 
-    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,List<ActivityPicture> picUrl
+    public Activity( String address,String title, String text, Integer userId, String startTime, String endTime, List<String> label,List<ActivityPicture> picUrl
     ,Timestamp buildingTime) {
         this.address = address;
         this.title = title;
@@ -50,7 +50,7 @@ public class Activity {    //活动
         this.picUrl = picUrl;
         this.buildingTime = buildingTime;
     }
-    public Activity( String address,String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, List<String> label,List<ActivityPicture> picUrl) {
+    public Activity( String address,String title, String text, Integer userId, String startTime, String endTime, List<String> label,List<ActivityPicture> picUrl) {
         this.address = address;
         this.title = title;
         this.text = text;
@@ -73,7 +73,7 @@ public class Activity {    //活动
         this.buildingTime = buildingTime;
     }
 
-    public Activity( String address, String title, String text, Integer userId, Timestamp startTime, Timestamp endTime, String date, List<String> label,  String dayToNow, Timestamp buildingTime, Boolean collected) {
+    public Activity( String address, String title, String text, Integer userId, String startTime, String endTime, String date, List<String> label,  String dayToNow, Timestamp buildingTime, Boolean collected) {
         this.address = address;
         this.title = title;
         this.text = text;

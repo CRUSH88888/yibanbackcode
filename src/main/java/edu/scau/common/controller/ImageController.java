@@ -5,10 +5,7 @@ import edu.scau.common.utils.FileUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
@@ -25,6 +22,7 @@ import java.util.Map;
 @RestController
 public class ImageController {
 
+    @PostMapping("/savePicture")
     public ApiResponse savePicture(@RequestParam("file")MultipartFile file) throws IOException {
         if (file.isEmpty()){
             return new ApiResponse(-1,"文件为空");

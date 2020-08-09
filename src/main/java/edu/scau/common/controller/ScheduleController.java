@@ -19,7 +19,6 @@ import java.util.List;
 public class ScheduleController {
     @Autowired
     private ScheduleServiceImpl scheduleService;
-
     /**
      * 获取日程表
      * @param userId

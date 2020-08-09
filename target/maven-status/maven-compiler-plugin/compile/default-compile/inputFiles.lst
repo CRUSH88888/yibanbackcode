@@ -34,11 +34,13 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\Schedule.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\PublishManagementMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\SearchController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Information.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\AuthenticationMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\ActivityManger.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\MessageMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\InformationController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\FunctionMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Browse.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\UserController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\ScheduleController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\AssociationController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\ActivityService.java
@@ -51,9 +53,11 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Label.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\MessageService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\impl\ActivityCollectedServiceImpl.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\MessageController.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\UserDetail.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\impl\AssociationServiceImpl.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\ListMerge.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\ImageController.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\ActivitySearch.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\InformationService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Association.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\AssociationService.java
