@@ -37,4 +37,10 @@
         where `level`=2
         and association_name=#{associationName}
     </select>
+    <delete id="deleteAuthentication">
+        delete from authentication
+        where user_id=#{userId}
+        and association_name=#{associationName}
+        and `level` =#{level}
+    </delete>
 </mapper>

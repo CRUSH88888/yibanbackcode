@@ -52,4 +52,11 @@ public class AuthenticationController {
         Integer result = authenticationService.saveActivityAuthentication(userId);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"没有权限，请先认证");
     }
+    @GetMapping("deleteAuthentication")
+    public ApiResponse deleteAuthentication(@RequestParam("userId")int userId,
+                                            @RequestParam("level")int level,
+                                            @RequestParam("associationName")String associationName){
+        Integer result = authenticationService.deleteAuthentication(userId, level, associationName);
+        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"delete error");
+    }
 }

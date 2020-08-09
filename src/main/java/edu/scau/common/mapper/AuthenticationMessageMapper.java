@@ -2,8 +2,11 @@ package edu.scau.common.mapper;
 
 import edu.scau.common.pojo.Authentication;
 import edu.scau.common.pojo.AuthenticationMessage;
+import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @description: 认证信息
@@ -17,4 +20,9 @@ public interface AuthenticationMessageMapper {
     Integer getAuthenticationId(@Param("userId") int userId,@Param("associationName") String associationName);
     String getName(int userId);
     String getUserName(int userId);
+    List<AuthenticationMessage> getAuthenticationMessage();
+    AuthenticationMessage getAuthenticationMessageById(int id);
+    List<String> getPicture(int authenticationId);
+    Integer insertAuthentication(Authentication authentication);
+    Integer updateAuthentication(int id);
 }
