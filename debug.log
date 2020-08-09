@@ -1017,3 +1017,26 @@ java.lang.NoSuchMethodException: tk.mybatis.mapper.provider.SpecialProvider.<ini
 2020-08-09 23:09:50.147  INFO 49408 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
 2020-08-09 23:09:50.195  INFO 49408 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
 2020-08-09 23:09:50.197  INFO 49408 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 3.773 seconds (JVM running for 4.854)
+2020-08-09 23:11:59.101  INFO 31292 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on DESKTOP-7ANT366 with PID 31292 (started by 陈云凤 in D:\项目\易班后台\demo)
+2020-08-09 23:11:59.104  INFO 31292 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-08-09 23:11:59.144  INFO 31292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-09 23:11:59.144  INFO 31292 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-09 23:12:00.220  INFO 31292 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$853eb55c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-09 23:12:00.479  INFO 31292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-08-09 23:12:00.494  INFO 31292 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-09 23:12:00.494  INFO 31292 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-08-09 23:12:00.499  INFO 31292 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : Loaded APR based Apache Tomcat Native library [1.2.23] using APR version [1.7.0].
+2020-08-09 23:12:00.499  INFO 31292 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true].
+2020-08-09 23:12:00.499  INFO 31292 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2020-08-09 23:12:00.501  INFO 31292 --- [restartedMain] o.a.catalina.core.AprLifecycleListener   : OpenSSL successfully initialized [OpenSSL 1.1.1c  28 May 2019]
+2020-08-09 23:12:00.638  INFO 31292 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-09 23:12:00.638  INFO 31292 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1494 ms
+2020-08-09 23:12:01.551  INFO 31292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-08-09 23:12:01.552  INFO 31292 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-08-09 23:12:01.564  INFO 31292 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-08-09 23:12:01.683  INFO 31292 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-09 23:12:01.910  INFO 31292 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-09 23:12:01.922  INFO 31292 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-09 23:12:01.944  INFO 31292 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-09 23:12:01.977  INFO 31292 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-08-09 23:12:01.979  INFO 31292 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 3.296 seconds (JVM running for 4.621)
