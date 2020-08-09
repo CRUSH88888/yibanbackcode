@@ -1,24 +1,36 @@
 package edu.scau.common.controller;
 
+import edu.scau.common.utils.ApiResponse;
+import edu.scau.common.utils.FileUtil;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
 /**
- * @description:
+ * @description:望平哥要求的接口
  * @auther:cyf
  * @create:2020/7/28 14:47
  **/
 @RestController
 public class ImageController {
+
+    @PostMapping("/savePicture")
+    public ApiResponse savePicture(@RequestParam("file")MultipartFile file) throws IOException {
+        if (file.isEmpty()){
+            return new ApiResponse(-1,"文件为空");
+        }else {
+            String fileUrl = FileUtil.saveFile(file);
+            return new ApiResponse(0,"success",fileUrl);
+        }
+    }
 
     @Data
     public class first implements Serializable {

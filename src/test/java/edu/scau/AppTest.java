@@ -20,18 +20,12 @@ import org.w3c.dom.UserDataHandler;
 @SpringBootTest
 public class AppTest 
 {
-    @Autowired
-    private AuthenticationMessageMapper authenticationMapper;
+
     @Test
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
-    @Test
-    public void test(){
-        String s="sda";
-        char[] chars = s.toCharArray();
-        System.out.println(chars.toString());
-    }
+
 
 }
