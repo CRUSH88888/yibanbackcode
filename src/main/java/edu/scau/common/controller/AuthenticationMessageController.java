@@ -39,15 +39,8 @@ public class AuthenticationMessageController {
     public ApiResponse sendAuthenticationMessage(@RequestParam("userId")int userId,
                                                  @RequestParam("associationName")String associationName,
                                                  @RequestParam("level") int level,
-                                                 @RequestParam(value = "picture",required = false)MultipartFile[] picture) throws IOException {
-        List<String> strings = new ArrayList<>();
-        if(picture!=null) {
-            for (MultipartFile multipartFile : picture) {
-                String s = FileUtil.saveFile(multipartFile);
-                strings.add(s);
-            }
-        }
-        AuthenticationMessage authenticationMessage = new AuthenticationMessage(userId, associationName, level, strings);
+                                                 @RequestParam(value = "picture",required = false)List<String> picture)  {
+        AuthenticationMessage authenticationMessage = new AuthenticationMessage(userId, associationName, level, picture);
         Integer result = authenticationMessageService.to_authentication(authenticationMessage);
         if(result==1){
             return new ApiResponse(1,"success");

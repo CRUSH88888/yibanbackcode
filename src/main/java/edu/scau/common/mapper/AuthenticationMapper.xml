@@ -21,8 +21,8 @@
     </select>
     <update id="updateAssociationName">
         update authentication
-        set assocaition_name=#{newName}
-        where association_name={oldName}
+        set association_name=#{newName}
+        where association_name=#{oldName}
     </update>
     <select id="getLevel" parameterType="integer">
         select `level` from authentication
