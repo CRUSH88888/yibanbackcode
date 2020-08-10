@@ -4,10 +4,7 @@ import edu.scau.common.Service.ActivityCertificateService;
 import edu.scau.common.pojo.ActivityCertificate;
 import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -26,6 +23,7 @@ public class ActivityCertificateController {
     @PostMapping("saveActivityCertificate")
     public ApiResponse saveActivityCertificate(@RequestParam("activityTitle")String activityTitle,
                                                @RequestParam("activityContent")String activityContent,
+                                               @RequestParam("userId")Integer userId,
                                                @RequestParam("fileUrl")String[] fileUrl,
                                                @RequestParam("label")String[] label){
         List<String> files = new ArrayList<>();
@@ -39,7 +37,7 @@ public class ActivityCertificateController {
             labels.add(s);
         }
 
-        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labels);
+        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labels,userId);
         activityCertificateService.save(certificate);
         return new  ApiResponse(0,"success");
     }
@@ -72,12 +70,22 @@ public class ActivityCertificateController {
 
         return null;
     }
-    @PostMapping("collectedCertificate")
-    public ApiResponse collectedCertificate(@RequestParam("userId")Integer userId,
+//    collectedCertificate
+    @PostMapping("/{path}")
+    public ApiResponse collectedCertificate(@PathVariable("path") String path,
+                                            @RequestParam("userId")Integer userId,
                                             @RequestParam("certificateId")Integer certificateId){
 
-        return new ApiResponse(activityCertificateService.collectedCertificate(userId,certificateId),"look result");
-    }
+        if ("collectedCertificate".equals(path)) {
+            return new ApiResponse(activityCertificateService.collectedCertificate(userId, certificateId), "look result");
+        }else if ("deleteCertificate".equals(path)){
+            return new ApiResponse(activityCertificateService.deleteCollectedCertificate(userId,certificateId),"look the return code");
+        }else {
+            return new ApiResponse(-1,"路径错误");
+        }
+
+        }
+
 
 
 }

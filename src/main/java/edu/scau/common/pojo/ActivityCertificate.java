@@ -5,6 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.Transient;
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -23,11 +24,26 @@ public class ActivityCertificate {
     private List<String> fileUrl;
     @Transient
     private List<String> labels;
-
+    /**
+     * 发布者
+     */
+    private Integer userId;
+    /**
+     * 发布时间
+     */
+    private Timestamp buildingTime;
     public ActivityCertificate( String activityTitle, String activityContent, List<String> fileUrl, List<String> labels) {
         this.activityTitle = activityTitle;
         this.activityContent = activityContent;
         this.fileUrl = fileUrl;
         this.labels = labels;
+    }
+
+    public ActivityCertificate( String activityTitle, String activityContent, List<String> fileUrl, List<String> labels, Integer userId) {
+        this.activityTitle = activityTitle;
+        this.activityContent = activityContent;
+        this.fileUrl = fileUrl;
+        this.labels = labels;
+        this.userId = userId;
     }
 }
