@@ -24,7 +24,7 @@
         set association_name=#{newName}
         where association_name=#{oldName}
     </update>
-    <select id="getLevel" parameterType="integer">
+    <select id="getLevel" parameterType="int" resultType="Integer">
         select `level` from authentication
         where user_id=#{userId}
     </select>

@@ -50,7 +50,6 @@ edu\scau\common\controller\GroupController.class
 edu\scau\common\controller\BrowsedController.class
 edu\scau\common\utils\PageUtil.class
 edu\scau\common\pojo\Authentication.class
-edu\scau\common\dto\PublishManagement.class
 edu\scau\common\utils\ListMerge.class
 edu\scau\common\dto\ActivityCertificateCollected.class
 edu\scau\common\Service\impl\ActivityServiceImpl.class

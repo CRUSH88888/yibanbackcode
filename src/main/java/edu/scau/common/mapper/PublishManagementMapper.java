@@ -1,9 +1,8 @@
 package edu.scau.common.mapper;
 
-import edu.scau.common.dto.PublishManagement;
+import edu.scau.common.dto.ActivityManger;
 import org.apache.ibatis.annotations.Mapper;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -13,10 +12,13 @@ import java.util.List;
  **/
 @Mapper
 public interface PublishManagementMapper {
-    List<PublishManagement> getPublishActivity(int userId);
-    List<PublishManagement> getPublishGroup(int userId);
-    List<PublishManagement> getAllActivity();
-    List<PublishManagement> getAllGroup();
+    List<ActivityManger> getPublishActivity(int userId);
+    List<ActivityManger> getPublishGroup(int userId);
+    List<ActivityManger> getCertificate(int userId);
+    List<ActivityManger> getAllActivity();
+    List<ActivityManger> getAllGroup();
+    List<ActivityManger> getAllCertificate();
     Integer deletePublishActivity(int id);
     Integer deletePublishGroup(int id);
+    Integer deleteCertificate(int id);
 }

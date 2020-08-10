@@ -52,7 +52,7 @@ public class FunctionServiceImpl implements FunctionService {
         }
         function.setInformation(information);
         function.setMessages(messageService.getMessages(userId));
-        function.setPublishManagements(publishManagementService.getPublish(userId));
+        function.setPublishMangers(publishManagementService.getPublish(userId));
         return function;
     }
 }

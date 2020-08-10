@@ -1,7 +1,7 @@
 package edu.scau.common.controller;
 
 import edu.scau.common.Service.impl.PublishManagementServiceImpl;
-import edu.scau.common.dto.PublishManagement;
+import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -27,7 +27,7 @@ public class PublishManagementController {
      */
     @GetMapping("/getPublish")
     public ApiResponse getPublish(@RequestParam("userId") int userId){
-        List<PublishManagement> publish = publishManagementService.getPublish(userId);
+        List<ActivityManger> publish = publishManagementService.getPublish(userId);
         return publish.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",publish);
     }
 

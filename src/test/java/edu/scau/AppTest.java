@@ -5,6 +5,8 @@ import static org.junit.Assert.assertTrue;
 import edu.scau.common.Service.impl.*;
 import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.mapper.AuthenticationMessageMapper;
+import edu.scau.common.mapper.BrowsedMapper;
+import edu.scau.common.pojo.Browse;
 import edu.scau.common.utils.SendMail;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -15,6 +17,7 @@ import org.w3c.dom.UserDataHandler;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
+import java.sql.Timestamp;
 
 /**
  * Unit test for simple App.
@@ -25,14 +28,17 @@ public class AppTest
 {
     @Autowired
     private SendMail sendMail;
+    @Autowired
+    private BrowsedMapper browsedMapper;
     @Test
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
     @Test
-    public void test() throws IOException, MessagingException {
-        sendMail.sendMail(null,"hhh");
+    public void test() {
+        Integer result = browsedMapper.updateBrowsed(new Browse(1, 1, new Timestamp(System.currentTimeMillis())));
+        System.out.println(result);
     }
 
 
