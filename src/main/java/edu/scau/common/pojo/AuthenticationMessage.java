@@ -28,4 +28,12 @@ public class AuthenticationMessage {
         this.level = level;
         this.pictureUrl = pictureUrl;
     }
+
+    public AuthenticationMessage(int id, int userId, String associationName, int level) {
+        this.id = id;
+        this.userId = userId;
+        this.associationName = associationName;
+        this.browsed = browsed;
+        this.level = level;
+    }
 }

@@ -56,8 +56,9 @@ public class AssociationController {
                                          @RequestParam("introduce") String introduce,
                                          @RequestParam(value = "href",required = false) String href,
                                          @RequestParam("type") String type,
-                                         @RequestParam("id") int id){
-        Association association = new Association(id,name, introduce, href, type);
+                                         @RequestParam("id") int id,
+                                         @RequestParam(value = "picture",required = false)List<String> picture){
+        Association association = new Association(id,name, introduce, href, type,picture);
         Integer result=associationService.updateAssociation(association);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Update Error");
     }
@@ -74,13 +75,11 @@ public class AssociationController {
     public ApiResponse insertAssociation(@RequestParam("name") String name,
                                          @RequestParam("introduce") String introduce,
                                          @RequestParam("href") String href,
-                                         @RequestParam("type") String type){
-        Association association = new Association(name, introduce, href, type);
+                                         @RequestParam("type") String type,
+                                         @RequestParam(value = "picture",required = false)List<String> picture){
+        Association association = new Association(name, introduce, href, type,picture);
         Integer result=associationService.insertAssociation(association);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }
-    @GetMapping("getAssociation")
-    public ApiResponse getAssociation(){
-        return new ApiResponse(1,"success",associationService.getAssociation());
-    }
+
 }

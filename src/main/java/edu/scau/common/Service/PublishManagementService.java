@@ -1,6 +1,6 @@
 package edu.scau.common.Service;
 
-import edu.scau.common.dto.PublishManagement;
+import edu.scau.common.dto.ActivityManger;
 
 import java.util.List;
 
@@ -10,6 +10,6 @@ import java.util.List;
  * @create: 2020-07-17 15:43
  **/
 public interface PublishManagementService {
-    public List<PublishManagement> getPublish(int userId);
+    public List<ActivityManger> getPublish(int userId);
     public Integer deletePublish(int[] id, int[] type);
 }

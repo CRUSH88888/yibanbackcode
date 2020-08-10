@@ -1,17 +1,17 @@
 package edu.scau.common.Service.impl;
 
 import edu.scau.common.Service.PublishManagementService;
-import edu.scau.common.dto.PublishManagement;
+import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.mapper.ActivityCollectedMapper;
 import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.mapper.BrowsedMapper;
 import edu.scau.common.mapper.PublishManagementMapper;
 import edu.scau.common.utils.DateToStringUtil;
+import edu.scau.common.utils.ListMerge;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import java.beans.Transient;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -31,10 +31,11 @@ public class PublishManagementServiceImpl implements PublishManagementService {
     @Autowired(required = false)
     private AuthenticationMapper authenticationMapper;
     @Override
-    public List<PublishManagement> getPublish(int userId) {
+    public List<ActivityManger> getPublish(int userId) {
         List<Integer> level = authenticationMapper.getLevel(userId);
-        List<PublishManagement> publishActivity=new ArrayList<>();
-        List<PublishManagement> publishGroup=new ArrayList<>();
+        List<ActivityManger> publishActivity=new ArrayList<>();
+        List<ActivityManger> publishGroup=new ArrayList<>();
+        List<ActivityManger> certificate=new ArrayList<>();
         int max=0;
         for (Integer integer : level) {
             if(integer>max){
@@ -44,45 +45,29 @@ public class PublishManagementServiceImpl implements PublishManagementService {
         if(max==3){
             publishActivity=publishManagementMapper.getAllActivity();
             publishGroup=publishManagementMapper.getAllGroup();
+            certificate = publishManagementMapper.getAllCertificate();
         }
         else{
             publishActivity = publishManagementMapper.getPublishActivity(userId);
             publishGroup = publishManagementMapper.getPublishGroup(userId);
+            certificate = publishManagementMapper.getCertificate(userId);
         }
-        for (PublishManagement publishManagement : publishActivity) {
-            publishManagement.setType(1);
+        for (ActivityManger activityManger : publishActivity) {
+            activityManger.setType(1);
         }
-        for (PublishManagement publishManagement : publishGroup) {
-            publishManagement.setType(2);
+        for (ActivityManger activityManger : certificate) {
+            activityManger.setType(2);
         }
-        List<PublishManagement> publishManagements = new ArrayList<>();
-        int i=0;
-        int j=0;
-        while(i<publishActivity.size()&&j<publishGroup.size()){
-            if(publishActivity.get(i).getPublishTime().after(publishGroup.get(j).getPublishTime())){
-                publishManagements.add(publishActivity.get(i));
-                i++;
-            }else{
-                publishManagements.add(publishGroup.get(j));
-                j++;
-            }
+        for (ActivityManger activityManger : publishGroup) {
+            activityManger.setType(3);
         }
-        if(i!=publishActivity.size()){
-            for(int a=i;a<publishActivity.size();a++){
-                publishManagements.add(publishActivity.get(a));
-            }
-        }else{
-            for(int b=j;b<publishGroup.size();b++){
-                publishManagements.add(publishGroup.get(b));
-            }
+        List<ActivityManger> activityMangers = ListMerge.listMerge2(publishActivity, certificate);
+        List<ActivityManger> activityMangers1 = ListMerge.listMerge2(activityMangers, publishGroup);
+        for (ActivityManger activityManger : activityMangers1) {
+            activityManger.setDate(DateToStringUtil.publishTime(activityManger.getBuildTime()));
+            activityManger.setSelect(false);
         }
-        for (PublishManagement publishManagement : publishManagements) {
-            publishManagement.setDate(DateToStringUtil.publishTime(publishManagement.getPublishTime()));
-        }
-        for (PublishManagement publishManagement : publishManagements) {
-            publishManagement.setSelect(false);
-        }
-        return publishManagements;
+        return activityMangers1;
     }
 
     @Override
@@ -91,13 +76,17 @@ public class PublishManagementServiceImpl implements PublishManagementService {
         Integer result=0;
         for (int i = 0; i <id.length ; i++) {
             if(type[i]==1){
-                result=publishManagementMapper.deletePublishActivity(id[i]);
+                result+=publishManagementMapper.deletePublishActivity(id[i]);
                 activityCollectedMapper.deleteCollectedActivity(null,id[i]);
                 browsedMapper.deleteBrowsed(id[i]);
+            }
+            else if(type[i]==2){
+                browsedMapper.deleteCertificateBrowsed(id[i]);
+                result+=publishManagementMapper.deleteCertificate(id[i]);
             }
             else
                 result=publishManagementMapper.deletePublishGroup(id[i]);
         }
-        return result;
+        return result==id.length?1:0;
     }
 }

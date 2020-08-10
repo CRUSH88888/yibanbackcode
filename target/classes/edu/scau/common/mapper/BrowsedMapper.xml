@@ -3,23 +3,54 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.BrowsedMapper">
-    <select id="getFootPrint" resultMap="footPrint" parameterType="int">
-        select a.id,a.title,b.browsed_time from browsed as b
-        left join activite as a on a.id=b.activity_id
+    <select id="getFootPrint" resultMap="activityManger" parameterType="int">
+        select a.id,a.title,b.browsed_time from activite as a
+        left join browsed as b on a.id=b.activity_id
         where b.user_id=#{userId}
         order by browsed_time desc
     </select>
-    <resultMap id="footPrint" type="edu.scau.common.dto.FootPrint">
-        <result column="id" property="activityId"/>
+    <resultMap id="activityManger" type="edu.scau.common.dto.ActivityManger">
+        <result column="id" property="id"/>
         <result column="title" property="title"/>
-        <result column="browsed_time" property="browsedTime"/>
+        <result column="browsed_time" property="buildTime"/>
+    </resultMap>
+    <select id="getCertificateFootPrint" resultMap="activityManger2" parameterType="int">
+        select a.id,a.activity_title,b.browsed_time from activity_certificate as a
+        left join activity_certificate_browsed as b on a.id=b.activity_certificate_id
+        where b.user_id=#{userId}
+        order by browsed_time desc
+    </select>
+    <resultMap id="activityManger2" type="edu.scau.common.dto.ActivityManger">
+        <result column="id" property="id"/>
+        <result column="activity_title" property="title"/>
+        <result column="browsed_time" property="buildTime"/>
     </resultMap>
     <insert id="insertBrowsed" parameterType="edu.scau.common.pojo.Browse" useGeneratedKeys="true" keyProperty="id">
         insert into browsed(is_browsed,activity_id,user_id,browsed_time)
         values (1,#{activityId},#{userId},#{browsedTime})
     </insert>
+    <insert id="insertBrowsed" parameterType="edu.scau.common.pojo.Browse" useGeneratedKeys="true" keyProperty="id">
+        insert into activity_certificate_browsed(is_browsed,activity_certificate_id,user_id,browsed_time)
+        values (1,#{activityId},#{userId},#{browsedTime})
+    </insert>
+    <update id="updateBrowsed" parameterType="edu.scau.common.pojo.Browse">
+        update browsed
+        set browsed_time=#{browsedTime}
+        where user_id=#{userId}
+        and activity_id=#{activityId}
+    </update>
+    <update id="updateCertificateBrowsed" parameterType="edu.scau.common.pojo.Browse">
+        update activity_certificate_browsed
+        set browsed_time=#{browsedTime}
+        where user_id=#{userId}
+        and activity_certificate_id=#{activityId}
+    </update>
     <delete id="deleteBrowsed" parameterType="int">
         delete from browsed
         where activity_id=#{activityId}
+    </delete>
+    <delete id="deleteCertificateBrowsed" parameterType="int">
+        delete from activity_certificate_browsed
+        where activity_certificate_id=#{activityId}
     </delete>
 </mapper>

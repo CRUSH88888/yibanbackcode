@@ -4,8 +4,10 @@ import edu.scau.common.Service.AssociationService;
 import edu.scau.common.mapper.AssociationMapper;
 import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.pojo.Association;
+import edu.scau.common.utils.FileUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
@@ -23,7 +25,10 @@ public class AssociationServiceImpl implements AssociationService {
 
     @Override
     public Association getAssociationByName(String associationName) {
-        return associationMapper.getAssociationByName(associationName);
+        Association associationByName = associationMapper.getAssociationByName(associationName);
+        List<String> picture = associationMapper.getPicture(associationName);
+        associationByName.setPicture(picture);
+        return associationByName;
     }
 
     @Override
@@ -32,19 +37,33 @@ public class AssociationServiceImpl implements AssociationService {
     }
 
     @Override
+    @Transactional
     public Integer updateAssociation(Association association) {
         String associationById = associationMapper.getAssociationById(association.getId());
-        authenticationMapper.updateAssociationName(associationById,association.getName());
-        Integer result=associationMapper.updateAssociation(association);
+        Integer result=0;
+        result+=authenticationMapper.updateAssociationName(associationById,association.getName());
+        List<String> picture1 = associationMapper.getPicture(associationById);
+        for (String s : picture1) {
+            result+=associationMapper.deletePicture(associationById);
+            FileUtil.deleteFile(s);
+        }
+        result+=associationMapper.updateAssociation(association);
+        List<String> picture = association.getPicture();
+        for (String s : picture) {
+            result+= associationMapper.insertPic(association.getName(),s);
+        }
         return result>0?1:0;
     }
 
     @Override
     public Integer insertAssociation(Association association) {
         Integer result=associationMapper.insertAssociation(association);
+        List<String> picture = association.getPicture();
+        if(picture!=null) {
+            for (String s : picture) {
+                result+=associationMapper.insertPic(s,association.getName());
+            }
+        }
         return result>0?1:0;
-    }
-    public List<String> getAssociation(){
-        return associationMapper.getAssociation();
     }
 }

@@ -4,26 +4,35 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.PublishManagementMapper">
     <select id="getPublishActivity" resultMap="activity" parameterType="int">
-        select id,user_id,title,build_time from activite
+        select id,title,build_time from activite
         where user_id=#{userId}
         order by build_time desc
     </select>
-    <resultMap id="activity" type="edu.scau.common.dto.PublishManagement">
+    <resultMap id="activity" type="edu.scau.common.dto.ActivityManger">
         <result property="id" column="id"/>
-        <result property="userId" column="user_id"/>
-        <result property="text" column="title"/>
-        <result property="publishTime" column="build_time"/>
+        <result property="title" column="title"/>
+        <result property="buildTime" column="build_time"/>
     </resultMap>
     <select id="getPublishGroup" resultMap="group" parameterType="int">
-        select id,user_id,text,publish_time from `group`
+        select id,text,publish_time from `group`
         where user_id=#{userId}
         order by publish_time desc
     </select>
-    <resultMap id="group" type="edu.scau.common.dto.PublishManagement">
+
+    <resultMap id="group" type="edu.scau.common.dto.ActivityManger">
         <result property="id" column="id"/>
-        <result property="userId" column="user_id"/>
-        <result property="text" column="text"/>
-        <result property="publishTime" column="publish_time"/>
+        <result property="title" column="text"/>
+        <result property="buildTime" column="publish_time"/>
+    </resultMap>
+    <select id="getCertificate" resultMap="certificate">
+        select id,activity_title,building_time from activity_certificate
+        where user_id=#{userId}
+        order by building_time desc
+    </select>
+    <resultMap id="certificate" type="edu.scau.common.dto.ActivityManger">
+        <result column="id" property="id"/>
+        <result column="activity_title" property="title"/>
+        <result column="building_time" property="buildTime"/>
     </resultMap>
     <delete id="deletePublishActivity" parameterType="int">
         delete from activite where id=#{id}
@@ -31,12 +40,19 @@
     <delete id="deletePublishGroup" parameterType="int">
         delete from `group` where id=#{id}
     </delete>
-    <select id="getAllActivity" resultMap="activity">
+    <delete id="deleteCertificate" parameterType="int">
+        delete from activity_certificate where id=#{id}
+    </delete>
+    <select id="deleteCertificate" resultMap="activity">
         select id,user_id,title,build_time from activite
         order by build_time desc
     </select>
     <select id="getAllGroup" resultMap="group">
         select id,user_id,text,publish_time from `group`
         order by publish_time desc
+    </select>
+    <select id="getAllCertificate" resultMap="certificate">
+        select id,activity_title,building_time from activity_certificate
+        order by building_time desc
     </select>
 </mapper>

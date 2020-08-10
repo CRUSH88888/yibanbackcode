@@ -20,4 +20,11 @@ public class Authentication {
     private int level;//用户权限 1:工作人员 2：负责人 3：管理员
     private Timestamp authenticationTime;//认证时间
     private String associationName;//认证社团名称
+
+    public Authentication(int userId, int level, Timestamp authenticationTime, String associationName) {
+        this.userId = userId;
+        this.level = level;
+        this.authenticationTime = authenticationTime;
+        this.associationName = associationName;
+    }
 }

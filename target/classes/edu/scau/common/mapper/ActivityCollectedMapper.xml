@@ -5,15 +5,27 @@
 <mapper namespace="edu.scau.common.mapper.ActivityCollectedMapper">
     <select id="getCollectedActivity" resultMap="activityManger" parameterType="int">
         select a.id,a.title,a.build_time
-         from collection c
-         left join activite a on c.activity_id = a.id
+         from activite a
+         left join collection c on c.activity_id = a.id
         where c.user_id = #{userId}
+        order by a.build_time desc
     </select>
     <resultMap id="activityManger" type="edu.scau.common.dto.ActivityManger">
         <result column="id" property="id"/>
         <result column="title" property="title"/>
         <result column="build_time" property="buildTime"/>
-        <result column="address" property="address"/>
+    </resultMap>
+    <select id="getCertificate" resultMap="activityManger2" parameterType="int">
+        select a.id,a.activity_title,a.building_time
+        from activity_certificate a
+        left join activity_certificate_collected c on c.certificate_id = a.id
+        where c.user_id = #{userId}
+        order by a.building_time desc
+    </select>
+    <resultMap id="activityManger2" type="edu.scau.common.dto.ActivityManger">
+        <result column="id" property="id"/>
+        <result column="activity_title" property="title"/>
+        <result column="building_time" property="buildTime"/>
     </resultMap>
     <select id="getACollectedActivity" resultType="integer">
         select id from collection

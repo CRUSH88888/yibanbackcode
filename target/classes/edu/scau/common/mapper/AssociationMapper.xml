@@ -4,9 +4,16 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.AssociationMapper">
 
-    <select id="getAssociationByName" resultType="edu.scau.common.pojo.Association" parameterType="String">
+    <select id="getAssociationByName" resultMap="association" parameterType="String">
         select * from association where `name`=#{associationName}
     </select>
+    <resultMap id="association" type="edu.scau.common.pojo.Association">
+        <result column="id" property="id"/>
+        <result column="name" property="name"/>
+        <result column="introduce" property="introduce"/>
+        <result column="href" property="href"/>
+        <result column="type" property="type"/>
+    </resultMap>
     <select id="getAssociationByType" resultType="String" parameterType="String">
         select `name` from association where type=#{type}
     </select>
@@ -30,4 +37,16 @@
         select `name` from association
         where id=#{id}
     </select>
+    <select id="getPicture" resultType="string" parameterType="string">
+        select picture from association_pic
+        where association_name=#{associationName}
+    </select>
+    <insert id="insertPic">
+        insert into association_pic(association_name,picture)
+        values (#{associationName},#{picture})
+    </insert>
+    <delete id="deletePicture" parameterType="string">
+        delete from association_pic
+        where association_name=#{associationName}
+    </delete>
 </mapper>

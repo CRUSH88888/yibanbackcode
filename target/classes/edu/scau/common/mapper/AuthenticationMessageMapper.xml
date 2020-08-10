@@ -21,4 +21,31 @@
         where user_id=#{userId}
         and association_name=#{associationName}
     </select>
+    <select id="getAuthenticationMessage" resultMap="authenticationMessage" parameterType="int">
+        select id,user_id,association_name,browsed,`level` from authentication_message
+    </select>
+    <resultMap id="authenticationMessage" type="edu.scau.common.pojo.AuthenticationMessage">
+        <result property="id" column="id"/>
+        <result property="userId" column="user_id"/>
+        <result property="associationName" column="association_name"/>
+        <result property="browsed" column="browsed"/>
+        <result property="level" column="level"/>
+    </resultMap>
+    <select id="getAuthenticationMessageById" resultMap="authenticationMessage">
+        select id,user_id,association_name,browsed,`level` from authentication_message
+        where id=#{id}
+    </select>
+    <select id="getPicture" resultType="string" parameterType="int">
+        select picture_url from authentication_pic
+        where authentication_id=#{authenticationId}
+    </select>
+    <insert id="insertAuthentication" parameterType="edu.scau.common.pojo.Authentication" useGeneratedKeys="true" keyProperty="id">
+        insert into authentication(user_id, `level`, authentication_time, association_name)
+        VALUES(#{userId}, #{level}, #{authenticationTime}, #{associationName})
+    </insert>
+    <update id="updateAuthentication" parameterType="int">
+        update authentication_message
+        set browsed=1
+        where id=#{id}
+    </update>
 </mapper>

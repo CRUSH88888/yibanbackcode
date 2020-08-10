@@ -39,15 +39,8 @@ public class AuthenticationMessageController {
     public ApiResponse sendAuthenticationMessage(@RequestParam("userId")int userId,
                                                  @RequestParam("associationName")String associationName,
                                                  @RequestParam("level") int level,
-                                                 @RequestParam(value = "picture",required = false)MultipartFile[] picture) throws IOException {
-        List<String> strings = new ArrayList<>();
-        if(picture!=null) {
-            for (MultipartFile multipartFile : picture) {
-                String s = FileUtil.saveFile(multipartFile);
-                strings.add(s);
-            }
-        }
-        AuthenticationMessage authenticationMessage = new AuthenticationMessage(userId, associationName, level, strings);
+                                                 @RequestParam(value = "picture",required = false)List<String> picture)  {
+        AuthenticationMessage authenticationMessage = new AuthenticationMessage(userId, associationName, level, picture);
         Integer result = authenticationMessageService.to_authentication(authenticationMessage);
         if(result==1){
             return new ApiResponse(1,"success");
@@ -58,5 +51,38 @@ public class AuthenticationMessageController {
         else{
             return new ApiResponse(-1,"认证失败");
         }
+    }
+
+    /**
+     * 获取审核信息
+     * @return
+     */
+    @GetMapping("getAuthenticationMessage")
+    public ApiResponse getAuthenticationMessage(){
+        List<AuthenticationMessage> authenticationMessage = authenticationMessageService.getAuthenticationMessage();
+        return authenticationMessage.isEmpty()==true?new ApiResponse(0,"empty"):new ApiResponse(0,"success",authenticationMessage);
+    }
+
+    /**
+     * 获取详细审核信息
+     * @param id
+     * @return
+     */
+    @GetMapping("getAuthenticationMessageById")
+    public ApiResponse getAuthenticationMessageById(@RequestParam("id") int id){
+        AuthenticationMessage authenticationMessageById = authenticationMessageService.getAuthenticationMessageById(id);
+        return authenticationMessageById==null?new ApiResponse(0,"empty"):new ApiResponse(0,"success",authenticationMessageById);
+    }
+    @GetMapping("fail")
+    public ApiResponse fail(@RequestParam("information") String information,
+                            @RequestParam("id") int id){
+        Integer fail = authenticationMessageService.fail(information,id);
+        return fail>0?new ApiResponse(0,"success"):new ApiResponse(-1,"error");
+
+    }
+    @GetMapping("success")
+    public ApiResponse success(@RequestParam("id") int id){
+        Integer success = authenticationMessageService.success(id);
+        return success>0?new ApiResponse(0,"success"):new ApiResponse(-1,"error");
     }
 }
