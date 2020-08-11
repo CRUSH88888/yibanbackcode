@@ -2,6 +2,7 @@
 <!DOCTYPE mapper  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.ActivityCertificateMapper">
+<!--    下面这玩意没用了先放着-->
     <update id="updateCertificate" parameterType="edu.scau.common.pojo.ActivityCertificate">
         update activity_certificate set
         activity_content = #{activity_content},
@@ -9,8 +10,8 @@
         where id = #{id}
     </update>
     <insert id="insertCertificate" parameterType="edu.scau.common.pojo.ActivityCertificate" keyProperty="id" useGeneratedKeys="true">
-        insert into activity_certificate ( activity_title, activity_content) VALUES
-        (#{activityTitle},#{activityContent})
+        insert into activity_certificate ( activity_title, activity_content,user_id,building_time) VALUES
+        (#{activityTitle},#{activityContent},#{userId},#{buildingTime})
     </insert>
     <insert id="insertCertificateFile" parameterType="java.util.List">
         insert into certificate_file (certificate_id, file_url) VALUES
@@ -31,6 +32,9 @@
         insert into activity_certificate_collected (user_id, collected, certificate_id) VALUES
         (#{userId},1,#{certificateId})
     </insert>
+    <delete id="deleteCollectedCertificate" parameterType="integer">
+        delete from activity_certificate_collected where user_id = #{userId} and certificate_id = #{certificateId}
+    </delete>
 
 
 

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="edu.scau.common.mapper.UserMapper">
+
+    <update id="updateUser" parameterType="edu.scau.common.pojo.User">
+        update user set
+        student_number = #{studentNumber},
+        username = #{username},
+        name = #{name},
+        grade = #{grade},
+        major = #{major},
+        phone_number = #{phoneNumber},
+        wechat_number = #{wechatNumber}
+        where yb_userid = #{yb_userid}
+    </update>
+</mapper>

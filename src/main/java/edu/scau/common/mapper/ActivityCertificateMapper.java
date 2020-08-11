@@ -4,6 +4,7 @@ import edu.scau.common.pojo.ActivityCertificate;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.MySqlMapper;
+import tk.mybatis.mapper.common.base.BaseDeleteMapper;
 
 import java.util.List;
 
@@ -21,6 +22,7 @@ public interface ActivityCertificateMapper extends MySqlMapper<ActivityCertifica
     Integer insertCertificateLabel(@Param("labels")List<String> labels,@Param("certificateId") Integer certificateId);
     Integer collectedCertificate(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
 
+    Integer deleteCollectedCertificate(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
 //    Integer updateCertificateFile(@Param("files") List<String> fileUrl,@Param("certificateId") Integer certificateId);
 
 }

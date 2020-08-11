@@ -722,6 +722,7 @@
     </collation>
     <collation id="226" parent="1" name="utf8mb4_vietnamese_ci">
       <Charset>utf8mb4</Charset>
+<<<<<<< HEAD
     </collation>
     <user id="227" parent="1" name="&apos;&apos;">
       <Host>izwz9bm1omvre5gitoiqcxz</Host>
@@ -762,70 +763,140 @@
     <table id="251" parent="7" name="label"/>
     <table id="252" parent="7" name="user"/>
     <column id="253" parent="233" name="id">
+=======
+      <DefaultForCharset>0</DefaultForCharset>
+    </collation>
+    <table id="227" parent="7" name="activite"/>
+    <table id="228" parent="7" name="activity_certificate"/>
+    <table id="229" parent="7" name="activity_certificate_browsed"/>
+    <table id="230" parent="7" name="activity_certificate_collected"/>
+    <table id="231" parent="7" name="activity_label"/>
+    <table id="232" parent="7" name="activity_message"/>
+    <table id="233" parent="7" name="activity_pic"/>
+    <table id="234" parent="7" name="association"/>
+    <table id="235" parent="7" name="association_pic"/>
+    <table id="236" parent="7" name="authentication"/>
+    <table id="237" parent="7" name="authentication_message"/>
+    <table id="238" parent="7" name="authentication_pic"/>
+    <table id="239" parent="7" name="browsed"/>
+    <table id="240" parent="7" name="certificate_file"/>
+    <table id="241" parent="7" name="certificate_label"/>
+    <table id="242" parent="7" name="collection"/>
+    <table id="243" parent="7" name="group"/>
+    <table id="244" parent="7" name="information"/>
+    <table id="245" parent="7" name="label"/>
+    <table id="246" parent="7" name="user"/>
+    <column id="247" parent="227" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="254" parent="233" name="title">
+=======
+    <column id="248" parent="227" name="title">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="255" parent="233" name="text">
+=======
+    <column id="249" parent="227" name="text">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="256" parent="233" name="user_id">
+=======
+    <column id="250" parent="227" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="257" parent="233" name="start_time">
+=======
+    <column id="251" parent="227" name="start_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="258" parent="233" name="end_time">
+=======
+    <column id="252" parent="227" name="end_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="259" parent="233" name="build_time">
+=======
+    <column id="253" parent="227" name="build_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="260" parent="233" name="address">
+=======
+    <column id="254" parent="227" name="address">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="261" parent="233" name="PRIMARY">
+=======
+    <key id="255" parent="227" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="262" parent="234" name="id">
+=======
+    <column id="256" parent="228" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="263" parent="234" name="activity_title">
+=======
+    <column id="257" parent="228" name="activity_title">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="264" parent="234" name="activity_content">
+=======
+    <column id="258" parent="228" name="activity_content">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="265" parent="234" name="user_id">
       <Position>4</Position>
       <DataType>int(255)|0s</DataType>
@@ -871,571 +942,1038 @@
       <ColumnKind>normal</ColumnKind>
     </column>
     <key id="273" parent="235" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <ColNames>id</ColNames>
-      <Primary>1</Primary>
-    </key>
-    <column id="274" parent="236" name="id">
-      <Position>1</Position>
-      <DataType>int(11)|0s</DataType>
-      <NotNull>1</NotNull>
-      <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="275" parent="236" name="user_id">
-      <Position>2</Position>
-      <DataType>int(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="276" parent="236" name="collected">
-      <Position>3</Position>
-      <DataType>tinyint(1)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <column id="277" parent="236" name="certificate_id">
+=======
+    <column id="259" parent="228" name="user_id">
       <Position>4</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="278" parent="236" name="PRIMARY">
+    <column id="260" parent="228" name="building_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
+      <ColumnKind>normal</ColumnKind>
+      <OnUpdate>CURRENT_TIMESTAMP</OnUpdate>
+    </column>
+    <key id="261" parent="228" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="279" parent="237" name="id">
+<<<<<<< HEAD
+    <column id="274" parent="236" name="id">
+=======
+    <column id="262" parent="229" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
+    <column id="275" parent="236" name="user_id">
+=======
+    <column id="263" parent="229" name="is_browsed">
+      <Position>2</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="264" parent="229" name="activity_certificate_id">
+      <Position>3</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="265" parent="229" name="user_id">
+      <Position>4</Position>
+      <DataType>int(11)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="266" parent="229" name="browsed_time">
+      <Position>5</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="267" parent="229" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+    <column id="268" parent="230" name="id">
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <column id="269" parent="230" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
+      <Position>2</Position>
+      <DataType>int(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+<<<<<<< HEAD
+    <column id="276" parent="236" name="collected">
+=======
+    <column id="270" parent="230" name="collected">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
+      <Position>3</Position>
+      <DataType>tinyint(1)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+<<<<<<< HEAD
+    <column id="277" parent="236" name="certificate_id">
+=======
+    <column id="271" parent="230" name="certificate_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
+      <Position>4</Position>
+      <DataType>int(255)|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+<<<<<<< HEAD
+    <key id="278" parent="236" name="PRIMARY">
+=======
+    <key id="272" parent="230" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
+      <NameSurrogate>1</NameSurrogate>
+      <ColNames>id</ColNames>
+      <Primary>1</Primary>
+    </key>
+<<<<<<< HEAD
+    <column id="279" parent="237" name="id">
+=======
+    <column id="273" parent="231" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
+      <Position>1</Position>
+      <DataType>int(11)|0s</DataType>
+      <NotNull>1</NotNull>
+      <SequenceIdentity>1</SequenceIdentity>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+<<<<<<< HEAD
     <column id="280" parent="237" name="label_code">
+=======
+    <column id="274" parent="231" name="label_code">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="281" parent="237" name="activity_id">
+=======
+    <column id="275" parent="231" name="activity_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="282" parent="237" name="PRIMARY">
+=======
+    <key id="276" parent="231" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="283" parent="238" name="id">
+=======
+    <column id="277" parent="232" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="284" parent="238" name="activity_id">
+=======
+    <column id="278" parent="232" name="activity_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <Comment>活动id</Comment>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="285" parent="238" name="message">
+=======
+    <column id="279" parent="232" name="message">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <Comment>评论</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="286" parent="238" name="user_id">
+=======
+    <column id="280" parent="232" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <Comment>有收藏活动的人的id&#xd;
 </Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="287" parent="238" name="browsed">
+=======
+    <column id="281" parent="232" name="browsed">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="288" parent="238" name="publish_time">
+=======
+    <column id="282" parent="232" name="publish_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="289" parent="238" name="PRIMARY">
+=======
+    <key id="283" parent="232" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="290" parent="239" name="id">
+=======
+    <column id="284" parent="233" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="291" parent="239" name="activity_id">
+=======
+    <column id="285" parent="233" name="activity_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="292" parent="239" name="pic_url">
+=======
+    <column id="286" parent="233" name="pic_url">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="293" parent="239" name="PRIMARY">
+=======
+    <key id="287" parent="233" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="294" parent="240" name="id">
+=======
+    <column id="288" parent="234" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="295" parent="240" name="name">
+=======
+    <column id="289" parent="234" name="name">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="296" parent="240" name="introduce">
+=======
+    <column id="290" parent="234" name="introduce">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="297" parent="240" name="href">
+=======
+    <column id="291" parent="234" name="href">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="298" parent="240" name="type">
+=======
+    <column id="292" parent="234" name="type">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>enum(&apos;组织&apos;, &apos;学术科技类&apos;, &apos;公益实践类&apos;, &apos;文化艺术类&apos;, &apos;体育竞技类&apos;)|0e</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="299" parent="240" name="PRIMARY">
+=======
+    <key id="293" parent="234" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="300" parent="241" name="association_name">
+=======
+    <column id="294" parent="235" name="association_name">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="301" parent="241" name="id">
+=======
+    <column id="295" parent="235" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="302" parent="241" name="picture">
+=======
+    <column id="296" parent="235" name="picture">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="303" parent="241" name="PRIMARY">
+=======
+    <key id="297" parent="235" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="304" parent="242" name="id">
+=======
+    <column id="298" parent="236" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(30)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="305" parent="242" name="user_id">
+=======
+    <column id="299" parent="236" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="306" parent="242" name="level">
+=======
+    <column id="300" parent="236" name="level">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="307" parent="242" name="authentication_time">
+=======
+    <column id="301" parent="236" name="authentication_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="308" parent="242" name="association_name">
+=======
+    <column id="302" parent="236" name="association_name">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="309" parent="242" name="PRIMARY">
+=======
+    <key id="303" parent="236" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="310" parent="243" name="id">
+=======
+    <column id="304" parent="237" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(30)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="311" parent="243" name="user_id">
+=======
+    <column id="305" parent="237" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="312" parent="243" name="association_name">
+=======
+    <column id="306" parent="237" name="association_name">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="313" parent="243" name="browsed">
+=======
+    <column id="307" parent="237" name="browsed">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="314" parent="243" name="level">
+=======
+    <column id="308" parent="237" name="level">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="315" parent="243" name="PRIMARY">
+=======
+    <key id="309" parent="237" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="316" parent="244" name="picture_url">
+=======
+    <column id="310" parent="238" name="picture_url">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="317" parent="244" name="authentication_id">
+=======
+    <column id="311" parent="238" name="authentication_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="318" parent="244" name="id">
+=======
+    <column id="312" parent="238" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="319" parent="244" name="PRIMARY">
+=======
+    <key id="313" parent="238" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="320" parent="245" name="id">
+=======
+    <column id="314" parent="239" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="321" parent="245" name="is_browsed">
+=======
+    <column id="315" parent="239" name="is_browsed">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="322" parent="245" name="activity_id">
+=======
+    <column id="316" parent="239" name="activity_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="323" parent="245" name="user_id">
+=======
+    <column id="317" parent="239" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="324" parent="245" name="browsed_time">
+=======
+    <column id="318" parent="239" name="browsed_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="325" parent="245" name="PRIMARY">
+=======
+    <key id="319" parent="239" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="326" parent="246" name="id">
+=======
+    <column id="320" parent="240" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="327" parent="246" name="certificate_id">
+=======
+    <column id="321" parent="240" name="certificate_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="328" parent="246" name="file_url">
+=======
+    <column id="322" parent="240" name="file_url">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="329" parent="246" name="PRIMARY">
+=======
+    <key id="323" parent="240" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="330" parent="247" name="id">
+=======
+    <column id="324" parent="241" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="331" parent="247" name="certificate_id">
+=======
+    <column id="325" parent="241" name="certificate_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="332" parent="247" name="label">
+=======
+    <column id="326" parent="241" name="label">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="333" parent="247" name="PRIMARY">
+=======
+    <key id="327" parent="241" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="334" parent="248" name="user_id">
+=======
+    <column id="328" parent="242" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="335" parent="248" name="activity_id">
+=======
+    <column id="329" parent="242" name="activity_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="336" parent="248" name="id">
+=======
+    <column id="330" parent="242" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="337" parent="248" name="PRIMARY">
+=======
+    <key id="331" parent="242" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="338" parent="249" name="id">
+=======
+    <column id="332" parent="243" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="339" parent="249" name="activity_id">
+=======
+    <column id="333" parent="243" name="activity_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="340" parent="249" name="user_id">
+=======
+    <column id="334" parent="243" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="341" parent="249" name="text">
+=======
+    <column id="335" parent="243" name="text">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="342" parent="249" name="publish_time">
+=======
+    <column id="336" parent="243" name="publish_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="343" parent="249" name="date">
+=======
+    <column id="337" parent="243" name="date">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="344" parent="249" name="PRIMARY">
+=======
+    <key id="338" parent="243" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="345" parent="250" name="id">
+=======
+    <column id="339" parent="244" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="346" parent="250" name="information">
+=======
+    <column id="340" parent="244" name="information">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="347" parent="250" name="user_id">
+=======
+    <column id="341" parent="244" name="user_id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="348" parent="250" name="publish_time">
+=======
+    <column id="342" parent="244" name="publish_time">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="349" parent="250" name="browsed">
+=======
+    <column id="343" parent="244" name="browsed">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="350" parent="250" name="PRIMARY">
+=======
+    <key id="344" parent="244" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="351" parent="251" name="id">
+=======
+    <column id="345" parent="245" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="352" parent="251" name="activityId">
+=======
+    <column id="346" parent="245" name="activityId">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="353" parent="251" name="propagandaConference">
+=======
+    <column id="347" parent="245" name="propagandaConference">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="354" parent="251" name="match">
+=======
+    <column id="348" parent="245" name="match">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="355" parent="251" name="volunteerActivities">
+=======
+    <column id="349" parent="245" name="volunteerActivities">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="356" parent="251" name="lecture">
+=======
+    <column id="350" parent="245" name="lecture">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>6</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="357" parent="251" name="movieFestival">
+=======
+    <column id="351" parent="245" name="movieFestival">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>7</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="358" parent="251" name="amusementActivity">
+=======
+    <column id="352" parent="245" name="amusementActivity">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>8</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="359" parent="251" name="universityLevel">
+=======
+    <column id="353" parent="245" name="universityLevel">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>9</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="360" parent="251" name="collegeLevel">
+=======
+    <column id="354" parent="245" name="collegeLevel">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>10</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="361" parent="251" name="extraPints">
+=======
+    <column id="355" parent="245" name="extraPints">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>11</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="362" parent="251" name="volunteerTime">
+=======
+    <column id="356" parent="245" name="volunteerTime">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>12</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="363" parent="251" name="other">
+=======
+    <column id="357" parent="245" name="other">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>13</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="364" parent="251" name="PRIMARY">
+=======
+    <key id="358" parent="245" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
     <column id="365" parent="252" name="id">
+=======
+    <column id="359" parent="246" name="id">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="366" parent="252" name="student_number">
+=======
+    <column id="360" parent="246" name="student_number">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="367" parent="252" name="username">
+=======
+    <column id="361" parent="246" name="username">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="368" parent="252" name="name">
+=======
+    <column id="362" parent="246" name="name">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="369" parent="252" name="grade">
+=======
+    <column id="363" parent="246" name="grade">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="370" parent="252" name="major">
+=======
+    <column id="364" parent="246" name="major">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="371" parent="252" name="phone_number">
+=======
+    <column id="365" parent="246" name="phone_number">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="372" parent="252" name="wechat_number">
+=======
+    <column id="366" parent="246" name="wechat_number">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="373" parent="252" name="yb_userid">
+=======
+    <column id="367" parent="246" name="yb_userid">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="374" parent="252" name="yb_realname">
+=======
+    <column id="368" parent="246" name="yb_realname">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="375" parent="252" name="yb_sex">
+=======
+    <column id="369" parent="246" name="yb_sex">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="376" parent="252" name="yb_userhead">
+=======
+    <column id="370" parent="246" name="yb_userhead">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>12</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="377" parent="252" name="yb_identity">
+=======
+    <column id="371" parent="246" name="yb_identity">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <Position>13</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <key id="378" parent="252" name="PRIMARY">
+=======
+    <key id="372" parent="246" name="PRIMARY">
+>>>>>>> 86d26a81c6037c4c63ea517d5b8046f8219c84b4
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
