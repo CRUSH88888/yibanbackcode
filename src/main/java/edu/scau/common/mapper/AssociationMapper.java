@@ -2,6 +2,7 @@ package edu.scau.common.mapper;
 
 import edu.scau.common.pojo.Association;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
@@ -18,4 +19,7 @@ public interface AssociationMapper {
     Integer updateAssociation(Association association);
     Integer insertAssociation(Association association);
     List<String> getAssociation();
+    Integer insertPic(@Param("picture") String picture, @Param("associationName")String associationName);
+    List<String> getPicture(String associationName);
+    Integer deletePicture(String associationName);
 }

@@ -1,8 +1,11 @@
 package edu.scau.common.Service;
 
 import edu.scau.common.dto.ActivityCertificateCollected;
+import edu.scau.common.dto.IndexActivityCertificate;
 import edu.scau.common.pojo.ActivityCertificate;
 import org.apache.ibatis.annotations.Param;
+
+import java.util.List;
 
 /**
  * @description:
@@ -18,6 +21,8 @@ public interface ActivityCertificateService {
 //    没用上
     Integer updateCertificate(ActivityCertificate activityCertificate);
     Integer deleteCollectedCertificate(Integer userId, Integer certificateId);
+    List<IndexActivityCertificate> get(Integer userId);
+
 
 
 }

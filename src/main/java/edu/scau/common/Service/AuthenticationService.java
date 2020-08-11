@@ -11,9 +11,8 @@ import java.util.List;
  * @create: 2020-08-07 15:48
  **/
 public interface AuthenticationService {
-    Integer insertAuthenticationMapper(Authentication authentication);
     List<Authentication> getAuthentication(int userId);
-    Integer deleteAuthentication(@Param("userId") int userId, @Param("associationName") String associationName);
+    Integer deleteAuthentication(@Param("userId") int userId,@Param("level") int level,@Param("associationName") String associationName);
     List<String> updateAssociationAuthentication(@Param("userId") int userId);
     List<String> insertAssociationAuthentication(@Param("userId") int userId);
     Integer saveActivityAuthentication(@Param("userId") int userId);

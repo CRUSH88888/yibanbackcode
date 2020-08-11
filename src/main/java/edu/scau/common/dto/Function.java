@@ -20,5 +20,5 @@ public class Function {
     private List<Schedule> schedules;//近期活动
     private List<Information> information;//信息中心
     private List<Message> messages;//留言
-    private List<PublishManagement> publishManagements;//发布管理
+    private List<ActivityManger> PublishMangers;//发布管理
 }

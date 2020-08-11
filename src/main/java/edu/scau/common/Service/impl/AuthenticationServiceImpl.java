@@ -5,6 +5,7 @@ import edu.scau.common.mapper.AssociationMapper;
 import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.pojo.Association;
 import edu.scau.common.pojo.Authentication;
+import edu.scau.common.pojo.AuthenticationMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,10 +23,6 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     private AuthenticationMapper authenticationMapper;
     @Autowired(required = false)
     private AssociationMapper associationMapper;
-    @Override
-    public Integer insertAuthenticationMapper(Authentication authentication) {
-        return null;
-    }
 
     @Override
     public List<Authentication> getAuthentication(int userId) {
@@ -33,10 +30,11 @@ public class AuthenticationServiceImpl implements AuthenticationService {
     }
 
     @Override
-    public Integer deleteAuthentication(int userId, String associationName) {
-        Integer result = authenticationMapper.deleteAuthentication(userId, associationName);
-        return result;
+    public Integer deleteAuthentication(int userId, int level, String associationName) {
+        Integer result = authenticationMapper.deleteAuthentication(userId, level, associationName);
+        return result>0?1:0;
     }
+
 
     @Override
     public List<String> updateAssociationAuthentication(int userId) {

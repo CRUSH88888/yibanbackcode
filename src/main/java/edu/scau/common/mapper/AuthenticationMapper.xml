@@ -21,10 +21,10 @@
     </select>
     <update id="updateAssociationName">
         update authentication
-        set assocaition_name=#{newName}
-        where association_name={oldName}
+        set association_name=#{newName}
+        where association_name=#{oldName}
     </update>
-    <select id="getLevel" parameterType="integer">
+    <select id="getLevel" parameterType="int" resultType="Integer">
         select `level` from authentication
         where user_id=#{userId}
     </select>
@@ -37,4 +37,10 @@
         where `level`=2
         and association_name=#{associationName}
     </select>
+    <delete id="deleteAuthentication">
+        delete from authentication
+        where user_id=#{userId}
+        and association_name=#{associationName}
+        and `level` =#{level}
+    </delete>
 </mapper>

@@ -1,14 +1,18 @@
 package edu.scau.common.Service.impl;
 
+import com.github.pagehelper.PageHelper;
 import edu.scau.common.Service.ActivityCertificateService;
 import edu.scau.common.dto.ActivityCertificateCollected;
+import edu.scau.common.dto.IndexActivityCertificate;
 import edu.scau.common.mapper.ActivityCertificateMapper;
 import edu.scau.common.mapper.CertificateFileMapper;
 import edu.scau.common.pojo.ActivityCertificate;
 import edu.scau.common.pojo.CertificateFile;
+import edu.scau.common.utils.DateToStringUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -28,8 +32,15 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     public Boolean save(ActivityCertificate activityCertificate) {
         Integer certificateId = activityCertificateMapper.insertCertificate(activityCertificate);
         System.out.println(certificateId);
-        activityCertificateMapper.insertCertificateFile(activityCertificate.getFileUrl(),certificateId);
-        activityCertificateMapper.insertCertificateLabel(activityCertificate.getLabels(),certificateId);
+        for (String s:activityCertificate.getFileUrl()
+        ) {
+            activityCertificateMapper.insertCertificateFile(s,certificateId);
+        }
+        for (String s:activityCertificate.getLabels()
+             ) {
+            activityCertificateMapper.insertCertificateLabel(s,certificateId);
+        }
+
         return null;
     }
 
@@ -53,5 +64,22 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     @Override
     public Integer deleteCollectedCertificate(Integer userId, Integer certificateId) {
         return activityCertificateMapper.deleteCollectedCertificate(userId,certificateId);
+    }
+
+    @Override
+    public List<IndexActivityCertificate> get(Integer userId) {
+        List<IndexActivityCertificate> activityCertificates = new ArrayList<>();
+        List<ActivityCertificate> certificates = activityCertificateMapper.selectCertificate();
+        for (ActivityCertificate a:certificates
+             ) {
+            a.setFileUrl(activityCertificateMapper.selectFileUrl(a.getId()));
+            a.setLabels(activityCertificateMapper.selectLabels(a.getId()));
+            IndexActivityCertificate certificate =  new IndexActivityCertificate();
+            certificate.setActivityCertificate(a);
+            certificate.setBrowsed(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId())==1?true:false);
+            certificate.setBuiltTimeToNow(DateToStringUtil.publishTime(a.getBuildingTime()));
+            activityCertificates.add(certificate);
+        }
+        return activityCertificates;
     }
 }

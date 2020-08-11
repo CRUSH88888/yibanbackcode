@@ -15,7 +15,7 @@ import java.util.List;
 @Mapper
 public interface AuthenticationMapper {
     List<Authentication> getAuthentication(int userId);
-    Integer deleteAuthentication(@Param("userId") int userId,@Param("associationName") String associationName);
+    Integer deleteAuthentication(@Param("userId") int userId,@Param("level") int level,@Param("associationName") String associationName);
     List<String> AssociationAuthentication(@Param("userId") int userId);
     Integer getAssociationId(@Param("associationName") String associationName);
     List<Integer> getId(@Param("userId") int userId);

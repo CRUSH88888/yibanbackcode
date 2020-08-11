@@ -1,8 +1,13 @@
 package edu.scau.common.controller;
 
 import edu.scau.common.Service.ActivityCertificateService;
+import edu.scau.common.Service.BrowsedService;
+import edu.scau.common.Service.impl.BrowsedServiceImpl;
+import edu.scau.common.dto.IndexActivityCertificate;
 import edu.scau.common.pojo.ActivityCertificate;
 import edu.scau.common.utils.ApiResponse;
+import edu.scau.common.utils.LabelTransUtils;
+import edu.scau.common.utils.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +24,8 @@ import java.util.List;
 public class ActivityCertificateController {
     @Autowired
     private ActivityCertificateService activityCertificateService;
+    @Autowired
+    private BrowsedService browsedService;
 
     @PostMapping("saveActivityCertificate")
     public ApiResponse saveActivityCertificate(@RequestParam("activityTitle")String activityTitle,
@@ -37,7 +44,9 @@ public class ActivityCertificateController {
             labels.add(s);
         }
 
-        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labels,userId);
+        List<String> labelString = LabelTransUtils.StringToString(labels);
+
+        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labelString,userId);
         activityCertificateService.save(certificate);
         return new  ApiResponse(0,"success");
     }
@@ -85,6 +94,32 @@ public class ActivityCertificateController {
         }
 
         }
+
+
+    /**
+     * 点击详情浏览
+     * @param userId
+     * @param certificateId
+     * @return
+     */
+        @PostMapping("/browsedCertificate")
+        public ApiResponse browsedCertificate( @RequestParam("userId")Integer userId,
+                                               @RequestParam("certificateId")Integer certificateId){
+            Integer result = new BrowsedServiceImpl().insertCertificateBrowsed(certificateId,userId);
+            return result > 0 ?new ApiResponse(0,"success"):new ApiResponse(-1,"failed");
+        }
+
+        @PostMapping("/getIndexCertificate")
+        public ApiResponse getIndexCertificate(@RequestParam("userId")Integer userId){
+            List<IndexActivityCertificate> indexActivityCertificates =
+                    activityCertificateService.get(userId);
+            return indexActivityCertificates != null ? new ApiResponse(0,"success",indexActivityCertificates):new ApiResponse(-1,"Server Error");
+        }
+//        @PostMapping("/getCertificateById")
+//        public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
+//                                              @RequestParam("certificateId")Integer certificateId){
+//
+//        }
 
 
 

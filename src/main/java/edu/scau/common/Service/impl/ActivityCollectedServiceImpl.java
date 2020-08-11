@@ -5,6 +5,7 @@ import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.mapper.ActivityCollectedMapper;
 import edu.scau.common.pojo.Activity;
 import edu.scau.common.utils.DateToStringUtil;
+import edu.scau.common.utils.ListMerge;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -22,16 +23,24 @@ public class ActivityCollectedServiceImpl implements ActivityCollectedService {
     @Override
     public List<ActivityManger> getCollectedActivity(int userId) {
         List<ActivityManger> collectedActivity = activityCollectedMapper.getCollectedActivity(userId);
+        List<ActivityManger> certificate = activityCollectedMapper.getCertificate(userId);
         for (ActivityManger activityManger : collectedActivity) {
+            activityManger.setType(1);
+        }
+        for (ActivityManger activityManger : certificate) {
+            activityManger.setType(2);
+        }
+        List<ActivityManger> activityMangers = ListMerge.listMerge2(collectedActivity, certificate);
+        for (ActivityManger activityManger : activityMangers) {
             activityManger.setDate(DateToStringUtil.publishTime(activityManger.getBuildTime()));
         }
-        return collectedActivity;
+        return activityMangers;
     }
 
     @Override
     public Integer addActivity(int userId, int activityId) {
         Integer result=1;
-        if(activityCollectedMapper.getACollectedActivity(userId,activityId)!=null)
+        if(activityCollectedMapper.getACollectedActivity(userId,activityId)==null)
         result = activityCollectedMapper.addActivity(userId, activityId);
         return result>0?1:0;
     }

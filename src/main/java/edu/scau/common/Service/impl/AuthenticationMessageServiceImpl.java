@@ -5,11 +5,13 @@ import edu.scau.common.Service.AuthenticationService;
 import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.mapper.AuthenticationMessageMapper;
 import edu.scau.common.mapper.FunctionMapper;
+import edu.scau.common.pojo.Authentication;
 import edu.scau.common.pojo.AuthenticationMessage;
 import edu.scau.common.pojo.Information;
 import io.swagger.models.auth.In;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.sql.Timestamp;
 import java.util.List;
@@ -75,5 +77,57 @@ public class AuthenticationMessageServiceImpl implements AuthenticationMessageSe
                 return -1;
             }
         }
+    }
+
+    @Override
+    public List<AuthenticationMessage> getAuthenticationMessage() {
+        List<AuthenticationMessage> authenticationMessage = authenticationMessageMapper.getAuthenticationMessage();
+        for (AuthenticationMessage message : authenticationMessage) {
+            if(message.getLevel()==1){
+                message.setAssociationName(message.getAssociationName()+"工作人员");
+            }
+            else
+                message.setAssociationName(message.getAssociationName()+"负责人");
+        }
+        return authenticationMessage;
+    }
+
+    @Override
+    public AuthenticationMessage getAuthenticationMessageById(int id) {
+        AuthenticationMessage authenticationMessageById = authenticationMessageMapper.getAuthenticationMessageById(id);
+        if(authenticationMessageById.getLevel()==1)
+            authenticationMessageById.setAssociationName(authenticationMessageById.getAssociationName()+"工作人员");
+        else
+            authenticationMessageById.setAssociationName(authenticationMessageById.getAssociationName()+"负责人");
+        List<String> picture = authenticationMessageMapper.getPicture(id);
+        authenticationMessageById.setPictureUrl(picture);
+        return authenticationMessageById;
+    }
+
+    @Override
+    @Transactional
+    public Integer success(int id) {
+        AuthenticationMessage authenticationMessage = authenticationMessageMapper.getAuthenticationMessageById(id);
+        Authentication authentication = new Authentication(authenticationMessage.getUserId(), authenticationMessage.getLevel(), new Timestamp(System.currentTimeMillis()), authenticationMessage.getAssociationName());
+        Integer result = authenticationMessageMapper.insertAuthentication(authentication);
+        result+= authenticationMessageMapper.updateAuthentication(authenticationMessage.getId());
+        String information;
+        if(authenticationMessage.getLevel()==1){
+            information="你提交申请的"+authenticationMessage.getAssociationName()+"工作人员的审核已通过";
+        }
+        else
+            information="你提交申请的"+authenticationMessage.getAssociationName()+"负责人的审核已通过";
+        Information information1 = new Information(information, authenticationMessage.getUserId(), new Timestamp(System.currentTimeMillis()));
+        result+= functionMapper.insertInformation(information1);
+        return result==3?1:0;
+    }
+
+    @Override
+    public Integer fail(String information,int id) {
+        AuthenticationMessage authenticationMessage = authenticationMessageMapper.getAuthenticationMessageById(id);
+        Information information1 = new Information(information, authenticationMessage.getUserId(), new Timestamp(System.currentTimeMillis()));
+        Integer result = functionMapper.insertInformation(information1);
+        result+= authenticationMessageMapper.updateAuthentication(id);
+        return result==2?1:0;
     }
 }

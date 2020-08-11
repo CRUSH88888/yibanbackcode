@@ -10,6 +10,7 @@ import org.springframework.web.multipart.MultipartFile;
 
 import javax.mail.MessagingException;
 import java.io.IOException;
+import java.util.List;
 
 /**
  * @description: 意见反馈
@@ -21,7 +22,7 @@ public class MailController {
     @Autowired
     private SendMail sendMail;
     @GetMapping("sendMail")
-    public ApiResponse sendMail(@RequestParam(value = "picture",required = false) MultipartFile[] picture,
+    public ApiResponse sendMail(@RequestParam(value = "picture",required = false) List<String> picture,
                                 @RequestParam("text")String text) throws MessagingException, IOException {
         sendMail.sendMail(picture, text);
         return new ApiResponse(0,"success");

@@ -15,18 +15,16 @@
     </insert>
     <insert id="insertCertificateFile" parameterType="java.util.List">
         insert into certificate_file (certificate_id, file_url) VALUES
-        <foreach collection="files" item="item" index="index"
-                 separator=",">
-            (#{certificateId},#{item})
-        </foreach>
+
+            (#{certificateId},#{files})
+
 
     </insert>
     <insert id="insertCertificateLabel" parameterType="arraylist">
         insert into certificate_label(certificate_id, label) VALUES 
-        <foreach collection="labels" separator="," index="index"
-                 item="item">
-            (#{certificateId},#{item})
-        </foreach>
+
+            (#{certificateId},#{label})
+
     </insert>
     <insert id="collectedCertificate" parameterType="integer">
         insert into activity_certificate_collected (user_id, collected, certificate_id) VALUES
@@ -35,6 +33,37 @@
     <delete id="deleteCollectedCertificate" parameterType="integer">
         delete from activity_certificate_collected where user_id = #{userId} and certificate_id = #{certificateId}
     </delete>
+    <resultMap id="Certificate" type="edu.scau.common.pojo.ActivityCertificate">
+        <id column="id" property="id"/>
+        <result column="user_id" property="userId"/>
+        <result property="buildingTime" column="building_time"/>
+        <result property="activityContent" column="activity_content"/>
+        <result property="activityTitle" column="activity_title"/>
+        <collection property="fileUrl" javaType="java.util.List" ofType="string"
+                    select="edu.scau.common.mapper.ActivityCertificateMapper.selectFileUrl"
+                    column="id">
+        </collection>
+        <collection property="labels" javaType="java.util.List" ofType="string"
+                    select="edu.scau.common.mapper.ActivityCertificateMapper.selectLabels"
+                    column="id">
+        </collection>
+    </resultMap>
+    <select id="selectCertificate" resultMap="Certificate">
+        select * from activity_certificate
+    </select>
+    <select id="selectFileUrl" parameterType="integer" resultType="string">
+        select file_url from certificate_file where certificate_id = #{certificateId};
+    </select>
+    <select id="selectLabels" parameterType="integer" resultType="string">
+        select label from certificate_label where certificate_id = #{certificateId};
+    </select>
+    <select id="checkedCertificateBrowsed" resultType="integer" parameterType="integer">
+        select activity_certificate_browsed.is_browsed from activity_certificate_browsed
+        where user_id = #{userId} and activity_certificate_id = #{certificateId}
+    </select>
+    <select id="selectCertificateById" parameterType="integer" resultMap="Certificate">
+        select * from activity_certificate where  id = #{certificateId}
+    </select>
 
 
 

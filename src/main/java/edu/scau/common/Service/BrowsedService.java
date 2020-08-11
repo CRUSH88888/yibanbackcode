@@ -1,7 +1,6 @@
 package edu.scau.common.Service;
 
-import edu.scau.common.dto.FootPrint;
-import edu.scau.common.pojo.Browse;
+import edu.scau.common.dto.ActivityManger;
 
 import java.util.List;
 
@@ -12,5 +11,5 @@ import java.util.List;
  **/
 public interface BrowsedService {
     Integer insertBrowsed(int activityId, int userId);
-    List<FootPrint> getFootPrint(int userId);
+    List<ActivityManger> getFootPrint(int userId);
 }
