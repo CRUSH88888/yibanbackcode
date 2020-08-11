@@ -25,8 +25,8 @@
         order by build_time desc
     </select>
     <select id="searchActivityByLabel" parameterType="int" resultMap="activitySearch">
-        select a.id,a.title,a.build_time from activity_label as l
-        left join activite as a on l.activity_id=a.id
+        select a.id,a.title,a.build_time from activite as a
+        left join activity_label as l on l.activity_id=a.id
         where l.label_code=#{label}
         order by build_time desc
     </select>
@@ -34,5 +34,24 @@
         select id,title,build_time,text from activite
         where `text` like '%${search}%'
         order by build_time desc
+    </select>
+    <resultMap id="activitySearch2" type="edu.scau.common.dto.ActivitySearch">
+        <result column="id" property="id"/>
+        <result column="activity_title" property="title"/>
+        <result column="building_time" property="buildTime"/>
+    </resultMap>
+    <select id="searchCertificateByTitle" resultMap="activitySearch2" >
+        select  id,activity_title,building_time from activity_certificate
+        where activity_title like concat
+        <foreach collection="search" item="name" open="(" close=")" separator=",">
+            trim('%${name}%')
+        </foreach>
+        order by building_time desc
+    </select>
+    <select id="searchCertificateByLabel" parameterType="int" resultMap="activitySearch2">
+        select a.id,a.activity_title,a.building_time from activity_certificate as a
+        left join certificate_label as l on l.certificate_id=a.id
+        where l.label=#{label}
+        order by building_time desc
     </select>
 </mapper>

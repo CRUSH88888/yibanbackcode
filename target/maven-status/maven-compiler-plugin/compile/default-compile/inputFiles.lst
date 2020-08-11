@@ -41,7 +41,6 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\GroupMapper.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\ActivityCollectedService.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\InformationController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\MessageController.java
-D:\yiban\SNLN\src\main\java\edu\scau\common\dto\FootPrint.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\pojo\CertificateFile.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\ActivityCertificateServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\utils\SendMail.java

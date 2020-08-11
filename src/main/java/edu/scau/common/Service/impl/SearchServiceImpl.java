@@ -39,7 +39,7 @@ public class SearchServiceImpl implements SearchService {
         for (int i = 0; i < integers.size(); i++) {
             List<ActivitySearch> activitySearches = searchMapper.searchActivityByLabel(integers.get(i));
             for (ActivitySearch activitySearch : activitySearches) {
-                ArrayList<String> strings1 = new ArrayList<>();
+                List<String> strings1 = new ArrayList<>();
                 strings1.add(strings.get(i));
                 activitySearch.setLabel(strings1);
             }
@@ -54,8 +54,45 @@ public class SearchServiceImpl implements SearchService {
         }
         activitySearches1 = ListMerge.listMerge(activitySearches1, activitySearches);
         for (ActivitySearch activitySearch : activitySearches1) {
+            activitySearch.setType(1);
+        }
+        List<ActivitySearch> activitySearches2 = searchMapper.searchCertificateByTitle(chars);
+        for (int i = 0; i < integers.size(); i++) {
+            List<ActivitySearch> activitySearches3 = searchMapper.searchCertificateByLabel(integers.get(i));
+            for (ActivitySearch activitySearch : activitySearches3) {
+                List<String> strings1 = new ArrayList<>();
+                strings1.add(strings.get(i));
+                activitySearch.setLabel(strings1);
+            }
+            activitySearches2 = ListMerge.listMerge(activitySearches2, activitySearches3);
+        }
+        for (ActivitySearch activitySearch : activitySearches2) {
+            activitySearch.setType(2);
+        }
+        List<ActivitySearch> activitySearches3 = new ArrayList<>();
+        int i=0;
+        int j=0;
+        while(i<activitySearches1.size()&&j<activitySearches2.size()){
+            if(activitySearches1.get(i).getBuildTime().after(activitySearches2.get(j).getBuildTime())){
+                activitySearches3.add(activitySearches1.get(i));
+                i++;
+            }else{
+                activitySearches3.add(activitySearches2.get(j));
+                j++;
+            }
+        }
+        if(i!=activitySearches1.size()){
+            for(int a=i;a<activitySearches1.size();a++){
+                activitySearches3.add(activitySearches1.get(a));
+            }
+        }else{
+            for(int b=j;b<activitySearches2.size();b++){
+                activitySearches3.add(activitySearches2.get(b));
+            }
+        }
+        for (ActivitySearch activitySearch : activitySearches3) {
             activitySearch.setDate(DateToStringUtil.publishTime(activitySearch.getBuildTime()));
         }
-        return activitySearches1;
+        return activitySearches3;
     }
 }

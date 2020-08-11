@@ -24,7 +24,6 @@ edu\scau\common\Service\ActivityService.class
 edu\scau\common\dto\ActivityAndMessage.class
 edu\scau\common\Service\SearchService.class
 edu\scau\common\utils\ApiResponse.class
-edu\scau\common\dto\FootPrint.class
 edu\scau\common\pojo\Message.class
 edu\scau\common\mapper\MessageMapper.class
 edu\scau\common\Service\impl\GroupServiceImpl.class

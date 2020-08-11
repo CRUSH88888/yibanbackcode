@@ -29,7 +29,7 @@
         insert into browsed(is_browsed,activity_id,user_id,browsed_time)
         values (1,#{activityId},#{userId},#{browsedTime})
     </insert>
-    <insert id="insertBrowsed" parameterType="edu.scau.common.pojo.Browse" useGeneratedKeys="true" keyProperty="id">
+    <insert id="insertCertificateBrowsed" parameterType="edu.scau.common.pojo.Browse" useGeneratedKeys="true" keyProperty="id">
         insert into activity_certificate_browsed(is_browsed,activity_certificate_id,user_id,browsed_time)
         values (1,#{activityId},#{userId},#{browsedTime})
     </insert>

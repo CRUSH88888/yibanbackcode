@@ -49,4 +49,9 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
 
         return null;
     }
+
+    @Override
+    public Integer deleteCollectedCertificate(Integer userId, Integer certificateId) {
+        return activityCertificateMapper.deleteCollectedCertificate(userId,certificateId);
+    }
 }

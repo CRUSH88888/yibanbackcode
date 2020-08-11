@@ -24,4 +24,5 @@ public class ActivitySearch {
     private String searchAfter;
     private List<String> label;
     private String date;//发布时间至今
+    private int type;//1：活动 2：活动证明
 }
