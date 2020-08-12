@@ -76,7 +76,7 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
             a.setLabels(activityCertificateMapper.selectLabels(a.getId()));
             IndexActivityCertificate certificate =  new IndexActivityCertificate();
             certificate.setActivityCertificate(a);
-            certificate.setBrowsed(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId())==1?true:false);
+            certificate.setCollected(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId())==1?true:false);
             certificate.setBuiltTimeToNow(DateToStringUtil.publishTime(a.getBuildingTime()));
             activityCertificates.add(certificate);
         }
@@ -86,7 +86,19 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     @Override
     public IndexActivityCertificate selectCertificateById(Integer certificateId, Integer userId) {
         ActivityCertificate activityCertificate = activityCertificateMapper.selectCertificateById(certificateId);
-        
-        return null;
+        IndexActivityCertificate indexActivityCertificate = new IndexActivityCertificate();
+        indexActivityCertificate.setActivityCertificate(activityCertificate);
+        indexActivityCertificate.setBuiltTimeToNow(DateToStringUtil.publishTime(activityCertificate.getBuildingTime()));
+        indexActivityCertificate.setCollected(activityCertificateMapper.checkedCertifiedCollected(userId,certificateId) != null?true:false);
+        return indexActivityCertificate;
+    }
+
+    @Override
+    public Integer insertCertificateBrowsed(Integer certificateId, Integer userId) {
+        Integer result = activityCertificateMapper.checkedCertificateBrowsed(certificateId,userId);
+        if (result == null){
+            return activityCertificateMapper.insertCertifiedBrowsed(certificateId,userId);
+        }
+        return 2;
     }
 }

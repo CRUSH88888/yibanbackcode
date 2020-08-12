@@ -1,5 +1,6 @@
 package edu.scau.common.controller;
 
+import edu.scau.common.Service.ActivityBrowsedService;
 import edu.scau.common.Service.ActivityCertificateService;
 import edu.scau.common.Service.BrowsedService;
 import edu.scau.common.Service.impl.BrowsedServiceImpl;
@@ -26,6 +27,8 @@ public class ActivityCertificateController {
     private ActivityCertificateService activityCertificateService;
     @Autowired
     private BrowsedService browsedService;
+    @Autowired
+    private ActivityBrowsedService activityBrowsedService;
 
     @PostMapping("saveActivityCertificate")
     public ApiResponse saveActivityCertificate(@RequestParam("activityTitle")String activityTitle,
@@ -104,9 +107,21 @@ public class ActivityCertificateController {
      */
         @PostMapping("/browsedCertificate")
         public ApiResponse browsedCertificate( @RequestParam("userId")Integer userId,
-                                               @RequestParam("certificateId")Integer certificateId){
-            Integer result = new BrowsedServiceImpl().insertCertificateBrowsed(certificateId,userId);
-            return result > 0 ?new ApiResponse(0,"success"):new ApiResponse(-1,"failed");
+                                               @RequestParam(value = "activityId",required = false,defaultValue = "-1") int activityId,
+                                               @RequestParam(value = "certificateId",required = false,defaultValue = "-1") int certificateId){
+            Integer result = 0;
+            System.out.println(activityId  + certificateId);
+            if (activityId != -1){
+                result = activityBrowsedService.insertActivityBrowsed(userId,activityId);
+
+            }
+            else if (certificateId != -1){
+                result = activityCertificateService.insertCertificateBrowsed(certificateId,userId);
+            }
+            if (result == 2){
+                return new ApiResponse(0,"已经浏览过");
+            }
+            return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
         }
 
         @PostMapping("/getIndexCertificate")
@@ -119,7 +134,8 @@ public class ActivityCertificateController {
         public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
                                               @RequestParam("certificateId")Integer certificateId){
 
-            return activityCertificateService.get(userId);
+            return new ApiResponse(0,"success",activityCertificateService.selectCertificateById(certificateId,userId)) ;
+
         }
 
 

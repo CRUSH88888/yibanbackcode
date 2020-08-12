@@ -14,4 +14,6 @@ public interface ActivityBrowsedService {
 
     List<IndexActivityStatus> selectActivityBrowsed(Integer userId);
 
+    Integer insertActivityBrowsed(Integer userId,Integer activityId);
+
 }

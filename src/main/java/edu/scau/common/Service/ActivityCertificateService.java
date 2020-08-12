@@ -23,7 +23,7 @@ public interface ActivityCertificateService {
     Integer deleteCollectedCertificate(Integer userId, Integer certificateId);
     List<IndexActivityCertificate> get(Integer userId);
     IndexActivityCertificate selectCertificateById(Integer certificateId,Integer userId);
-
+    Integer insertCertificateBrowsed(Integer certificateId,Integer userId);
 
 
 

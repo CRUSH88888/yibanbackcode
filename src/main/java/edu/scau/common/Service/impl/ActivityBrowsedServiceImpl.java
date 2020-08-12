@@ -41,4 +41,16 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
 
         return statuses;
     }
+
+    @Override
+    public Integer insertActivityBrowsed(Integer userId, Integer activityId) {
+        Integer result = 0;
+        result = activityBrowsedMapper.checkedActivityBrowsed(userId,activityId);
+        if (result == null){
+            activityBrowsedMapper.insertActivityBrowsed(userId,activityId);
+        }
+        return 1;
+    }
+
+
 }
