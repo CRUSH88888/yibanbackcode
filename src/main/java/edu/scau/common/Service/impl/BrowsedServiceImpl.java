@@ -26,23 +26,21 @@ public class BrowsedServiceImpl implements BrowsedService {
     @Override
     @Transactional
     public Integer insertBrowsed(int activityId, int userId) {
+        Integer result;
         Browse browse = new Browse(activityId, userId, new Timestamp(System.currentTimeMillis()));
-        Integer result = browsedMapper.updateBrowsed(browse);
-        if(result==0)
-            result = browsedMapper.insertBrowsed(browse);
+        if(browsedMapper.getActivityBrowsed(userId,activityId)!=null)
+            result = browsedMapper.updateBrowsed(browse);
         else
-            result=1;
+            result = browsedMapper.insertBrowsed(browse);
         return result>0?1:0;
     }
     public Integer insertCertificateBrowsed(int activityId, int userId) {
+        Integer result;
         Browse browse = new Browse(activityId, userId, new Timestamp(System.currentTimeMillis()));
-        System.out.println(browse);
-        Integer result = browsedMapper.updateCertificateBrowsed(browse);
-        System.out.println(result);
-        if(result==0)
-            result = browsedMapper.insertCertificateBrowsed(browse);
+        if(browsedMapper.getCertificateBrowsed(userId,activityId)!=null)
+            result = browsedMapper.updateCertificateBrowsed(browse);
         else
-            result=1;
+            result = browsedMapper.insertCertificateBrowsed(browse);
         return result>0?1:0;
     }
 
