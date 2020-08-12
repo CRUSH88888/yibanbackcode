@@ -22,6 +22,8 @@ public interface ActivityCertificateService {
     Integer updateCertificate(ActivityCertificate activityCertificate);
     Integer deleteCollectedCertificate(Integer userId, Integer certificateId);
     List<IndexActivityCertificate> get(Integer userId);
+    IndexActivityCertificate selectCertificateById(Integer certificateId,Integer userId);
+
 
 
 

@@ -82,4 +82,11 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
         }
         return activityCertificates;
     }
+
+    @Override
+    public IndexActivityCertificate selectCertificateById(Integer certificateId, Integer userId) {
+        ActivityCertificate activityCertificate = activityCertificateMapper.selectCertificateById(certificateId);
+        
+        return null;
+    }
 }

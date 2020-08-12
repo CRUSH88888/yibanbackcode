@@ -115,11 +115,12 @@ public class ActivityCertificateController {
                     activityCertificateService.get(userId);
             return indexActivityCertificates != null ? new ApiResponse(0,"success",indexActivityCertificates):new ApiResponse(-1,"Server Error");
         }
-//        @PostMapping("/getCertificateById")
-//        public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
-//                                              @RequestParam("certificateId")Integer certificateId){
-//
-//        }
+        @PostMapping("/getCertificateById")
+        public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
+                                              @RequestParam("certificateId")Integer certificateId){
+
+            return activityCertificateService.get(userId);
+        }
 
 
 

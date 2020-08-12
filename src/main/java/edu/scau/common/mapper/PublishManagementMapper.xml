@@ -43,7 +43,7 @@
     <delete id="deleteCertificate" parameterType="int">
         delete from activity_certificate where id=#{id}
     </delete>
-    <select id="deleteCertificate" resultMap="activity">
+    <select id="getAllActivity" resultMap="activity">
         select id,user_id,title,build_time from activite
         order by build_time desc
     </select>
