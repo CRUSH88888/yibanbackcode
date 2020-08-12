@@ -1,8 +1,14 @@
 package edu.scau.common.controller;
 
+import edu.scau.common.Service.ActivityBrowsedService;
 import edu.scau.common.Service.ActivityCertificateService;
+import edu.scau.common.Service.BrowsedService;
+import edu.scau.common.Service.impl.BrowsedServiceImpl;
+import edu.scau.common.dto.IndexActivityCertificate;
 import edu.scau.common.pojo.ActivityCertificate;
 import edu.scau.common.utils.ApiResponse;
+import edu.scau.common.utils.LabelTransUtils;
+import edu.scau.common.utils.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -19,6 +25,10 @@ import java.util.List;
 public class ActivityCertificateController {
     @Autowired
     private ActivityCertificateService activityCertificateService;
+    @Autowired
+    private BrowsedService browsedService;
+    @Autowired
+    private ActivityBrowsedService activityBrowsedService;
 
     @PostMapping("saveActivityCertificate")
     public ApiResponse saveActivityCertificate(@RequestParam("activityTitle")String activityTitle,
@@ -37,7 +47,9 @@ public class ActivityCertificateController {
             labels.add(s);
         }
 
-        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labels,userId);
+        List<String> labelString = LabelTransUtils.StringToString(labels);
+
+        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labelString,userId);
         activityCertificateService.save(certificate);
         return new  ApiResponse(0,"success");
     }
@@ -83,6 +95,46 @@ public class ActivityCertificateController {
         }else {
             return new ApiResponse(-1,"路径错误");
         }
+
+        }
+
+
+    /**
+     * 点击详情浏览
+     * @param userId
+     * @param certificateId
+     * @return
+     */
+        @PostMapping("/browsedCertificate")
+        public ApiResponse browsedCertificate( @RequestParam("userId")Integer userId,
+                                               @RequestParam(value = "activityId",required = false,defaultValue = "-1") int activityId,
+                                               @RequestParam(value = "certificateId",required = false,defaultValue = "-1") int certificateId){
+            Integer result = 0;
+            System.out.println(activityId  + certificateId);
+            if (activityId != -1){
+                result = activityBrowsedService.insertActivityBrowsed(userId,activityId);
+
+            }
+            else if (certificateId != -1){
+                result = activityCertificateService.insertCertificateBrowsed(certificateId,userId);
+            }
+            if (result == 2){
+                return new ApiResponse(0,"已经浏览过");
+            }
+            return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
+        }
+
+        @PostMapping("/getIndexCertificate")
+        public ApiResponse getIndexCertificate(@RequestParam("userId")Integer userId){
+            List<IndexActivityCertificate> indexActivityCertificates =
+                    activityCertificateService.get(userId);
+            return indexActivityCertificates != null ? new ApiResponse(0,"success",indexActivityCertificates):new ApiResponse(-1,"Server Error");
+        }
+        @PostMapping("/getCertificateById")
+        public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
+                                              @RequestParam("certificateId")Integer certificateId){
+
+            return new ApiResponse(0,"success",activityCertificateService.selectCertificateById(certificateId,userId)) ;
 
         }
 

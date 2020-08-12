@@ -26,10 +26,12 @@ import java.sql.Timestamp;
 @SpringBootTest
 public class AppTest 
 {
+
     @Autowired
     private SendMail sendMail;
     @Autowired
     private BrowsedServiceImpl browsedService;
+
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -40,5 +42,6 @@ public class AppTest
     public void test1(){
         browsedService.insertCertificateBrowsed(1,1);
     }
+
 
 }

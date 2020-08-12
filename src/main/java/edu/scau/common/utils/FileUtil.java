@@ -11,13 +11,13 @@ import java.io.IOException;
  * @create:2020/6/26 14:20
  **/
 public class FileUtil {
-    public static String swp = "C:/images";//望平哥特用
-    public static String dev = "D:/images";//开发
+//    public static String swp = "C:/images";//望平哥特用
+//    public static String dev = "D:/images";//开发
     public static String pro = "/usr/local/video";//上线
 
     public static String saveFile(MultipartFile file) throws IOException {
         String fileName = file.getOriginalFilename();
-        String dirName = dev ;
+        String dirName = pro ;
         File dir = new File(dirName);
         if (!dir.exists()){
             dir.mkdir();
@@ -26,7 +26,7 @@ public class FileUtil {
         {
             return "null";
         }
-        String filePath = dev +"/";
+        String filePath = pro +"/";
         File dest = new File(filePath + fileName);
         System.out.println(filePath+fileName);
         dest.createNewFile();

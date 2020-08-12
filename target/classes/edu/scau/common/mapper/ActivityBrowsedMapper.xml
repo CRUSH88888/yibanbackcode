@@ -27,6 +27,12 @@
     <select id="selectLabels" parameterType="integer" resultType="integer">
         select label_code from activity_label where activity_id = #{activityId}
     </select>
-
+    <insert id="insertActivityBrowsed" parameterType="integer" >
+        insert into browsed (is_browsed, activity_id, user_id)
+        VALUES (1,#{activityId},#{userId})
+    </insert>
+    <select id="checkedActivityBrowsed" parameterType="integer" resultType="integer">
+        select browsed.is_browsed from browsed where user_id = #{userId} and activity_id = #{activityId}
+    </select>
 
 </mapper>
