@@ -236,3 +236,52 @@ Unconditional classes:
 2020-08-12 13:27:58.655  INFO 20184 --- [main] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
 2020-08-12 13:27:59.118  INFO 20184 --- [Thread-3] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'taskExecutor'
 2020-08-12 13:27:59.135  INFO 20184 --- [Thread-3] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2020-08-12 17:48:23.491  INFO 24352 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 24352 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-08-12 17:48:23.500  INFO 24352 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-08-12 17:48:23.737  INFO 24352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-12 17:48:23.737  INFO 24352 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-12 17:48:28.999  INFO 24352 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$b8eab772] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-12 17:48:29.571  INFO 24352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-08-12 17:48:29.593  INFO 24352 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-12 17:48:29.593  INFO 24352 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-08-12 17:48:29.798  INFO 24352 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-12 17:48:29.798  INFO 24352 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 6061 ms
+2020-08-12 17:48:33.543  INFO 24352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-08-12 17:48:33.544  INFO 24352 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-08-12 17:48:33.575  INFO 24352 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-08-12 17:48:33.839  INFO 24352 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-12 17:48:34.315  INFO 24352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-12 17:48:34.362  INFO 24352 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-12 17:48:34.394  INFO 24352 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-12 17:48:34.449  INFO 24352 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-08-12 17:48:34.452  INFO 24352 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 12.048 seconds (JVM running for 15.962)
+2020-08-12 17:49:15.657  INFO 24352 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-12 17:49:15.657  INFO 24352 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-12 17:49:15.665  INFO 24352 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 7 ms
+2020-08-12 17:49:15.869  INFO 24352 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-08-12 17:49:34.734  INFO 1212 --- [restartedMain] edu.scau.DemoApplication                 : Starting DemoApplication on LAPTOP-7RJ4E68N with PID 1212 (D:\yiban\SNLN\target\classes started by 14375 in D:\yiban\SNLN)
+2020-08-12 17:49:34.739  INFO 1212 --- [restartedMain] edu.scau.DemoApplication                 : No active profile set, falling back to default profiles: default
+2020-08-12 17:49:34.805  INFO 1212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2020-08-12 17:49:34.806  INFO 1212 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2020-08-12 17:49:37.072  INFO 1212 --- [restartedMain] trationDelegate$BeanPostProcessorChecker : Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$766a82c6] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2020-08-12 17:49:37.464  INFO 1212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8864 (http)
+2020-08-12 17:49:37.489  INFO 1212 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2020-08-12 17:49:37.489  INFO 1212 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.21]
+2020-08-12 17:49:37.702  INFO 1212 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2020-08-12 17:49:37.702  INFO 1212 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2896 ms
+2020-08-12 17:49:40.674  INFO 1212 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService
+2020-08-12 17:49:40.676  INFO 1212 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'taskExecutor'
+2020-08-12 17:49:40.694  INFO 1212 --- [restartedMain] pertySourcedRequestMappingHandlerMapping : Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2020-08-12 17:49:40.854  INFO 1212 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2020-08-12 17:49:41.297  INFO 1212 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Context refreshed
+2020-08-12 17:49:41.316  INFO 1212 --- [restartedMain] d.s.w.p.DocumentationPluginsBootstrapper : Found 1 custom documentation plugin(s)
+2020-08-12 17:49:41.352  INFO 1212 --- [restartedMain] s.d.s.w.s.ApiListingReferenceScanner     : Scanning for api listing references
+2020-08-12 17:49:41.405  INFO 1212 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8864 (http) with context path ''
+2020-08-12 17:49:41.409  INFO 1212 --- [restartedMain] edu.scau.DemoApplication                 : Started DemoApplication in 7.346 seconds (JVM running for 9.464)
+2020-08-12 17:50:02.333  INFO 1212 --- [http-nio-8864-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2020-08-12 17:50:02.334  INFO 1212 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2020-08-12 17:50:02.349  INFO 1212 --- [http-nio-8864-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 15 ms
+2020-08-12 17:50:02.480  INFO 1212 --- [http-nio-8864-exec-1] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2020-08-12 17:52:51.093  WARN 1212 --- [http-nio-8864-exec-2] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "2$associationName=142524"]
+2020-08-12 17:52:55.494  WARN 1212 --- [http-nio-8864-exec-3] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+2020-08-12 17:52:58.784  WARN 1212 --- [http-nio-8864-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.web.method.annotation.MethodArgumentTypeMismatchException: Failed to convert value of type 'java.lang.String' to required type 'int'; nested exception is java.lang.NumberFormatException: For input string: "2$associationName=142524"]
