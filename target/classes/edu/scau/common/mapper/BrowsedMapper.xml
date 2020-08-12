@@ -33,6 +33,16 @@
         insert into activity_certificate_browsed(is_browsed,activity_certificate_id,user_id,browsed_time)
         values (1,#{activityId},#{userId},#{browsedTime})
     </insert>
+    <select id="getActivityBrowsed" resultType="integer">
+        select id from browsed
+        where user_id=#{userId}
+        and activity_id=#{activityId}
+    </select>
+    <select id="getCertificateBrowsed" resultType="integer">
+        select id from activity_certificate_browsed
+        where user_id=#{userId}
+        and certificate_id=#{certificateId}
+    </select>
     <update id="updateBrowsed" parameterType="edu.scau.common.pojo.Browse">
         update browsed
         set browsed_time=#{browsedTime}
