@@ -27,12 +27,21 @@ import java.sql.Timestamp;
 public class AppTest 
 {
 
+    @Autowired
+    private SendMail sendMail;
+    @Autowired
+    private BrowsedServiceImpl browsedService;
+
     @Test
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
 
+    @Test
+    public void test1(){
+        browsedService.insertCertificateBrowsed(1,1);
+    }
 
 
 }
