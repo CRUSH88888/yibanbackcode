@@ -29,17 +29,16 @@ public class AppTest
     @Autowired
     private SendMail sendMail;
     @Autowired
-    private BrowsedMapper browsedMapper;
+    private BrowsedServiceImpl browsedService;
     @Test
     public void shouldAnswerWithTrue()
     {
         assertTrue( true );
     }
-    @Test
-    public void test() {
-        Integer result = browsedMapper.updateBrowsed(new Browse(1, 1, new Timestamp(System.currentTimeMillis())));
-        System.out.println(result);
-    }
 
+    @Test
+    public void test1(){
+        browsedService.insertCertificateBrowsed(1,1);
+    }
 
 }

@@ -41,7 +41,7 @@
     <select id="getCertificateBrowsed" resultType="integer">
         select id from activity_certificate_browsed
         where user_id=#{userId}
-        and certificate_id=#{certificateId}
+        and activity_certificate_id=#{certificateId}
     </select>
     <update id="updateBrowsed" parameterType="edu.scau.common.pojo.Browse">
         update browsed
