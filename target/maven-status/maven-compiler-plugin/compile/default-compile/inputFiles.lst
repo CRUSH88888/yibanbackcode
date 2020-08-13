@@ -44,6 +44,7 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Association.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\ActivityCertificateMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\ActivityCertificateService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\ActivityPicture.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\MessageSubscribe.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\StringCompareUtil.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\MailController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\AssociationMapper.java
@@ -82,11 +83,13 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\impl\UserServiceImpl
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\AuthenticationMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\ActivityManger.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\ScheduleController.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\MessageSubscribeController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\BrowsedController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\PageUtil.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Label.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\ActivityCertificateCollected.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\CertificateFile.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\MessageSubscribeMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\MessageController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\UserMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\UserDetail.java

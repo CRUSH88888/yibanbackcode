@@ -4,6 +4,7 @@ import edu.scau.common.Service.ActivityCertificateService;
 import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
 import edu.scau.common.Service.impl.BrowsedServiceImpl;
 import edu.scau.common.dto.ActivityManger;
+import edu.scau.common.dto.MessageSubscribe;
 import edu.scau.common.pojo.Activity;
 import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -53,12 +54,11 @@ public class ActivityCollectedController {
      * @return
      */
     @PostMapping("/addActivity")
-            public ApiResponse addActivity(@RequestParam("userId") int userId,
-                                       @RequestParam(value = "activityId",required = false,defaultValue = "-1") int activityId){
-             Integer result = 0;
-             result = activityCollectedService.addActivity(userId, activityId);
 
-        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
+        public ApiResponse addActivity(@RequestParam("userId") int userId,@RequestParam("activityId") int activityId){
+        MessageSubscribe messageSubscribe = activityCollectedService.addActivity(userId, activityId);
+        return messageSubscribe!=null?new ApiResponse(0,"success",messageSubscribe):new ApiResponse(-1,"Server Error");
+
     }
 
 

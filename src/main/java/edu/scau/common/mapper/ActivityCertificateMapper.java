@@ -3,6 +3,7 @@ package edu.scau.common.mapper;
 import edu.scau.common.dto.ActivityCertificateDetail;
 import edu.scau.common.dto.IndexActivityCertificate;
 import edu.scau.common.pojo.ActivityCertificate;
+import org.apache.ibatis.annotations.Delete;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.MySqlMapper;
@@ -33,11 +34,16 @@ public interface ActivityCertificateMapper extends MySqlMapper<ActivityCertifica
     List<String> selectLabels(@Param("certificateId")Integer certificateId);
     List<Integer> checkedCertificateBrowsed(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     ActivityCertificate selectCertificateById(@Param("certificateId")Integer certificateId);
-    Integer checkedCertifiedCollected(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
+    List<Integer> checkedCertifiedCollected(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     Integer insertCertifiedBrowsed(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     List<ActivityCertificate> selectCollectedCertificate(@Param("userId") Integer userId);
 
     Integer updateCertificateBrowsed(@Param("userId") Integer userId, @Param("certificateId") Integer certificateId, @Param("browsedTime")Timestamp browsedTime);
     Integer deleteCertificateBrowsed(@Param("id")Integer id);
 
+    @Delete("delete from activity_certificate_collected where id = #{id}")
+    Integer deleteCertifiedCollected(@Param("id")Integer id);
+
+    @Delete("delete from ")
+    Integer deleteCollectedCertificate(@Param("id")Integer id);
 }

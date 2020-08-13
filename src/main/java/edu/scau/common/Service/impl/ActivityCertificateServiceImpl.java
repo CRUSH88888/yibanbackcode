@@ -48,7 +48,22 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
 
     @Override
     public Integer collectedCertificate(Integer userId, Integer certificateId) {
-        return activityCertificateMapper.collectedCertificate(userId,certificateId);
+        List<Integer> collectionResult = new ArrayList<>();
+         collectionResult = activityCertificateMapper.checkedCertifiedCollected(userId,certificateId);
+
+        for (Integer i:collectionResult
+             ) {
+            System.out.println(i);
+        }
+        if (collectionResult.size()==0){
+            activityCertificateMapper.collectedCertificate(userId,certificateId);
+        }else if (collectionResult.size()>1){
+            for (int i = 1;i<collectionResult.size();i++){
+                System.out.println("delete: " + i);
+                activityCertificateMapper.deleteCertifiedCollected(collectionResult.get(i));
+            }
+        }
+        return 1;
     }
 
     @Override
@@ -92,7 +107,12 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
         IndexActivityCertificate indexActivityCertificate = new IndexActivityCertificate();
         indexActivityCertificate.setActivityCertificate(activityCertificate);
         indexActivityCertificate.setBuiltTimeToNow(DateToStringUtil.publishTime(activityCertificate.getBuildingTime()));
-        indexActivityCertificate.setBrowsed(activityCertificateMapper.checkedCertifiedCollected(userId,certificateId) != null?true:false);
+        List<Integer> collectionResult = activityCertificateMapper.checkedCertifiedCollected(userId,certificateId);
+        for(int i = 1;i<collectionResult.size();i++){
+            System.out.println(collectionResult.get(i));
+            activityCertificateMapper.deleteCertifiedCollected(collectionResult.get(i));
+        }
+        indexActivityCertificate.setBrowsed(collectionResult.size()>0?true:false);
         return indexActivityCertificate;
     }
 

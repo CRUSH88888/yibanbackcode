@@ -40,17 +40,19 @@ public class AssociationServiceImpl implements AssociationService {
     @Transactional
     public Integer updateAssociation(Association association) {
         String associationById = associationMapper.getAssociationById(association.getId());
-        Integer result=0;
-        result+=authenticationMapper.updateAssociationName(associationById,association.getName());
+        Integer result = 0;
+        result += authenticationMapper.updateAssociationName(associationById, association.getName());
         List<String> picture1 = associationMapper.getPicture(associationById);
         for (String s : picture1) {
-            result+=associationMapper.deletePicture(associationById);
+            result += associationMapper.deletePicture(associationById);
             FileUtil.deleteFile(s);
         }
-        result+=associationMapper.updateAssociation(association);
+        result += associationMapper.updateAssociation(association);
         List<String> picture = association.getPicture();
-        for (String s : picture) {
-            result+= associationMapper.insertPic(association.getName(),s);
+        if (picture != null){
+            for (String s : picture) {
+                result += associationMapper.insertPic(s, association.getName());
+            }
         }
         return result>0?1:0;
     }

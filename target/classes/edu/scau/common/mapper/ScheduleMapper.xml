@@ -5,8 +5,8 @@
 <mapper namespace="edu.scau.common.mapper.ScheduleMapper">
     <select id="getSchedule" resultMap="schedule" parameterType="int">
         select a.id,a.address,a.title,a.start_time,a.end_time
-         from collection c
-         left join activite a on c.activity_id = a.id
+         from activite a
+         left join collection c on c.activity_id = a.id
         where c.user_id = #{userId}
         order by a.start_time asc
     </select>
