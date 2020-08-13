@@ -9,9 +9,11 @@ import edu.scau.common.mapper.CertificateFileMapper;
 import edu.scau.common.pojo.ActivityCertificate;
 import edu.scau.common.pojo.CertificateFile;
 import edu.scau.common.utils.DateToStringUtil;
+import edu.scau.common.utils.LabelTransUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -76,8 +78,9 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
             a.setLabels(activityCertificateMapper.selectLabels(a.getId()));
             IndexActivityCertificate certificate =  new IndexActivityCertificate();
             certificate.setActivityCertificate(a);
-            certificate.setCollected(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId())==1?true:false);
+            certificate.setBrowsed(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId()).size()>0?true:false);
             certificate.setBuiltTimeToNow(DateToStringUtil.publishTime(a.getBuildingTime()));
+            certificate.getActivityCertificate().setLabels(LabelTransUtils.numStringTranToString(certificate.getActivityCertificate().getLabels()));
             activityCertificates.add(certificate);
         }
         return activityCertificates;
@@ -89,17 +92,29 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
         IndexActivityCertificate indexActivityCertificate = new IndexActivityCertificate();
         indexActivityCertificate.setActivityCertificate(activityCertificate);
         indexActivityCertificate.setBuiltTimeToNow(DateToStringUtil.publishTime(activityCertificate.getBuildingTime()));
-        indexActivityCertificate.setCollected(activityCertificateMapper.checkedCertifiedCollected(userId,certificateId) != null?true:false);
+        indexActivityCertificate.setBrowsed(activityCertificateMapper.checkedCertifiedCollected(userId,certificateId) != null?true:false);
         return indexActivityCertificate;
     }
 
     @Override
     public Integer insertCertificateBrowsed(Integer certificateId, Integer userId) {
-        Integer result = activityCertificateMapper.checkedCertificateBrowsed(certificateId,userId);
-        if (result == null){
-            return activityCertificateMapper.insertCertifiedBrowsed(certificateId,userId);
+
+        List<Integer> result = activityCertificateMapper.checkedCertificateBrowsed(certificateId,userId);
+        for (Integer i:result
+             ) {
+            System.out.println(i);
         }
-        return 2;
+
+        if (result == null || result.size() == 0){
+            return activityCertificateMapper.insertCertifiedBrowsed(certificateId,userId);
+        }else if (result.size() > 1){
+            for (int i = 1;i<result.size();i++){
+                System.out.println("delete: " + i);
+                activityCertificateMapper.deleteCertificateBrowsed(result.get(i));
+            }
+             activityCertificateMapper.updateCertificateBrowsed(userId,certificateId, new Timestamp(System.currentTimeMillis()));
+        }
+        return 1;
     }
 
     @Override

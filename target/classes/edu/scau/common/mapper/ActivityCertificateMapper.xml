@@ -58,7 +58,7 @@
         select label from certificate_label where certificate_id = #{certificateId};
     </select>
     <select id="checkedCertificateBrowsed" resultType="integer" parameterType="integer">
-        select activity_certificate_browsed.is_browsed from activity_certificate_browsed
+        select activity_certificate_browsed.id from activity_certificate_browsed
         where user_id = #{userId} and activity_certificate_id = #{certificateId}
     </select>
     <select id="selectCertificateById" parameterType="integer" resultMap="Certificate">
@@ -75,6 +75,17 @@
         RIGHT JOIN activity_certificate_collected as acc on(
             acc.certificate_id = ac.id and acc.user_id = #{userId})
     </select>
+    <update id="updateCertificateBrowsed">
+        update activity_certificate_browsed set
+        user_id = #{userId},
+        activity_certificate_Id = #{certificateId},
+        browsed_time = #{browsedTime}
+        where   user_id = #{userId} and
+        activity_certificate_Id = #{certificateId}
+    </update>
+    <delete id="deleteCertificateBrowsed" parameterType="integer">
+        delete from activity_certificate_browsed where id = #{id}
+    </delete>
 
 
 

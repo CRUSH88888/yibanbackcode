@@ -32,7 +32,19 @@
         VALUES (1,#{activityId},#{userId})
     </insert>
     <select id="checkedActivityBrowsed" parameterType="integer" resultType="integer">
-        select browsed.is_browsed from browsed where user_id = #{userId} and activity_id = #{activityId}
+        select browsed.id from browsed where user_id = #{userId} and activity_id = #{activityId}
     </select>
+
+    <update id="updateActivityBrowsed" >
+        update browsed set
+        user_id = #{userId},
+        activity_Id = #{activityId},
+        browsed_Time = #{buildingTime}
+        where user_id = #{userId} and activity_Id = #{activityId}
+    </update>
+
+    <delete id="deleteActivityBrowsed" parameterType="integer">
+        delete  from browsed where id = #{id}
+    </delete>
 
 </mapper>

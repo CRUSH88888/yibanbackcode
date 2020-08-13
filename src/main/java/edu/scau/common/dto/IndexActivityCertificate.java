@@ -15,6 +15,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 public class IndexActivityCertificate {
     private ActivityCertificate activityCertificate;
-    private Boolean collected;
+    private Boolean browsed;
     private String builtTimeToNow;
 }
