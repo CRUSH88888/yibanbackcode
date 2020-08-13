@@ -25,6 +25,6 @@ public interface ActivityCertificateService {
     IndexActivityCertificate selectCertificateById(Integer certificateId,Integer userId);
     Integer insertCertificateBrowsed(Integer certificateId,Integer userId);
 
-
+    List<ActivityCertificate> selectCollectedCertificate(Integer userId);
 
 }
