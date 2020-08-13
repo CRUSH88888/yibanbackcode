@@ -43,6 +43,7 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\controller\InformationController.jav
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\MessageController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\UserServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\pojo\CertificateFile.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\mapper\MessageSubscribeMapper.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\ActivityCertificateServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\utils\SendMail.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\utils\DateToStringUtil.java
@@ -51,6 +52,7 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\utils\PageUtil.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\AuthenticationController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\PublishManagementServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\DemoApplication.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\controller\MessageSubscribeController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\BrowsedServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\config\CommonConfig.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\dto\ActivityAndMessage.java
@@ -61,6 +63,7 @@ D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\InformationServiceImpl.
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\BrowsedService.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\ActivityBrowsedService.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\ScheduleServiceImpl.java
+D:\yiban\SNLN\src\main\java\edu\scau\common\dto\MessageSubscribe.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\controller\ActivityBrowsedController.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\Service\impl\MessageServiceImpl.java
 D:\yiban\SNLN\src\main\java\edu\scau\common\config\CorsConfig.java

@@ -74,7 +74,7 @@ public class AuthenticationController {
      * @param userId
      * @return
      */
-    @GetMapping("getAuthentication")
+        @GetMapping("getAuthentication")
     public ApiResponse getAuthentication(@RequestParam("userId")int userId){
         List<Authentication> authentication = authenticationService.getAuthentication(userId);
         return authentication.isEmpty()!=true?new ApiResponse(0,"success",authentication):new ApiResponse(-1,"empty");

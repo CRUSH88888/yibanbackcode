@@ -6,6 +6,7 @@ import edu.scau.common.Service.impl.*;
 import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.mapper.AuthenticationMessageMapper;
 import edu.scau.common.mapper.BrowsedMapper;
+import edu.scau.common.mapper.MessageSubscribeMapper;
 import edu.scau.common.pojo.Browse;
 import edu.scau.common.utils.SendMail;
 import org.junit.Test;
@@ -27,7 +28,7 @@ import java.sql.Timestamp;
 public class AppTest 
 {
     @Autowired
-    private SendMail sendMail;
+    private MessageSubscribeMapper  messageSubscribeMapper;
     @Autowired
     private BrowsedServiceImpl browsedService;
     @Test
@@ -38,7 +39,7 @@ public class AppTest
 
     @Test
     public void test1(){
-        browsedService.insertCertificateBrowsed(1,1);
+        messageSubscribeMapper.getMessageSubscribe(1);
     }
 
 }
