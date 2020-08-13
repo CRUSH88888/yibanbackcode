@@ -39,8 +39,8 @@ public class ActivityCollectedController {
      */
     @PostMapping("/getCollectedActivity/deleteCollectedActivity")
     public ApiResponse deleteCollectedActivity(@RequestParam("userId") int userId,@RequestParam("activityId") int activityId){
-        Integer result = activityCollectedService.deleteCollectedActivity(userId, activityId);
-        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Delete Error");
+        String result = activityCollectedService.deleteCollectedActivity(userId, activityId);
+        return result!=null?new ApiResponse(0,"success",result):new ApiResponse(-1,"Delete Error");
     }
 
     /**

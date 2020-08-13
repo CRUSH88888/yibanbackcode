@@ -14,5 +14,5 @@ import java.util.List;
 public interface ActivityCollectedService {
     List<ActivityManger> getCollectedActivity(int userId);
     MessageSubscribe addActivity(int userId, int activityId);
-    Integer deleteCollectedActivity(int userId,int activityId);
+    String deleteCollectedActivity(int userId,int activityId);
 }

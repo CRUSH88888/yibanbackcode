@@ -27,4 +27,6 @@ public interface MessageSubscribeMapper {
     Integer updateOpen(@Param("userId") int userId);
     Integer deleteClockId(@Param("userId") int userId,
                           @Param("activityId") int activityId);
+    String getClockId(@Param("userId") int userId,
+                      @Param("activityId") int activityId);
 }

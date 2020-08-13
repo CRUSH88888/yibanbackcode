@@ -47,4 +47,9 @@
         where user_id=#{userId}
         and activity_id=#{activityId}
     </update>
+    <select id="getClockId" resultType="string">
+        select clock_id from message_clock
+        where user_id=#{userId}
+        and activity_id=#{activityId}
+    </select>
 </mapper>

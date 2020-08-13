@@ -7,7 +7,7 @@
         select `name` from user where id=#{userId}
     </select>
     <select id="getUserName" parameterType="int" resultType="string">
-        select `user_name` from user where id=#{userId}
+        select `username` from `user` where id=#{userId}
     </select>
     <insert id="insertAuthenticationMessage" parameterType="edu.scau.common.pojo.AuthenticationMessage" useGeneratedKeys="true" keyProperty="id">
         insert into authentication_message(user_id, association_name, browsed, `level`)
