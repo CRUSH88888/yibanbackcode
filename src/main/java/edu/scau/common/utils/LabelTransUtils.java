@@ -135,4 +135,46 @@ public class LabelTransUtils {
         }
         return integerLabels;
     }
+    public static List<String> numStringTranToString(List<String> stringLabel){
+        List<String> numString = new ArrayList<>();
+        for (String s:stringLabel
+        ) {
+            switch (s){
+                case ("1"):{
+                    numString.add("宣讲会");
+                    break;
+                }
+                case ("2"):{
+                    numString.add("比赛");break;
+                }
+                case ("3"):{
+                    numString.add("志愿活动");break;
+                }
+                case ("4"):{
+                    numString.add("讲座");break;
+                }
+                case ("5"):{
+                    numString.add("电影节");break;
+                }
+                case ("6"):{
+                    numString.add("娱乐活动");break;
+                }
+                case ("7"):{
+                    numString.add("校级");break;
+                }
+                case ("8"):{
+                    numString.add("院级");break;
+                }
+                case ("9"):{
+                    numString.add("综测加分");break;
+                }case ("10"):{
+                    numString.add("志愿时");break;
+                }
+                case ("11"):{
+                    numString.add("其它");break;
+                }
+            }
+        }
+        return numString;
+    }
 }

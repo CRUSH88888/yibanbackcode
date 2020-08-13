@@ -8,6 +8,7 @@ import org.apache.ibatis.annotations.Param;
 import tk.mybatis.mapper.common.MySqlMapper;
 import tk.mybatis.mapper.common.base.BaseDeleteMapper;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -30,10 +31,13 @@ public interface ActivityCertificateMapper extends MySqlMapper<ActivityCertifica
     List<ActivityCertificate> selectCertificate();
     List<String> selectFileUrl(@Param("certificateId")Integer certificateId);
     List<String> selectLabels(@Param("certificateId")Integer certificateId);
-    Integer checkedCertificateBrowsed(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
+    List<Integer> checkedCertificateBrowsed(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     ActivityCertificate selectCertificateById(@Param("certificateId")Integer certificateId);
     Integer checkedCertifiedCollected(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     Integer insertCertifiedBrowsed(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     List<ActivityCertificate> selectCollectedCertificate(@Param("userId") Integer userId);
+
+    Integer updateCertificateBrowsed(@Param("userId") Integer userId, @Param("certificateId") Integer certificateId, @Param("browsedTime")Timestamp browsedTime);
+    Integer deleteCertificateBrowsed(@Param("id")Integer id);
 
 }

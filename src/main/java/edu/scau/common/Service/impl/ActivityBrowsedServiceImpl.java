@@ -12,6 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -44,10 +45,28 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
 
     @Override
     public Integer insertActivityBrowsed(Integer userId, Integer activityId) {
-        Integer result = 0;
+        List<Integer> result = new ArrayList<>();
+        result.add(-1);
         result = activityBrowsedMapper.checkedActivityBrowsed(userId,activityId);
-        if (result == null){
+        for (Integer i:result
+             ) {
+            System.out.println(i);
+        }
+        System.out.println("size "+result.size());
+        if (result.size()==0){
             activityBrowsedMapper.insertActivityBrowsed(userId,activityId);
+            System.out.println("1");
+        }else if (result.size() > 1){
+//            第二次调用要更新时间
+            System.out.println("2");
+            System.out.println(new Timestamp(System.currentTimeMillis()));
+            for (int i = 1;i<result.size();i++) {
+                System.out.println("delete: " + result.get(i));
+                activityBrowsedMapper.deleteActivityBrowsed(result.get(i));
+
+            }
+            activityBrowsedMapper.updateActivityBrowsed(userId,activityId,new Timestamp(System.currentTimeMillis()));
+
         }
         return 1;
     }

@@ -55,11 +55,8 @@ public class ActivityCollectedController {
     @PostMapping("/addActivity")
             public ApiResponse addActivity(@RequestParam("userId") int userId,
                                        @RequestParam(value = "activityId",required = false,defaultValue = "-1") int activityId){
-        Integer result = 0;
-
-
+             Integer result = 0;
              result = activityCollectedService.addActivity(userId, activityId);
-
 
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }

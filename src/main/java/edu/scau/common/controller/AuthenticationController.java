@@ -1,6 +1,7 @@
 package edu.scau.common.controller;
 
 import edu.scau.common.Service.impl.AuthenticationServiceImpl;
+import edu.scau.common.pojo.Authentication;
 import edu.scau.common.utils.ApiResponse;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -66,5 +67,16 @@ public class AuthenticationController {
                                             @RequestParam("associationName")String associationName){
         Integer result = authenticationService.deleteAuthentication(userId, level, associationName);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"delete error");
+    }
+
+    /**
+     *
+     * @param userId
+     * @return
+     */
+    @GetMapping("getAuthentication")
+    public ApiResponse getAuthentication(@RequestParam("userId")int userId){
+        List<Authentication> authentication = authenticationService.getAuthentication(userId);
+        return authentication.isEmpty()!=true?new ApiResponse(0,"success",authentication):new ApiResponse(-1,"empty");
     }
 }

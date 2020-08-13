@@ -110,12 +110,14 @@ public class ActivityCertificateController {
                                                @RequestParam(value = "activityId",required = false,defaultValue = "-1") int activityId,
                                                @RequestParam(value = "certificateId",required = false,defaultValue = "-1") int certificateId){
             Integer result = 0;
-            System.out.println(activityId  + certificateId);
+            System.out.println(activityId  +" "+ certificateId);
             if (activityId != -1){
+                System.out.println("activityId != -1");
                 result = activityBrowsedService.insertActivityBrowsed(userId,activityId);
 
             }
             else if (certificateId != -1){
+                System.out.println("certificateId != -1");
                 result = activityCertificateService.insertCertificateBrowsed(certificateId,userId);
             }
             if (result == 2){
@@ -130,7 +132,7 @@ public class ActivityCertificateController {
                     activityCertificateService.get(userId);
             return indexActivityCertificates != null ? new ApiResponse(0,"success",indexActivityCertificates):new ApiResponse(-1,"Server Error");
         }
-        @PostMapping("/getCertificateById")
+            @PostMapping("/getCertificateById")
         public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
                                               @RequestParam("certificateId")Integer certificateId){
 
