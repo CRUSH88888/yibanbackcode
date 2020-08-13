@@ -70,6 +70,11 @@
     <insert id="insertCertifiedBrowsed" parameterType="integer">
         insert into activity_certificate_browsed (is_browsed, activity_certificate_id, user_id) values (1,#{certificateId},#{userId});
     </insert>
+    <select id="selectCollectedCertificate" parameterType="integer" resultMap="Certificate">
+        select acc.certificate_id,ac.* from activity_certificate as ac
+        RIGHT JOIN activity_certificate_collected as acc on(
+            acc.certificate_id = ac.id and acc.user_id = #{userId})
+    </select>
 
 
 

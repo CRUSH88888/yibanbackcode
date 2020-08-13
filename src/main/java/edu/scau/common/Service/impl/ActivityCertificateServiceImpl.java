@@ -101,4 +101,9 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
         }
         return 2;
     }
+
+    @Override
+    public List<ActivityCertificate> selectCollectedCertificate(Integer userId) {
+        return activityCertificateMapper.selectCollectedCertificate(userId);
+    }
 }

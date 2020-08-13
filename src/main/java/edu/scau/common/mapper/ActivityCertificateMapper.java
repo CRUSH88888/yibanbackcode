@@ -34,6 +34,6 @@ public interface ActivityCertificateMapper extends MySqlMapper<ActivityCertifica
     ActivityCertificate selectCertificateById(@Param("certificateId")Integer certificateId);
     Integer checkedCertifiedCollected(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
     Integer insertCertifiedBrowsed(@Param("userId") Integer userId,@Param("certificateId") Integer certificateId);
-
+    List<ActivityCertificate> selectCollectedCertificate(@Param("userId") Integer userId);
 
 }

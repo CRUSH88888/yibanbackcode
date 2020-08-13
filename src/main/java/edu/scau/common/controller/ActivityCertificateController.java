@@ -137,6 +137,11 @@ public class ActivityCertificateController {
             return new ApiResponse(0,"success",activityCertificateService.selectCertificateById(certificateId,userId)) ;
 
         }
+        @PostMapping("/getCollectedCertificate")
+    public ApiResponse getCollectedCertificate(@RequestParam("userId")Integer userId){
+            List<ActivityCertificate> certificates = activityCertificateService.selectCollectedCertificate(userId);
+            return certificates != null ? new ApiResponse(0,"success",certificates):new ApiResponse(-1,"failed");
+        }
 
 
 

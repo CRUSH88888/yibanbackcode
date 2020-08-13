@@ -251,12 +251,6 @@
         <version>5.2.8.RELEASE</version>
 
       </dependency>
-    <!-- https://mvnrepository.com/artifact/com.tetragramato/custom-spring-boot-resttemplate -->
-    <dependency>
-      <groupId>com.tetragramato</groupId>
-      <artifactId>custom-spring-boot-resttemplate</artifactId>
-      <version>1.0.0</version>
-    </dependency>
 
 
   </dependencies>
