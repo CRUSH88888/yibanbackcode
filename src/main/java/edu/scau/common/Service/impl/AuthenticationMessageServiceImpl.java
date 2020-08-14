@@ -13,6 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.sql.Time;
 import java.sql.Timestamp;
 import java.util.List;
 
@@ -32,26 +33,36 @@ public class AuthenticationMessageServiceImpl implements AuthenticationMessageSe
     @Override
     public Integer to_authentication(AuthenticationMessage authenticationMessage) {
         if(authenticationMessage.getLevel()==1){
-            authenticationMessage.setBrowsed(false);
+            Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+            timestamp.setTime(timestamp.getTime()/1000*1000);
+            authenticationMessage.setBuildTime(timestamp);
             Integer result= authenticationMessageMapper.insertAuthenticationMessage(authenticationMessage);
             List<String> pictureUrl = authenticationMessage.getPictureUrl();
-            Integer authenticationId = authenticationMessageMapper.getAuthenticationId(authenticationMessage.getUserId(), authenticationMessage.getAssociationName());
-            for (String s : pictureUrl) {
-                result+= authenticationMessageMapper.insertPicture(s,authenticationId);
+            Integer authenticationId = authenticationMessageMapper.getAuthenticationId(authenticationMessage.getUserId(), authenticationMessage.getAssociationName(),timestamp);
+            if(pictureUrl!=null) {
+                for (String s : pictureUrl) {
+                    result += authenticationMessageMapper.insertPicture(s, authenticationId);
+                }
+                return result==pictureUrl.size()+1?1:0;
             }
-            return result==pictureUrl.size()+1?1:0;
+            return result>0?1:0;
         }
         else {
             Integer userId = authenticationMapper.getUserIdByName(authenticationMessage.getAssociationName());
             if(userId==null){
-                authenticationMessage.setBrowsed(false);
+                Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+                timestamp.setTime(timestamp.getTime()/1000*1000);
+                authenticationMessage.setBuildTime(timestamp);
                 Integer result= authenticationMessageMapper.insertAuthenticationMessage(authenticationMessage);
                 List<String> pictureUrl = authenticationMessage.getPictureUrl();
-                Integer authenticationId = authenticationMessageMapper.getAuthenticationId(authenticationMessage.getUserId(), authenticationMessage.getAssociationName());
-                for (String s : pictureUrl) {
-                    result+= authenticationMessageMapper.insertPicture(s, authenticationId);
+                Integer authenticationId = authenticationMessageMapper.getAuthenticationId(authenticationMessage.getUserId(), authenticationMessage.getAssociationName(),timestamp);
+                if(pictureUrl!=null) {
+                    for (String s : pictureUrl) {
+                        result += authenticationMessageMapper.insertPicture(s, authenticationId);
+                    }
+                    return result==pictureUrl.size()+1?1:0;
                 }
-                return result==pictureUrl.size()+1?1:0;
+                return result>0?1:0;
             }
             else{
                 String s;

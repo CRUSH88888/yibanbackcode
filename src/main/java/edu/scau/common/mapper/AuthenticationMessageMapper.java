@@ -6,6 +6,7 @@ import io.swagger.models.auth.In;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -17,7 +18,7 @@ import java.util.List;
 public interface AuthenticationMessageMapper {
     Integer insertAuthenticationMessage(AuthenticationMessage authenticationMessage);
     Integer insertPicture(@Param("picture") String picture,@Param("authenticationId") int authenticationId);
-    Integer getAuthenticationId(@Param("userId") int userId,@Param("associationName") String associationName);
+    Integer getAuthenticationId(@Param("userId") int userId, @Param("associationName") String associationName, @Param("buildTime")Timestamp buildTime);
     String getName(int userId);
     String getUserName(int userId);
     List<AuthenticationMessage> getAuthenticationMessage();

@@ -10,19 +10,20 @@
         select `username` from `user` where id=#{userId}
     </select>
     <insert id="insertAuthenticationMessage" parameterType="edu.scau.common.pojo.AuthenticationMessage" useGeneratedKeys="true" keyProperty="id">
-        insert into authentication_message(user_id, association_name, browsed, `level`)
-        VALUES (#{userId}, #{associationName}, 0, #{level})
+        insert into authentication_message(user_id, association_name, browsed, `level`,build_time)
+        VALUES (#{userId}, #{associationName}, 0, #{level},#{buildTime})
     </insert>
     <insert id="insertPicture">
         insert into authentication_pic(picture_url, authentication_id) VALUES (#{picture},#{authenticationId})
     </insert>
     <select id="getAuthenticationId" resultType="integer">
-        select id from authentication
+        select id from authentication_message
         where user_id=#{userId}
         and association_name=#{associationName}
+        and build_time=#{buildTime}
     </select>
     <select id="getAuthenticationMessage" resultMap="authenticationMessage" parameterType="int">
-        select id,user_id,association_name,browsed,`level` from authentication_message
+        select id,user_id,association_name,browsed,`level`,build_time from authentication_message
     </select>
     <resultMap id="authenticationMessage" type="edu.scau.common.pojo.AuthenticationMessage">
         <result property="id" column="id"/>
@@ -30,9 +31,10 @@
         <result property="associationName" column="association_name"/>
         <result property="browsed" column="browsed"/>
         <result property="level" column="level"/>
+        <result property="buildTime" column="build_time"/>
     </resultMap>
     <select id="getAuthenticationMessageById" resultMap="authenticationMessage">
-        select id,user_id,association_name,browsed,`level` from authentication_message
+        select id,user_id,association_name,browsed,`level`,build_time from authentication_message
         where id=#{id}
     </select>
     <select id="getPicture" resultType="string" parameterType="int">
