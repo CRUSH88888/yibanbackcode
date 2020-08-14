@@ -2,6 +2,8 @@ package edu.scau.common.controller;
 
 import edu.scau.common.mapper.MessageSubscribeMapper;
 import edu.scau.common.utils.ApiResponse;
+import edu.scau.common.utils.HttpUtil;
+import net.sf.json.JSONObject;
 import org.apache.ibatis.annotations.Param;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -42,14 +44,21 @@ public class MessageSubscribeController {
     /**
      * 添加openid
      * @param userId
-     * @param openId
+     * @param code
      * @return
      */
     @PostMapping("insertOpenId")
     public ApiResponse insertOpenId(@RequestParam("userId") int userId,
-                                    @RequestParam("openId")String openId){
-        Integer result = messageSubscribeMapper.insertOpenId(userId, openId);
-        return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
+                                    @RequestParam("code")String code) throws Exception {
+        String result= HttpUtil.doGet("https://api.weixin.qq.com/sns/jscode2session?appid="
+                + "wx3ba5b3cafbcbd958" + "&secret="
+                + "13c3597b68a04f2b65270413e38a5989" + "&js_code="
+                + code
+                + "&grant_type=authorization_code");
+        JSONObject jsonObject = JSONObject.fromObject(result);
+        String openid = (String) jsonObject.get("openid");
+        Integer result1 = messageSubscribeMapper.insertOpenId(userId, openid);
+        return result1>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }
 
     /**

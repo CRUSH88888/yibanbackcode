@@ -64,6 +64,7 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\Message.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\AuthenticationMessage.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\ActivityCertificate.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\GroupService.java
+D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\HttpUtil.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\ActivityBrowsedService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\AccessTokenController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\config\CommonConfig.java

@@ -10,4 +10,5 @@ import edu.scau.common.pojo.User;
 public interface UserService {
     Integer saveUser(User user);
     Integer updateUser(User user);
+    User selectUserById(Integer id);
 }

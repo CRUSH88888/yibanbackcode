@@ -15,6 +15,7 @@ import lombok.NoArgsConstructor;
 
 public class UserDetail {
     private Integer id;
+    private String yb_username;//用户名",
     private String yb_userid;//易班用户id"
     private String yb_realname;//真实姓名
     private String yb_sex;//    "yb_sex":"性别",
@@ -28,7 +29,8 @@ public class UserDetail {
      * @param yb_sex
      * @param yb_userhead
      */
-    public UserDetail(String yb_userid, String yb_sex,   String yb_userhead) {
+    public UserDetail(String yb_username,String yb_userid, String yb_sex,   String yb_userhead) {
+        this.yb_username = yb_username;
         this.yb_userid = yb_userid;
         this.yb_sex = yb_sex;
         this.yb_userhead = yb_userhead;

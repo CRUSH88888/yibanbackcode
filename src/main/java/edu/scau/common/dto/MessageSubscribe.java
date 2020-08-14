@@ -19,9 +19,9 @@ public class MessageSubscribe {
     private int activity_id;
     private String address;//地点
     private String title;//标题
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm",timezone="GMT+8")
     private Timestamp startTime;//活动开始时间
-    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm",timezone="GMT+8")
     private Timestamp endTime;//活动结束时间
     private String date;//活动时间转为字符串
     private long clockTime;//定时

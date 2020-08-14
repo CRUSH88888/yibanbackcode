@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class User {         //用户信息
-    private int id;
+    private Integer id;
     private String studentNumber;//学号
     private String username;//用户名
     private String name;//真实名字

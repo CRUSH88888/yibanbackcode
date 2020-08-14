@@ -63,9 +63,10 @@ public class ActivityCollectedServiceImpl implements ActivityCollectedService {
 
     @Override
     @Transactional
-    public Integer deleteCollectedActivity(int userId, int activityId) {
+    public String deleteCollectedActivity(int userId, int activityId) {
         Integer result = activityCollectedMapper.deleteCollectedActivity(userId, activityId);
+        String clockId = messageSubscribeMapper.getClockId(userId, activityId);
         result+= messageSubscribeMapper.deleteClockId(userId, activityId);
-        return result==2?1:0;
+        return result==2?clockId:null;
     }
 }

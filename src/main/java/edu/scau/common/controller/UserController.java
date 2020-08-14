@@ -6,10 +6,7 @@ import edu.scau.common.pojo.UserDetail;
 import edu.scau.common.utils.ApiResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 /**
  * @description:
@@ -45,6 +42,12 @@ public class UserController {
         Integer result = userService.updateUser(user);
         return result > 0?new ApiResponse(0,"success"):new ApiResponse(-1,"failed");
 
+    }
+
+    @GetMapping("/getStudentDetail")
+    public ApiResponse getStudentDetail(@RequestParam("id")Integer id){
+        System.out.println(userService.selectUserById(id));
+        return null;
     }
 
 
