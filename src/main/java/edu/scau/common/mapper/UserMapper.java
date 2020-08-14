@@ -13,5 +13,6 @@ import tk.mybatis.mapper.common.MySqlMapper;
 @Mapper
 public interface UserMapper extends MySqlMapper<User>, BaseMapper<User> {
     Integer updateUser(User user);
+    User selectById(Integer id);
 
 }

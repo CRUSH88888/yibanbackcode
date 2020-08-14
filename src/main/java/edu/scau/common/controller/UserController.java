@@ -46,8 +46,10 @@ public class UserController {
 
     @GetMapping("/getStudentDetail")
     public ApiResponse getStudentDetail(@RequestParam("id")Integer id){
-        System.out.println(userService.selectUserById(id));
-        return null;
+        User user = userService.selectUserById(id);
+        System.out.println("当前登陆人： "+user.toString());
+
+        return new ApiResponse(0,"success",user);
     }
 
 
