@@ -27,13 +27,12 @@
         <result column="activity_title" property="title"/>
         <result column="building_time" property="buildTime"/>
     </resultMap>
-        <select id="getACollectedActivity"  resultType="integer">
+    <select id="getACollectedActivity" resultType="integer">
         select id from collection
         where activity_id=#{activityId}
         and user_id=#{userId}
     </select>
-<!--    改了浩嘉的代码 useGeneratedKeys="true" keyProperty="id"-->
-    <insert id="addActivity" parameterType="integer" >
+    <insert id="addActivity">
         insert into collection(user_id, activity_id) value (#{userId},#{activityId})
     </insert>
     <delete id="deleteCollectedActivity" >

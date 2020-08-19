@@ -18,12 +18,29 @@ public class UserServiceImpl implements UserService {
     private UserMapper userMapper;
 
     @Override
-    public Integer saveUser(User user) {
-        return userMapper.insert(user);
+    public User saveUser(User user) {
+        System.out.println("now there is someone want to login in,let we check does he had logined");
+        User id = userMapper.selectByYBId(user.getYb_userid());
+        if (id != null)
+        {
+            System.out.println(id);
+            return id;
+        }
+        else {
+            Integer result = userMapper.insertGenerateId(user);
+            System.out.println(result);
+            return user;
+        }
+
     }
 
     @Override
     public Integer updateUser(User user) {
+        User user1 = userMapper.checkName(user.getStudentNumber());
+
+        if (user1==null){System.out.println(user1.toString());
+            userMapper.insert(user);
+        }
         return userMapper.updateUser(user);
     }
 

@@ -1,8 +1,6 @@
 package edu.scau.common.controller;
 
-import edu.scau.common.Service.ActivityCertificateService;
 import edu.scau.common.Service.impl.ActivityCollectedServiceImpl;
-import edu.scau.common.Service.impl.BrowsedServiceImpl;
 import edu.scau.common.dto.ActivityManger;
 import edu.scau.common.dto.MessageSubscribe;
 import edu.scau.common.pojo.Activity;
@@ -21,8 +19,6 @@ import java.util.List;
 public class ActivityCollectedController {
     @Autowired
     private ActivityCollectedServiceImpl activityCollectedService;
-    @Autowired
-    private ActivityCertificateService activityCertificateService;
 
     /**
      *查询收藏的活动
@@ -60,6 +56,4 @@ public class ActivityCollectedController {
         return messageSubscribe!=null?new ApiResponse(0,"success",messageSubscribe):new ApiResponse(-1,"Server Error");
 
     }
-
-
 }

@@ -27,12 +27,10 @@ import java.sql.Timestamp;
 @SpringBootTest
 public class AppTest 
 {
-
     @Autowired
     private MessageSubscribeMapper  messageSubscribeMapper;
     @Autowired
     private BrowsedServiceImpl browsedService;
-
     @Test
     public void shouldAnswerWithTrue()
     {
@@ -43,6 +41,5 @@ public class AppTest
     public void test1(){
         messageSubscribeMapper.getMessageSubscribe(1);
     }
-
 
 }

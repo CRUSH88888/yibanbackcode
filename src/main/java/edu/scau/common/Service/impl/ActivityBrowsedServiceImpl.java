@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 
 /**
@@ -42,34 +43,33 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
 
         return statuses;
     }
-
-    @Override
     public Integer insertActivityBrowsed(Integer userId, Integer activityId) {
-        List<Integer> result = new ArrayList<>();
-        result.add(-1);
-        result = activityBrowsedMapper.checkedActivityBrowsed(userId,activityId);
-        for (Integer i:result
-             ) {
-            System.out.println(i);
+        ArrayList result = new ArrayList();
+        result.add(Integer.valueOf(-1));
+        List var6 = this.activityBrowsedMapper.checkedActivityBrowsed(userId, activityId);
+        Iterator i = var6.iterator();
+
+        while(i.hasNext()) {
+            Integer i1 = (Integer)i.next();
+            System.out.println(i1);
         }
-        System.out.println("size "+result.size());
-        if (result.size()==0){
-            activityBrowsedMapper.insertActivityBrowsed(userId,activityId);
+
+        System.out.println("size " + var6.size());
+        if(var6.size() == 0) {
+            this.activityBrowsedMapper.insertActivityBrowsed(userId, activityId);
             System.out.println("1");
-        }else if (result.size() > 1){
-//            第二次调用要更新时间
+        } else if(var6.size() > 1) {
             System.out.println("2");
             System.out.println(new Timestamp(System.currentTimeMillis()));
-            for (int i = 1;i<result.size();i++) {
-                System.out.println("delete: " + result.get(i));
-                activityBrowsedMapper.deleteActivityBrowsed(result.get(i));
 
+            for(int var7 = 1; var7 < var6.size(); ++var7) {
+                System.out.println("delete: " + var6.get(var7));
+                activityBrowsedMapper.deleteActivityBrowsed((Integer)var6.get(var7));
             }
-            activityBrowsedMapper.updateActivityBrowsed(userId,activityId,new Timestamp(System.currentTimeMillis()));
 
+           activityBrowsedMapper.updateActivityBrowsed(userId, activityId, new Timestamp(System.currentTimeMillis()));
         }
-        return 1;
+
+        return Integer.valueOf(1);
     }
-
-
 }

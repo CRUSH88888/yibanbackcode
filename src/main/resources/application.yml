@@ -1,6 +1,6 @@
 server:
   # 服务端===,（最好安装linux版的,windows版的也行,windows版的下载redis的zip包解压后点击redis-server.exe即可）
-  port: 8864
+  port: 8800
 #  ssl:
 #    key-store: liveforjokes.icu.pfx
 #    key-store-password: XF7r4TLs
@@ -98,4 +98,5 @@ mybatis-plus:
     default-statement-timeout: 3000
   # 别名
   type-aliases-package: edu.scau.common.mapper
+
 

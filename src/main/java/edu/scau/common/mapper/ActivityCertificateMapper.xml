@@ -15,16 +15,21 @@
     </insert>
     <insert id="insertCertificateFile" parameterType="java.util.List">
         insert into certificate_file (certificate_id, file_url) VALUES
-
-            (#{certificateId},#{files})
-
+        <foreach collection="files" item="item" index="index"
+                 separator=",">
+            (#{certificateId},#{item})
+        </foreach>
 
     </insert>
     <insert id="insertCertificateLabel" parameterType="arraylist">
-        insert into certificate_label(certificate_id, label) VALUES 
+<!--        insert into certificate_label(certificate_id, label) VALUES -->
+<!--        <foreach collection="labels" separator="," index="index"-->
+<!--                 item="item">-->
+<!--            (#{certificateId},#{item})-->
+<!--        </foreach>-->
+        insert into certificate_label (certificate_id, label) VALUES
 
-            (#{certificateId},#{label})
-
+        (#{certificateId},#{label})
     </insert>
     <insert id="collectedCertificate" parameterType="integer">
         insert into activity_certificate_collected (user_id, collected, certificate_id) VALUES
@@ -33,6 +38,7 @@
     <delete id="deleteCollectedCertificate" parameterType="integer">
         delete from activity_certificate_collected where user_id = #{userId} and certificate_id = #{certificateId}
     </delete>
+
     <resultMap id="Certificate" type="edu.scau.common.pojo.ActivityCertificate">
         <id column="id" property="id"/>
         <result column="user_id" property="userId"/>
@@ -49,7 +55,7 @@
         </collection>
     </resultMap>
     <select id="selectCertificate" resultMap="Certificate">
-        select * from activity_certificate
+        select * from activity_certificate order by building_time DESC
     </select>
     <select id="selectFileUrl" parameterType="integer" resultType="string">
         select file_url from certificate_file where certificate_id = #{certificateId};
@@ -86,6 +92,7 @@
     <delete id="deleteCertificateBrowsed" parameterType="integer">
         delete from activity_certificate_browsed where id = #{id}
     </delete>
+
 
 
 

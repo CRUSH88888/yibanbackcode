@@ -1,7 +1,5 @@
 package edu.scau.common.pojo;
 
-import lombok.Data;
-
 import java.sql.Timestamp;
 
 /**
@@ -9,7 +7,6 @@ import java.sql.Timestamp;
  * @auther:cyf
  * @create:2020/7/3 18:14
  **/
-@Data
 public class Browse {
 
     /*

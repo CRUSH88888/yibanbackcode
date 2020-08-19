@@ -24,10 +24,12 @@ public class UserController {
      * @return
      */
     @PostMapping("/saveUser")
-    public ApiResponse saveUser(@RequestBody @Validated User user){
+    public ApiResponse saveUser(@RequestBody(required = false) @Validated User user
+                                ){
         System.out.println(user.toString());
-        Integer result = userService.saveUser(user);
-        return result > 0 ?new ApiResponse(0,"success"):new ApiResponse(-1,"failed");
+        User user1 = userService.saveUser(user);
+
+        return user1 !=null ?new ApiResponse(0,"success",user1):new ApiResponse(-1,"failed");
 
     }
 

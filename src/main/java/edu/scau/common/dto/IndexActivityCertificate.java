@@ -8,13 +8,16 @@ import lombok.NoArgsConstructor;
 /**
  * @description:
  * @auther:cyf
- * @create:2020/8/11 16:22
+ * @create:2020/8/15 9:41
  **/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class IndexActivityCertificate {
-    private ActivityCertificate activityCertificate;
-    private Boolean browsed;
-    private String builtTimeToNow;
+
+        private ActivityCertificate activityCertificate;
+        private Boolean browsed;
+        private String builtTimeToNow;
+
+
 }

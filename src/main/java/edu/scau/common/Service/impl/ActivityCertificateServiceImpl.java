@@ -1,6 +1,5 @@
 package edu.scau.common.Service.impl;
 
-import com.github.pagehelper.PageHelper;
 import edu.scau.common.Service.ActivityCertificateService;
 import edu.scau.common.dto.ActivityCertificateCollected;
 import edu.scau.common.dto.IndexActivityCertificate;
@@ -34,15 +33,13 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     public Boolean save(ActivityCertificate activityCertificate) {
         Integer certificateId = activityCertificateMapper.insertCertificate(activityCertificate);
         System.out.println(certificateId);
-        for (String s:activityCertificate.getFileUrl()
-        ) {
-            activityCertificateMapper.insertCertificateFile(s,certificateId);
-        }
-        for (String s:activityCertificate.getLabels()
+        activityCertificateMapper.insertCertificateFile(activityCertificate.getFileUrl(),certificateId);
+        List<String > labels = activityCertificate.getLabels();
+        for (String s:labels
              ) {
             activityCertificateMapper.insertCertificateLabel(s,certificateId);
-        }
 
+        }
         return null;
     }
 
@@ -82,6 +79,7 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     public Integer deleteCollectedCertificate(Integer userId, Integer certificateId) {
         return activityCertificateMapper.deleteCollectedCertificate(userId,certificateId);
     }
+
 
     @Override
     public List<IndexActivityCertificate> get(Integer userId) {
@@ -141,4 +139,5 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     public List<ActivityCertificate> selectCollectedCertificate(Integer userId) {
         return activityCertificateMapper.selectCollectedCertificate(userId);
     }
+
 }

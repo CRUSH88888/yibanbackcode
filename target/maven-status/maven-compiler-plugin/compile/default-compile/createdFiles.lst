@@ -58,6 +58,7 @@ edu\scau\common\dto\ActivityCertificateCollected.class
 edu\scau\common\Service\impl\ActivityServiceImpl.class
 edu\scau\common\controller\MessageController.class
 edu\scau\common\Service\ActivityCollectedService.class
+edu\scau\common\pojo\User$UserBuilder.class
 edu\scau\common\controller\MessageSubscribeController.class
 edu\scau\common\mapper\UserMapper.class
 edu\scau\common\pojo\Label.class
@@ -89,7 +90,6 @@ edu\scau\common\mapper\AuthenticationMessageMapper.class
 edu\scau\common\Service\impl\MessageServiceImpl.class
 edu\scau\common\controller\ActivityBrowsedController.class
 edu\scau\common\pojo\ActivityPicture.class
-edu\scau\common\controller\AccessTokenController.class
 edu\scau\common\pojo\Association.class
 edu\scau\common\Service\ActivityBrowsedService.class
 edu\scau\common\mapper\ActivityCertificateMapper.class
@@ -101,7 +101,6 @@ edu\scau\common\pojo\User.class
 edu\scau\common\Service\ScheduleService.class
 edu\scau\common\controller\FunctionController.class
 edu\scau\common\pojo\group.class
-edu\scau\common\dto\ActivityCertificateDetail.class
 edu\scau\common\dto\Schedule.class
 edu\scau\common\Service\impl\InformationServiceImpl.class
 edu\scau\common\controller\AuthenticationMessageController.class

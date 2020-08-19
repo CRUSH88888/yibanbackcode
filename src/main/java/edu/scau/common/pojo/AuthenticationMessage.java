@@ -1,9 +1,11 @@
 package edu.scau.common.pojo;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.sql.Timestamp;
 import java.util.List;
 
 /**
@@ -21,6 +23,8 @@ public class AuthenticationMessage {
     private boolean browsed;//是否已审核
     private int level;//认证权限
     private List<String> pictureUrl;
+    @JsonFormat(pattern = "yyyy-MM-dd HH:mm:ss",timezone="GMT+8")
+    private Timestamp buildTime;//建立时间
 
     public AuthenticationMessage(int userId, String associationName, int level, List<String> pictureUrl) {
         this.userId = userId;

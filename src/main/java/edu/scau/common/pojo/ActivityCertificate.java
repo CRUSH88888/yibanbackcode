@@ -46,4 +46,12 @@ public class ActivityCertificate {
         this.labels = labels;
         this.userId = userId;
     }
+    public ActivityCertificate( String activityTitle, String activityContent, List<String> fileUrl, List<String> labels, Integer userId,Timestamp buildingTime) {
+        this.activityTitle = activityTitle;
+        this.activityContent = activityContent;
+        this.fileUrl = fileUrl;
+        this.labels = labels;
+        this.userId = userId;
+        this.buildingTime = buildingTime;
+    }
 }

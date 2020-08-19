@@ -54,7 +54,6 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\SearchService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\ApiResponse.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\ActivityCollectedService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\ActivityCollectedController.java
-D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\ActivityCertificateDetail.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\mapper\ScheduleMapper.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\dto\ActivityAndMessage.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\DateToStringUtil.java
@@ -66,7 +65,6 @@ D:\项目\易班后台\demo\src\main\java\edu\scau\common\pojo\ActivityCertificate.jav
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\GroupService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\utils\HttpUtil.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\ActivityBrowsedService.java
-D:\项目\易班后台\demo\src\main\java\edu\scau\common\controller\AccessTokenController.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\config\CommonConfig.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\Service\UserService.java
 D:\项目\易班后台\demo\src\main\java\edu\scau\common\config\AsynConfiguration.java

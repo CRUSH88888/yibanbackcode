@@ -16,11 +16,11 @@ import java.util.List;
 public interface ActivityBrowsedMapper {
     List<IndexActivityStatus> selectActivityBrowsed(Integer userId);
     List<Integer> selectLabels(Integer activityId);
-
     List<Integer> checkedActivityBrowsed(@Param("userId") Integer userId, @Param("activityId") Integer activityId);
-    Integer insertActivityBrowsed(@Param("userId")Integer userId,@Param("activityId")Integer activityId);
 
-    Integer updateActivityBrowsed(@Param("userId")Integer userId, @Param("activityId")Integer activityId, @Param("buildingTime")Timestamp buildingTime);
+    Integer insertActivityBrowsed(@Param("userId") Integer userId, @Param("activityId") Integer activityId);
 
-    Integer deleteActivityBrowsed(@Param("id")Integer id);
+    Integer updateActivityBrowsed(@Param("userId") Integer userId, @Param("activityId") Integer activityId, @Param("buildingTime") Timestamp var3);
+
+    Integer deleteActivityBrowsed(@Param("id") Integer id);
 }

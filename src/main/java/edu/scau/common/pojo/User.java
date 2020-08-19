@@ -1,15 +1,15 @@
 package edu.scau.common.pojo;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
-import lombok.NoArgsConstructor;
+import lombok.*;
 
 /**
  * 用于用户填写个人信息时的类
  */
 @Data
-@AllArgsConstructor
-@NoArgsConstructor
+//@AllArgsConstructor
+//@NoArgsConstructor
+//@NonNull
+@Builder
 public class User {         //用户信息
     private Integer id;
     private String studentNumber;//学号
@@ -20,6 +20,7 @@ public class User {         //用户信息
     private String phoneNumber;//手机号码
     private String wechatNumber;//微信号码
 
+    private String yb_username;//易班用户名
     private String yb_userid;//易班用户id"
     private String yb_realname;//真实姓名
     private String yb_sex;//    "yb_sex":"性别",
@@ -31,7 +32,8 @@ public class User {         //用户信息
 //    private Activity[] publishActivities;//发布的活动
 //    private Activity[] CollectionActivities;//收藏的活动
 
-    public User(  String studentNumber, String username, String name, String grade, String major, String phoneNumber, String wechatNumber) {
+    public User( Integer id,  String studentNumber, String username, String name, String grade, String major, String phoneNumber, String wechatNumber) {
+        this.id = id;
         this.studentNumber = studentNumber;
         this.username = username;
         this.name = name;
@@ -65,5 +67,60 @@ public class User {         //用户信息
         this.id = id;
         this.yb_realname = yb_realname;
         this.yb_identity = yb_identity;
+    }
+
+    public User(String studentNumber, String username, String name, String grade, String major, String phoneNumber, String wechatNumber, String yb_username, String yb_userid, String yb_realname, String yb_sex, String yb_userhead, String yb_identity) {
+
+        this.studentNumber = studentNumber;
+        this.username = username;
+        this.name = name;
+        this.grade = grade;
+        this.major = major;
+        this.phoneNumber = phoneNumber;
+        this.wechatNumber = wechatNumber;
+        this.yb_username = yb_username;
+        this.yb_userid = yb_userid;
+        this.yb_realname = yb_realname;
+        this.yb_sex = yb_sex;
+        this.yb_userhead = yb_userhead;
+        this.yb_identity = yb_identity;
+
+    }
+    public User(String studentNumber, String username, String name, String grade, String major, String phoneNumber, String wechatNumber, String yb_username, String yb_userid, String yb_realname, String yb_sex, String yb_userhead) {
+
+        this.studentNumber = studentNumber;
+        this.username = username;
+        this.name = name;
+        this.grade = grade;
+        this.major = major;
+        this.phoneNumber = phoneNumber;
+        this.wechatNumber = wechatNumber;
+        this.yb_username = yb_username;
+        this.yb_userid = yb_userid;
+        this.yb_realname = yb_realname;
+        this.yb_sex = yb_sex;
+        this.yb_userhead = yb_userhead;
+
+    }
+
+    public User() {
+    }
+
+    public User(Integer id, String studentNumber, String username, String name, String grade, String major, String phoneNumber, String wechatNumber, String yb_username, String yb_userid, String yb_realname, String yb_sex, String yb_userhead, String yb_identity, Integer level) {
+        this.id = id;
+        this.studentNumber = studentNumber;
+        this.username = username;
+        this.name = name;
+        this.grade = grade;
+        this.major = major;
+        this.phoneNumber = phoneNumber;
+        this.wechatNumber = wechatNumber;
+        this.yb_username = yb_username;
+        this.yb_userid = yb_userid;
+        this.yb_realname = yb_realname;
+        this.yb_sex = yb_sex;
+        this.yb_userhead = yb_userhead;
+        this.yb_identity = yb_identity;
+        this.level = level;
     }
 }

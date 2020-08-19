@@ -51,12 +51,16 @@ public class PublishManagementServiceImpl implements PublishManagementService {
             publishActivity = publishManagementMapper.getPublishActivity(userId);
             publishGroup = publishManagementMapper.getPublishGroup(userId);
             certificate = publishManagementMapper.getCertificate(userId);
+
         }
         for (ActivityManger activityManger : publishActivity) {
             activityManger.setType(1);
+            System.out.println(activityManger.toString());
         }
+        System.out.println("~~~~~~~~~");
         for (ActivityManger activityManger : certificate) {
             activityManger.setType(2);
+            System.out.println(activityManger.toString());
         }
         for (ActivityManger activityManger : publishGroup) {
             activityManger.setType(3);

@@ -56,6 +56,7 @@ public class ListMerge {
         int i=0;
         int j=0;
         while(i<activityMangers.size()&&j<activityMangers1.size()){
+            System.out.println(activityMangers.get(i).getBuildTime());
             if(activityMangers.get(i).getBuildTime().after(activityMangers1.get(j).getBuildTime())){
                 activityMangers2.add(activityMangers.get(i));
                 i++;

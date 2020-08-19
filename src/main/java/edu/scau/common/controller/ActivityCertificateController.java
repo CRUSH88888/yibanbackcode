@@ -12,6 +12,7 @@ import edu.scau.common.utils.PageUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,7 +50,7 @@ public class ActivityCertificateController {
 
         List<String> labelString = LabelTransUtils.StringToString(labels);
 
-        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labelString,userId);
+        ActivityCertificate certificate = new ActivityCertificate(activityTitle,activityContent,files,labelString,userId,new Timestamp(System.currentTimeMillis()));
         activityCertificateService.save(certificate);
         return new  ApiResponse(0,"success");
     }

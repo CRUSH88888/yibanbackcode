@@ -13,7 +13,7 @@ public interface ActivityBrowsedService {
 
 
     List<IndexActivityStatus> selectActivityBrowsed(Integer userId);
+    Integer insertActivityBrowsed(Integer var1, Integer var2);
 
-    Integer insertActivityBrowsed(Integer userId,Integer activityId);
 
 }

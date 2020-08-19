@@ -13,10 +13,10 @@
         major = #{major},
         phone_number = #{phoneNumber},
         wechat_number = #{wechatNumber}
-        where yb_userid = #{yb_userid}
+        where id = #{id} and student_number = #{studentNumber}
     </update>
     <resultMap id="user" type="edu.scau.common.pojo.User">
-        <id column="id" property="id"></id>
+        <result column="id" property="id"/>
         <result property="grade" column="grade"/>
         <result property="level" column="level"/>
         <result property="major" column="major"/>
@@ -28,11 +28,79 @@
         <result property="yb_identity" column="yb_identity"/>
         <result property="yb_realname" column="yb_realname"/>
         <result property="yb_sex" column="yb_sex" />
+        <result property="yb_username" column="yb_username"/>
         <result property="yb_userhead" column="yb_userhead"/>
         <result property="yb_userid" column="yb_userid"/>
     </resultMap>
     <select id="selectById" parameterType="integer" resultMap="user">
         select * from user where id = #{id}
     </select>
-
+    <select id="checkName" parameterType="string" resultMap="user">
+        select * from user where student_number = #{student_number}
+    </select>
+    <insert id="insertGenerateId" parameterType="edu.scau.common.pojo.User" useGeneratedKeys="true" keyProperty="id">
+        insert into user
+        (student_number,
+         username,
+         name,
+         grade,
+          major,
+           phone_number,
+            wechat_number,
+             yb_userid,
+              yb_realname,
+               yb_sex,
+                yb_userhead,
+                 yb_identity,
+                  level)
+                  select
+          #{studentNumber},
+            #{username},
+            #{name},
+            #{grade},
+            #{major},
+            #{phoneNumber},
+            #{wechatNumber},
+            #{yb_userid},
+            #{yb_realname},
+            #{yb_sex},
+            #{yb_userhead},
+            #{yb_identity},
+            #{level}
+         from DUAL WHERE NOT EXISTS
+        (SELECT student_number, name
+        FROM user WHERE  yb_userid= #{yb_userid});
+    </insert>
+<!--    insert into user-->
+<!--    (student_number,-->
+<!--    username,-->
+<!--    name,-->
+<!--    grade,-->
+<!--    major,-->
+<!--    phone_number,-->
+<!--    wechat_number,-->
+<!--    yb_userid,-->
+<!--    yb_realname,-->
+<!--    yb_sex,-->
+<!--    yb_userhead,-->
+<!--    yb_identity,-->
+<!--    level) VALUES-->
+<!--    (   #{studentNumber},-->
+<!--    #{username},-->
+<!--    #{name},-->
+<!--    #{grade},-->
+<!--    #{major},-->
+<!--    #{phoneNumber},-->
+<!--    #{wechatNumber},-->
+<!--    #{yb_userid},-->
+<!--    #{yb_realname},-->
+<!--    #{yb_sex},-->
+<!--    #{yb_userhead},-->
+<!--    #{yb_identity},-->
+<!--    #{level})-->
+    <select id="selectByYBId" parameterType="string" resultMap="user">
+        select * from user <where>
+        yb_userid = #{yb_userid}
+    </where>
+    </select>
 </mapper>

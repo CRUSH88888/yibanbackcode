@@ -2,6 +2,7 @@ package edu.scau.common.mapper;
 
 import edu.scau.common.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.BaseMapper;
 import tk.mybatis.mapper.common.MySqlMapper;
 
@@ -12,7 +13,12 @@ import tk.mybatis.mapper.common.MySqlMapper;
  **/
 @Mapper
 public interface UserMapper extends MySqlMapper<User>, BaseMapper<User> {
+//    @Select("select * from user where student_number = #{student_number}")
+    User checkName(String student_number);
     Integer updateUser(User user);
     User selectById(Integer id);
+    User selectByYBId(String yb_userid);
+    Integer insertGenerateId(User user);
+
 
 }

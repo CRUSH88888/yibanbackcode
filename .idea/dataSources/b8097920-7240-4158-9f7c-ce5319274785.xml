@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="8.129.172.254">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.16">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
     <root id="1">
       <ServerVersion>5.6.48</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -28,7 +28,6 @@
     </schema>
     <collation id="8" parent="1" name="armscii8_bin">
       <Charset>armscii8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="9" parent="1" name="armscii8_general_ci">
       <Charset>armscii8</Charset>
@@ -36,7 +35,6 @@
     </collation>
     <collation id="10" parent="1" name="ascii_bin">
       <Charset>ascii</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="11" parent="1" name="ascii_general_ci">
       <Charset>ascii</Charset>
@@ -44,7 +42,6 @@
     </collation>
     <collation id="12" parent="1" name="big5_bin">
       <Charset>big5</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="13" parent="1" name="big5_chinese_ci">
       <Charset>big5</Charset>
@@ -56,15 +53,12 @@
     </collation>
     <collation id="15" parent="1" name="cp1250_bin">
       <Charset>cp1250</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="16" parent="1" name="cp1250_croatian_ci">
       <Charset>cp1250</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="17" parent="1" name="cp1250_czech_cs">
       <Charset>cp1250</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="18" parent="1" name="cp1250_general_ci">
       <Charset>cp1250</Charset>
@@ -72,15 +66,12 @@
     </collation>
     <collation id="19" parent="1" name="cp1250_polish_ci">
       <Charset>cp1250</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="20" parent="1" name="cp1251_bin">
       <Charset>cp1251</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="21" parent="1" name="cp1251_bulgarian_ci">
       <Charset>cp1251</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="22" parent="1" name="cp1251_general_ci">
       <Charset>cp1251</Charset>
@@ -88,15 +79,12 @@
     </collation>
     <collation id="23" parent="1" name="cp1251_general_cs">
       <Charset>cp1251</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="24" parent="1" name="cp1251_ukrainian_ci">
       <Charset>cp1251</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="25" parent="1" name="cp1256_bin">
       <Charset>cp1256</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="26" parent="1" name="cp1256_general_ci">
       <Charset>cp1256</Charset>
@@ -104,7 +92,6 @@
     </collation>
     <collation id="27" parent="1" name="cp1257_bin">
       <Charset>cp1257</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="28" parent="1" name="cp1257_general_ci">
       <Charset>cp1257</Charset>
@@ -112,11 +99,9 @@
     </collation>
     <collation id="29" parent="1" name="cp1257_lithuanian_ci">
       <Charset>cp1257</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="30" parent="1" name="cp850_bin">
       <Charset>cp850</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="31" parent="1" name="cp850_general_ci">
       <Charset>cp850</Charset>
@@ -124,7 +109,6 @@
     </collation>
     <collation id="32" parent="1" name="cp852_bin">
       <Charset>cp852</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="33" parent="1" name="cp852_general_ci">
       <Charset>cp852</Charset>
@@ -132,7 +116,6 @@
     </collation>
     <collation id="34" parent="1" name="cp866_bin">
       <Charset>cp866</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="35" parent="1" name="cp866_general_ci">
       <Charset>cp866</Charset>
@@ -140,7 +123,6 @@
     </collation>
     <collation id="36" parent="1" name="cp932_bin">
       <Charset>cp932</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="37" parent="1" name="cp932_japanese_ci">
       <Charset>cp932</Charset>
@@ -148,7 +130,6 @@
     </collation>
     <collation id="38" parent="1" name="dec8_bin">
       <Charset>dec8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="39" parent="1" name="dec8_swedish_ci">
       <Charset>dec8</Charset>
@@ -156,7 +137,6 @@
     </collation>
     <collation id="40" parent="1" name="eucjpms_bin">
       <Charset>eucjpms</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="41" parent="1" name="eucjpms_japanese_ci">
       <Charset>eucjpms</Charset>
@@ -164,7 +144,6 @@
     </collation>
     <collation id="42" parent="1" name="euckr_bin">
       <Charset>euckr</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="43" parent="1" name="euckr_korean_ci">
       <Charset>euckr</Charset>
@@ -172,7 +151,6 @@
     </collation>
     <collation id="44" parent="1" name="gb2312_bin">
       <Charset>gb2312</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="45" parent="1" name="gb2312_chinese_ci">
       <Charset>gb2312</Charset>
@@ -180,7 +158,6 @@
     </collation>
     <collation id="46" parent="1" name="gbk_bin">
       <Charset>gbk</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="47" parent="1" name="gbk_chinese_ci">
       <Charset>gbk</Charset>
@@ -188,7 +165,6 @@
     </collation>
     <collation id="48" parent="1" name="geostd8_bin">
       <Charset>geostd8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="49" parent="1" name="geostd8_general_ci">
       <Charset>geostd8</Charset>
@@ -196,7 +172,6 @@
     </collation>
     <collation id="50" parent="1" name="greek_bin">
       <Charset>greek</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="51" parent="1" name="greek_general_ci">
       <Charset>greek</Charset>
@@ -204,7 +179,6 @@
     </collation>
     <collation id="52" parent="1" name="hebrew_bin">
       <Charset>hebrew</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="53" parent="1" name="hebrew_general_ci">
       <Charset>hebrew</Charset>
@@ -212,7 +186,6 @@
     </collation>
     <collation id="54" parent="1" name="hp8_bin">
       <Charset>hp8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="55" parent="1" name="hp8_english_ci">
       <Charset>hp8</Charset>
@@ -220,7 +193,6 @@
     </collation>
     <collation id="56" parent="1" name="keybcs2_bin">
       <Charset>keybcs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="57" parent="1" name="keybcs2_general_ci">
       <Charset>keybcs2</Charset>
@@ -228,7 +200,6 @@
     </collation>
     <collation id="58" parent="1" name="koi8r_bin">
       <Charset>koi8r</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="59" parent="1" name="koi8r_general_ci">
       <Charset>koi8r</Charset>
@@ -236,7 +207,6 @@
     </collation>
     <collation id="60" parent="1" name="koi8u_bin">
       <Charset>koi8u</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="61" parent="1" name="koi8u_general_ci">
       <Charset>koi8u</Charset>
@@ -244,31 +214,24 @@
     </collation>
     <collation id="62" parent="1" name="latin1_bin">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="63" parent="1" name="latin1_danish_ci">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="64" parent="1" name="latin1_general_ci">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="65" parent="1" name="latin1_general_cs">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="66" parent="1" name="latin1_german1_ci">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="67" parent="1" name="latin1_german2_ci">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="68" parent="1" name="latin1_spanish_ci">
       <Charset>latin1</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="69" parent="1" name="latin1_swedish_ci">
       <Charset>latin1</Charset>
@@ -276,15 +239,12 @@
     </collation>
     <collation id="70" parent="1" name="latin2_bin">
       <Charset>latin2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="71" parent="1" name="latin2_croatian_ci">
       <Charset>latin2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="72" parent="1" name="latin2_czech_cs">
       <Charset>latin2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="73" parent="1" name="latin2_general_ci">
       <Charset>latin2</Charset>
@@ -292,11 +252,9 @@
     </collation>
     <collation id="74" parent="1" name="latin2_hungarian_ci">
       <Charset>latin2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="75" parent="1" name="latin5_bin">
       <Charset>latin5</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="76" parent="1" name="latin5_turkish_ci">
       <Charset>latin5</Charset>
@@ -304,11 +262,9 @@
     </collation>
     <collation id="77" parent="1" name="latin7_bin">
       <Charset>latin7</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="78" parent="1" name="latin7_estonian_cs">
       <Charset>latin7</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="79" parent="1" name="latin7_general_ci">
       <Charset>latin7</Charset>
@@ -316,11 +272,9 @@
     </collation>
     <collation id="80" parent="1" name="latin7_general_cs">
       <Charset>latin7</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="81" parent="1" name="macce_bin">
       <Charset>macce</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="82" parent="1" name="macce_general_ci">
       <Charset>macce</Charset>
@@ -328,7 +282,6 @@
     </collation>
     <collation id="83" parent="1" name="macroman_bin">
       <Charset>macroman</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="84" parent="1" name="macroman_general_ci">
       <Charset>macroman</Charset>
@@ -336,7 +289,6 @@
     </collation>
     <collation id="85" parent="1" name="sjis_bin">
       <Charset>sjis</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="86" parent="1" name="sjis_japanese_ci">
       <Charset>sjis</Charset>
@@ -344,7 +296,6 @@
     </collation>
     <collation id="87" parent="1" name="swe7_bin">
       <Charset>swe7</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="88" parent="1" name="swe7_swedish_ci">
       <Charset>swe7</Charset>
@@ -352,7 +303,6 @@
     </collation>
     <collation id="89" parent="1" name="tis620_bin">
       <Charset>tis620</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="90" parent="1" name="tis620_thai_ci">
       <Charset>tis620</Charset>
@@ -360,27 +310,21 @@
     </collation>
     <collation id="91" parent="1" name="ucs2_bin">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="92" parent="1" name="ucs2_croatian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="93" parent="1" name="ucs2_czech_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="94" parent="1" name="ucs2_danish_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="95" parent="1" name="ucs2_esperanto_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="96" parent="1" name="ucs2_estonian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="97" parent="1" name="ucs2_general_ci">
       <Charset>ucs2</Charset>
@@ -388,87 +332,66 @@
     </collation>
     <collation id="98" parent="1" name="ucs2_general_mysql500_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="99" parent="1" name="ucs2_german2_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="100" parent="1" name="ucs2_hungarian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="101" parent="1" name="ucs2_icelandic_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="102" parent="1" name="ucs2_latvian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="103" parent="1" name="ucs2_lithuanian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="104" parent="1" name="ucs2_persian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="105" parent="1" name="ucs2_polish_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="106" parent="1" name="ucs2_roman_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="107" parent="1" name="ucs2_romanian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="108" parent="1" name="ucs2_sinhala_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="109" parent="1" name="ucs2_slovak_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="110" parent="1" name="ucs2_slovenian_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="111" parent="1" name="ucs2_spanish2_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="112" parent="1" name="ucs2_spanish_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="113" parent="1" name="ucs2_swedish_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="114" parent="1" name="ucs2_turkish_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="115" parent="1" name="ucs2_unicode_520_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="116" parent="1" name="ucs2_unicode_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="117" parent="1" name="ucs2_vietnamese_ci">
       <Charset>ucs2</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="118" parent="1" name="ujis_bin">
       <Charset>ujis</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="119" parent="1" name="ujis_japanese_ci">
       <Charset>ujis</Charset>
@@ -476,27 +399,21 @@
     </collation>
     <collation id="120" parent="1" name="utf16_bin">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="121" parent="1" name="utf16_croatian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="122" parent="1" name="utf16_czech_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="123" parent="1" name="utf16_danish_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="124" parent="1" name="utf16_esperanto_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="125" parent="1" name="utf16_estonian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="126" parent="1" name="utf16_general_ci">
       <Charset>utf16</Charset>
@@ -504,83 +421,63 @@
     </collation>
     <collation id="127" parent="1" name="utf16_german2_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="128" parent="1" name="utf16_hungarian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="129" parent="1" name="utf16_icelandic_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="130" parent="1" name="utf16_latvian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="131" parent="1" name="utf16_lithuanian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="132" parent="1" name="utf16_persian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="133" parent="1" name="utf16_polish_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="134" parent="1" name="utf16_roman_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="135" parent="1" name="utf16_romanian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="136" parent="1" name="utf16_sinhala_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="137" parent="1" name="utf16_slovak_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="138" parent="1" name="utf16_slovenian_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="139" parent="1" name="utf16_spanish2_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="140" parent="1" name="utf16_spanish_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="141" parent="1" name="utf16_swedish_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="142" parent="1" name="utf16_turkish_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="143" parent="1" name="utf16_unicode_520_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="144" parent="1" name="utf16_unicode_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="145" parent="1" name="utf16_vietnamese_ci">
       <Charset>utf16</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="146" parent="1" name="utf16le_bin">
       <Charset>utf16le</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="147" parent="1" name="utf16le_general_ci">
       <Charset>utf16le</Charset>
@@ -588,27 +485,21 @@
     </collation>
     <collation id="148" parent="1" name="utf32_bin">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="149" parent="1" name="utf32_croatian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="150" parent="1" name="utf32_czech_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="151" parent="1" name="utf32_danish_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="152" parent="1" name="utf32_esperanto_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="153" parent="1" name="utf32_estonian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="154" parent="1" name="utf32_general_ci">
       <Charset>utf32</Charset>
@@ -616,103 +507,78 @@
     </collation>
     <collation id="155" parent="1" name="utf32_german2_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="156" parent="1" name="utf32_hungarian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="157" parent="1" name="utf32_icelandic_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="158" parent="1" name="utf32_latvian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="159" parent="1" name="utf32_lithuanian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="160" parent="1" name="utf32_persian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="161" parent="1" name="utf32_polish_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="162" parent="1" name="utf32_roman_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="163" parent="1" name="utf32_romanian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="164" parent="1" name="utf32_sinhala_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="165" parent="1" name="utf32_slovak_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="166" parent="1" name="utf32_slovenian_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="167" parent="1" name="utf32_spanish2_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="168" parent="1" name="utf32_spanish_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="169" parent="1" name="utf32_swedish_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="170" parent="1" name="utf32_turkish_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="171" parent="1" name="utf32_unicode_520_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="172" parent="1" name="utf32_unicode_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="173" parent="1" name="utf32_vietnamese_ci">
       <Charset>utf32</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="174" parent="1" name="utf8_bin">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="175" parent="1" name="utf8_croatian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="176" parent="1" name="utf8_czech_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="177" parent="1" name="utf8_danish_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="178" parent="1" name="utf8_esperanto_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="179" parent="1" name="utf8_estonian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="180" parent="1" name="utf8_general_ci">
       <Charset>utf8</Charset>
@@ -720,107 +586,81 @@
     </collation>
     <collation id="181" parent="1" name="utf8_general_mysql500_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="182" parent="1" name="utf8_german2_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="183" parent="1" name="utf8_hungarian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="184" parent="1" name="utf8_icelandic_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="185" parent="1" name="utf8_latvian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="186" parent="1" name="utf8_lithuanian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="187" parent="1" name="utf8_persian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="188" parent="1" name="utf8_polish_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="189" parent="1" name="utf8_roman_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="190" parent="1" name="utf8_romanian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="191" parent="1" name="utf8_sinhala_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="192" parent="1" name="utf8_slovak_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="193" parent="1" name="utf8_slovenian_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="194" parent="1" name="utf8_spanish2_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="195" parent="1" name="utf8_spanish_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="196" parent="1" name="utf8_swedish_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="197" parent="1" name="utf8_turkish_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="198" parent="1" name="utf8_unicode_520_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="199" parent="1" name="utf8_unicode_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="200" parent="1" name="utf8_vietnamese_ci">
       <Charset>utf8</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="201" parent="1" name="utf8mb4_bin">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="202" parent="1" name="utf8mb4_croatian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="203" parent="1" name="utf8mb4_czech_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="204" parent="1" name="utf8mb4_danish_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="205" parent="1" name="utf8mb4_esperanto_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="206" parent="1" name="utf8mb4_estonian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="207" parent="1" name="utf8mb4_general_ci">
       <Charset>utf8mb4</Charset>
@@ -828,80 +668,60 @@
     </collation>
     <collation id="208" parent="1" name="utf8mb4_german2_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="209" parent="1" name="utf8mb4_hungarian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="210" parent="1" name="utf8mb4_icelandic_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="211" parent="1" name="utf8mb4_latvian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="212" parent="1" name="utf8mb4_lithuanian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="213" parent="1" name="utf8mb4_persian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="214" parent="1" name="utf8mb4_polish_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="215" parent="1" name="utf8mb4_roman_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="216" parent="1" name="utf8mb4_romanian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="217" parent="1" name="utf8mb4_sinhala_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="218" parent="1" name="utf8mb4_slovak_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="219" parent="1" name="utf8mb4_slovenian_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="220" parent="1" name="utf8mb4_spanish2_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="221" parent="1" name="utf8mb4_spanish_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="222" parent="1" name="utf8mb4_swedish_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="223" parent="1" name="utf8mb4_turkish_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="224" parent="1" name="utf8mb4_unicode_520_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="225" parent="1" name="utf8mb4_unicode_ci">
       <Charset>utf8mb4</Charset>
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <collation id="226" parent="1" name="utf8mb4_vietnamese_ci">
       <Charset>utf8mb4</Charset>
-<<<<<<< HEAD
-      <DefaultForCharset>0</DefaultForCharset>
     </collation>
     <table id="227" parent="7" name="activite"/>
     <table id="228" parent="7" name="activity_certificate"/>
@@ -922,6 +742,7 @@
     <table id="243" parent="7" name="group"/>
     <table id="244" parent="7" name="information"/>
     <table id="245" parent="7" name="label"/>
+<<<<<<< HEAD
     <table id="246" parent="7" name="user"/>
     <column id="247" parent="227" name="id">
 =======
@@ -973,12 +794,19 @@
     <table id="254" parent="7" name="user"/>
     <column id="255" parent="233" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <table id="246" parent="7" name="message_clock"/>
+    <table id="247" parent="7" name="message_subscribe"/>
+    <table id="248" parent="7" name="user"/>
+    <column id="249" parent="227" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="248" parent="227" name="title">
@@ -988,10 +816,14 @@
 =======
     <column id="256" parent="233" name="title">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="250" parent="227" name="title">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="249" parent="227" name="text">
@@ -1001,10 +833,14 @@
 =======
     <column id="257" parent="233" name="text">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="251" parent="227" name="text">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="250" parent="227" name="user_id">
@@ -1014,10 +850,14 @@
 =======
     <column id="258" parent="233" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="252" parent="227" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="251" parent="227" name="start_time">
@@ -1027,10 +867,14 @@
 =======
     <column id="259" parent="233" name="start_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="253" parent="227" name="start_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="252" parent="227" name="end_time">
@@ -1040,10 +884,14 @@
 =======
     <column id="260" parent="233" name="end_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="254" parent="227" name="end_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="253" parent="227" name="build_time">
@@ -1053,11 +901,15 @@
 =======
     <column id="261" parent="233" name="build_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="255" parent="227" name="build_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>7</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="254" parent="227" name="address">
@@ -1067,10 +919,14 @@
 =======
     <column id="262" parent="233" name="address">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="256" parent="227" name="address">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="255" parent="227" name="PRIMARY">
@@ -1080,10 +936,14 @@
 =======
     <key id="263" parent="233" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="257" parent="227" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="256" parent="228" name="id">
@@ -1093,12 +953,16 @@
 =======
     <column id="264" parent="234" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="258" parent="228" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="257" parent="228" name="activity_title">
@@ -1108,10 +972,14 @@
 =======
     <column id="265" parent="234" name="activity_title">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="259" parent="228" name="activity_title">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="258" parent="228" name="activity_content">
@@ -1121,10 +989,14 @@
 =======
     <column id="266" parent="234" name="activity_content">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="260" parent="228" name="activity_content">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="259" parent="228" name="user_id">
@@ -1134,10 +1006,14 @@
 =======
     <column id="267" parent="234" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="261" parent="228" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="260" parent="228" name="building_time">
@@ -1147,6 +1023,9 @@
 =======
     <column id="268" parent="234" name="building_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="262" parent="228" name="building_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
@@ -1155,54 +1034,63 @@
     </column>
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <key id="261" parent="228" name="PRIMARY">
 =======
     <key id="267" parent="234" name="PRIMARY">
 =======
     <key id="269" parent="234" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="263" parent="228" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="270" parent="235" name="id">
+    <column id="264" parent="229" name="id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="271" parent="235" name="is_browsed">
+    <column id="265" parent="229" name="is_browsed">
       <Position>2</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="272" parent="235" name="activity_certificate_id">
+    <column id="266" parent="229" name="activity_certificate_id">
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="273" parent="235" name="user_id">
+    <column id="267" parent="229" name="user_id">
       <Position>4</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="274" parent="235" name="browsed_time">
+    <column id="268" parent="229" name="browsed_time">
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
 <<<<<<< HEAD
+<<<<<<< HEAD
     <key id="273" parent="235" name="PRIMARY">
 >>>>>>> f4a4587198cf36ecb745dee9bbd02e2576967559
 =======
     <key id="275" parent="235" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="269" parent="229" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="262" parent="229" name="id">
@@ -1212,12 +1100,16 @@
 =======
     <column id="276" parent="236" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="270" parent="230" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="263" parent="229" name="is_browsed">
@@ -1259,10 +1151,14 @@
 =======
     <column id="277" parent="236" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="271" parent="230" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="270" parent="230" name="collected">
@@ -1272,10 +1168,14 @@
 =======
     <column id="278" parent="236" name="collected">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="272" parent="230" name="collected">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="271" parent="230" name="certificate_id">
@@ -1285,10 +1185,14 @@
 =======
     <column id="279" parent="236" name="certificate_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="273" parent="230" name="certificate_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="272" parent="230" name="PRIMARY">
@@ -1298,10 +1202,14 @@
 =======
     <key id="280" parent="236" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="274" parent="230" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="273" parent="231" name="id">
@@ -1311,12 +1219,16 @@
 =======
     <column id="281" parent="237" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="275" parent="231" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="274" parent="231" name="label_code">
@@ -1326,11 +1238,15 @@
 =======
     <column id="282" parent="237" name="label_code">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="276" parent="231" name="label_code">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="275" parent="231" name="activity_id">
@@ -1340,11 +1256,15 @@
 =======
     <column id="283" parent="237" name="activity_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="277" parent="231" name="activity_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="276" parent="231" name="PRIMARY">
@@ -1354,10 +1274,14 @@
 =======
     <key id="284" parent="237" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="278" parent="231" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="277" parent="232" name="id">
@@ -1367,12 +1291,16 @@
 =======
     <column id="285" parent="238" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="279" parent="232" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="278" parent="232" name="activity_id">
@@ -1382,11 +1310,15 @@
 =======
     <column id="286" parent="238" name="activity_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="280" parent="232" name="activity_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <Comment>活动id</Comment>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="279" parent="232" name="message">
@@ -1396,11 +1328,15 @@
 =======
     <column id="287" parent="238" name="message">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="281" parent="232" name="message">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <Comment>评论</Comment>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="280" parent="232" name="user_id">
@@ -1410,12 +1346,16 @@
 =======
     <column id="288" parent="238" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="282" parent="232" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <Comment>有收藏活动的人的id&#xd;
 </Comment>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="281" parent="232" name="browsed">
@@ -1425,10 +1365,14 @@
 =======
     <column id="289" parent="238" name="browsed">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="283" parent="232" name="browsed">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="282" parent="232" name="publish_time">
@@ -1438,10 +1382,14 @@
 =======
     <column id="290" parent="238" name="publish_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="284" parent="232" name="publish_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>6</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="283" parent="232" name="PRIMARY">
@@ -1451,10 +1399,14 @@
 =======
     <key id="291" parent="238" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="285" parent="232" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="284" parent="233" name="id">
@@ -1464,12 +1416,16 @@
 =======
     <column id="292" parent="239" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="286" parent="233" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="285" parent="233" name="activity_id">
@@ -1479,10 +1435,14 @@
 =======
     <column id="293" parent="239" name="activity_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="287" parent="233" name="activity_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="286" parent="233" name="pic_url">
@@ -1492,10 +1452,14 @@
 =======
     <column id="294" parent="239" name="pic_url">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="288" parent="233" name="pic_url">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="287" parent="233" name="PRIMARY">
@@ -1505,10 +1469,14 @@
 =======
     <key id="295" parent="239" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="289" parent="233" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="288" parent="234" name="id">
@@ -1518,12 +1486,16 @@
 =======
     <column id="296" parent="240" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="290" parent="234" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="289" parent="234" name="name">
@@ -1533,10 +1505,14 @@
 =======
     <column id="297" parent="240" name="name">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="291" parent="234" name="name">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="290" parent="234" name="introduce">
@@ -1546,10 +1522,14 @@
 =======
     <column id="298" parent="240" name="introduce">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="292" parent="234" name="introduce">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="291" parent="234" name="href">
@@ -1559,10 +1539,14 @@
 =======
     <column id="299" parent="240" name="href">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="293" parent="234" name="href">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="292" parent="234" name="type">
@@ -1572,10 +1556,14 @@
 =======
     <column id="300" parent="240" name="type">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="294" parent="234" name="type">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>enum(&apos;组织&apos;, &apos;学术科技类&apos;, &apos;公益实践类&apos;, &apos;文化艺术类&apos;, &apos;体育竞技类&apos;)|0e</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="293" parent="234" name="PRIMARY">
@@ -1585,10 +1573,14 @@
 =======
     <key id="301" parent="240" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="295" parent="234" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="294" parent="235" name="association_name">
@@ -1598,10 +1590,14 @@
 =======
     <column id="302" parent="241" name="association_name">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="296" parent="235" name="association_name">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="295" parent="235" name="id">
@@ -1611,12 +1607,16 @@
 =======
     <column id="303" parent="241" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="297" parent="235" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="296" parent="235" name="picture">
@@ -1626,10 +1626,14 @@
 =======
     <column id="304" parent="241" name="picture">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="298" parent="235" name="picture">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="297" parent="235" name="PRIMARY">
@@ -1639,10 +1643,14 @@
 =======
     <key id="305" parent="241" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="299" parent="235" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="298" parent="236" name="id">
@@ -1652,12 +1660,16 @@
 =======
     <column id="306" parent="242" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="300" parent="236" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(30)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="299" parent="236" name="user_id">
@@ -1667,10 +1679,14 @@
 =======
     <column id="307" parent="242" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="301" parent="236" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="300" parent="236" name="level">
@@ -1680,10 +1696,14 @@
 =======
     <column id="308" parent="242" name="level">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="302" parent="236" name="level">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(30)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="301" parent="236" name="authentication_time">
@@ -1693,10 +1713,14 @@
 =======
     <column id="309" parent="242" name="authentication_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="303" parent="236" name="authentication_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="302" parent="236" name="association_name">
@@ -1706,10 +1730,14 @@
 =======
     <column id="310" parent="242" name="association_name">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="304" parent="236" name="association_name">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="303" parent="236" name="PRIMARY">
@@ -1719,10 +1747,14 @@
 =======
     <key id="311" parent="242" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="305" parent="236" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="304" parent="237" name="id">
@@ -1732,12 +1764,16 @@
 =======
     <column id="312" parent="243" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="306" parent="237" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(30)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="305" parent="237" name="user_id">
@@ -1747,10 +1783,14 @@
 =======
     <column id="313" parent="243" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="307" parent="237" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="306" parent="237" name="association_name">
@@ -1760,10 +1800,14 @@
 =======
     <column id="314" parent="243" name="association_name">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="308" parent="237" name="association_name">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="307" parent="237" name="browsed">
@@ -1773,10 +1817,14 @@
 =======
     <column id="315" parent="243" name="browsed">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="309" parent="237" name="browsed">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="308" parent="237" name="level">
@@ -1786,10 +1834,14 @@
 =======
     <column id="316" parent="243" name="level">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="310" parent="237" name="level">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="309" parent="237" name="PRIMARY">
@@ -1799,10 +1851,19 @@
 =======
     <key id="317" parent="243" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="311" parent="237" name="build_time">
+      <Position>6</Position>
+      <DataType>datetime|0s</DataType>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <key id="312" parent="237" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="310" parent="238" name="picture_url">
@@ -1812,10 +1873,14 @@
 =======
     <column id="318" parent="244" name="picture_url">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="313" parent="238" name="picture_url">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="311" parent="238" name="authentication_id">
@@ -1825,10 +1890,14 @@
 =======
     <column id="319" parent="244" name="authentication_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="314" parent="238" name="authentication_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="312" parent="238" name="id">
@@ -1838,12 +1907,16 @@
 =======
     <column id="320" parent="244" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="315" parent="238" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="313" parent="238" name="PRIMARY">
@@ -1853,10 +1926,14 @@
 =======
     <key id="321" parent="244" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="316" parent="238" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="314" parent="239" name="id">
@@ -1866,12 +1943,16 @@
 =======
     <column id="322" parent="245" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="317" parent="239" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="315" parent="239" name="is_browsed">
@@ -1881,10 +1962,14 @@
 =======
     <column id="323" parent="245" name="is_browsed">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="318" parent="239" name="is_browsed">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="316" parent="239" name="activity_id">
@@ -1894,10 +1979,14 @@
 =======
     <column id="324" parent="245" name="activity_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="319" parent="239" name="activity_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="317" parent="239" name="user_id">
@@ -1907,10 +1996,14 @@
 =======
     <column id="325" parent="245" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="320" parent="239" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="318" parent="239" name="browsed_time">
@@ -1920,11 +2013,15 @@
 =======
     <column id="326" parent="245" name="browsed_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="321" parent="239" name="browsed_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="319" parent="239" name="PRIMARY">
@@ -1934,10 +2031,14 @@
 =======
     <key id="327" parent="245" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="322" parent="239" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="320" parent="240" name="id">
@@ -1947,12 +2048,16 @@
 =======
     <column id="328" parent="246" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="323" parent="240" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="321" parent="240" name="certificate_id">
@@ -1962,10 +2067,14 @@
 =======
     <column id="329" parent="246" name="certificate_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="324" parent="240" name="certificate_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="322" parent="240" name="file_url">
@@ -1975,10 +2084,14 @@
 =======
     <column id="330" parent="246" name="file_url">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="325" parent="240" name="file_url">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="323" parent="240" name="PRIMARY">
@@ -1988,10 +2101,14 @@
 =======
     <key id="331" parent="246" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="326" parent="240" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="324" parent="241" name="id">
@@ -2001,12 +2118,16 @@
 =======
     <column id="332" parent="247" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="327" parent="241" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="325" parent="241" name="certificate_id">
@@ -2016,10 +2137,14 @@
 =======
     <column id="333" parent="247" name="certificate_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="328" parent="241" name="certificate_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="326" parent="241" name="label">
@@ -2029,10 +2154,14 @@
 =======
     <column id="334" parent="247" name="label">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="329" parent="241" name="label">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="327" parent="241" name="PRIMARY">
@@ -2042,10 +2171,14 @@
 =======
     <key id="335" parent="247" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="330" parent="241" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="328" parent="242" name="user_id">
@@ -2055,10 +2188,14 @@
 =======
     <column id="336" parent="248" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="331" parent="242" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="329" parent="242" name="activity_id">
@@ -2068,10 +2205,14 @@
 =======
     <column id="337" parent="248" name="activity_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="332" parent="242" name="activity_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="330" parent="242" name="id">
@@ -2081,12 +2222,16 @@
 =======
     <column id="338" parent="248" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="333" parent="242" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="331" parent="242" name="PRIMARY">
@@ -2096,10 +2241,14 @@
 =======
     <key id="339" parent="248" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="334" parent="242" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="332" parent="243" name="id">
@@ -2109,12 +2258,16 @@
 =======
     <column id="340" parent="249" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="335" parent="243" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="333" parent="243" name="activity_id">
@@ -2124,10 +2277,14 @@
 =======
     <column id="341" parent="249" name="activity_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="336" parent="243" name="activity_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="334" parent="243" name="user_id">
@@ -2137,10 +2294,14 @@
 =======
     <column id="342" parent="249" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="337" parent="243" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="335" parent="243" name="text">
@@ -2150,10 +2311,14 @@
 =======
     <column id="343" parent="249" name="text">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="338" parent="243" name="text">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="336" parent="243" name="publish_time">
@@ -2163,10 +2328,14 @@
 =======
     <column id="344" parent="249" name="publish_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="339" parent="243" name="publish_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="337" parent="243" name="date">
@@ -2176,10 +2345,14 @@
 =======
     <column id="345" parent="249" name="date">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="340" parent="243" name="date">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="338" parent="243" name="PRIMARY">
@@ -2189,10 +2362,14 @@
 =======
     <key id="346" parent="249" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="341" parent="243" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="339" parent="244" name="id">
@@ -2202,12 +2379,16 @@
 =======
     <column id="347" parent="250" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="342" parent="244" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="340" parent="244" name="information">
@@ -2217,10 +2398,14 @@
 =======
     <column id="348" parent="250" name="information">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="343" parent="244" name="information">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>longtext|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="341" parent="244" name="user_id">
@@ -2230,10 +2415,14 @@
 =======
     <column id="349" parent="250" name="user_id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="344" parent="244" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="342" parent="244" name="publish_time">
@@ -2243,10 +2432,14 @@
 =======
     <column id="350" parent="250" name="publish_time">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="345" parent="244" name="publish_time">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>datetime|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="343" parent="244" name="browsed">
@@ -2256,10 +2449,14 @@
 =======
     <column id="351" parent="250" name="browsed">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="346" parent="244" name="browsed">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="344" parent="244" name="PRIMARY">
@@ -2269,10 +2466,14 @@
 =======
     <key id="352" parent="250" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="347" parent="244" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="345" parent="245" name="id">
@@ -2282,11 +2483,15 @@
 =======
     <column id="353" parent="251" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="348" parent="245" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="346" parent="245" name="activityId">
@@ -2296,11 +2501,15 @@
 =======
     <column id="354" parent="251" name="activityId">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="349" parent="245" name="activityId">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>int(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="347" parent="245" name="propagandaConference">
@@ -2310,10 +2519,14 @@
 =======
     <column id="355" parent="251" name="propagandaConference">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="350" parent="245" name="propagandaConference">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="348" parent="245" name="match">
@@ -2323,10 +2536,14 @@
 =======
     <column id="356" parent="251" name="match">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="351" parent="245" name="match">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="349" parent="245" name="volunteerActivities">
@@ -2336,10 +2553,14 @@
 =======
     <column id="357" parent="251" name="volunteerActivities">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="352" parent="245" name="volunteerActivities">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="350" parent="245" name="lecture">
@@ -2349,10 +2570,14 @@
 =======
     <column id="358" parent="251" name="lecture">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="353" parent="245" name="lecture">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>6</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="351" parent="245" name="movieFestival">
@@ -2362,10 +2587,14 @@
 =======
     <column id="359" parent="251" name="movieFestival">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="354" parent="245" name="movieFestival">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>7</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="352" parent="245" name="amusementActivity">
@@ -2375,10 +2604,14 @@
 =======
     <column id="360" parent="251" name="amusementActivity">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="355" parent="245" name="amusementActivity">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>8</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="353" parent="245" name="universityLevel">
@@ -2388,10 +2621,14 @@
 =======
     <column id="361" parent="251" name="universityLevel">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="356" parent="245" name="universityLevel">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>9</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="354" parent="245" name="collegeLevel">
@@ -2401,10 +2638,14 @@
 =======
     <column id="362" parent="251" name="collegeLevel">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="357" parent="245" name="collegeLevel">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>10</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="355" parent="245" name="extraPints">
@@ -2414,10 +2655,14 @@
 =======
     <column id="363" parent="251" name="extraPints">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="358" parent="245" name="extraPints">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>11</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="356" parent="245" name="volunteerTime">
@@ -2427,10 +2672,14 @@
 =======
     <column id="364" parent="251" name="volunteerTime">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="359" parent="245" name="volunteerTime">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>12</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="357" parent="245" name="other">
@@ -2440,10 +2689,14 @@
 =======
     <column id="365" parent="251" name="other">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="360" parent="245" name="other">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>13</Position>
       <DataType>tinyint(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="358" parent="245" name="PRIMARY">
@@ -2453,10 +2706,14 @@
 =======
     <key id="366" parent="251" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="361" parent="245" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="359" parent="246" name="id">
@@ -2465,43 +2722,51 @@
 >>>>>>> f4a4587198cf36ecb745dee9bbd02e2576967559
 =======
     <column id="367" parent="252" name="user_id">
+=======
+    <column id="362" parent="246" name="user_id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="368" parent="252" name="activity_id">
+    <column id="363" parent="246" name="activity_id">
       <Position>2</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="369" parent="252" name="clock_id">
+    <column id="364" parent="246" name="clock_id">
       <Position>3</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="370" parent="253" name="user_id">
+    <column id="365" parent="247" name="user_id">
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="371" parent="253" name="open_id">
+    <column id="366" parent="247" name="open_id">
       <Position>2</Position>
-      <DataType>int(11)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="372" parent="253" name="is_open">
+    <column id="367" parent="247" name="is_open">
       <Position>3</Position>
       <DataType>tinyint(1)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
     <column id="373" parent="254" name="id">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="368" parent="248" name="id">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>1</Position>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="360" parent="246" name="student_number">
@@ -2511,10 +2776,14 @@
 =======
     <column id="374" parent="254" name="student_number">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="369" parent="248" name="student_number">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="361" parent="246" name="username">
@@ -2524,10 +2793,14 @@
 =======
     <column id="375" parent="254" name="username">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="370" parent="248" name="username">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="362" parent="246" name="name">
@@ -2537,10 +2810,14 @@
 =======
     <column id="376" parent="254" name="name">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="371" parent="248" name="name">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="363" parent="246" name="grade">
@@ -2550,10 +2827,14 @@
 =======
     <column id="377" parent="254" name="grade">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="372" parent="248" name="grade">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>5</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="364" parent="246" name="major">
@@ -2563,10 +2844,14 @@
 =======
     <column id="378" parent="254" name="major">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="373" parent="248" name="major">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="365" parent="246" name="phone_number">
@@ -2576,10 +2861,14 @@
 =======
     <column id="379" parent="254" name="phone_number">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="374" parent="248" name="phone_number">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>7</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="366" parent="246" name="wechat_number">
@@ -2589,10 +2878,14 @@
 =======
     <column id="380" parent="254" name="wechat_number">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="375" parent="248" name="wechat_number">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>8</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="367" parent="246" name="yb_userid">
@@ -2602,11 +2895,15 @@
 =======
     <column id="381" parent="254" name="yb_userid">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="376" parent="248" name="yb_userid">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>9</Position>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="368" parent="246" name="yb_realname">
@@ -2616,10 +2913,14 @@
 =======
     <column id="382" parent="254" name="yb_realname">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="377" parent="248" name="yb_realname">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>10</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="369" parent="246" name="yb_sex">
@@ -2629,10 +2930,14 @@
 =======
     <column id="383" parent="254" name="yb_sex">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="378" parent="248" name="yb_sex">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>11</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="370" parent="246" name="yb_userhead">
@@ -2642,10 +2947,14 @@
 =======
     <column id="384" parent="254" name="yb_userhead">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="379" parent="248" name="yb_userhead">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>12</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="371" parent="246" name="yb_identity">
@@ -2655,10 +2964,14 @@
 =======
     <column id="385" parent="254" name="yb_identity">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="380" parent="248" name="yb_identity">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>13</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <column id="372" parent="246" name="level">
@@ -2668,10 +2981,14 @@
 =======
     <column id="386" parent="254" name="level">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <column id="381" parent="248" name="level">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <Position>14</Position>
       <DataType>int(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <key id="373" parent="246" name="PRIMARY">
@@ -2681,6 +2998,9 @@
 =======
     <key id="387" parent="254" name="PRIMARY">
 >>>>>>> 145fa71664b6118ec35d0bcb83dbf7e6719c6f52
+=======
+    <key id="382" parent="248" name="PRIMARY">
+>>>>>>> fd85805421eccac8d5f05b284bbba03c4426ce7b
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id
 yb_userid</ColNames>
