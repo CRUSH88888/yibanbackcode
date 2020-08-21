@@ -7,8 +7,10 @@ import edu.scau.common.dto.MessageSubscribe;
 import edu.scau.common.dto.Schedule;
 import edu.scau.common.mapper.MessageSubscribeMapper;
 import edu.scau.common.mapper.ScheduleMapper;
+import edu.scau.common.utils.DateToStringUtil;
 import edu.scau.common.utils.HttpUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.sql.Timestamp;
@@ -27,6 +29,7 @@ public class MessageSubscribeServiceImpl implements MessageSubscribeService {
     @Autowired(required = false)
     private ScheduleMapper scheduleMapper;
     @Override
+    @Scheduled(cron = "0 0 9 * * ?")
     public List<String> sendSubscribeMessage() throws Exception {
         List<String> results = new ArrayList<>();
         List<Integer> userIds = messageSubscribeMapper.getUserId();
@@ -43,7 +46,7 @@ public class MessageSubscribeServiceImpl implements MessageSubscribeService {
                                 if(schedule1.getStartTime().after(currentTimestamp)&&schedule1.getStartTime().before(afterTimestamp)){
                                     MessageData messageData = new MessageData();
                                     messageData.setThing2(new MessageData.Thing2(schedule1.getTitle()));
-                                    messageData.setThing5(new MessageData.Thing5(schedule1.getDate()));
+                                    messageData.setThing5(new MessageData.Thing5(DateToStringUtil.dateToString(schedule1.getStartTime(),schedule1.getEndTime())));
                                     messageData.setThing6(new MessageData.Thing6(schedule1.getAddress()));
                                     MessageSubscribe messageSubscribe = new MessageSubscribe();
                                     messageSubscribe.setData(messageData);
@@ -52,7 +55,11 @@ public class MessageSubscribeServiceImpl implements MessageSubscribeService {
                                     String s = JSON.toJSONString(messageSubscribe);
                                     String s1 = HttpUtil.doPostJson("https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=" + HttpUtil.getAccessToken(), s);
                                     results.add(s1);
+                                    messageSubscribeMapper.deleteMessageSubscribeAllow(userId,integer);
                                 }
+                                break;
+                            }
+                            if(schedule1.getStartTime().after(afterTimestamp)){
                                 break;
                             }
                         }

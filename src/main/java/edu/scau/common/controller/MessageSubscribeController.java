@@ -24,6 +24,17 @@ public class MessageSubscribeController {
     private MessageSubscribeMapper messageSubscribeMapper;
     @Autowired
     private MessageSubscribeServiceImpl messageSubscribeService;
+
+    /**
+     * 获取订阅状态
+     * @param userId
+     * @return
+     */
+    @GetMapping("getIsOpen")
+    public ApiResponse getIsOpen(@RequestParam("userId")int userId){
+        Boolean isOpen = messageSubscribeMapper.getIsOpen(userId);
+        return new ApiResponse(1,"success",isOpen);
+    }
     /**
      * 添加openid
      * @param userId
@@ -66,18 +77,20 @@ public class MessageSubscribeController {
     @PostMapping("insertMessageSubscribeAllow")
     public ApiResponse insertMessageSubscribeAllow(@RequestParam("userId")int userId,
                                                    @RequestParam("activityId")int activityId){
-        Integer result = messageSubscribeMapper.insertMessageSubscribeAllow(userId, activityId);
+        Integer result=1;
+        if(messageSubscribeMapper.getMessageSubscribeAllowId(userId,activityId)!=null)
+        result = messageSubscribeMapper.insertMessageSubscribeAllow(userId, activityId);
         return result>0?new ApiResponse(0,"success"):new ApiResponse(-1,"Server Error");
     }
 
-    /**
-     *
-     * @return
-     * @throws Exception
-     */
-    @GetMapping("MessageSubscribe")
-    public ApiResponse MessageSubscribe() throws Exception{
-        List<String> strings = messageSubscribeService.sendSubscribeMessage();
-        return new ApiResponse(1,"success",strings);
-    }
+//    /**
+//     *
+//     * @return
+//     * @throws Exception
+//     */
+//    @GetMapping("MessageSubscribe")
+//    public ApiResponse MessageSubscribe() throws Exception{
+//        List<String> strings = messageSubscribeService.sendSubscribeMessage();
+//        return new ApiResponse(1,"success",strings);
+//    }
 }

@@ -20,7 +20,7 @@
     </select>
     <insert id="insertOpenId">
         insert into message_subscribe(user_id, open_id, is_open)
-        VALUES(#{userId},#{openId},0)
+        VALUES(#{userId},#{openId},1)
     </insert>
     <update id="updateOpen" parameterType="int">
         update message_subscribe
@@ -34,4 +34,14 @@
     <insert id="insertMessageSubscribeAllow">
         insert into message_subscribe_allow(user_id, activity_id) value (#{userId},#{activityId})
     </insert>
+    <select id="getMessageSubscribeAllowId" resultType="integer">
+        select id from message_subscribe_allow
+        where user_id=#{userId}
+        and activity_id=#{activityId}
+    </select>
+    <delete id="deleteMessageSubscribeAllow">
+        delete from message_subscribe_allow
+        where user_id=#{userId}
+        and activity_id=#{activityId}
+    </delete>
 </mapper>
