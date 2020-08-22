@@ -46,7 +46,7 @@
     select * from activite where id = #{activityId}
     </select>
     <select id="selectMessage" resultMap="message" parameterType="integer">
-        select message from activity_message where user_id = #{userId} and activity_id = #{activityId}
+        select message from activity_message where user_id = -1 and activity_id = #{activityId}
     </select>
 
     <select id="selectPicture" parameterType="integer" resultType="edu.scau.common.pojo.ActivityPicture">

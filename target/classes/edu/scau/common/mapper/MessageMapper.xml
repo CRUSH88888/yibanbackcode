@@ -7,6 +7,7 @@
         select m.* from activite as a
         left join activity_message as m on a.id=m.activity_id
         where m.user_id=#{userId}
+        order by publish_time desc
     </select>
     <resultMap id="message" type="edu.scau.common.pojo.Message">
         <result column="id" property="id"/>
