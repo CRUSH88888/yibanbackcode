@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @description:
+ * @description:消息订阅
  * @author: whj
  * @create: 2020-08-18 20:48
  **/
@@ -13,7 +13,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class MessageSubscribe {
-    private String touser;
-    private String template_id;
+    private String touser;//接受者openid
+    private String template_id;//模板id
     private MessageData data;
 }

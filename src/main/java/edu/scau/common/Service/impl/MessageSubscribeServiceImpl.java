@@ -28,6 +28,12 @@ public class MessageSubscribeServiceImpl implements MessageSubscribeService {
     private MessageSubscribeMapper messageSubscribeMapper;
     @Autowired(required = false)
     private ScheduleMapper scheduleMapper;
+
+    /**
+     * 定时每天早上九点发送订阅消息
+     * @return
+     * @throws Exception
+     */
     @Override
     @Scheduled(cron = "0 0 9 * * ?")
     public List<String> sendSubscribeMessage() throws Exception {

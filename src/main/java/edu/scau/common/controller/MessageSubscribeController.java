@@ -36,7 +36,7 @@ public class MessageSubscribeController {
         return new ApiResponse(1,"success",isOpen);
     }
     /**
-     * 添加openid
+     * 上传添加openid
      * @param userId
      * @param code
      * @return
@@ -58,7 +58,7 @@ public class MessageSubscribeController {
     }
 
     /**
-     * 取消订阅和开启订阅 默认一开始是关闭的
+     * 取消订阅和开启订阅 默认一开始是开启的
      * @param userId
      * @return
      */
@@ -69,7 +69,7 @@ public class MessageSubscribeController {
     }
 
     /**
-     *
+     *添加授权
      * @param userId
      * @param activityId
      * @return

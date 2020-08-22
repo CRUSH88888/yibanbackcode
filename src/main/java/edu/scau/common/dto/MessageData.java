@@ -4,7 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 
 /**
- * @description:
+ * @description:消息订阅内容
  * @author: whj
  * @create: 2020-08-18 18:40
  **/
