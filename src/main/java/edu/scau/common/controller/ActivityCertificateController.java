@@ -37,6 +37,7 @@ public class ActivityCertificateController {
                                                @RequestParam("userId")Integer userId,
                                                @RequestParam("fileUrl")String[] fileUrl,
                                                @RequestParam("label")String[] label){
+        System.out.println("/certificate/saveActivityCertificate");
         List<String> files = new ArrayList<>();
         List<String> labels = new ArrayList<>();
         for (String s:fileUrl
@@ -90,8 +91,10 @@ public class ActivityCertificateController {
                                             @RequestParam("certificateId")Integer certificateId){
 
         if ("collectedCertificate".equals(path)) {
+            System.out.println("collectedCertificate");
             return new ApiResponse(activityCertificateService.collectedCertificate(userId, certificateId), "look result");
         }else if ("deleteCertificate".equals(path)){
+            System.out.println("deleteCertificate");
             return new ApiResponse(activityCertificateService.deleteCollectedCertificate(userId,certificateId),"look the return code");
         }else {
             return new ApiResponse(-1,"路径错误");
@@ -110,6 +113,7 @@ public class ActivityCertificateController {
         public ApiResponse browsedCertificate( @RequestParam("userId")Integer userId,
                                                @RequestParam(value = "activityId",required = false,defaultValue = "-1") int activityId,
                                                @RequestParam(value = "certificateId",required = false,defaultValue = "-1") int certificateId){
+            System.out.println("browsedCertificate");
             Integer result = 0;
             System.out.println(activityId  +" "+ certificateId);
             if (activityId != -1){
@@ -129,6 +133,7 @@ public class ActivityCertificateController {
 
         @PostMapping("/getIndexCertificate")
         public ApiResponse getIndexCertificate(@RequestParam("userId")Integer userId){
+            System.out.println("getIndexCertificate");
             List<IndexActivityCertificate> indexActivityCertificates =
                     activityCertificateService.get(userId);
             return indexActivityCertificates != null ? new ApiResponse(0,"success",indexActivityCertificates):new ApiResponse(-1,"Server Error");
@@ -137,11 +142,13 @@ public class ActivityCertificateController {
         public ApiResponse getCertificateById(@RequestParam("userId")Integer userId,
                                               @RequestParam("certificateId")Integer certificateId){
 
+                System.out.println("getCertificateById");
             return new ApiResponse(0,"success",activityCertificateService.selectCertificateById(certificateId,userId)) ;
 
         }
         @PostMapping("/getCollectedCertificate")
     public ApiResponse getCollectedCertificate(@RequestParam("userId")Integer userId){
+            System.out.println("getCollectedCertificate");
             List<ActivityCertificate> certificates = activityCertificateService.selectCollectedCertificate(userId);
             return certificates != null ? new ApiResponse(0,"success",certificates):new ApiResponse(-1,"failed");
         }

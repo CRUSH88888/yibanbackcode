@@ -31,7 +31,9 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
 
     @Override
     public Boolean save(ActivityCertificate activityCertificate) {
-        Integer certificateId = activityCertificateMapper.insertCertificate(activityCertificate);
+
+                activityCertificateMapper.insertCertificate(activityCertificate);
+        Integer certificateId = activityCertificate.getId();
         System.out.println(certificateId);
         activityCertificateMapper.insertCertificateFile(activityCertificate.getFileUrl(),certificateId);
         List<String > labels = activityCertificate.getLabels();
@@ -91,7 +93,7 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
             a.setLabels(activityCertificateMapper.selectLabels(a.getId()));
             IndexActivityCertificate certificate =  new IndexActivityCertificate();
             certificate.setActivityCertificate(a);
-            certificate.setBrowsed(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId()).size()>0?true:false);
+            certificate.setCollected(activityCertificateMapper.checkedCertificateBrowsed(userId,a.getId()).size()>0?true:false);
             certificate.setBuiltTimeToNow(DateToStringUtil.publishTime(a.getBuildingTime()));
             certificate.getActivityCertificate().setLabels(LabelTransUtils.numStringTranToString(certificate.getActivityCertificate().getLabels()));
             activityCertificates.add(certificate);
@@ -110,7 +112,7 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
             System.out.println(collectionResult.get(i));
             activityCertificateMapper.deleteCertifiedCollected(collectionResult.get(i));
         }
-        indexActivityCertificate.setBrowsed(collectionResult.size()>0?true:false);
+        indexActivityCertificate.setCollected(collectionResult.size()>0?true:false);
         return indexActivityCertificate;
     }
 
