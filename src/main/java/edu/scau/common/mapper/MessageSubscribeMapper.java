@@ -1,32 +1,23 @@
 package edu.scau.common.mapper;
 
-import edu.scau.common.dto.MessageSubscribe;
-import edu.scau.common.dto.Schedule;
 import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
 /**
- * @description: 消息订阅
+ * @description: 消息订阅mapper
  * @author: whj
- * @create: 2020-08-12 20:29
+ * @create: 2020-08-18 22:58
  **/
 @Mapper
 public interface MessageSubscribeMapper {
-    MessageSubscribe getMessageSubscribe(@Param("userId") int userId);
-    MessageSubscribe getActivity(@Param("activityId")int activityId);
-    Integer addClockId(@Param("userId") int userId,
-                       @Param("activityId") int activityId,
-                       @Param("clockId") String clockId);
-    Integer updateClock(@Param("userId") int userId,
-                        @Param("activityId") int activityId,
-                        @Param("clockId") String clockId);
-    Integer insertOpenId(@Param("userId") int userId,
-                         @Param("openId")String openId);
-    Integer updateOpen(@Param("userId") int userId);
-    Integer deleteClockId(@Param("userId") int userId,
-                          @Param("activityId") int activityId);
-    String getClockId(@Param("userId") int userId,
-                      @Param("activityId") int activityId);
+    List<Integer> getUserId();
+    String getOpenId(int userId);
+    Boolean getIsOpen(int userId);
+    Integer getId(int userId);
+    Integer insertOpenId(@Param("userId")int userId,@Param("openId")String openId);
+    Integer updateOpen(@Param("userId")int userId);
+    List<Integer> getActivityId(@Param("userId")int userId);//授权的活动
+    Integer insertMessageSubscribeAllow(@Param("userId")int userId,@Param("activityId")int activityId);
 }

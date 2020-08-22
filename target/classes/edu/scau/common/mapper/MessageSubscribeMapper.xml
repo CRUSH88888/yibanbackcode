@@ -3,53 +3,35 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="edu.scau.common.mapper.MessageSubscribeMapper">
-    <select id="getMessageSubscribe" resultMap="messageSubscribe">
-        select open_id,is_open from message_subscribe
+    <select id="getUserId" resultType="integer">
+        select id from `user`
+    </select>
+    <select id="getOpenId" resultType="string" parameterType="int">
+        select open_id from message_subscribe
         where user_id=#{userId}
     </select>
-    <resultMap id="messageSubscribe" type="edu.scau.common.dto.MessageSubscribe">
-        <result column="open_id" property="openId"/>
-        <result column="is_open" property="isOpen"/>
-    </resultMap>
-    <select id="getActivity" resultMap="schedule">
-        select id,address,title,start_time,end_time
-        from activite
-        where id = #{activityId}
+    <select id="getIsOpen" resultType="boolean" parameterType="int">
+        select is_open from message_subscribe
+        where user_id=#{userId}
     </select>
-    <resultMap id="schedule" type="edu.scau.common.dto.MessageSubscribe">
-        <result column="id" property="activity_id"/>
-        <result column="address" property="address"/>
-        <result column="title" property="title"/>
-        <result column="start_time" property="startTime" jdbcType="TIMESTAMP"/>
-        <result column="end_time" property="endTime" jdbcType="TIMESTAMP"/>
-    </resultMap>
-    <insert id="addClockId">
-        insert into message_clock (user_id, activity_id, clock_id)
-        VALUES (#{userId}, #{activityId},#{clockId})
-    </insert>
+    <select id="getId" resultType="integer" parameterType="int">
+        select user_id from message_subscribe
+        where user_id=#{userId}
+    </select>
     <insert id="insertOpenId">
         insert into message_subscribe(user_id, open_id, is_open)
-         VALUES (#{userId}, #{openId}, 0)
+        VALUES(#{userId},#{openId},0)
     </insert>
-    <update id="updateOpen">
+    <update id="updateOpen" parameterType="int">
         update message_subscribe
         set is_open=NOT is_open
         where user_id=#{userId}
     </update>
-    <delete id="deleteClockId">
-        delete from message_clock
+    <select id="getActivityId" parameterType="int" resultType="integer">
+        select activity_id from message_subscribe_allow
         where user_id=#{userId}
-        and activity_id=#{activityId}
-    </delete>
-    <update id="updateClock">
-        update message_clock
-        set clock_id=#{clockId}
-        where user_id=#{userId}
-        and activity_id=#{activityId}
-    </update>
-    <select id="getClockId" resultType="string">
-        select clock_id from message_clock
-        where user_id=#{userId}
-        and activity_id=#{activityId}
     </select>
+    <insert id="insertMessageSubscribeAllow">
+        insert into message_subscribe_allow(user_id, activity_id) value (#{userId},#{activityId})
+    </insert>
 </mapper>

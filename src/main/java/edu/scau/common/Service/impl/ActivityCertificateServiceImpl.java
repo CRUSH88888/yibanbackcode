@@ -117,15 +117,15 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
     @Override
     public Integer insertCertificateBrowsed(Integer certificateId, Integer userId) {
 
-        List<Integer> result = activityCertificateMapper.checkedCertificateBrowsed(certificateId,userId);
+        List<Integer> result = activityCertificateMapper.checkedCertificateBrowsed(userId,certificateId);
         for (Integer i:result
              ) {
             System.out.println(i);
         }
 
-        if (result == null || result.size() == 0){
-            return activityCertificateMapper.insertCertifiedBrowsed(certificateId,userId);
-        }else if (result.size() > 1){
+        if (result.size() == 0){
+            return activityCertificateMapper.insertCertifiedBrowsed(userId,certificateId);
+        }else if (result.size() >= 1){
             for (int i = 1;i<result.size();i++){
                 System.out.println("delete: " + i);
                 activityCertificateMapper.deleteCertificateBrowsed(result.get(i));

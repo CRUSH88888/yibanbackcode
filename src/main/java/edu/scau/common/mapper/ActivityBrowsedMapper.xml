@@ -28,8 +28,19 @@
         select label_code from activity_label where activity_id = #{activityId}
     </select>
     <insert id="insertActivityBrowsed" parameterType="integer" >
-        insert into browsed (is_browsed, activity_id, user_id)
-        VALUES (1,#{activityId},#{userId})
+
+ insert into browsed
+        (
+				is_browsed,
+				activity_id,
+				user_id)
+                  select
+                    1,
+					#{activityId},
+					#{userId}
+         from DUAL WHERE NOT EXISTS
+        (SELECT activity_id, user_id
+        FROM browsed WHERE  user_id= #{userId} and activity_id = #{activityId});
     </insert>
     <select id="checkedActivityBrowsed" parameterType="integer" resultType="integer">
         select browsed.id from browsed where user_id = #{userId} and activity_id = #{activityId}

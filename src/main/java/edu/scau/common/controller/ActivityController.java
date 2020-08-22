@@ -58,18 +58,20 @@ public class ActivityController {
         List<String> labels = new ArrayList<>();
         for (String s:label
         ) {
+            System.out.println("labels: "+s);
             labels.add(s);
         }
         List<ActivityPicture> pics = new ArrayList<>();
         for (String s:picture
         ) {
+            System.out.println("pic: "+s);
             pics.add(new ActivityPicture(s));
         }
 
         Activity activity = new Activity(address,title,text,userId,startTime,endTime,labels,pics);
         Integer result =  activityService.InsertActivity(activity);
         System.out.println(result);
-        return new ApiResponse(result,"look result");
+        return result > 0?new ApiResponse(0,"success"):new ApiResponse(-1,"server error");
 
     }
     public ApiResponse saveActivity(@RequestParam("address") String address,

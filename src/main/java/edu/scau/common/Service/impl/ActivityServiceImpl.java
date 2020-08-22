@@ -48,18 +48,25 @@ public class ActivityServiceImpl implements ActivityService {
 
     @Override
     public Integer InsertActivity(Activity activity) {
-        Integer activityId = activityMapper.insertActivity(activity);
+         activityMapper.insertActivity(activity);
+        Integer activityId = activity.getId();
+        System.out.println(activityId);
         List<ActivityPicture> pictures = activity.getPicUrl();
         for (ActivityPicture a: pictures
              ) {
+            System.out.println(a);
             activityMapper.insertActivityPicture(a.getPicUrl(),activityId);
         }
         List<String> labels = activity.getLabel();
+        for (String s:labels
+             ) {
+            System.out.println("labels: "+s);
+        }
         List<Integer> integerLabel = LabelTransUtils.StringToInteger(labels);
         Integer result  = 0;
         for (Integer i:integerLabel
              ) {
-
+            System.out.println(i);
              result += activityMapper.insertLabelOfActivity(i,activityId);
 
         }

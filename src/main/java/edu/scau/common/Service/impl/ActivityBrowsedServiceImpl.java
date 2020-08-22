@@ -58,7 +58,7 @@ public class ActivityBrowsedServiceImpl implements ActivityBrowsedService {
         if(var6.size() == 0) {
             this.activityBrowsedMapper.insertActivityBrowsed(userId, activityId);
             System.out.println("1");
-        } else if(var6.size() > 1) {
+        } else if(var6.size() >= 1) {
             System.out.println("2");
             System.out.println(new Timestamp(System.currentTimeMillis()));
 

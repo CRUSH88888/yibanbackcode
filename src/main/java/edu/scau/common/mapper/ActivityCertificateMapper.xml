@@ -73,12 +73,25 @@
     <select id="checkedCertifiedCollected" parameterType="integer" resultType="integer">
         select id  from activity_certificate_collected where user_id = #{userId} and certificate_Id = #{certificateId}
     </select>
+<!--          insert into activity_certificate_browsed (is_browsed, activity_certificate_id, user_id) values (1,#{certificateId},#{userId});-->
+
     <insert id="insertCertifiedBrowsed" parameterType="integer">
-        insert into activity_certificate_browsed (is_browsed, activity_certificate_id, user_id) values (1,#{certificateId},#{userId});
+     insert into activity_certificate_browsed
+        (
+				is_browsed,
+				activity_certificate_id,
+				user_id)
+                  select
+          1,
+					#{certificateId},
+					#{userId}
+         from DUAL WHERE NOT EXISTS
+        (SELECT activity_certificate_id, user_id
+        FROM activity_certificate_browsed WHERE  user_id= #{userId} and activity_certificate_id = #{certificateId});
     </insert>
     <select id="selectCollectedCertificate" parameterType="integer" resultMap="Certificate">
         select acc.certificate_id,ac.* from activity_certificate as ac
-        RIGHT JOIN activity_certificate_collected as acc on(
+        INNER JOIN activity_certificate_collected as acc on(
             acc.certificate_id = ac.id and acc.user_id = #{userId})
     </select>
     <update id="updateCertificateBrowsed">

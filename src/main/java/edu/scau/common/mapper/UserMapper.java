@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Select;
 import tk.mybatis.mapper.common.BaseMapper;
 import tk.mybatis.mapper.common.MySqlMapper;
 
+import java.util.List;
+
 /**
  * @description:
  * @auther:cyf
@@ -17,8 +19,9 @@ public interface UserMapper extends MySqlMapper<User>, BaseMapper<User> {
     User checkName(String student_number);
     Integer updateUser(User user);
     User selectById(Integer id);
-    User selectByYBId(String yb_userid);
+    List<User> selectByYBId(String yb_userid);
     Integer insertGenerateId(User user);
+    Integer deleteUserById(Integer id);
 
 
 }

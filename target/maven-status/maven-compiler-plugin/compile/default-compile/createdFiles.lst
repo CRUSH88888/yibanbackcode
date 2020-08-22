@@ -5,6 +5,7 @@ edu\scau\common\utils\DateToStringUtil.class
 edu\scau\common\pojo\UserDetail.class
 edu\scau\common\utils\StringCompareUtil.class
 edu\scau\common\dto\MessageSubscribe.class
+edu\scau\common\dto\MessageData$Thing6.class
 edu\scau\common\dto\IndexActivityCertificate.class
 edu\scau\common\Service\MessageService.class
 edu\scau\common\utils\LabelTransUtils.class
@@ -52,7 +53,9 @@ edu\scau\common\Service\PublishManagementService.class
 edu\scau\common\controller\GroupController.class
 edu\scau\common\controller\BrowsedController.class
 edu\scau\common\utils\PageUtil.class
+edu\scau\common\dto\MessageData.class
 edu\scau\common\pojo\Authentication.class
+edu\scau\common\Service\MessageSubscribeService.class
 edu\scau\common\utils\ListMerge.class
 edu\scau\common\dto\ActivityCertificateCollected.class
 edu\scau\common\Service\impl\ActivityServiceImpl.class
@@ -65,6 +68,7 @@ edu\scau\common\pojo\Label.class
 edu\scau\common\dto\Function.class
 edu\scau\common\controller\SearchController.class
 edu\scau\common\config\SwaggerConfig.class
+edu\scau\common\dto\MessageData$Thing2.class
 edu\scau\common\Service\AuthenticationService.class
 edu\scau\common\pojo\CertificateFile.class
 edu\scau\common\Service\impl\AuthenticationServiceImpl.class
@@ -87,6 +91,7 @@ edu\scau\common\pojo\ActivityCertificate.class
 edu\scau\common\pojo\Information.class
 edu\scau\common\utils\HttpUtil.class
 edu\scau\common\mapper\AuthenticationMessageMapper.class
+edu\scau\common\Service\impl\MessageSubscribeServiceImpl.class
 edu\scau\common\Service\impl\MessageServiceImpl.class
 edu\scau\common\controller\ActivityBrowsedController.class
 edu\scau\common\pojo\ActivityPicture.class
@@ -95,6 +100,7 @@ edu\scau\common\Service\ActivityBrowsedService.class
 edu\scau\common\mapper\ActivityCertificateMapper.class
 edu\scau\common\controller\ImageController$Response.class
 edu\scau\common\config\CorsConfig.class
+edu\scau\common\dto\MessageData$Thing5.class
 edu\scau\common\pojo\ActivityLabel.class
 edu\scau\common\Service\FunctionService.class
 edu\scau\common\pojo\User.class
