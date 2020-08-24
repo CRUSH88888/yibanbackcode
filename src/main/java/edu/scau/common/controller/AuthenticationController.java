@@ -1,6 +1,7 @@
 package edu.scau.common.controller;
 
 import edu.scau.common.Service.impl.AuthenticationServiceImpl;
+import edu.scau.common.mapper.AuthenticationMapper;
 import edu.scau.common.pojo.Authentication;
 import edu.scau.common.utils.ApiResponse;
 import org.apache.ibatis.annotations.Param;
@@ -21,6 +22,8 @@ public class AuthenticationController {
     @Autowired
     private AuthenticationServiceImpl authenticationService;
 
+    @Autowired(required = false)
+    private AuthenticationMapper authenticationMapper;
     /**
      *  修改资料认证
      * @param userId
@@ -78,5 +81,19 @@ public class AuthenticationController {
     public ApiResponse getAuthentication(@RequestParam("userId")int userId){
         List<Authentication> authentication = authenticationService.getAuthentication(userId);
         return authentication.isEmpty()!=true?new ApiResponse(0,"success",authentication):new ApiResponse(-1,"empty");
+    }
+    @GetMapping("getLevel")
+    public ApiResponse getLevel(@RequestParam("userId")int userId){
+        List<Integer> levels = authenticationMapper.getLevel(userId);
+        Boolean level=false;
+        if(levels !=null) {
+            for (Integer integer : levels) {
+                if (integer == 3) {
+                    level = true;
+                    break;
+                }
+            }
+        }
+        return new ApiResponse(1,"success",level);
     }
 }

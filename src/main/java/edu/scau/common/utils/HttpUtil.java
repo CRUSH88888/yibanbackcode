@@ -23,8 +23,8 @@ import java.net.URL;
  * @create: 2020-08-13 20:49
  **/
 public class HttpUtil {
-    public static final String APPID="wx3ba5b3cafbcbd958";
-    public static final String APPSECRET="13c3597b68a04f2b65270413e38a5989";
+    public static final String APPID="wx7c557545f7c62375";
+    public static final String APPSECRET="9364d3eaea4a70bd07b8e048390f9e51";
     public static String doGet(String urlPath)
             throws Exception {
         URL url = new URL(urlPath);

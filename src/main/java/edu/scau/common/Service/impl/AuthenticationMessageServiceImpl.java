@@ -67,7 +67,7 @@ public class AuthenticationMessageServiceImpl implements AuthenticationMessageSe
             else{
                 String s;
                 String name = authenticationMessageMapper.getName(authenticationMessage.getUserId());
-                String userName = authenticationMessageMapper.getUserName(authenticationMessage.getUserId());
+                String userName = authenticationMessageMapper.getRealName(authenticationMessage.getUserId());
                 if(name==null){
                     s=userName;
                 }
@@ -77,9 +77,9 @@ public class AuthenticationMessageServiceImpl implements AuthenticationMessageSe
                 int length = s.length();
                 String substring = s.substring(0, 1);
                 for (int i = 1; i < length; i++) {
-                    substring+='*';
+                    substring += '*';
                 }
-                s=substring+authenticationMessage.getAssociationName()+"负责人，请仔细确认，" +
+                s = substring + "申请"+authenticationMessage.getAssociationName() + "负责人，请仔细确认，" +
                         "如果需要转让负责人，请到 我的—>身份认证 处进行身份的删除，若无需转让，请忽略本条信息。";
                 char[] chars1 = s.toCharArray();
 

@@ -40,6 +40,10 @@ public class MessageServiceImpl implements MessageService {
             message.setPublishTime(new Timestamp(System.currentTimeMillis()));
             result = messageMapper.insertMessage(message);
         }
+        message.setUserId(-1);
+        message.setBrowsed(false);
+        message.setPublishTime(new Timestamp(System.currentTimeMillis()));
+        result = messageMapper.insertMessage(message);
         return result;
     }
 

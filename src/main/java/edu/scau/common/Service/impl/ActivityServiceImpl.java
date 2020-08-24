@@ -5,6 +5,7 @@ import edu.scau.common.dto.ActivityAndMessage;
 import edu.scau.common.mapper.ActivityBrowsedMapper;
 import edu.scau.common.mapper.ActivityMapper;
 import edu.scau.common.mapper.BrowsedMapper;
+import edu.scau.common.mapper.MessageMapper;
 import edu.scau.common.pojo.*;
 import edu.scau.common.utils.DateToStringUtil;
 import edu.scau.common.utils.LabelTransUtils;
@@ -33,6 +34,8 @@ public class ActivityServiceImpl implements ActivityService {
     private ActivityBrowsedMapper activityBrowsedMapper;
     @Autowired
     private BrowsedMapper browsedMapper;
+    @Autowired
+    private MessageMapper messageMapper;
     @Data
     @NoArgsConstructor
     public class temp{
@@ -97,7 +100,7 @@ public class ActivityServiceImpl implements ActivityService {
         activityAndMessage.getActivity().setDate(DateToStringUtil.dateToString(Timestamp.valueOf(activityAndMessage.getActivity().getStartTime()), Timestamp.valueOf(activityAndMessage.getActivity().getEndTime())));
         List<Message> messages = activityMapper.selectMessage(activityId,userId);
         activityAndMessage.setMessage(messages);
-
+        messageMapper.updateMessage(activityId,userId);
 
 
         return activityAndMessage;

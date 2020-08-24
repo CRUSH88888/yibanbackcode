@@ -112,6 +112,7 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
             System.out.println(collectionResult.get(i));
             activityCertificateMapper.deleteCertifiedCollected(collectionResult.get(i));
         }
+        activityCertificate.setLabels(LabelTransUtils.numStringTranToString(activityCertificate.getLabels()));
         indexActivityCertificate.setCollected(collectionResult.size()>0?true:false);
         return indexActivityCertificate;
     }
@@ -139,7 +140,12 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
 
     @Override
     public List<ActivityCertificate> selectCollectedCertificate(Integer userId) {
-        return activityCertificateMapper.selectCollectedCertificate(userId);
+        List<ActivityCertificate> certificates = activityCertificateMapper.selectCollectedCertificate(userId);
+        for (ActivityCertificate a :
+                certificates) {
+            a.setLabels(LabelTransUtils.numStringTranToString(a.getLabels()));
+        }
+        return certificates;
     }
 
 }

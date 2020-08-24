@@ -20,4 +20,6 @@ public interface MessageSubscribeMapper {
     Integer updateOpen(@Param("userId")int userId);
     List<Integer> getActivityId(@Param("userId")int userId);//授权的活动
     Integer insertMessageSubscribeAllow(@Param("userId")int userId,@Param("activityId")int activityId);
+    Integer getMessageSubscribeAllowId(@Param("userId")int userId,@Param("activityId")int activityId);
+    Integer deleteMessageSubscribeAllow(@Param("userId")int userId,@Param("activityId")int activityId);
 }
