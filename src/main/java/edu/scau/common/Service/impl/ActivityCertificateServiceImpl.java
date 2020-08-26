@@ -143,6 +143,7 @@ public class ActivityCertificateServiceImpl implements ActivityCertificateServic
         List<ActivityCertificate> certificates = activityCertificateMapper.selectCollectedCertificate(userId);
         for (ActivityCertificate a :
                 certificates) {
+            System.out.println(a.toString());
             a.setLabels(LabelTransUtils.numStringTranToString(a.getLabels()));
         }
         return certificates;

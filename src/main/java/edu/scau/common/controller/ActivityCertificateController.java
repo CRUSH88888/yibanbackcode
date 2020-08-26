@@ -92,10 +92,11 @@ public class ActivityCertificateController {
 
         if ("collectedCertificate".equals(path)) {
             System.out.println("collectedCertificate");
-            return new ApiResponse(activityCertificateService.collectedCertificate(userId, certificateId), "look result");
+            return activityCertificateService.collectedCertificate(userId, certificateId) ==1?new ApiResponse(0,"success"):new ApiResponse(-1,"server error");
+
         }else if ("deleteCertificate".equals(path)){
             System.out.println("deleteCertificate");
-            return new ApiResponse(activityCertificateService.deleteCollectedCertificate(userId,certificateId),"look the return code");
+            return activityCertificateService.deleteCollectedCertificate(userId,certificateId) ==1?new ApiResponse(0,"success"):new ApiResponse(-1,"server error");
         }else {
             return new ApiResponse(-1,"路径错误");
         }
@@ -148,7 +149,7 @@ public class ActivityCertificateController {
         }
         @PostMapping("/getCollectedCertificate")
     public ApiResponse getCollectedCertificate(@RequestParam("userId")Integer userId){
-            System.out.println("getCollectedCertificate");
+            System.out.println("getCollectedCertificate" + "userId: " + userId);
             List<ActivityCertificate> certificates = activityCertificateService.selectCollectedCertificate(userId);
             return certificates != null ? new ApiResponse(0,"success",certificates):new ApiResponse(-1,"failed");
         }
