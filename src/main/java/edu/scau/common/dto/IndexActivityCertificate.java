@@ -16,7 +16,8 @@ import lombok.NoArgsConstructor;
 public class IndexActivityCertificate {
 
         private ActivityCertificate activityCertificate;
-        private Boolean collected;
+//        无语了这个browsed我改了三次的，下次能不能拉一下代码再写你的，傻逼
+        private Boolean browsed;
         private String builtTimeToNow;
 
 
